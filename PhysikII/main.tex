@@ -1,0 +1,139 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{amsmath}
+\geometry{margin=1.5cm}
+\author{Benjamin Dropmann}
+
+\newcommand{\mspc}{\hspace{0.4cm}}
+
+\begin{document}
+\section{Bonusprogramm}
+12 serien* 5 punkte / serie$\rightarrow$ 60 oubkte\begin{itemize}
+\item[\textbullet]{0-19 Kein bonus}
+\item[\textbullet]{20-39 Lineare interpolation}
+\item[\textbullet]{$>$40 maximaler bonus 39, 40 schon maximler bonu}
+\end{itemize}
+\section{Wellen}
+\subsection{Federwelle} Gutes model für eine Festkoper, Transversale Anregung, senkrecht zur länge, Longitundonale Anregung, entlang der  längle des feder dings. (Elektromagnetik schwer da es in beide richtungen geht). Es gelten Folgende Bedingungen für die federwelle:
+\begin{itemize}
+\item[\textbullet]Jede masse Schwingt um ihre ruhelage, (wie eine Pendel)
+\item[\textbullet]Jede masse bleibt in ruhe bis die welle sie erreicht
+\item[\textbullet]Ruckrehr zur ruhelage
+\end{itemize}
+\textbf{Amplitude} der Welle $\xi(x,t)$ ($x : Ort fur die Seilwelle, t zeit$)
+\textbf{Disersion}: Form des wellenpakets der anregung bleibt unverändert
+$\xi(x,t=0)=f(x)$ $f(x)$ ist die form des wellenpakets\\$x-a$ fuhrt zu einer translation der Wele ohne ändergun seiner form:
+\[c\rightarrow x-a\rightarrow \xi(x-a,t=0)\rightarrow (x+a)\]
+\[a=vt \rightarrow f(x\pm vt)\]
+\[\xi(x,t)=f(x\pm vt\] $v$ ist hier die \textbf{Phasengeschwindigkeit} der Welle.
+\subsection{Harmonische Wellene} Vom Harmonischen Oszillator, Wellengleichung herleiten, allgeimene wellengleichung finden. Eine Harmonische Welle ist eine sinus (cosinus ist besser) kurve
+\[\xi(x,t)=\xi_0\cdot\sin(k(x\pm vt=f(x\pm vt)\]
+\[wellenzahlk(x+\lambda)=kx+"\pi \rightarrow k\lambda = 2\pi \rightarrow k=\frac{2\pi}{\lambda}\]
+$k$ ist die Wellenzahl (so dass was im sinus ist dimensionslos ist)  \[\lambda:{Wellenlange}\]
+In zwei dimensionen ist $k$ä ist ein vektor und zeigt uns die wellen direktion aus (longitude, oder senkrecht)
+\\Kreisfrequenz: $\omega=2\pi\nu=2\pi\frac{1}{T}$ Wo $T$ die Periode ist.\\$\xi(x,t)=\xi_0\sim(k(x\pm vt))=\sin(kx+kvt)=\xi_0\sin(kx\pm\omega t)$
+\subsection{Wellenglaichung in einer Dimension}
+\[\xi(x,t)=\xi_0e^{i(kx\pm \omega t}\]
+wir leiten nach der zeit ab:
+\[\frac{\delta\xi}{\delta t}=\xi_0(-kv)cos(k(x-vt))\]
+\[\frac{\\delta^2\xi}{\delta^2t}=\xi_0(-kv)^2sin(k(x-vt))\]
+ncahc dem ort ableiten
+\[\frac{\delta\xi}{\delta x}=\xi_0kcos(k(x-vt))\]
+\[\frac{\delta^2\xi}{\delta^2x}=\xi_0k^2sin(k(x-vt))\]
+Zusammestellen $\frac{\\delta^2\xi}{\delta^2t}=v^2\frac{\\delta^2\xi}{\delta^2x}$
+\[\frac{\delta^2\xi}{\delta^2t}-v^2\frac{\\delta^2\xi}{\delta^2x}=0\]
+Wie sieht dann die algemeine lösung aus?
+\[\xi(x,t)=f(x-vt)+g(x+vt)\]
+Ableitung nach der Zeit
+\[\frac{\delta\xi}{\delta t}=\frac{\delta f(x-vt)}{\delta t}+\frac{\delta f(x+vt}{\delta t}=\frac{\delta f(\alpha(x,t)}{\delta t}+\frac{\delta g(\beta(x,t)}{\delta t}\]
+Weiter und weiter ableiten und herumschreiben:
+\[\frac{\delta f}{\delta \alpha}(\alpha(-v)+\frac{g(\beta)}{\delta \beta}(\beta(v)\]
+Für die zweite ableitung gilt diese hergehensweise auch, und wir finden dass die gleicung oben erfüllt ist und dass folgende gleichung gilt:
+\[\frac{\delta^2\xi}{\delta^2t}-v^2\frac{\delta^2\xi}{\delta^2x}=0\]
+Gute frage: jede sinusfunktion erfullt das; wir haben nur angenommen dass $x$ und $t$ einen anhang ($f$ in diesen fall) haben\\
+\textbf{EXPeriment} DNA dings, sehr wenig reibug zwischung elemente $\rightarrow$ rucktreibendende kraft sehr gering. Auch reflektion. \\
+\subsection{Wichtige dinge}
+\[x-vt=konst\]
+\[\nu=v/\lambda\]
+\subsection{Transversale Wellen}
+\[\xi(z,t)=Af(z-vt)\]
+Diesmal aber ein Vektor ZU(*ZHU)(HZ(U*"UO)W(U*"\\
+\[xi(z,t)=A\cos(kz                omega t)\hat{x}\]
+Anhange zur spannung(seilwelle) Seilwelle$\rightarrow$ Wellengleichung
+Wir nehmen viele kliene massenelemente den seil entlang, Dann haben wir zwei kräfte, den seil hoch/entlang und die spannung des seils/nach unten. Wir haben jetzt für eine massen element zwei funktionen $xi(x)$ und $\xi(x+dx)$ Wir brauchen also der unterschid zwischen diese zwei kräfte, die nicht entgegengesetzt sind wegen der breite des massenelements.
+\[\Delta S_y=S\sin(\alpha')-S\sin(\alpha)\]
+Herumdingen
+\[\Delta S_y=S\frac{\delta^2\xi}{\delta x^2} dx\]
+Ich habe verpasst Elastizität modul?
+\subsection{Räumliche verteilung von Wellen}
+\[\xi(x,y,z,t)=Af(kz-\omega t)\]
+Transversale Welle: Polarisationsrichtung (in x oder y schwingen, transversal aber anders)
+\[A=\begin{pmatrix}A_x\\A_y\end{pmatrix}\mspc \xi(t)=\begin{pmatrix}A_x\\A_y\end{pmatrix}\cdot e^{ikz-\omega t}\]
+Die wellenzahl wird jetzt zu einem Vektor der beschreibt in welcher richtung diese welle sich ausbretet. 
+\[\xi(r, t)=Ae^{i(kr-\omega t)}\] wobei $k=\begin{pmatrix}0\\0\\k_z\end{pmatrix}$
+\subsection{Wellengleichung in drei dimensionen}
+\[\frac{1}{v^2}\frac{\delta^2\xi}{\delta t^2}-\frac{\delta^2\xi}{\delta x^2}-\frac{\delta^2\xi}{\delta y^2}-\frac{\delta^2\xi}{\delta z^2}=0\]
+Laplace operator $\Delta=\nabla^2=\left(\frac{\delta}{\delta x},\frac{\delta}{\delta x},\frac{\delta}{\delta x}\right)\begin{pmatrix}\delta/\delta x\\\delta/\delta y\\\delta/\delta z\end{pmatrix}$ Also es gilt \[\frac{1}{v^2}\frac{\delta^2\vec{\xi}}{\delta t^2}(x,y,z,t)-\Delta\vec{\xi}=0\]
+\subsection{Kugelwellen}
+Beispiel punktformige Lichtquelle. Hier ist $k$ nicht mehr wohldefiniert, da die welle sich in alle richtungen ausbreitet.
+\[\vec{\xi}_0\cdot e^{i(\vec{k}\vec{r}-\omega t}\]
+\[\frac{\delta \vec{\xi}}{\delta x}=ikxe^{i(\vec{k}\vec{r}- \omega t}\]
+In alle richtungen und zweimal ableiten, und wir finden:
+\[\Delta\vec{\xi}(\vec{r},t)=-k^2\vec{\xi}(\vec{r},t)\]
+Und dann dasselbe mit der zeit:
+\[\frac{1}{v^2}\frac{\delta^2\vec{\xi}}{\delta t^2}-\Delta\vec{\xi}=\xi\left[-\frac{\omega^2}{v^2}+k^2\right]\vec{\xi}\mspc v=\frac{\omega}{k}\]
+Mit der Kugel symmetrie $\Delta = \frac{\delta^2}{\delta x^2}+\frac{\delta^2}{\delta y^2}+\frac{\delta^2}{\delta z^2}$
+bekommen wir dann 
+\[\frac{\delta \phi}{\delta x}=\left(\frac{\delta r}{\delta x}\frac{\delta}{\delta r}+\frac{\delta \theta}{\delta x}\frac{\delta}{\delta \theta}+\frac{\delta \phi}{\delta x}\frac{\delta}{\delta \phi}\right)\phi\]
+\[\frac{\delta r}{\delta x}=\sin(\theta)\cos(\phi)\]
+\[\frac{\delta\theta}{\delta x}=\frac{\delta}{\delta x}\left[\arccos\left(\frac{z}{r}\right)\right]=\frac{1}{\sqrt{1-\frac{z^2}{r^2}}}\frac{\delta}{\delta x}\frac{z}{r}=\frac{1}{\sqrt{1-\frac{z^2}{r^2}}}\left(-\frac{1}{2}\frac{1}{r^3}2xz\right)\]
+\[=\frac{1}{r}\cos(\theta)\cos(\phi)\]
+Dasselbe geht jetzt mit $\frac{\delta \phi}{\delta x}$ (Schreibe ich nicht hin)
+\subsection{Kugelwellen, Wellengleichungen in 3d}$\vec{k}\cdot\vec{r}= |\vec{k}|\cdot|\vec{r}|=k\cdot r$ Da $k$ und $r$ immer parallel laufen (dank der Kugelsymmetrie)
+\[\vec{\xi}(r,t)=\frac{\vec{A}_1}{r}f_1(kr-\omega t)+\frac{\vec{A}_2}{r}f_2(kr-\omega t)\]
+Diese lösung erfullt die differentialgleichung.
+\subsection{Energietransport} Die Geschwindigketi eines massenstücks $v=\frac{\delta \xi(\vec{r},t}{\delta t}$\\
+Die kinetische energie dieses massenstuck $dT=\frac{1}{2}\left(\frac{\delta \xi}{\delta t}\right)^2 dm$
+Energie dichte $\frac{dT}{dV}$
+\\
+Elastische energie:
+\[E_{el}=\int_0^{\Delta l}(\Delta l')d(\Delta l')=A\int_0^{\Delta l}E\frac{\Delta l^2}{l}=\frac{1}{2}(A\cdot l)E\left(\frac{\Delta l}{l}\right)^2\]
+\[\frac{\Delta l}{l}=\frac{\delta \xi}{\delta x}\Rightarrow\frac{1}{2}E\left(\frac{\delta \xi}{\delta x}\right)^2\]
+Energie dichte:
+\[\frac{dT}{dV}=\frac{1}{2}\rho v^2 f'^2\]
+\[\frac{dE_{el}}{dV}=\frac{1}{2}Ef'^2\]
+Pro volumen gerechnet ist die elastische und kinetische energie dieselbe. Die Gesamtenergie ist alsow $\frac{dW}{dV}=\rho v^2f'^2$\\
+\section{Ubungs stunde Wellen}
+\subsection{Wellenfunction $\xi$}
+\[\xi(x,t)=\]
+Die Form einer welle: $f(x)=\xi(x,t=0)$ ist der initiale gefrorene status einer Welle. Für jetzt, ist die Form konstant (dämpfungen sind benachlässigt). Wegen der Form der Welle, ist ort und Zeit nicht unabhängig, da die Form der Welle nur den Ort definiert bei einer konstanter Zeit.\\
+Nach eine Zeit hat sich die Welle bus zum punkt $x\pm vt$ ausbreitet, wobeir $v$ die Wellengeschwindigkeit ist. Die Wellenfunktion ist also\[\xi(x,t)=f(x\pm vt)\]
+\subsection{Harmonische Welle}
+Eine harmonische Welle ist beschrieben durch ein sinus oder ein cosinus:\[\xi(x,t)=A\cdot\sin(k(x\pm vt)\] wobei $k$ die Wellenzahl (später Wellenvektor) $\left[\frac{1}{m}\right]$, ist, $A$ die Amplitude. Es gilt $k=\frac{2\pi}{\lambda}$ wo lambda die Wellenlänge ist. Also man kann die folgende vereinfachung machen:
+\[k(x\pm vt)=kx+kvt=kx+\omega t\]
+wobei $\omega$ die Kreisfrequenz ist.\\
+\subsection{Wellengleichung}
+Wir leiten nahc der Zeit ab
+\[\frac{\delta\xi}{\delta t}=A(-\omega)\cos(kx-\omega t)\]
+\[\frac{\delta^2 \xi}{\delta t^2}=a-\omega^2A\sin(kx-\omega t)\]
+Und jetzt nach dem Ort:
+\[\frac{\delta\xi}{\delta x}=Ak\cos(kx-\omega t)\]
+\[\frac{\delta^2 \xi}{\delta x^2}=-k^2A\sin(kx-\omega t)\]
+Wie setzen dies zusammen und Bekommen:
+\[=\frac{\omega^2}{k^2}\frac{\delta^2\xi}{\delta x}=v^2\frac{\delta^2\xi}{\delta x^2}\]
+\[\frac{\delta^2 \xi}{\delta t^2}-v^2\frac{\delta^2\xi}{\delta x^2}\]
+Die Allgemeine Lösung olgt folgender Form:
+\[f(x-vt)-g(x+vt)\]
+\subsection{Arten von Wellenverbreitung}
+\begin{itemize}
+\item{Transversalwelle: Auslenkung senkrecht zur geschwindigkeit}
+\item{Longitudonalwell, die Auslenkung ist parallel zur ausbreitung der Welle}
+\subsection{Energietransport einer Welle}
+Eine welle transportiert kinetische und elastische energie, die Beträge dieser beiden einergien ist im volumen (flachenelement oder distanz) immer gleich.
+\subsection{Tipps zur Serie 1}
+\begin{itemize}
+\item[$1.1_a$]{Vollständige Wellenfunktion finden, (wichtige dingen oben sind hilfreich}
+\item[$1.1_b$]{Die orte einfch einsetzen und die trigonometrische vereinfachen mit den mathemathischen hilfsmitteln der formelsammlung}
+\item[$1.2_a$]{Uhr und Lineal, so dass man zeiten und abständen messen kann. Welche gössen sind gegeben, und welche sin messbar? damit vereinfachen. Die Wellenlänge kann man (theoretisch messen) also mit der Wellenlänge die distanz ausrechen.}
+\end{itemize}
+\end{document}

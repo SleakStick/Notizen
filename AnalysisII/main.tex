@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{geometry}
+
+\geometry{margin=1.5cm}
+
+\author{Benjamin Dropmann}
+\title{Analysis II}
+\newcommand{\mspc}{\hspace{0.3cm}}
+
+\begin{document}
+\maketitle
+
+\section{Metrische Räume}
+\textbf{Skalarproduct} Seien zwei vektoren $x,y\in\mathbb{R}^n$ dann ist der skalaproduktwie Folgt definiert: \[x\cdot y=<x,y>=\sum_{i=1}^nx_iy_i\]
+\textbf{Eufklidische Norm} Sei $x\in \mathbb{R}^n$ dann ist die Euklidische norm des Vektors \[||x||=\sqrt{\sum_{i=1}^nx_i^2}\]
+\textbf{Euklidischer Abstand  } \[d(x,y)=\sqrt{\sum^n_{i=1}(x_i-y_i)^2}\]
+\textbf{Dreiecksungleichung  }$\forall x,y,zin\mathbb{R}^n\rightarrow||x-z||\le||x-y||+||y-z||$
+\textbf{Metrische Räume} Ein metrische (M.R) $(X,d)$ ist eine nicht-leere menge $X$ zusammen mit einer funktion $d:X\times X\rightarrow[0;\infty[$ Welche die folgenden Eigenschaften besitzt:
+\begin{itemize}
+\item[1.]{Positiv definiert $\forall x,y\in X\mspc d(x,y)=0\Leftrightarrow x=y$}
+\item[2.]{Symmetrie $\forall x,y \in X\mspc d(x,y)=d(y,x)$}
+\item[3.]{Dreiecksungleichung $\forall x,y,z\in X\mspc d(x,z)\le d(x,y)+d(y,z)$}
+\end{itemize}
+\textbf{Folgen} Sei $X$ eine Menge dann ist $(a_n)_{n\in\mathbb{N}_0}$ eine Folge $\mathbb{N}_0\rightarrow X$ mit dem bild $a_n=a(n)$.\newline
+\textbf{Konvergenz einer Folge in X} $(dim(x\ge1)$ Sei $(X,d)$ ein M.R. und $(a_n)_{n\in\mathbb{N}_0}$ eine Folge.  Dann konvergiert die folge auf eine zahl $A\in X$ falls.
+\[\forall\varepsilon>0\mspc\exists N>0:\mspc d(a_n,A)<\epsilon\]
+Falls es kein $A$ gibt dann divergiert die Folge.\newline
+\textbf{Teilfolgen} Sei ein M.R. $(X,d)$ und $(a_n)_{n\in\mathbb{N}_0}$ eine folge, dann existier eine teilfolge $(x_{n_k})_{n\in\mathbb{N}_0}$ wobei $(n_k)_{k\in\mathbb{N}_0}$ eine Folge von reellen Zahlen ist.\newline
+\textbf{Häufungspunkt} Sei $(X,d)$ ein M.R. und $(a_n)_{n\in\mathbb{N}_0}$ eine Folge. $A\in X$ ist ein Häufungspunkt der Folge falls es eine Teilfolge die auf $A$ Konvergiert.\newline
+\textbf{Satz} $y\subset X$ Teilmenge eines M.R. $(X,d)$ $x\in X$ ist Häufungspunkt von $y$ falls eine Folge $(y_n)_{n\in\mathbb{N}_0}$ existiert welche gegen $x$ konvergiert.
+\newline\textbf{Lemma} Es sei $(x_n)_{n\in\mathbb{N}_0}$ eine Folge im Metrischen Raum $(X,d)$ mit $x\in X$ Dann konvergiert $(x_n)_{n\in\mathbb{N}_0}$ genau dann wenn jede Teilfolge $(x_{n_k})_{k\in\mathbb{N}_0}$ eine Teilfolge $(x_{n_{m_k}})_{k\in\mathbb{N}_0}$ die gegen $x$ konvergiert.
+\newline\textbf{Lemma}Eine Folfe in $(\mathbb{R}^n, d(x,y)=||x-y||)$ Konvergiert genau dann wenn sie koordinaten weise konvergiert.
+\subsection{Cauchy Folge}Eine Folge $(a_n)_{n\in\mathbb{N}_0}$ in einem Metrischen Raum $(X,d)$ heisst cauchy foglge falls:\[\forall \varepsilon >0 \mspc \exists N>0 \text{ So dass } \forall m,n >N: \mspc d(a_n,a_m)<\varepsilon\]
+\textbf{Lemma} Analog zur Folgen in $\mathbb{R}$ gilt:
+\begin{itemize}
+\item{Jede Cauchy-Folge ist beschränkt,$\Leftrightarrow \exists K\in\mathbb{R}$ so dass $ d(a_n,a_0\le K \forall n\in \mathbb{N}_0$}
+\item{Jede Konvergente Folge ist eine Cauchy-Folge.}
+\item{Eine Cauchy Folge konvergiert genau dann wenn sie eine konvergente Teilfolge besitzt}
+\end{itemize}
+\textbf{Vollstandigkeit} Eine Metrischer Raum heisst vollständig falls jede Cauchy-Folge in $X$ Konvergiert.
+\newline\textbf{Theorem} Für alle $n\ge1$ ist $\mathbb{R}^n$ mit der Standard metrik ist Vollständig.\newline
+\textbf{Beweis} Analog zur tatsache, das in $\mathbb{R}^n$ konvergenz im Metrischen Raum äquivalent ist zur Koordinaten-weise konvergenz: Eine Cauchy-Folge in $\mathbb{R}^n$ zu sein ist äquivalent zur Tatsache dass jede Koordinate eine Cauchy-Folge liefert (in den Reelen zahlen).\newline
+In den Reellen Zahlen konvergieren alle Cauchy-Folgen, Daher muss die Behauptung stimmen. Q.E.D.
+\subsection{Topologie Metrischer Raume}
+Es sei $(X,d)$ ein Metrischer Raum, $x\in X$ und $r>0$ eine reelle Zahl. Der offene Ball um den Punkt $x$ mit radius $r$ ist die Menge:\[B_r(x)=B(x,r:=\left[y\in X|\mspc d(x,y)<r\right]\]
+\subsection{Innere/Abschulss-mengen und Ränder}
+Sei $(X,d)$ ein Metrischer Raum und $A\subset X$ eine Teilmenge
+\begin{itemize}
+\item{das innere der Menge $A$ ist gegebe durch \[A^o=int(A):=\bigcup\left[E\subset A|\mspc E \text{ ist offen}\right]\] Und ist die grösste offene Menge, welche in $A$ enthalten ist.}
+\item{Der Abschluss von A:\[\overline{A}
+:=\bigcap \left[A\subset U|U \text{ ist abgeschlossen}\right]\] und ist die kleinste abgeschlossene Menge welche $A$ enthält.}
+\item{Dr Tipologische Rabd von $A$ ist $\overline{A}/A^o$}
+\end{itemize}
+Beispiel, in $\mathbb{R}$ mit $A=]0,1[\rightarrow A^o=]0,1[$ und $\overline{A}=[0,1]$ dann ist der Rand: $\left\lbrace 0\right\rbrace\cup\left\lbrace1\right\rbrace$.\newline
+\textbf{Proposition} Es sei $(X,d)$ ein Metrischer Raum:
+\begin{itemize}
+\item{Eine Teilmenge $A\subset X$ ist genau dann offen, alls für jede konvegente Folge $(x_n)_{n\in\mathbb{N}_0}$ mit grenzwert $x\in A$ gilt:\[\exists N\in\mathbb, \forall n>N \mspc x:n\in A\]}
+\item{Eine Teilmenge $A\subset X$ ist genau dann abgeschlossen falls fur jede konvergente Folge $(x_n)_{n\in\mathbb{N}_0}\subset A$ mit grenzwert $x\in A$ ist $x\in A$}
+\end{itemize}
+\textbf{Beweis} Fall der Offene Menge:\newline
+"$\Rightarrow$" Es sei $(x_n)_{n\in\mathbb{N}_0 }$ eine Konvergente Folge mit grenzwert $x\in A$. Gemäss vorassetzung wissen wir, dass die Teilmenge $A$ offen ist Da $A$ offen ist, und $x\in A$ gibt es ein Offenen Ball $B(x,\varepsilon)\subset A$. Für dieses $\varepsilon>0 \exists N\in\mathbb{N}_0$ (wegen der Konvergenz der betrachteten Folge) $d(x,x_n)<\varepsilon$ (Konvergente folgen sind in $X$ Cauchy-Folgen) dies Bedeutet das FOlgeglieder 
+mit index $n>N$ in $B(x,\varepsilon)$\newline
+"$\Leftarrow$" Wir nehmen jetzt an das $A\subset X$ nicht offen ist. Dies bedeutet dass $\exists x\in A \varepsilon>0 \mspc B(x,\varepsilon)/A\neq\emptyset$
+Insbesonde konnen wir $\varepsilon=2^{-1}$ betrachten und eine Folge $(x_n)_{n\in\mathbb{N}}$ konstruiren mit $x_n\in B(x,2^{2{-n}})/A$ Es gilt für diese Folge aber auch dass Folgende $x_n\rightarrow x\in A$ \newline
+Der Fall der Geschlossene Menge:\newline
+"$\Rightarrow$" Wir nehmen an dass $A$ abgeschlossen ist. Wir betrachten dann eine beliebige FOlge $(x_n)_{n\in\mathbb{N}}$ mit $x_n\rightarrow x\in X$ Da $V:=X/A=A^c$ offen ist, kann der Grenzwert $x$ nicht in dieser offennen Menge liegen, da sonst die Folgenglieder ab einen bestimmten Index ebenfalls in dieser Offenene Menge liegen müssen, damit muss gelten dass:$x\in A$\newline
+"$\Leftarrow$" Wir nehmen an dass $A$ nicht abgeschlossen ist, dann ist $A^c$ nicht offen Dies bedeutet dass: $\exists y\in A^c \forall \varepsilon>0 \mspc B(y,\varepsilon) \cap A \neq \emptyset$ Damit kann man eine Folge konstruiren 
+$(x_n)_{n\in\mathbb{N}}$ mit $d(y,x_n)<\varepsilon \mspc \Rightarrow\mspc x\rightarrow y\in A^c$ Dann ist de beweis fertig Dann ist de beweis fertig.\newline
+\noindent
+\textbf{Proposition} Es sei $(X,d)$ ein Metrischer Raum. Eine folge $(x_n)_{n\in\mathbb{N}_0}$ konvergiert genau dann gegen $x$ wenn alle offene Mengen $U$ gilt:\[\exists N\in \mathbb{N}\forall n>N\mspc x_n\in U\]\newline
+\textbf{Beweis}
+"$\Rightarrow$" Sei $(x_n)_{n\in\mathbb{N}}$ eine gegen $x$ konvergierende Folge, es sei ausserdem $U$ offen mit $x\in U$. Da $U$ offen ist: $\exists \varepsilon >0 B(x,\varepsilon)$ Dann gilt auch \[\forall \varepsilon \exists N\in\mathbb{N} \forall n>N \mspc d(x,x_n)<\varepsilon\]
+\newline
+"$\Leftarrow$" $\forall \epsilon \mspc B(x, \epsilon)$ ist offen. Und es gilt $\exists N\in\mathbb{N} : x_n\in\forall n>N B(x, \varepsilon)$ Dies bedeutet gemäss definition dass $\underset{n\rightarrow\infty}{lim} x_n=x$. \newline
+\textbf{Korollar} Es sei $X$ eine Menge und $d_1, d_2$ zwei verschieden Metriken. Dann haben $(X,d_1), (X, d_2)$ genau dann die selben konvergente Folgen wenn die Topologien von $d_1$ und $d_2$ ubereinstimmen. 
+\newline
+\end{document}

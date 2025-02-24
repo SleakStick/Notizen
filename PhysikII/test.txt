@@ -1,0 +1,3 @@
+Hello
+My name is benjamin, this neovim config is not laggy at all, it seems to be one of the neovim packages that makes it laggy, ill try telescope as it might be very heavy and resource intensive, i dont use it very much so thats also a good aspect, if thats whats not working, then i will not need to fix anything, ill just get rid of telescopeö:w
+wait a minute, i just uninstalled telescope and it seems to be working better, i think that was the solution to my problem, let me try and do more intensive tasks
