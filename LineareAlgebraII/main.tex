@@ -89,6 +89,19 @@ Sei $B\in M_{n\times n}$ und $b=(b_{ij})$ dann gitl die formel
 Sei $B=A-x1_n$ und $\sigma\in S_n$ Fur welche $\sigma$ hat \[b_{\sigma(1,1)}b_{\sigma(2,2)}....b_{\sigma(n,n)}\] ein polynom von grad $>$n-1?
 Der beweis ist todlich, nacheher schauen ich tippe jetzt was ich nicht verstehe...
 
+\Section{2. Viewing von der Vorlesung am 25.02}
+$T:V\rightarrow V$ linear, dann ist $\lambda \in K$ eine Eigenvector wenn $\exists v\in V,v\neq 0_v$ so dass $Tv=\lambda v$. Hier merken wir dass der skalar eines Eigenvektors, auch ein egeinvektor ist, und dass die addition von zwei vektoren mir den selben eigenwert, auch ein Eigenvektor ist, also hat dies die Struktur eines unterraums...\newline
+Wir sind auf dem Folgenden Satz gekommen. Sei $T:V\rightarrow V$ linear, dann gilt $\lambda \in K$ ist genau dann Eigenwert von $T$ wenn $ker(T-\lamda I_n)\neq\left\lbrace\emptyset\right\rbrace$\newline
+\textbf{Beweis} $\lambda \in K$ Eigenwert $\LeftRightarrow \exists v\in V, v\neq 0_v$ so dass $Tv=\lambda v\Leftrightarrow (T-\lambda I_n)v=0_v$ Und daher ist $v\in ker(T-\lambda I_n)$ 
+\newline Das ist Praktisch da wenn $(T-\lambda I_n$ nicht injektiv ist dann ist $ker(T-\lambda I_n)\neq \emptyset$ und wenn die Determinante nicht null ist dann ist $T-\lambda I_n$ kein endomorphismus.\newline
+\textbf{Bemerkung} 0 ist ein Eigenwert wenn $T$ kein isomorphismus ist\newline
+\textbf{Korollar} Folgende aussagen sind äquivalent: \begin{itemize}
+\item{$\lambda$ ist ein Eigenwert von $T$}
+\item{$ker(T_\lambda I_n)\neq =0_v$}
+\item{$T-\lambda I_n$ ist kein Isomorphismus}
+\item{$det(T-\lambda I_n)=0$}
+\end{itemize}
+Der Beweis ist eine zusammenfassung von vorherigen beweisen
 
 
 \end{document}
