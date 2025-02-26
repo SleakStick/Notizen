@@ -58,7 +58,7 @@ $y\neq0, x\neq0$ Da die nullvektoren keine Eigenvektoren sind $\Rightarrow (1-\l
  Und jetzt fur die Eigenvektoren: für $\lambda = 2$
  \[b(v)=2v\Rightarrow v=\alpha\begin{pmatrix}-1\\2\end{pmatrix}, \alpha\neq0\]}
 \end{itemize}
-\textbf{Satz 10.1.4} $T:V\rightarrow V$ linear. Dann gilt: $\lambda \in K$ eigenwert von $T\Leftrightarrow ker(T-\lambda\1_v)=0$
+\textbf{Satz 10.1.4} $T:V\rightarrow V$ linear. Dann gilt: $\lambda \in K$ eigenwert von $T\Leftrightarrow ker(T-\lambda1_v)=0$
 Bis hier habe ich was verpasst...
 
 \textbf{Fibonaccifolgen} sei $V$ der V-R der Fibonnacci Folgen. wir haben $S:V\rightarrow V$ ist die Verschiebungsabbiildung, (die ist definiert in satz 1.1.15)\newline Die Basis war $B=\left\lbrace\mathbb{F}_{0,1}, \mathbb{F}_{1,0}<\right\rbrace$
@@ -78,21 +78,21 @@ Sei $M=\begin{pmatrix}a&b\\c&cd\end{pmatrix} \Rightarrow X_A=x^2-(a+d)x+ad-bc$\n
 \textbf{Def 10.2.7} Sei $T:V\rightarrow V$ linear dann ist die Spur von $T$ \[Tr(T)=Tr([T]^B_B)\]
 \textbf{10.2.8} $Tr(T)$ ist wohldefiniert
 \newline\textbf{Beweis} Zu zeigen wann $C$ eine Andere Basis un $D=id]^C_B$ dann gilt \[Tr([T]^B_B)=Tr(D^{-1}[T]^C_CD)\]
-Es reicht aus zu zeigen dass wenn $M_1,M-2\inM_{n\times n}(K)$ dann gilt $Tr(M_1M_2)=Tr(M-2M_1)$ (mit explizite rechnung beweisen)\newline
+Es reicht aus zu zeigen dass wenn $M_1,M-2\in M_{n\times n}(K)$ dann gilt $Tr(M_1M_2)=Tr(M-2M_1)$ (mit explizite rechnung beweisen)\newline
 Daher gilt auch 10.2.8\newline
 \textbf{Satz10.2.9} es sei $T:v\rightarrow V$ linear dann gilt \[X_T=(-1)^nx^n+(-1)^{n-1}x^{n-1}Tr(T)+...+det(T)\]
-\textbf{Beweis} es sei $A=[^B_B]$ Mit induktion kann man beweisen dass wenn es für eine $M_{n-1\timesn-1}$ geht dann geht es für $M_{n\times n}$ als übung  zu machen.
+\textbf{Beweis} es sei $A=[^B_B]$ Mit induktion kann man beweisen dass wenn es für eine $M_{n-1\times n-1}$ geht dann geht es für $M_{n\times n}$ als übung  zu machen.
 Der Zweite beweis geht wie folgt ab:
 \newline
 Sei $B\in M_{n\times n}$ und $b=(b_{ij})$ dann gitl die formel
-\[\sum_{\sigma\in S_n}b_{\sigma(1,1)}....b_{\sigma(n,n)\]
+\[\sum_{\sigma\in S_n}b_{\sigma(1,1)}....b_{\sigma(n,n)}\]
 Sei $B=A-x1_n$ und $\sigma\in S_n$ Fur welche $\sigma$ hat \[b_{\sigma(1,1)}b_{\sigma(2,2)}....b_{\sigma(n,n)}\] ein polynom von grad $>$n-1?
 Der beweis ist todlich, nacheher schauen ich tippe jetzt was ich nicht verstehe...
 
-\Section{2. Viewing von der Vorlesung am 25.02}
+\section{2. Viewing von der Vorlesung am 25.02}
 $T:V\rightarrow V$ linear, dann ist $\lambda \in K$ eine Eigenvector wenn $\exists v\in V,v\neq 0_v$ so dass $Tv=\lambda v$. Hier merken wir dass der skalar eines Eigenvektors, auch ein egeinvektor ist, und dass die addition von zwei vektoren mir den selben eigenwert, auch ein Eigenvektor ist, also hat dies die Struktur eines unterraums...\newline
-Wir sind auf dem Folgenden Satz gekommen. Sei $T:V\rightarrow V$ linear, dann gilt $\lambda \in K$ ist genau dann Eigenwert von $T$ wenn $ker(T-\lamda I_n)\neq\left\lbrace\emptyset\right\rbrace$\newline
-\textbf{Beweis} $\lambda \in K$ Eigenwert $\LeftRightarrow \exists v\in V, v\neq 0_v$ so dass $Tv=\lambda v\Leftrightarrow (T-\lambda I_n)v=0_v$ Und daher ist $v\in ker(T-\lambda I_n)$ 
+Wir sind auf dem Folgenden Satz gekommen. Sei $T:V\rightarrow V$ linear, dann gilt $\lambda \in K$ ist genau dann Eigenwert von $T$ wenn $ker(T-\lambda I_n)\neq\left\lbrace\emptyset\right\rbrace$\newline
+\textbf{Beweis} $\lambda \in K$ Eigenwert $\Leftrightarrow \exists v\in V, v\neq 0_v$ so dass $Tv=\lambda v\Leftrightarrow (T-\lambda I_n)v=0_v$ Und daher ist $v\in ker(T-\lambda I_n)$ 
 \newline Das ist Praktisch da wenn $(T-\lambda I_n$ nicht injektiv ist dann ist $ker(T-\lambda I_n)\neq \emptyset$ und wenn die Determinante nicht null ist dann ist $T-\lambda I_n$ kein endomorphismus.\newline
 \textbf{Bemerkung} 0 ist ein Eigenwert wenn $T$ kein isomorphismus ist\newline
 \textbf{Korollar} Folgende aussagen sind äquivalent: \begin{itemize}
@@ -102,6 +102,22 @@ Wir sind auf dem Folgenden Satz gekommen. Sei $T:V\rightarrow V$ linear, dann gi
 \item{$det(T-\lambda I_n)=0$}
 \end{itemize}
 Der Beweis ist eine zusammenfassung von vorherigen beweisen
-
+\newline Mit dieses wissen kann man Finden dass es hochstens $n$ Unterschliedliche eigenwerte gibt, da die mit einen grad $n$ polynom definiert sind.
+\subsection{Das charachteristische polynom} \textbf{Definition 10.2.1} Sei $A\in M_{n\times n}(K)$. dann ist $X_a(x)=det(A-x1_n)$ das charakteristische polyom von A
+Für eine $2\times 2$ Matrix ist dann \[X_A(X)=x^2-\underset{Tr(A)}{\underbrace{(a-d)}}x+\underset{det(A)}{\underbrace{ad-bc}}\]
+Kleine errinerung, die Trace ist die Summe der Diagonale elemente. Diese bemerkung gilt auch für $3\times3$. Wir rechnen jetzt für $n\times n$. Der Konstante term von $det(A-xI_n)$ ist $det(A)$ (da es der Fall bei $x=0$ ist)
+\newline
+Insbesondere:
+\[X_1(x)=x^2-2x+1=(x-1)^2\]
+\textbf{Definition 10.2.3} $T:V\rightarrow V$ linear dann ist $X_T(x)=det([T]_b^b-xI_n)$ Für eine Basis $B$ von $V$.\newline
+\textbf{10.2.4} $X_T(x)$ ist wohldefiniert.\newline
+\textbf{Beweis}
+\[[T]^C_C=[D]^B_C[T]^B_B[D^{-1}]^C_B\] 
+Multiplikativität von det:
+\[det([T]^C_C-xI_n)=det([D]^B_C[T]^B_B[D^{-1}]^C_B-xI_n)=det([D]^B_C[T]^B_B[D^{-1}]^C_B-xD^{-1}D)=det(D)det([T]^B_B-xI_n)det(D^{-1})\]
+Was unsere  aussage zustimmt.
+\newline Da  das  Charakteristische  Polynom unabhängig von der Wahl der Basis, ist sie Eindeutig und daher Wohldefiniert.
+\newline\textbf{Theorem 10.2.5} Es sei $T:V\rightarrow V$ linear, dann gilt dass\[\left\lbrace\text{Eigenwerte von }T\right\rbrace=\left\lbrace\lambda\in K|X_T(\lambda)=0\right\rbrace\]
+\textbf{Lemma 10.2.6} Sei $A=(a_{ij})\in M_{n\times n}(K)$ Eine Obere Dreiecksmatrix. Dann ist das Charakteristische Polynom \[X_A(x)=\Pi_{i=1}^n(a_{ii}-x)\]
 
 \end{document}
