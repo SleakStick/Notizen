@@ -75,5 +75,16 @@ $(x_n)_{n\in\mathbb{N}}$ mit $d(y,x_n)<\varepsilon \mspc \Rightarrow\mspc x\righ
 \newline
 "$\Leftarrow$" $\forall \epsilon \mspc B(x, \epsilon)$ ist offen. Und es gilt $\exists N\in\mathbb{N} : x_n\in\forall n>N B(x, \varepsilon)$ Dies bedeutet gemäss definition dass $\underset{n\rightarrow\infty}{lim} x_n=x$. \newline
 \textbf{Korollar} Es sei $X$ eine Menge und $d_1, d_2$ zwei verschieden Metriken. Dann haben $(X,d_1), (X, d_2)$ genau dann die selben konvergente Folgen wenn die Topologien von $d_1$ und $d_2$ ubereinstimmen. 
+\newline\subsection{Banachscher Fixpunkttheorem}
+Sei $(X,d)$ Ein Vollständiger Metrischer raum mit eine Abbildung $f:X\rightarrow X$ die Lipschitz stetig ist mit $L<1$\[\forall x,x'\in X\mspc d(f(x),f(x'))\le Ld(x,x')\]
+Dann gibt es ein wert $z\in X$ wofür $f(z)=z$
 \newline
+\textbf{Beweis der Existenz des Fixpunkts} Wir nehmen $x\in x_0$ beliebig, dann konstruiren wir iterativ eine Folge in $X$ und zwar wie folgt: $x_{n+1}:=f(x_n)$ Dies ergibt tatsächlich eine Folge $(x_n)n\in\mathbb{N}_0$ Als nächstes wollen wir Zeigen dass diese Folge eine Cauchy-Folge ist.
+\begin{itemize}
+  \item{$d(x_{n+1},x_n)=d(f(x_n),f(x_{n-1}))=d(f^n(x_0),f^n(x_0))\le L^nd(x_1,x_0)$}
+  \item{$d(x_m,x_n)\le \sum_{k=n}^{m-1}d(x_{k+1}^,x_k)\le\sum_{k=n}^{m-1}L^kd(x_1,x_0)=d(x_1,x_0)\sum_{k=n}^{m-1}l^k$ Und diese Reihe ist für $L<1$ $\forall n,m\in \mathbb{N}_0$ und sogar $m\rightarrow\infty$ konvergent.
+  Und wir finden:\[\forall m,n\in\mathbb{N}_0, d(x_n,x_m)\le d(x_1,x_0)\underset{\text{für }n\rightarrow\infty,\mspc \rightarrow0}{\underbrace{\frac{L^n}{1-L}}} \]Und damit ist unsere Folge eine Cauchy-Folge }
+\end{itemize}
+Es bleibt noch zu zeigen dass $\overline{x}$ ein Fixpunkt ist:
+\[f(\overline{x})=\lim_j\]
 \end{document}
