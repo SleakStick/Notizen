@@ -128,6 +128,7 @@ Die Allgemeine Lösung olgt folgender Form:
 \begin{itemize}
 \item{Transversalwelle: Auslenkung senkrecht zur geschwindigkeit}
 \item{Longitudonalwell, die Auslenkung ist parallel zur ausbreitung der Welle}
+\end{itemize}
 \subsection{Energietransport einer Welle}
 Eine welle transportiert kinetische und elastische energie, die Beträge dieser beiden einergien ist im volumen (flachenelement oder distanz) immer gleich.
 \subsection{Tipps zur Serie 1}
@@ -136,4 +137,50 @@ Eine welle transportiert kinetische und elastische energie, die Beträge dieser 
 \item[$1.1_b$]{Die orte einfch einsetzen und die trigonometrische vereinfachen mit den mathemathischen hilfsmitteln der formelsammlung}
 \item[$1.2_a$]{Uhr und Lineal, so dass man zeiten und abständen messen kann. Welche gössen sind gegeben, und welche sin messbar? damit vereinfachen. Die Wellenlänge kann man (theoretisch messen) also mit der Wellenlänge die distanz ausrechen.}
 \end{itemize}
+\textbf{Stehende Welle} Die Stehende Welle ist einfach eine summe der Zwei wellen die sie aufführt.
+\subsection{Reflection und Transmission} Transmission ist in derselben richtung als einkommende Welle, Reflektierte welle dagegen
+\[\xi_A=Ae^{i(k_1x-\omega t)}\]
+\[\xi_R=Ree^{i(-k_1x-\omega t +\delta_R)}\]
+\[\xi_R=Te^{e(kx-\omega t +\delta_T)}\]
+Wir konnen diese glaichungen mit zwei Parameter (zwei gleichungen) losen.
+\newline Wir haben Zwei Bedingungen:
+\newline Steigkeit\[lim_{x\rightarrow 0^-}(\xi_a+\xi_R)=lim_{x\rightarrow0^+}\xi_T\]
+Und Kraftegleichgewicht:\[S_1\frac{\delta\xi_a}{\delta x}\left.\right|_{x=0}+\frac{\delta\xi_R}{\delta x}\left.\right|_{x=0}=\frac{\delta\xi_T}{\delta x}\left.\right|_{x=0}\]
+\[A+Re^{i\delta_R}=Te^{i\delta_T}\]
+Imaginärteil: $T\sin(\delta_T)=R\sin(\delta_R)$
+\[Kraftgleichung\mspc AS_1k_1=TS_2k_2e^{i\delta_T}+RS_1k_1e^{i\delta_R}\]
+\[TS_2k_2\sin(\delta_T)+RS_1k_1\sin(\delta_R)=0=T\sin(\delta_T(S_2k_2+S_1k_1))\]
+Und wir bekommen
+\[k_i=\frac{\omega}{v_i}\]
+\[\alpha=\frac{S_2\delta_2}{S_1\delta_1}\]
+Materialparameter $\alpha$ Ist ein Index von den Geschwindigkeiten der Welle in den beiden Materien (für ein seil ist $S$ die Spannung):\[T\sin(\delta_T)(\alpha+1)=0\Rightarrow\sin(\delta_T)=0\]
+  \[\delta_T=0\mspc\lim_{v_1\rightarrow v_2}\xi_A=\xi_T\]
+  \[\delta_T=\pi\lim_{v_1\rightarrow v_2}\xi_A=-\xi_T\]
+Es muss also $\delta_T=0$ sein da der Zweite fall unphysikalisch ist.
+\newline\textbf{Reflektierte Welle}
+Es gibt nochmal die Zwei mmoglichkeiten: $\delta_R=0$ oder $\delta_R=\pi$ 
+\[A=T\pm R \text{ oder } A=\alpha T\mp R\]
+\[R=\pm\frac{1-\alpha}{1+\alpha}A\mspc T=\frac{2A}{a+\alpha}\]
+Spezailfälle:
+
+\begin{itemize}
+\item{$\alpha=1\Rightarrow S_1\delta_1=S_2\delta_2\mspc\mspc R=0, T=A$}
+\item{$\alpha>1\Rightarrow\delta_R=\pi$ bei $\alpha\rightarrow\infty$ wird alles reflektiert und nichts transmittiert}
+\item{$\alpha<0\Rightarrow R\ge0$ und  $\delta_R=0\Rightarrow R=\frac{1-\alpha}{1+\alpha}A,\mspc T=\frac{2A}{\alpha+1}$}
+\end{itemize}
+\subsection{Stehende Wellen} Wir haben jetzt in dem Gedanksexperiment 2 laufende Wellen, und zwei Grenzflächen $\Rightarrow \xi=2A\cos(kx-\frac{\delta_R}{2})\cos(\omega t-\frac{\delta_R}{2})$
+\newline Reflexion am hartem Medium:$\alpha>>1, \delta_R=\pi$
+\[\xi=2Asin(kx)\sin(\omega t)\]
+\textbf{Energieverteilung der Stehende Wellen} Kinetische Energiedichte \[\frac{dT}{dV}=\frac{1}{2}\rho\left(\frac{\delta\xi}{\delta t}\right)^2=2\rho A^2\omega^2\sin^2(kx)\cos^2(\omega t)\]
+Elastische Energiedichte:
+\[\frac{1}{2}E\left(\frac{\delta \xi}{\delta x}\right)^2=2EA^2k^2\cos^2(kx)\sin^2(\omega t)\]
+\[k^2=\frac{\omega^2}{v^2}\mspc v^2=\frac{E}{\rho^2}\]
+\textbf{Eigenschwingungen Einer Seite} $\frac{\delta\xi^2}{\delta t^2}=v^2\frac{\delta^2\xi}{\delta x^2}$ Und daher $v^2=\frac{S}{\rho}$ rechnen rechnen rechnen und wir kommen auf:
+\[u(x)=u_0\cos(kx+\phi)=A\cos(kx)+B\sin(kx)\]
+Wo $A$ und $B$ ovn Randbedinugen kommen, (z.B feste Seite: $u(x=0)=u(x=l)=0$)
+\subsection{Ubungsstunde 2}
+\textbf{Polarisation} WIr wissen dass die Ausbreitung einer transversalwelle Senkrecht zur ausbreitungsrichtung Steht. Wir nehmen an die Welle breitet sich in der $z$ richtung aus, dann kann die Auslenkung überall auf der $x-<$ Ebene statt finden.\newline Eine Welle hesiit linear falls die Ganze AUslenkung nur in eine Ebene Stattfindet.
+Falls mehrere linear POlarisierte Wellen Uberlagert werden, und es zwischen diese Wellen einen Phasenunterschid gibt, dann ensteht eine Elliptisch-Polarisierte Welle
+\newline\textbf{Beispielaufgben} Angenommen wir haben eune Uberlagerung von:\[y_1(x,t)=5\cos(kx-\omega t)\vec{e_x}\]
+\[y_2(x,t)=2\cos(kx+\omega t)\vec{e_y}\]Hier ist die resultierende Welle immer noch linear polarisiert.
 \end{document}
