@@ -119,5 +119,27 @@ Was unsere  aussage zustimmt.
 \newline Da  das  Charakteristische  Polynom unabhängig von der Wahl der Basis, ist sie Eindeutig und daher Wohldefiniert.
 \newline\textbf{Theorem 10.2.5} Es sei $T:V\rightarrow V$ linear, dann gilt dass\[\left\lbrace\text{Eigenwerte von }T\right\rbrace=\left\lbrace\lambda\in K|X_T(\lambda)=0\right\rbrace\]
 \textbf{Lemma 10.2.6} Sei $A=(a_{ij})\in M_{n\times n}(K)$ Eine Obere Dreiecksmatrix. Dann ist das Charakteristische Polynom \[X_A(x)=\Pi_{i=1}^n(a_{ii}-x)\]
-
+\textbf{Satz 10.2.8} $Tr(T)$ ist wohldefiniert.
+\newline\textbf{Beweis} Wenn $C$ eine andere basis ist und $D=\left[id_v\right]^B_C$ dann gilt: $Tr[T]^B_B=Tr(D^{-1}[T]^C_CD)$
+\newline Hier bleibt in theorie nichts anderes als von hand zu zeigen dass $M_1,M_1\in M_{n\times n}(K)$ dann gilt: $Tr(M_1M_2)=Tr(M_2M_1)$. Aber es ist immer noch nicht sehr schon.
+\newline\textbf{Satz 10.2.9} Es sei $T:V\rightarrow V$ linear dann ist \[X_T(x)=(-1)^nx^n+(-1)^{n-1}Tr(T)x^{n-1}+\cdots+det(T)\] Uber den rest kann man nicht viel sagen\newline\textbf{Beweis}
+Es sei $A=[T]^B_B$ dann ist $X_A(x)=det(A)$ Aber die $A$ matrix ist sehr gross, dann muss man den beweis per induktion machen (Gute exams aufgabe). Hier ist die zweite idee die wir machen Wir wissen dass $B\in M_{n\times n}(K)$ dann gilt 
+\[det(B)=\sum_{\sigma\in S_n}sgn(\sigma)b_{\sigma(1),1}\cdot\cdots b_{\sigma(n),n}\] Sei $B=A-xI_n$ und $\sigma\in S_n$, für welche $\sigma$ ist $b_{\sigma(1),1}\cdot b_{\sigma(2),2}\cdots b_{\sigma(n),n}=(*)$ ein Polynom vom Grad $\ge n-1$?
+wenn $\sigma=id$ dann ist \[(*)=(a_{1,1}-x)\cdots(a_{nn}-x)=(-1)^nx^n+(-1)^{n-1}\underset{=Tr(B)}{\underbrace{(a_{1,1}+a_{2,2}+...+a_{n,n})}}x^{n-1}+\text{Restterm von grad <n-1}\] Alle andere moglichkeiten für $\sigma$ müssen also vom grad $<n-1$ sein (da nur auf der Diagonale $a_{j,j}-x$ steht, uberall sonst gibt es kein $x$ und wenn wir nur ein element vertauschen, sind es zwei, und daher ist grad $<n-1$), und daher ist dass zweite vorfaktor vom polynom
+Welches dann beweist dass der zweite Restterm $Tr(A)$ ist und also dass unsere gleichung stimmt (der konstante faktor muss ja $=det(A)$ sein)
+\textbf{Korollar 10.2.11} $T:V\rightarrow V$ mir $V$ n-dim hat hochstens n Eigenwerte (da der Charachteristische polynom grad $n$ ist.)\newline
+\subsection{Diagonalisierung} Frage: es sei $T:V\rightarrow V$ ein Endomorphismus. Gibt es eine Basis in welche die abbildungsmatrix von $T$  diagonal ist?
+\newline\textbf{Satz 10.3.2} Es seien $\lambda_1,\cdots,\lambda_n$ verschieden eigenwerte von $T$ und $\forall i$ sei $v_i$ ein Eigenvektor mit eigenwert $\lambda_i$ dann sind $v_1,\cdots,v_m$ linear unabhängig.\newline
+\textbf{Beweis} Es sei zwei Eigenvektoren, $v_a, v_b$ mit eigenwerte $\lambda_a,\lambda_b$ dabei ist dann $Tv_a=\lambda_av_a$ und $Tv_b=\lambda_bv_b$ wenn aber $v_a=cv_b$ (sie sind nicht linear unabhängig) dann gilt $Tcv_b=\lambda_acv_b$ und damit ist $\lambda_a\cdot c=\lambda_a$ und also sind diese Eigenvektore nicht unterschiedlich, da sie beide den selben Eigenwert haben.
+\newline
+\textbf{Korollar 10.3.4} Wenn Wir für $T:V\rightarrow V$ linear mit $V$ n-dim, wenn $T$ Genau $n$ verschidene Eigenwerte hat, dann hat $V$ eine Basis die aus $\lambda_1,\lambda_2,\cdots,\lambda_n$ besteht.\newline
+\textbf{Definition 10.3.5} $T:V\rightarrow V$ ist diagonalisierbar wenn $\exists$ Basis von Eigenvektoren existiert.
+In diesem Fall ist die Abbildungsmatrix von $T$ bezüglich dieser Basis diagonal, mit den Eigenwerte als einträge in der Matrix.\newline
+\textbf{Bemerkung 10.3.6} Eine $A\in M_{n\times n}$ Matrix ist diagonalisierbar $\Leftrightarrow$ $\exists B\in GL_n(K)$ so dass $B^{-1}AB$ diagonal ist (basiswechselmatrix).
+\newline \textbf{Lemma 10.3.7} Wenn $A$ Diagonalisierbar mit Eigenwerten $\lambda_1,\cdots,\lambda_1$ ist, dann ist $X_A=\Pi(\lambda_i-x)$
+\newline
+Charachterische Polynom ist: $X_A=det(A-xI_n)$ und seine losungen sind die Eigenwerte der Matrix.\newline
+Eine $n$-dim Matrix ist diagonalisierbar falls es $n$ unterschiedliche Eigenwerte gibt, daher wenn es eine Basis von Eigenvektoren gibt. Wir wissen auch dass
+\[A=[T]^B_B\Leftrightarrow\exists P\in GL_n(K) \text{ so dass } P^{-1}AP \text{ Diagonal ist }\]
+Frage, für welche $A$ gibt es so ein $P$?
 \end{document}
