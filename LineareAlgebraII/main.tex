@@ -90,8 +90,7 @@ Sei $B\in M_{n\times n}$ und $b=(b_{ij})$ dann gitl die formel
 \[\sum_{\sigma\in S_n}b_{\sigma(1,1)}....b_{\sigma(n,n)}\]
 Sei $B=A-x1_n$ und $\sigma\in S_n$ Fur welche $\sigma$ hat \[b_{\sigma(1,1)}b_{\sigma(2,2)}....b_{\sigma(n,n)}\] ein polynom von grad $>$n-1?
 Der beweis ist todlich, nacheher schauen ich tippe jetzt was ich nicht verstehe...
-
-\section{2. Viewing von der Vorlesung am 25.02}
+\newline
 $T:V\rightarrow V$ linear, dann ist $\lambda \in K$ eine Eigenvector wenn $\exists v\in V,v\neq 0_v$ so dass $Tv=\lambda v$. Hier merken wir dass der skalar eines Eigenvektors, auch ein egeinvektor ist, und dass die addition von zwei vektoren mir den selben eigenwert, auch ein Eigenvektor ist, also hat dies die Struktur eines unterraums...\newline
 Wir sind auf dem Folgenden Satz gekommen. Sei $T:V\rightarrow V$ linear, dann gilt $\lambda \in K$ ist genau dann Eigenwert von $T$ wenn $ker(T-\lambda I_n)\neq\left\lbrace\emptyset\right\rbrace$\newline
 \textbf{Beweis} $\lambda \in K$ Eigenwert $\Leftrightarrow \exists v\in V, v\neq 0_v$ so dass $Tv=\lambda v\Leftrightarrow (T-\lambda I_n)v=0_v$ Und daher ist $v\in ker(T-\lambda I_n)$ 
@@ -199,6 +198,19 @@ Man merkt dass:
 $\det([T]^B_B-xI_n)=(\lambda-x)^k\cdot\det(D-xI_{n-k})$ das bedeutet dass $k\le a_\lambda$ da im $\det(D-xI_{n-k})$ auch eine Nullstelle vorkommen kann.
 \newline
 \textbf{Korollar 10.5.5} Es seien $\lambda_1,...,\lambda_k$ unterschiedliche Eigenwerte von $T$, dann gilt: \[T \text{ ist diagonalisierbar }\Leftrightarrow g_{\lambda_i}=a_{\lambda_i}\smspc \forall i\]
-\newline\textbf{Beweis} Korollar 10.4.10 sagt dass $T$ ist Diagonalisierbar übung...
+\newline\textbf{Beweis} Korollar 10.4.10 sagt dass \[T\text{ ist Diagonalisierbar }\Leftrightarrow V=E_{\lambda_1}\bigoplus...\bigoplus E_{\lambda_k}\Leftrightarrow \dim(V)=\sum\dim(E_{\lambda_i})=\sum g_{\lambda_i}\le\sum a_{\lambda_i}=n=\dim(V)\]
+da beide seiten $\dim(V)$ haben, dann ist $\sum g_{\lambda_i}=\sum a_{\lambda_i}$ und da $a_{\lambda_i}\ge g_{\lambda_i}$ ist $a_{\lambda_i}=g_{\lambda_i}\smspc\forall i$
+\newline\textbf{Theorem 10.5.6} Sei $\dim(V)=n$ mit $T:V\rightarrow V$ dann sind folgende aussagen äquivalent:\begin{itemize}
+  \item{$T$ ist Diagonalisierbar}
+  \item{$\forall\lambda$ gilt $a_\lambda=g_\lambda$}
+  \item{Seien $\lambda_1,...\lambda_k$ Eigenwerte, dann gilt $X_T(x)=\Pi(\lambda_i-x)^{g_{\lambda_i}}$}
+  \item{$V=\overset{k}{\underset{i=1}{\bigoplus}}E_{\lambda_i}$}
+\end{itemize}
+Die Beweise sind schon alle vorgeführt gewesen.\newline
+Was machen wir mit den Matrizen die man nicht diagonalisieren kann? 
+\section{Das minimale Polynom}
+\subsection{Definition und Erste Eigenschaften}\textbf{Definition 11.1.1} Sei $T:V\rightarrow V$ linear, dann ist $T^k=\underset{k\text{ mal}}{\underbrace{T\circ...\circ T}}$ und $T^0=id_V$. Die definition ist für Matrizen analog.\newline
+\textbf{Definition 11.1.2} Sei $g(x)=a_dx^d+...+a_1x+a_0\in K$ ein Polynom, dann definieren wir $g(T)=a_dT^d+...+a_1T^1+a_0T^0\in End_k(V)$. Es geht auch mit matrizen.
+\newline
 \end{document}
 
