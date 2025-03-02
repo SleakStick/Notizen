@@ -2,9 +2,11 @@
 \title{Lineare Algebra II}
 \author{Benjamin Dropmann}
 \usepackage{geometry}
+\usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \newcommand{\mspc}{\hspace{0.7cm}}
+\newcommand{\smspc}{\hspace{0.3cm}}
 \geometry{margin=1.5cm}
 \begin{document}
 \maketitle
@@ -127,7 +129,7 @@ Es sei $A=[T]^B_B$ dann ist $X_A(x)=det(A)$ Aber die $A$ matrix ist sehr gross, 
 \[det(B)=\sum_{\sigma\in S_n}sgn(\sigma)b_{\sigma(1),1}\cdot\cdots b_{\sigma(n),n}\] Sei $B=A-xI_n$ und $\sigma\in S_n$, für welche $\sigma$ ist $b_{\sigma(1),1}\cdot b_{\sigma(2),2}\cdots b_{\sigma(n),n}=(*)$ ein Polynom vom Grad $\ge n-1$?
 wenn $\sigma=id$ dann ist \[(*)=(a_{1,1}-x)\cdots(a_{nn}-x)=(-1)^nx^n+(-1)^{n-1}\underset{=Tr(B)}{\underbrace{(a_{1,1}+a_{2,2}+...+a_{n,n})}}x^{n-1}+\text{Restterm von grad <n-1}\] Alle andere moglichkeiten für $\sigma$ müssen also vom grad $<n-1$ sein (da nur auf der Diagonale $a_{j,j}-x$ steht, uberall sonst gibt es kein $x$ und wenn wir nur ein element vertauschen, sind es zwei, und daher ist grad $<n-1$), und daher ist dass zweite vorfaktor vom polynom
 Welches dann beweist dass der zweite Restterm $Tr(A)$ ist und also dass unsere gleichung stimmt (der konstante faktor muss ja $=det(A)$ sein)
-\textbf{Korollar 10.2.11} $T:V\rightarrow V$ mir $V$ n-dim hat hochstens n Eigenwerte (da der Charachteristische polynom grad $n$ ist.)\newline
+\newline\textbf{Korollar 10.2.11} $T:V\rightarrow V$ mir $V$ n-dim hat hochstens n Eigenwerte (da der Charachteristische polynom grad $n$ ist.)\newline
 \subsection{Diagonalisierung} Frage: es sei $T:V\rightarrow V$ ein Endomorphismus. Gibt es eine Basis in welche die abbildungsmatrix von $T$  diagonal ist?
 \newline\textbf{Satz 10.3.2} Es seien $\lambda_1,\cdots,\lambda_n$ verschieden eigenwerte von $T$ und $\forall i$ sei $v_i$ ein Eigenvektor mit eigenwert $\lambda_i$ dann sind $v_1,\cdots,v_m$ linear unabhängig.\newline
 \textbf{Beweis} Es sei zwei Eigenvektoren, $v_a, v_b$ mit eigenwerte $\lambda_a,\lambda_b$ dabei ist dann $Tv_a=\lambda_av_a$ und $Tv_b=\lambda_bv_b$ wenn aber $v_a=cv_b$ (sie sind nicht linear unabhängig) dann gilt $Tcv_b=\lambda_acv_b$ und damit ist $\lambda_a\cdot c=\lambda_a$ und also sind diese Eigenvektore nicht unterschiedlich, da sie beide den selben Eigenwert haben.
@@ -141,5 +143,62 @@ In diesem Fall ist die Abbildungsmatrix von $T$ bezüglich dieser Basis diagonal
 Charachterische Polynom ist: $X_A=det(A-xI_n)$ und seine losungen sind die Eigenwerte der Matrix.\newline
 Eine $n$-dim Matrix ist diagonalisierbar falls es $n$ unterschiedliche Eigenwerte gibt, daher wenn es eine Basis von Eigenvektoren gibt. Wir wissen auch dass
 \[A=[T]^B_B\Leftrightarrow\exists P\in GL_n(K) \text{ so dass } P^{-1}AP \text{ Diagonal ist }\]
-Frage, für welche $A$ gibt es so ein $P$?
+Frage, für welche $A$ gibt es so ein $P$?\begin{itemize}
+  \item{Wenn $A$ diagonal ist dann ist $P$ die identität.}
+  \item{Wenn $X_A(x)$ $n$ verschiedene Nullstellen hat, beachte, $\begin{pmatrix}1&0\\0&1\end{pmatrix} aber X(x)=(1-x)^2$ also diese bedingung ist nicht ausschlieslich.}
+\end{itemize}
+Gibt es matizen die Nicht diagonlisierbar sind?\newline
+\textbf{Beispiele 10.3.8} \begin{itemize}
+  \item{$A=\begin{pmatrix}1&1\\0&0\end{pmatrix}\Rightarrow X_A(x)=x^2\Rightarrow A$ hat nur einen Eigenwert, $\Rightarrow\begin{pmatrix}0&1\\0&0\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}0\\0\end{pmatrix}\Rightarrow$ Eigenvektoren sind $\alpha \begin{pmatrix}1\\0\end{pmatrix}$ Daraus kann man aber keine Basis machen, dies ist nicht diagonalisierbar.}
+  \item{Es kann auch am Korper liegen dass wir nicht diagonaliseren konnen: $M=\begin{pmatrix}0&-1\\1&0\end{pmatrix}\in M_{2\times2}(\mathbb{R})\Rightarrow X_M(x)=x^2+1$ dass konnen wir nicht in $\mathbb{R}$ faktorisieren, aber in $\mathbb{C}$ geht es mit Eigenwerte $\pm i$, Wir werden immer den Korper vergrossern so dass dieser Fall nicht aufkommt}    
+  \end{itemize}
+  \textbf{Besipiel 10.3.9:} der Erste Fall in der Liste lässt sich verallgemeinern, Sei $n\ge1, \lambda \in K$ Wir definieren die \textbf{Jordansche Blockmatrix} \[J_n(\lambda)=\begin{pmatrix}
+\lambda & 1 & 0 & \dots & 0 \\
+0 & \lambda & 1 & \dots & 0 \\
+0 & 0 & \lambda & \ddots & \vdots \\
+\vdots & \vdots & \ddots & \ddots & 1 \\
+0 & 0 & \dots & 0 & \lambda
+\end{pmatrix}\]
+Und wir merken also dass $X_{J_n}(x)=(\lambda-x)^n$ Wobei der einzige Eigenwert $x=\lambda$ und die Dazugehorigen EigenVektoren sind dann $\alpha \begin{pmatrix}1\\0\\\vdots\\0\end{pmatrix}$ was natürlich für $n>1$ keine Basis.
+\newline
+\textbf{Folgerungen} Dass Charakterische allein entscheidet nicht ob eine Matrix diagonalisierbar ist. Und dass Problem ist eine Mogliche Diskrepanz zwischen der Ordnung der Nullstelle und die Dimension des aufgespannten Unterraums der Eigenvektoren.
+\subsection{Eigenräume}\textbf{Definition 10.4.1} Sei $T:V\rightarrow V$ linear und $\lambda$ ein Eigenvektor von $T$. Der Eigenraum, ist der Aufgespannte unterraum vom $\lambda$-Eigenvektor, seine Defintion ist wie Folgt $E_\lambda=ker(T-\lambda id_v)=<\lambda\text{Eigenvektoren}>$
+\newline\textbf{Lemma 10.4.2} $E_\lambda\subset V$ Beweis trivial.\newline
+\textbf{10.4.3}\begin{itemize}
+  \item{$A=\begin{pmatrix}0&1&1\\1&0&1\\1&1&0\end{pmatrix}$ Dann ist $X_A(x)=-x^3+3x+2$ und dann sind die Eigenwerte $X_A(2)=0$ und dann konnen wir Faktorisieren und es kommt $X_A(x)=-(x-2)(x+1)^2$ und die Dimensionen der Dazugehorigen Eigenräume sind:\[A\begin{pmatrix}x\\y\\z\end{pmatrix}=2\begin{pmatrix}x\\y\\z\end{pmatrix}\Rightarrow E_{\lambda=2}=\left<\begin{pmatrix}1\\1\\1\end{pmatrix}\right>\]
+    Und mit $E_{\lambda=-1}=\left<\begin{pmatrix}1\\1\\-2\end{pmatrix},\begin{pmatrix}1\\-2\\1\end{pmatrix}\right>$}
+\end{itemize}
+Aber mit eine Riesen matrix ist es schwierig zu sagen ob wenn wir alle Eigenräume zusammenstellen, wir eine Basis von $V$ haben, oder nicht. \newline
+\textbf{Definition 10.4.4} Sei $V$ ein V-R, wir betrachten $U_1, ..., U_k\subset V$ Sei $W=U_1+\cdots U_k$ Dann ist $W$ die Direkte summe von $U_1,...,U_k$, wenn \[\forall w \in W\smspc \exists!u_1\in U_1,..., u_k\in U_k\text{ so dass } w=u_1+...+u_k\] Man schreibt $W=U_1\bigoplus...\bigoplus U_k$
+\newline Ich glaube dies ist äquivalent zu $\bigcap U_i=\left\lbrace0_v\right\rbrace$ Der beweis ist schwierig.
+\newline\textbf{Lemma 10.4.6} Es gilt $W=U_1\bigoplus...\bigoplus U_k$ genau wenn die Gleichung $u_1+...+u_k==_v$ mit $u_i\in U_i \smspc \forall i$ nur die Losung $u_i=0_v\smspc\forall i$ hat. Der beweis ist als übung zum Leser überlassen\newline
+\textbf{Beispiele 10.4.7}\begin{itemize}
+\item{$\mathbb{R}^3=\left<\begin{pmatrix}1\\-1\\0\end{pmatrix}\right>\bigoplus\left<\begin{pmatrix}2\\-1\\0\end{pmatrix}\right>\bigoplus\left<\begin{pmatrix}0\\0\\1\end{pmatrix}\right>$ Dies wäare äquivalent zu sagen dass diese drei elemente eine Basis von $\mathbb{R}^3$ sind also ja}
+\item{$\mathbb{R}^2=\left<\begin{pmatrix}1\\-1\end{pmatrix}\right>+\left<\begin{pmatrix}2\\-1\end{pmatrix},\begin{pmatrix}-3\\1\end{pmatrix}\right>$ aber Keine Direkte summe da die zweite lineare Hülle unnotige elemente enthält}
+  
+\end{itemize}
+\textbf{Beachte 10.4.8} Wenn $W$ die Direkte Summe von $U_1....U_k$ ist dann gilt dass $\dim(W)=\dim(U_1)+...\dim(U_k)$
+\newline\textbf{Beweis} Sei $B_i$ Basis von $U_i$ dann behaupten wir dass $B_1\cup....\cup B_k$ Basis von $W$ ist. Dieser Teil des Beweis ist als Ubung überlassen \newline
+\textbf{Satz 10.4.9} Es sei $T:V\rightarrow V$ linear und $\lambda_1,...,\lambda_k$ Eigenwerte von $T$ mit $\lambda_i\neq\lambda_j\forall i\neq j$. Sei $W =E_{\lambda_1}+...+E_{\lambda_k}$ Dann gilt $W=E_{\lambda_1}\bigoplus...\bigoplus E_{\lambda_k}$.
+\newline\textbf{Beweis} Nehmen wir an dass $\exists u_1,...,u_k\smspc u_i\in E_{\lambda_i}$ und dann da $u_i$ jeweils in unterschiedliche Eigenräume sind, sind die alle von einander linear unabhängig, kann die summe den Nullvektor ergeben:\[\exists u_1,...,u_k\in E_{\lambda_i}\text{ so dass } u_1+...+u_k=0_v\]
+Doch $u_1,...,u_k$ sind linear unabhängig und wenn $u_i\neq 0_v\smspc \forall i$ dann kriegen wir ein widerspruch.
+\newline \textbf{Korollar 10.4.10} Sei $T:V\rightarrow V$ linear mit Eigenwerte $\lambda_1,...,\lambda_k$ dann ist $T$ genau dann Diagonalisierbar, wenn die summe der dimensionen der dazugehorigen Eigenräume, die dimension von $V$ ist: \[T \text{ ist Diagonaliserbar }\Leftrightarrow\dim(V)=\sum_{i=1}^k\dim(E_{\lambda_i})\] 
+\subsection{Algebraische und Geometrische vielfachheit}
+\textbf{Bemerkung 10.5.1} Es sei $n=\dim_K(V)$ mit $T:V\rightarrow V$ Dann hat $X_T(x)$ grad $n$ und wenn $X_T(x)=(\lambda_1-x)^{a_1}\cdot...\cdot (\lambda_k-x)^{a_k}$ mit $\lambda_i\neq\lambda_j\forall i\neq j$ dann ist $n=\sum a_i$
+\newline\textbf{Definition 10.5.2} sei $\lambda$ Eigenwert von $T$ dann ist \begin{itemize}
+  \item{Die Geometrische Vieflachheit; $g_\lambda=\dim(E_\lambda)$}
+  \item{Algebraische Vielfacheit $a_\lambda$ ist die Ordnung der Nullstelle vom Faktor $\lambda$ in $X_T(x)$}
+\end{itemize}
+\textbf{Beispiele 10.5.3} Im beispiel 10.4.3 hatten wir \begin{itemize}\item{$\lambda_1=-1$ und $g_{\lambda_1}=a_{\lambda_1}=-2$}
+  \item{$J_n(\lambda)\smspc g_{\lambda}=1\smspc a_\lambda=n$}
+  \item{$\lambda I_n \smspc g_\lambda=a_\lambda=n$}
+\end{itemize}
+Man merkt dass:
+\newline\textbf{Satz 10.5.4} $T:V\rightarrow V$ mir Eigenwert $\lambda$ Dann gilt $g_\lambda\le a_\lambda$
+\newline\textbf{Beweis} Sei $v_1,...,v_k$ eine Basis von $E_\lambda,v_k$ eine Basis von $E_\lambda$ und wir erweitern sie zu einer Basis $B=\lbrace v_1,...,v_k,v_{k+1},...,v_n\rbrace$ von $V$. Dann ist $[T]^B_B=\begin{pmatrix}\lambda I_k&C\\0&D\end{pmatrix}$ Dann ist
+$\det([T]^B_B-xI_n)=(\lambda-x)^k\cdot\det(D-xI_{n-k})$ das bedeutet dass $k\le a_\lambda$ da im $\det(D-xI_{n-k})$ auch eine Nullstelle vorkommen kann.
+\newline
+\textbf{Korollar 10.5.5} Es seien $\lambda_1,...,\lambda_k$ unterschiedliche Eigenwerte von $T$, dann gilt: \[T \text{ ist diagonalisierbar }\Leftrightarrow g_{\lambda_i}=a_{\lambda_i}\smspc \forall i\]
+\newline\textbf{Beweis} Korollar 10.4.10 sagt dass $T$ ist Diagonalisierbar übung...
 \end{document}
+

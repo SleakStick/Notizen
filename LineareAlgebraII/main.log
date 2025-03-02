@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.17)  1 MAR 2025 13:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.17)  2 MAR 2025 15:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -51,6 +51,9 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@dimlist=\toks18
 
 (C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
 (C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks19
@@ -59,8 +62,7 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+)) (C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip50
 
@@ -136,20 +138,20 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -185,23 +187,23 @@ LaTeX Font Info:    ... okay on input line 9.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
 
 (C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
 
 
 (C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 25--27
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
@@ -209,21 +211,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
 {C:/Users/Benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 128--131
+Underfull \hbox (badness 10000) in paragraph at lines 130--133
 
  []
 
-[4] (main.aux)
+[4] [5]
+Overfull \hbox (0.68518pt too wide) in paragraph at lines 196--201
+\OT1/cmr/bx/n/10 Beweis \OT1/cmr/m/n/10 Sei $\OML/cmm/m/it/10 v[]; :::; v[]$ \O
+T1/cmr/m/n/10 eine Ba-sis von $\OML/cmm/m/it/10 E[]; v[]$ \OT1/cmr/m/n/10 eine 
+Ba-sis von $\OML/cmm/m/it/10 E[]$ \OT1/cmr/m/n/10 und wir er-weit-ern sie zu ei
+ner Ba-sis $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/m/i
+t/10 v[]; :::; v[]; v[]; :::; v[]\OMS/cmsy/m/n/10 g$
+ []
+
+[6] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1894 strings out of 474486
- 29531 string characters out of 5743755
- 1943542 words of memory out of 5000000
- 24198 multiletter control sequences out of 15000+600000
+ 2313 strings out of 474486
+ 33924 string characters out of 5743755
+ 1948542 words of memory out of 5000000
+ 24614 multiletter control sequences out of 15000+600000
  566267 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,11n,65p,511b,218s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -245,9 +256,9 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Benja/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Benja/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (4 pages, 198923 bytes).
+Output written on main.pdf (6 pages, 216991 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1740832095.50687 "main.tex" "main.pdf" "main" 1740832096.21841 0
+["pdflatex"] 1740927008.06903 "main.tex" "main.pdf" "main" 1740927009.17687 0
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1740673091 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1735424699 11548 c8973c1c68aefebcc5118b7265d9f7dc ""
   "C:/Users/Benja/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1726576287 24225046 60d94b863bc1ec79cb6202797aed6d80 ""
@@ -43,6 +43,7 @@
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty" 1643997108 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty" 1643997108 1057 525c2192b5febbd8c1f662c9468335bb ""
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty" 1358197772 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
+  "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty" 1358197772 13829 94730e64147574077f8ecfea9bb69af4 ""
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd" 1358197772 961 6518c6525a34feb5e8250ffa91731cff ""
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd" 1358197772 961 d02606146ba5601b5645f987c92e6193 ""
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty" 1686931788 2222 499d61426192c39efd8f410ee1a52b9c ""
@@ -56,8 +57,8 @@
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty" 1578053545 42759 9cf6c5257b1bc7af01a58859749dd37a ""
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1665067579 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1704400941 30006 57b07afb710ee2f649c65cfbafda39c1 ""
-  "main.aux" 1740832095 817 50b4ef61fe3202f3d2b0bb64c4591f0f "pdflatex"
-  "main.tex" 1740832095 14256 50a545d53729e4413da52d9e4bd887ee ""
+  "main.aux" 1740927008 1056 654d2d5c9c70bc287d5527bfad0ceebc "pdflatex"
+  "main.tex" 1740927007 21642 593e24638011c3e9e61f582b25c0a2dd ""
   (generated)
   "main.aux"
   "main.log"
