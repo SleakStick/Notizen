@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.17)  2 MAR 2025 20:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.17)  3 MAR 2025 14:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -224,22 +224,17 @@ ner Ba-sis $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/m/i
 t/10 v[]; :::; v[]; v[]; :::; v[]\OMS/cmsy/m/n/10 g$
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 212--215
-
- []
-
-[7] (main.aux)
+[6] [7] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2313 strings out of 474486
- 33924 string characters out of 5743755
+ 2314 strings out of 474486
+ 33932 string characters out of 5743755
  1949542 words of memory out of 5000000
- 24614 multiletter control sequences out of 15000+600000
+ 24615 multiletter control sequences out of 15000+600000
  566267 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,65p,511b,218s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -261,7 +256,7 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Benja/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Benja/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (7 pages, 222124 bytes).
+Output written on main.pdf (7 pages, 224496 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

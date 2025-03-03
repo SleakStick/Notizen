@@ -211,6 +211,26 @@ Was machen wir mit den Matrizen die man nicht diagonalisieren kann?
 \section{Das minimale Polynom}
 \subsection{Definition und Erste Eigenschaften}\textbf{Definition 11.1.1} Sei $T:V\rightarrow V$ linear, dann ist $T^k=\underset{k\text{ mal}}{\underbrace{T\circ...\circ T}}$ und $T^0=id_V$. Die definition ist für Matrizen analog.\newline
 \textbf{Definition 11.1.2} Sei $g(x)=a_dx^d+...+a_1x+a_0\in K$ ein Polynom, dann definieren wir $g(T)=a_dT^d+...+a_1T^1+a_0T^0\in End_k(V)$. Es geht auch mit matrizen.
-\newline
+\newline\textbf{Beispiele 11.1.4}
+\begin{itemize}
+  \item{$A=\begin{pmatrix}1&2\\-1&1\end{pmatrix}\smspc f(x)=x^2-x+3\Rightarrow f(A)=A$}
+  \item{$g(x)=x^n$ dann ist $g(J_n(0))=0_{n\times n}$ im Jordanblock, verschiebt sich die diagonale nach oben rechts.}
+\end{itemize}
+\textbf{Satz 11.1.5} Sei $T\in End_K(V)$ dann $\exists g(x)\in K[x]$ so dass $g(T)=0_v$
+\newline\textbf{Beweis} $\dim(End_k(V))=n^2\Leftrightarrow\dim(V)=n$ dass heisst dass $T^0,T^1,...T^{n^2}$ sind alle linear unabhängig, und daher:\[\exists a_0,...a_{n^2}\in K \neq 0\text{ so dass }a_0T^0+...+a_{n^2}T^{n^2}=0_v\]
+\newline Aber kann man dieses Polynom finden, und hat es einen zusammenhang mit den Charakteristischen Polynom\newline
+\textbf{Bemerkung 11.1.6} Wenn $g(T)0_V$ dann gilt auch $(\alpha g)(T)=0_V\smspc \forall \alpha \in K$
+\newline\textbf{Beispiele 11.1.7}\begin{itemize}
+  \item{Sei $n\ge1\smspc, A=Id_n$ und $g(x)=x-1$ dann gilt $g(A)=0_{n\times n}$}
+  \item{Sei $A=\begin{pmatrix}\lambda_1&\left.\right.&0\\\left.\right.&\ddots&\left.\right.\\0&\left.\right.&\lambda_k\end{pmatrix}$ dann haben wir
+    $\forall g\smspc g(A)=\begin{pmatrix}g(\lambda_1)&\left.\right.&0\\\left.\right.&\ddots&\left.\right.\\0&\left.\right.&g(\lambda_k)\end{pmatrix}$ Hier konnen wir also $X_A(A)=0_{n\times n}$ nehmen}
+\end{itemize}
+Gilt dies also für jede Matrix?
+
+
+
+\subsection{Übungsstunde}
+Die geometrische vielfachheit vom Jordanblock ist immer $1$ und seine algebraische vielfachheit ist immer $n$:\[X_{J_{n}}(X)=(\lambda-x)^n\mspc g_\lambda=1\mspc a_\lambda=n\]
+
 \end{document}
 
