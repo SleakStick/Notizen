@@ -2,9 +2,11 @@
 \title{Lineare Algebra II}
 \author{Benjamin Dropmann}
 \usepackage{geometry}
+\usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \newcommand{\mspc}{\hspace{0.7cm}}
+\newcommand{\smspc}{\hspace{0.3cm}}
 \geometry{margin=1.5cm}
 \begin{document}
 \maketitle
@@ -60,7 +62,38 @@ $y\neq0, x\neq0$ Da die nullvektoren keine Eigenvektoren sind $\Rightarrow (1-\l
 \end{itemize}
 \textbf{Satz 10.1.4} $T:V\rightarrow V$ linear. Dann gilt: $\lambda \in K$ eigenwert von $T\Leftrightarrow ker(T-\lambda1_v)=0$
 
+<<<<<<< HEAD
 \section{Eigenwerttheorie}
+=======
+\textbf{Fibonaccifolgen} sei $V$ der V-R der Fibonnacci Folgen. wir haben $S:V\rightarrow V$ ist die Verschiebungsabbiildung, (die ist definiert in satz 1.1.15)\newline Die Basis war $B=\left\lbrace\mathbb{F}_{0,1}, \mathbb{F}_{1,0}<\right\rbrace$
+Und die matrix ist $[S]^B_B=\begin{pmatrix}0&1\\1&1\end{pmatrix}$ und $det(S)=\lambda^2-\lambda-1$ eigenwerte sind also $\phi und \varphi$ und die Eigenfolgen sind $\left\lbrace\mathbb{F}_{\phi,1}, \mathbb{F}_{\varphi,0}<\right\rbrace$ also die diagonal matrix ist dann $[S]^C_C=\begin{pmatrix}\phi&0\\0&\varphi\end{pmatrix}$
+\textbf{Das charakteristische polynom} Sei $A\in M_{m\times n}(K)$ Dann ist $X_A(x)=det(A-x\mathbb{a}_n)$ das charakteristische polynom von A\newline
+\textbf{10.2.2} $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ dann ist $X_a(x)=ichhabe nicht abgeschrieben$ aber der konstante term des carachteristischen polynom ist die Determinante.\newline
+\textbf{}$det(A-x1_n)$ Insbesondere $X_{1_2}(x)=x^3-2x+1=(x-1)^2$ 
+\newline
+\textbf{Definition 10.2.3} $T:V\rightarrow V$ linear dann sei $X_T(x)=det([T]_B^B-x1_n)$ dies ist unabhängig von der wahl der Basis $B$. 10.2.4: $X_T(x)$ ist wohldefiniert
+\newline
+\textbf{Beweis} $[T]_c^C=[D]^B_C[T]_B^B[D^{-1}]^C_B$ danns ist \[det([T]_C^C-1_nx) =det([D]^B_C[T]_B^B[D^{-1}]^C_B-1_nx)=det(D[T]^B_BD^{-1}-xDD^{-1})\]\[=det(D([T]^B_B-xT)D^{-1})=det(D)det([T]^B_B-x)det(d^-1=)=\det(D)det([T]^B_B-x)\]
+\subsection{Theorem 10.2.5:} Es sei $T:V\rightarrow V$ linear. Dann gilt dans die Eigenverte von $T=\left\lbrace\lambda \in K|X_T(\lambda)=0\right\rbrace$
+\newline
+\textbf{Lemma 10.2.6}Sei $A=(a_{ij})\in M_{n\times n}(K)$ eine obere Dreiecksmatrix fann gilt \[X_A(x)=\Pi_{n=1}^n(a_{ii}-x)\]
+Sei $M=\begin{pmatrix}a&b\\c&cd\end{pmatrix} \Rightarrow X_A=x^2-(a+d)x+ad-bc$\newline
+ Trace (noch nachzu sehen) $Tr:M_{n\times n}(K)\rightarrow A=(a_{ij})\rightarrow\sum a_{ii}1$
+\textbf{Def 10.2.7} Sei $T:V\rightarrow V$ linear dann ist die Spur von $T$ \[Tr(T)=Tr([T]^B_B)\]
+\textbf{10.2.8} $Tr(T)$ ist wohldefiniert
+\newline\textbf{Beweis} Zu zeigen wann $C$ eine Andere Basis un $D=id]^C_B$ dann gilt \[Tr([T]^B_B)=Tr(D^{-1}[T]^C_CD)\]
+Es reicht aus zu zeigen dass wenn $M_1,M-2\in M_{n\times n}(K)$ dann gilt $Tr(M_1M_2)=Tr(M-2M_1)$ (mit explizite rechnung beweisen)\newline
+Daher gilt auch 10.2.8\newline
+\textbf{Satz10.2.9} es sei $T:v\rightarrow V$ linear dann gilt \[X_T=(-1)^nx^n+(-1)^{n-1}x^{n-1}Tr(T)+...+det(T)\]
+\textbf{Beweis} es sei $A=[^B_B]$ Mit induktion kann man beweisen dass wenn es für eine $M_{n-1\times n-1}$ geht dann geht es für $M_{n\times n}$ als übung  zu machen.
+Der Zweite beweis geht wie folgt ab:
+\newline
+Sei $B\in M_{n\times n}$ und $b=(b_{ij})$ dann gitl die formel
+\[\sum_{\sigma\in S_n}b_{\sigma(1,1)}....b_{\sigma(n,n)}\]
+Sei $B=A-x1_n$ und $\sigma\in S_n$ Fur welche $\sigma$ hat \[b_{\sigma(1,1)}b_{\sigma(2,2)}....b_{\sigma(n,n)}\] ein polynom von grad $>$n-1?
+Der beweis ist todlich, nacheher schauen ich tippe jetzt was ich nicht verstehe...
+\newline
+>>>>>>> refs/remotes/origin/main
 $T:V\rightarrow V$ linear, dann ist $\lambda \in K$ eine Eigenvector wenn $\exists v\in V,v\neq 0_v$ so dass $Tv=\lambda v$. Hier merken wir dass der skalar eines Eigenvektors, auch ein egeinvektor ist, und dass die addition von zwei vektoren mir den selben eigenwert, auch ein Eigenvektor ist, also hat dies die Struktur eines unterraums...\newline
 Wir sind auf dem Folgenden Satz gekommen. Sei $T:V\rightarrow V$ linear, dann gilt $\lambda \in K$ ist genau dann Eigenwert von $T$ wenn $ker(T-\lambda I_n)\neq\left\lbrace\emptyset\right\rbrace$\newline
 \textbf{Beweis} $\lambda \in K$ Eigenwert $\Leftrightarrow \exists v\in V, v\neq 0_v$ so dass $Tv=\lambda v\Leftrightarrow (T-\lambda I_n)v=0_v$ Und daher ist $v\in ker(T-\lambda I_n)$ 
@@ -90,6 +123,7 @@ Was unsere  aussage zustimmt.
 \newline Da  das  Charakteristische  Polynom unabhängig von der Wahl der Basis, ist sie Eindeutig und daher Wohldefiniert.
 \newline\textbf{Theorem 10.2.5} Es sei $T:V\rightarrow V$ linear, dann gilt dass\[\left\lbrace\text{Eigenwerte von }T\right\rbrace=\left\lbrace\lambda\in K|X_T(\lambda)=0\right\rbrace\]
 \textbf{Lemma 10.2.6} Sei $A=(a_{ij})\in M_{n\times n}(K)$ Eine Obere Dreiecksmatrix. Dann ist das Charakteristische Polynom \[X_A(x)=\Pi_{i=1}^n(a_{ii}-x)\]
+<<<<<<< HEAD
 \newline
 $Tr:M_{n\times n}(K)\rightarrow K\mspc A=(a_{ij}\rightarrow \sum a_{ii})$ Ist wohldefiniert.
 \newline\textbf{Definition 10.2.7} Sei $T:V\rightarrow V$ linear  dann ist $Tr(T)=Tr([T]^B_B)$ Wobei $B$ eine Basis, Wohldefiniert (\textbf{Satz 10.2.8}).
@@ -97,5 +131,123 @@ $Tr:M_{n\times n}(K)\rightarrow K\mspc A=(a_{ij}\rightarrow \sum a_{ii})$ Ist wo
 reicht aus  zu zeigen, Wenn $M_1,M_2\in M_{n\times n}(K)$ dann gilt $Tr(M_1\cdot M_2)=Tr(M_2\cdot M_1)$ Da wenn dass gilt dann kürzt sich der $D, D^{-1}$. Dass ist eine Explizite berechung.
 \textbf{Satz 10.2.9} Sei $T:V\rightarrow V$ linear, dann gilt \[X_T(x)=(-1)^nx^n +(-1)^{n-1}Tr(T)x^{n-1}+\cdots+det(T)\]
 \newline \textbf{Beweis} Es sei $A=[T]^B_B$
-
+=======
+\textbf{Satz 10.2.8} $Tr(T)$ ist wohldefiniert.
+\newline\textbf{Beweis} Wenn $C$ eine andere basis ist und $D=\left[id_v\right]^B_C$ dann gilt: $Tr[T]^B_B=Tr(D^{-1}[T]^C_CD)$
+\newline Hier bleibt in theorie nichts anderes als von hand zu zeigen dass $M_1,M_1\in M_{n\times n}(K)$ dann gilt: $Tr(M_1M_2)=Tr(M_2M_1)$. Aber es ist immer noch nicht sehr schon.
+\newline\textbf{Satz 10.2.9} Es sei $T:V\rightarrow V$ linear dann ist \[X_T(x)=(-1)^nx^n+(-1)^{n-1}Tr(T)x^{n-1}+\cdots+det(T)\] Uber den rest kann man nicht viel sagen\newline\textbf{Beweis}
+Es sei $A=[T]^B_B$ dann ist $X_A(x)=det(A)$ Aber die $A$ matrix ist sehr gross, dann muss man den beweis per induktion machen (Gute exams aufgabe). Hier ist die zweite idee die wir machen Wir wissen dass $B\in M_{n\times n}(K)$ dann gilt 
+\[det(B)=\sum_{\sigma\in S_n}sgn(\sigma)b_{\sigma(1),1}\cdot\cdots b_{\sigma(n),n}\] Sei $B=A-xI_n$ und $\sigma\in S_n$, für welche $\sigma$ ist $b_{\sigma(1),1}\cdot b_{\sigma(2),2}\cdots b_{\sigma(n),n}=(*)$ ein Polynom vom Grad $\ge n-1$?
+wenn $\sigma=id$ dann ist \[(*)=(a_{1,1}-x)\cdots(a_{nn}-x)=(-1)^nx^n+(-1)^{n-1}\underset{=Tr(B)}{\underbrace{(a_{1,1}+a_{2,2}+...+a_{n,n})}}x^{n-1}+\text{Restterm von grad <n-1}\] Alle andere moglichkeiten für $\sigma$ müssen also vom grad $<n-1$ sein (da nur auf der Diagonale $a_{j,j}-x$ steht, uberall sonst gibt es kein $x$ und wenn wir nur ein element vertauschen, sind es zwei, und daher ist grad $<n-1$), und daher ist dass zweite vorfaktor vom polynom
+Welches dann beweist dass der zweite Restterm $Tr(A)$ ist und also dass unsere gleichung stimmt (der konstante faktor muss ja $=det(A)$ sein)
+\newline\textbf{Korollar 10.2.11} $T:V\rightarrow V$ mir $V$ n-dim hat hochstens n Eigenwerte (da der Charachteristische polynom grad $n$ ist.)\newline
+\subsection{Diagonalisierung} Frage: es sei $T:V\rightarrow V$ ein Endomorphismus. Gibt es eine Basis in welche die abbildungsmatrix von $T$  diagonal ist?
+\newline\textbf{Satz 10.3.2} Es seien $\lambda_1,\cdots,\lambda_n$ verschieden eigenwerte von $T$ und $\forall i$ sei $v_i$ ein Eigenvektor mit eigenwert $\lambda_i$ dann sind $v_1,\cdots,v_m$ linear unabhängig.\newline
+\textbf{Beweis} Es sei zwei Eigenvektoren, $v_a, v_b$ mit eigenwerte $\lambda_a,\lambda_b$ dabei ist dann $Tv_a=\lambda_av_a$ und $Tv_b=\lambda_bv_b$ wenn aber $v_a=cv_b$ (sie sind nicht linear unabhängig) dann gilt $Tcv_b=\lambda_acv_b$ und damit ist $\lambda_a\cdot c=\lambda_a$ und also sind diese Eigenvektore nicht unterschiedlich, da sie beide den selben Eigenwert haben.
+\newline
+\textbf{Korollar 10.3.4} Wenn Wir für $T:V\rightarrow V$ linear mit $V$ n-dim, wenn $T$ Genau $n$ verschidene Eigenwerte hat, dann hat $V$ eine Basis die aus $\lambda_1,\lambda_2,\cdots,\lambda_n$ besteht.\newline
+\textbf{Definition 10.3.5} $T:V\rightarrow V$ ist diagonalisierbar wenn $\exists$ Basis von Eigenvektoren existiert.
+In diesem Fall ist die Abbildungsmatrix von $T$ bezüglich dieser Basis diagonal, mit den Eigenwerte als einträge in der Matrix.\newline
+\textbf{Bemerkung 10.3.6} Eine $A\in M_{n\times n}$ Matrix ist diagonalisierbar $\Leftrightarrow$ $\exists B\in GL_n(K)$ so dass $B^{-1}AB$ diagonal ist (basiswechselmatrix).
+\newline \textbf{Lemma 10.3.7} Wenn $A$ Diagonalisierbar mit Eigenwerten $\lambda_1,\cdots,\lambda_1$ ist, dann ist $X_A=\Pi(\lambda_i-x)$
+\newline
+Charachterische Polynom ist: $X_A=det(A-xI_n)$ und seine losungen sind die Eigenwerte der Matrix.\newline
+Eine $n$-dim Matrix ist diagonalisierbar falls es $n$ unterschiedliche Eigenwerte gibt, daher wenn es eine Basis von Eigenvektoren gibt. Wir wissen auch dass
+\[A=[T]^B_B\Leftrightarrow\exists P\in GL_n(K) \text{ so dass } P^{-1}AP \text{ Diagonal ist }\]
+Frage, für welche $A$ gibt es so ein $P$?\begin{itemize}
+  \item{Wenn $A$ diagonal ist dann ist $P$ die identität.}
+  \item{Wenn $X_A(x)$ $n$ verschiedene Nullstellen hat, beachte, $\begin{pmatrix}1&0\\0&1\end{pmatrix} aber X(x)=(1-x)^2$ also diese bedingung ist nicht ausschlieslich.}
+\end{itemize}
+Gibt es matizen die Nicht diagonlisierbar sind?\newline
+\textbf{Beispiele 10.3.8} \begin{itemize}
+  \item{$A=\begin{pmatrix}1&1\\0&0\end{pmatrix}\Rightarrow X_A(x)=x^2\Rightarrow A$ hat nur einen Eigenwert, $\Rightarrow\begin{pmatrix}0&1\\0&0\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}0\\0\end{pmatrix}\Rightarrow$ Eigenvektoren sind $\alpha \begin{pmatrix}1\\0\end{pmatrix}$ Daraus kann man aber keine Basis machen, dies ist nicht diagonalisierbar.}
+  \item{Es kann auch am Korper liegen dass wir nicht diagonaliseren konnen: $M=\begin{pmatrix}0&-1\\1&0\end{pmatrix}\in M_{2\times2}(\mathbb{R})\Rightarrow X_M(x)=x^2+1$ dass konnen wir nicht in $\mathbb{R}$ faktorisieren, aber in $\mathbb{C}$ geht es mit Eigenwerte $\pm i$, Wir werden immer den Korper vergrossern so dass dieser Fall nicht aufkommt}    
+  \end{itemize}
+  \textbf{Besipiel 10.3.9:} der Erste Fall in der Liste lässt sich verallgemeinern, Sei $n\ge1, \lambda \in K$ Wir definieren die \textbf{Jordansche Blockmatrix} \[J_n(\lambda)=\begin{pmatrix}
+\lambda & 1 & 0 & \dots & 0 \\
+0 & \lambda & 1 & \dots & 0 \\
+0 & 0 & \lambda & \ddots & \vdots \\
+\vdots & \vdots & \ddots & \ddots & 1 \\
+0 & 0 & \dots & 0 & \lambda
+\end{pmatrix}\]
+Und wir merken also dass $X_{J_n}(x)=(\lambda-x)^n$ Wobei der einzige Eigenwert $x=\lambda$ und die Dazugehorigen EigenVektoren sind dann $\alpha \begin{pmatrix}1\\0\\\vdots\\0\end{pmatrix}$ was natürlich für $n>1$ keine Basis.
+\newline
+\textbf{Folgerungen} Dass Charakterische allein entscheidet nicht ob eine Matrix diagonalisierbar ist. Und dass Problem ist eine Mogliche Diskrepanz zwischen der Ordnung der Nullstelle und die Dimension des aufgespannten Unterraums der Eigenvektoren.
+\subsection{Eigenräume}\textbf{Definition 10.4.1} Sei $T:V\rightarrow V$ linear und $\lambda$ ein Eigenvektor von $T$. Der Eigenraum, ist der Aufgespannte unterraum vom $\lambda$-Eigenvektor, seine Defintion ist wie Folgt $E_\lambda=ker(T-\lambda id_v)=<\lambda\text{Eigenvektoren}>$
+\newline\textbf{Lemma 10.4.2} $E_\lambda\subset V$ Beweis trivial.\newline
+\textbf{10.4.3}\begin{itemize}
+  \item{$A=\begin{pmatrix}0&1&1\\1&0&1\\1&1&0\end{pmatrix}$ Dann ist $X_A(x)=-x^3+3x+2$ und dann sind die Eigenwerte $X_A(2)=0$ und dann konnen wir Faktorisieren und es kommt $X_A(x)=-(x-2)(x+1)^2$ und die Dimensionen der Dazugehorigen Eigenräume sind:\[A\begin{pmatrix}x\\y\\z\end{pmatrix}=2\begin{pmatrix}x\\y\\z\end{pmatrix}\Rightarrow E_{\lambda=2}=\left<\begin{pmatrix}1\\1\\1\end{pmatrix}\right>\]
+    Und mit $E_{\lambda=-1}=\left<\begin{pmatrix}1\\1\\-2\end{pmatrix},\begin{pmatrix}1\\-2\\1\end{pmatrix}\right>$}
+\end{itemize}
+Aber mit eine Riesen matrix ist es schwierig zu sagen ob wenn wir alle Eigenräume zusammenstellen, wir eine Basis von $V$ haben, oder nicht. \newline
+\textbf{Definition 10.4.4} Sei $V$ ein V-R, wir betrachten $U_1, ..., U_k\subset V$ Sei $W=U_1+\cdots U_k$ Dann ist $W$ die Direkte summe von $U_1,...,U_k$, wenn \[\forall w \in W\smspc \exists!u_1\in U_1,..., u_k\in U_k\text{ so dass } w=u_1+...+u_k\] Man schreibt $W=U_1\bigoplus...\bigoplus U_k$
+\newline Ich glaube dies ist äquivalent zu $\bigcap U_i=\left\lbrace0_v\right\rbrace$ Der beweis ist schwierig.
+\newline\textbf{Lemma 10.4.6} Es gilt $W=U_1\bigoplus...\bigoplus U_k$ genau wenn die Gleichung $u_1+...+u_k==_v$ mit $u_i\in U_i \smspc \forall i$ nur die Losung $u_i=0_v\smspc\forall i$ hat. Der beweis ist als übung zum Leser überlassen\newline
+\textbf{Beispiele 10.4.7}\begin{itemize}
+\item{$\mathbb{R}^3=\left<\begin{pmatrix}1\\-1\\0\end{pmatrix}\right>\bigoplus\left<\begin{pmatrix}2\\-1\\0\end{pmatrix}\right>\bigoplus\left<\begin{pmatrix}0\\0\\1\end{pmatrix}\right>$ Dies wäare äquivalent zu sagen dass diese drei elemente eine Basis von $\mathbb{R}^3$ sind also ja}
+\item{$\mathbb{R}^2=\left<\begin{pmatrix}1\\-1\end{pmatrix}\right>+\left<\begin{pmatrix}2\\-1\end{pmatrix},\begin{pmatrix}-3\\1\end{pmatrix}\right>$ aber Keine Direkte summe da die zweite lineare Hülle unnotige elemente enthält}
+  
+\end{itemize}
+\textbf{Beachte 10.4.8} Wenn $W$ die Direkte Summe von $U_1....U_k$ ist dann gilt dass $\dim(W)=\dim(U_1)+...\dim(U_k)$
+\newline\textbf{Beweis} Sei $B_i$ Basis von $U_i$ dann behaupten wir dass $B_1\cup....\cup B_k$ Basis von $W$ ist. Dieser Teil des Beweis ist als Ubung überlassen \newline
+\textbf{Satz 10.4.9} Es sei $T:V\rightarrow V$ linear und $\lambda_1,...,\lambda_k$ Eigenwerte von $T$ mit $\lambda_i\neq\lambda_j\forall i\neq j$. Sei $W =E_{\lambda_1}+...+E_{\lambda_k}$ Dann gilt $W=E_{\lambda_1}\bigoplus...\bigoplus E_{\lambda_k}$.
+\newline\textbf{Beweis} Nehmen wir an dass $\exists u_1,...,u_k\smspc u_i\in E_{\lambda_i}$ und dann da $u_i$ jeweils in unterschiedliche Eigenräume sind, sind die alle von einander linear unabhängig, kann die summe den Nullvektor ergeben:\[\exists u_1,...,u_k\in E_{\lambda_i}\text{ so dass } u_1+...+u_k=0_v\]
+Doch $u_1,...,u_k$ sind linear unabhängig und wenn $u_i\neq 0_v\smspc \forall i$ dann kriegen wir ein widerspruch.
+\newline \textbf{Korollar 10.4.10} Sei $T:V\rightarrow V$ linear mit Eigenwerte $\lambda_1,...,\lambda_k$ dann ist $T$ genau dann Diagonalisierbar, wenn die summe der dimensionen der dazugehorigen Eigenräume, die dimension von $V$ ist: \[T \text{ ist Diagonaliserbar }\Leftrightarrow\dim(V)=\sum_{i=1}^k\dim(E_{\lambda_i})\] 
+\subsection{Algebraische und Geometrische vielfachheit}
+\textbf{Bemerkung 10.5.1} Es sei $n=\dim_K(V)$ mit $T:V\rightarrow V$ Dann hat $X_T(x)$ grad $n$ und wenn $X_T(x)=(\lambda_1-x)^{a_1}\cdot...\cdot (\lambda_k-x)^{a_k}$ mit $\lambda_i\neq\lambda_j\forall i\neq j$ dann ist $n=\sum a_i$
+\newline\textbf{Definition 10.5.2} sei $\lambda$ Eigenwert von $T$ dann ist \begin{itemize}
+  \item{Die Geometrische Vieflachheit; $g_\lambda=\dim(E_\lambda)$}
+  \item{Algebraische Vielfacheit $a_\lambda$ ist die Ordnung der Nullstelle vom Faktor $\lambda$ in $X_T(x)$}
+\end{itemize}
+\textbf{Beispiele 10.5.3} Im beispiel 10.4.3 hatten wir \begin{itemize}\item{$\lambda_1=-1$ und $g_{\lambda_1}=a_{\lambda_1}=-2$}
+  \item{$J_n(\lambda)\smspc g_{\lambda}=1\smspc a_\lambda=n$}
+  \item{$\lambda I_n \smspc g_\lambda=a_\lambda=n$}
+\end{itemize}
+Man merkt dass:
+\newline\textbf{Satz 10.5.4} $T:V\rightarrow V$ mir Eigenwert $\lambda$ Dann gilt $g_\lambda\le a_\lambda$
+\newline\textbf{Beweis} Sei $v_1,...,v_k$ eine Basis von $E_\lambda,v_k$ eine Basis von $E_\lambda$ und wir erweitern sie zu einer Basis $B=\lbrace v_1,...,v_k,v_{k+1},...,v_n\rbrace$ von $V$. Dann ist $[T]^B_B=\begin{pmatrix}\lambda I_k&C\\0&D\end{pmatrix}$ Dann ist
+$\det([T]^B_B-xI_n)=(\lambda-x)^k\cdot\det(D-xI_{n-k})$ das bedeutet dass $k\le a_\lambda$ da im $\det(D-xI_{n-k})$ auch eine Nullstelle vorkommen kann.
+\newline
+\textbf{Korollar 10.5.5} Es seien $\lambda_1,...,\lambda_k$ unterschiedliche Eigenwerte von $T$, dann gilt: \[T \text{ ist diagonalisierbar }\Leftrightarrow g_{\lambda_i}=a_{\lambda_i}\smspc \forall i\]
+\newline\textbf{Beweis} Korollar 10.4.10 sagt dass \[T\text{ ist Diagonalisierbar }\Leftrightarrow V=E_{\lambda_1}\bigoplus...\bigoplus E_{\lambda_k}\Leftrightarrow \dim(V)=\sum\dim(E_{\lambda_i})=\sum g_{\lambda_i}\le\sum a_{\lambda_i}=n=\dim(V)\]
+da beide seiten $\dim(V)$ haben, dann ist $\sum g_{\lambda_i}=\sum a_{\lambda_i}$ und da $a_{\lambda_i}\ge g_{\lambda_i}$ ist $a_{\lambda_i}=g_{\lambda_i}\smspc\forall i$
+\newline\textbf{Theorem 10.5.6} Sei $\dim(V)=n$ mit $T:V\rightarrow V$ dann sind folgende aussagen äquivalent:\begin{itemize}
+  \item{$T$ ist Diagonalisierbar}
+  \item{$\forall\lambda$ gilt $a_\lambda=g_\lambda$}
+  \item{Seien $\lambda_1,...\lambda_k$ Eigenwerte, dann gilt $X_T(x)=\Pi(\lambda_i-x)^{g_{\lambda_i}}$}
+  \item{$V=\overset{k}{\underset{i=1}{\bigoplus}}E_{\lambda_i}$}
+\end{itemize}
+Die Beweise sind schon alle vorgeführt gewesen.\newline
+Was machen wir mit den Matrizen die man nicht diagonalisieren kann? 
+\section{Das minimale Polynom}
+\subsection{Definition und Erste Eigenschaften}\textbf{Definition 11.1.1} Sei $T:V\rightarrow V$ linear, dann ist $T^k=\underset{k\text{ mal}}{\underbrace{T\circ...\circ T}}$ und $T^0=id_V$. Die definition ist für Matrizen analog.\newline
+\textbf{Definition 11.1.2} Sei $g(x)=a_dx^d+...+a_1x+a_0\in K$ ein Polynom, dann definieren wir $g(T)=a_dT^d+...+a_1T^1+a_0T^0\in End_k(V)$. Es geht auch mit matrizen.
+\newline\textbf{Beispiele 11.1.4}
+\begin{itemize}
+  \item{$A=\begin{pmatrix}1&2\\-1&1\end{pmatrix}\smspc f(x)=x^2-x+3\Rightarrow f(A)=A$}
+  \item{$g(x)=x^n$ dann ist $g(J_n(0))=0_{n\times n}$ im Jordanblock, verschiebt sich die diagonale nach oben rechts.}
+\end{itemize}
+\textbf{Satz 11.1.5} Sei $T\in End_K(V)$ dann $\exists g(x)\in K[x]$ so dass $g(T)=0_v$
+\newline\textbf{Beweis} $\dim(End_k(V))=n^2\Leftrightarrow\dim(V)=n$ dass heisst dass $T^0,T^1,...T^{n^2}$ sind alle linear unabhängig, und daher:\[\exists a_0,...a_{n^2}\in K \neq 0\text{ so dass }a_0T^0+...+a_{n^2}T^{n^2}=0_v\]
+\newline Aber kann man dieses Polynom finden, und hat es einen zusammenhang mit den Charakteristischen Polynom\newline
+\textbf{Bemerkung 11.1.6} Wenn $g(T)=0_V$ dann gilt auch $(\alpha g)(T)=0_V\smspc \forall \alpha \in K$
+\newline\textbf{Beispiele 11.1.7}\begin{itemize}
+  \item{Sei $n\ge1\smspc, A=Id_n$ und $g(x)=x-1$ dann gilt $g(A)=0_{n\times n}$}
+  \item{Sei $A=\begin{pmatrix}\lambda_1&\left.\right.&0\\\left.\right.&\ddots&\left.\right.\\0&\left.\right.&\lambda_k\end{pmatrix}$ dann haben wir
+    $\forall g\smspc g(A)=\begin{pmatrix}g(\lambda_1)&\left.\right.&0\\\left.\right.&\ddots&\left.\right.\\0&\left.\right.&g(\lambda_k)\end{pmatrix}$ Hier konnen wir also $X_A(A)=0_{n\times n}$ nehmen}
+\end{itemize}
+Gilt also dass $g(x)=X_A(x)$ für jede Matrix $A$?
+\newline
+\textbf{Vermutung:} Sei $A\in M_{n\times n}(K)$ dann ist $X_A(A)=0_{n \times n}$ Hier kommen wir später zuruck
+\newline\textbf{Definition 11.1.8} Sei $T:V\rightarrow V$ linear. Das minimale Polynom ist das monische ($\neq 0$) Polynom kleinsetn Grades $m_T(x)\in K[x]$ so dass $m_T(T)=0_V$
+\newline \textbf{Lemma 11.1.9:} Seien $m(x)$ und $m'(x)$ beide Monisch, vom kleinsten Grad $d\ge1$ so dass $m(T)=m'(T)=0_V$. Dann gilt $m(x)=m'(x)$.\newline
+\textbf{Beweis} Nimm an dass $m(x)\neq m'(x)$ Dann sei \[g(x)=m(x)-m'(x)\neq\Rightarrow deg(g)<d\text{ und } g(T)=0_V\]Was ein Widerspruch bringt.\newline
+\textbf{Sat 11.1.10} Sei $T:V\rightarrow V$ Linear und $g(x)\in K[x]$ monisch so dass $g(T)=0_V$ Dann gilt dass $m_T(x)|g(x)$ ($m_T(x)$ teilt $g(x))$)
+\newline\textbf{Beweis} Polynom division: $\exists q(x), r(x)\in K[x]$ mit $deg(r)<deg(m)$ so dass $g(x)=m(x)q(x)+r(x)$ und da $g(T)=0_v=q(T)\underset{m(T)=0}{\underbrace{m(T)}}+r(T)$ also $r(T)=0_V\Rightarrow r(x)=0$ 
+\newline\textbf{Beispiele{11.1.11}}
+\begin{itemize}
+  \item{$A=\begin{pmatrix}\lambda&0\\0&\mu\end{pmatrix}\Rightarrow X_A(x)=(x-\lambda)(x-\mu)$ wir wissen dass $X_A(A)=0_{2\times 2}$ und wir wissen das der minimale polynom der Charakteristische Polynom teilt. Wenn also $\mu\neq\lambda\Rightarrow m_A(x)=X_A(x)$ aber wenn $\lambda=\mu\Rightarrow m_A(x)=(x-\lambda)^2$}
+\end{itemize}
 \end{document}
+
