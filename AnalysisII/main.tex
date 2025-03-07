@@ -7,8 +7,8 @@
 
 \author{Benjamin Dropmann}
 \title{Analysis II}
-\newcommand{\mspc}{\hspace{0.3cm}}
-
+\newcommand{\mspc}{\hspace{0.7cm}}
+\newcommand{\smspc}{\hspace{0.3cm}}
 \begin{document}
 \maketitle
 
@@ -82,7 +82,7 @@ Dann gibt es ein wert $z\in X$ wofür $f(z)=z$
 \textbf{Beweis der Existenz des Fixpunkts} Wir nehmen $x\in x_0$ beliebig, dann konstruiren wir iterativ eine Folge in $X$ und zwar wie folgt: $x_{n+1}:=f(x_n)$ Dies ergibt tatsächlich eine Folge $(x_n)n\in\mathbb{N}_0$ Als nächstes wollen wir Zeigen dass diese Folge eine Cauchy-Folge ist.
 \begin{itemize}
   \item{$d(x_{n+1},x_n)=d(f(x_n),f(x_{n-1}))=d(f^n(x_0),f^n(x_0))\le L^nd(x_1,x_0)$}
-  \item{$d(x_m,x_n)\le \sum_{k=n}^{m-1}d(x_{k+1}^,x_k)\le\sum_{k=n}^{m-1}L^kd(x_1,x_0)=d(x_1,x_0)\sum_{k=n}^{m-1}l^k$ Und diese Reihe ist für $L<1$ $\forall n,m\in \mathbb{N}_0$ und sogar $m\rightarrow\infty$ konvergent.
+  \item{$d(x_m,x_n)\le \sum_{k=n}^{m-1}d(x_{k+1}^,x_k)\le\sum_{k=n}a^{m-1}L^kd(x_1,x_0)=d(x_1,x_0)\sum_{k=n}^{m-1}l^k$ Und diese Reihe ist für $L<1$ $\forall n,m\in \mathbb{N}_0$ und sogar $m\rightarrow\infty$ konvergent.
   Und wir finden:\[\forall m,n\in\mathbb{N}_0, d(x_n,x_m)\le d(x_1,x_0)\underset{\text{für }n\rightarrow\infty,\mspc \rightarrow0}{\underbrace{\frac{L^n}{1-L}}} \]Und damit ist unsere Folge eine Cauchy-Folge }
 \end{itemize}
 Es bleibt noch zu zeigen dass $\overline{x}$ ein Fixpunkt ist:
@@ -92,6 +92,33 @@ Es bleibt noch zu zeigen dass $\overline{x}$ ein Fixpunkt ist:
   \item{K heisst Folgenkompakt falls jede Folge $(x_n)_{n\in\mathbb{N}_0}\subset K$ eine in $K$ konvergente Teilfolge.}
 \item{K heisst Topologisch Kompakt falls jede Familie von Offenen Mengen $\mathbb{U}:=\left\lbrace\mathbb{U}_i\right\rbrace_i\in I$, welche $K$ uberdeckt, also dass:\[K\subset\bigcup\mathbb{U}=\bigcup_{i\in I}U_i\] eine Endliche Teilüberdeckung besitzt, (eine endliche familie welche $K$ immer noch überdeckt.)}
 \end{itemize}
-\textbf{Theorem} 
+\textbf{Definition} Sei $(X,d)$ ein metrischer und $K\subset X$ eine Teilmenge. $K$ heisst totalbeschränkt, falls $\forall r>0\smspc \exists x_1,...,x_n\in K$ so dass $\bigcup B_i$ (wobei $B_i=B(x_i,r)$) $K$ überdeckt.\newline
+\textbf{Beispiel} Das intervall $I=[0,1[$ ist beschränkt aber nicht abgeschlossen (im sinne von Analysis I). WIr bemerken auch dass es nicht Topologisch kompakt ist da\[\lbrace\mathbb{U}_i\rbrace_{i\in\mathbb{N}}\smspc \mathbb{U}_i=[0,1-2^{-i}[ \] Keine endliche Teilüberdeckung von $I$ besitzt.\newline
+\textbf{Bemerkung} Es sei $(X,d)$ ein Metrischer Raum. Falls $(X,d)$ totalbeschränkt ist so ist es auch beschränkt d.h. $\exists d$ so dass $\lim \sup d(x,y)<\infty$\newline
+\textbf{Bemerkung} Ein beschränkter Metrischer Raum muss nicht totalbeschrankt sein. Hier ein Gegenbeispiel\[X=\mathbb{N} \smspc d(n,m)=arctan(|n-m|)\Rightarrow r=\frac{\pi}{8}\text{ Dann ist der Raum nicht mit endlichen bällen überdeckbar}\]
+\newpage\textbf{Theorem} Es sei $(X,d)$ ein metrischer Raum und $K\subset X$ eine Teillmenge, dann sind folgende aussagen äquivalent:
+\begin{itemize}
+  \item{$K$ ist Folgenkompakt}
+  \item{$K$ ist Topologish  kompakt}
+  \item{$K$ ist vollstänfig und totallbeschränkt}
+\end{itemize}
+Wir nennen hier die Teilmenge einfach Kompakt.
+\newline\textbf{Lemma} Es sei $(X,d)$ ein metrischer Raum. Dann ist $K\subset X$ genau dann topologisch kompakt falls für alle Familien $\mathbb{A}:=\lbrace A_i\rbrace_{i\in I}$ abgeschlossener Teilmengen, jede Schnittmenge endlicher vieler Mengen aus $\mathbb{A}$ einen nicht leeren Schnitt mit $K$ besitzt, ist auch $K\cup\bigcup_{i\in I} A_i$ nicht leer.
+\newline\textbf{Lemma Diagonalfolge} Es seien $\mathbb{N}0\supset N_0\supset N_1\supset ...$ eine unendliche Familie einander verschachteter Mengen. Des Weitern besitze jede Mengen $N_k$ unendlich viele Elemente.
+Dann existiert eine streng monoton wachsende Funktion $f:\mathbb{N}_0\rightarrow \mathbb{N}_0$ mit der Eigenschaft $f(k)\in N_k \smspc \forall k\in\mathbb{N}_0$.\newline
+\textbf{Beweis} Die Funktion $f$ wird iterativ konstruirt, Als erstes wählen wir $f(0)$ beliebig aus $N_0$ und dann für jedes nachfolgende $f(k):=\min\lbrace m\in\mathbb{N}_0\cup N_k\rbrace$\newline
+\textbf{Korollar} Es sei $(X,d)$ ein metrischer Raum $A\subset X$ eine abgeschlossene Teilmenge und $K\subset X$ eine kompakte Teilmenge. Dann ist $A\cap K$ kompakt.\newline
+\noindent\textbf{Theorem Heine Borel} Eine Teilmenge $K\subset \mathbb{R}^n$ ist genau dann kompakt wenn sie abgeschlossen und beschränkt ist.
+\textbf{Beweis}  \newline Hinrichtung "$\Rightarrow$" Es sei $K$ Kompakt, Dann ist $K$ insbesondere totalbeschränkt. Die Abgeschlossenheit von $K$ folgt aus dem vorherigen Korollar.
+\newline Rückrichtung "$\Leftarrow$" Für die Rückrichtung müssen wir nur nachweisen dass $K$ vollständig und totalbeschränkt ist.
+\begin{itemize}
+  \item[]{Vollständigkeit:  Aus der Tatsache dass $\mathbb{R}$ vollständig (vollständig=Cauchy$\Rightarrow$Konvergent) ist, muss $\mathbb{R}^n$ vollständig sein und daher auch $K\subset \mathbb{R}^n$}
+  \item[]{Totalbeschränkteit:   $K$ ist beschränkt, d.h. $\exists N\in\mathbb{N}_0$ so dass $K\subset[-2^N,2^N]$ Nun sei $r>0$ vorgegeben, dann wählen wir $M$ so dass $2^-M<\frac{r}{\sqrt{n}}$. Dann betrachten wir de bälle dessen Mittelpunkte auf den folgenden Gitter:\[y=(y_1,...y_n)\in\mathbb{Z}\text{ mit } -2^{N+M}\le y_i\le2^{N+M}\]$\rightarrow z_i=2^{-M}y_i$ Die bälle sind $B_i=B(r,z_i)$ und hier brauchen wir nur endlich viele bälle und überdeckt die gnaze Teilmenge. }\end{itemize}
+\noindent
+\textbf{Theorem} Es seien $(X,d_X)$ und $(Y,d_Y)$ zwei metrische Räume, $f:X\rightarrow Y$ eine stetige Abbildung und $K\subset X$ eine Kompakte Teilmenge von $X$ Dann ist $f(K)$ eine kompakte teilmenge von $Y$ (Der satz hat Kobel Keller mathematisch falsch ausgesagt, wir haben noch nicht $f(K)$ definiert...)\newline
+\textbf{Beweis} Hier geben wir nur die Struktur des Beweises an:\newline Wir benutzen einerseits die Beschreibung der stetigkeit als Folgenstetigkeit und andererseits die Beschreibung der Kompaktheit als Folgenkompaktheit\newline 
+Zu zeigen jede Folge im Bild von $K$ unter $f,f(K)$ hat eine konvergente Teilfolge.
+\textbf{Proposition} Es seien $(X,d_X)$ und $(Y,d_Y)$ zwei metrische Räume, $f:X\rightarrow Y$ eine stetige Abbildung. Falls $X$ kompakt ist, ist $f$ gleichmässig stetig\newline
+
 \end{document}
 

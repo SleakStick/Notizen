@@ -247,7 +247,11 @@ Gilt also dass $g(x)=X_A(x)$ für jede Matrix $A$?
 \newline\textbf{Beweis} Polynom division: $\exists q(x), r(x)\in K[x]$ mit $deg(r)<deg(m)$ so dass $g(x)=m(x)q(x)+r(x)$ und da $g(T)=0_v=q(T)\underset{m(T)=0}{\underbrace{m(T)}}+r(T)$ also $r(T)=0_V\Rightarrow r(x)=0$ 
 \newline\textbf{Beispiele{11.1.11}}
 \begin{itemize}
-  \item{$A=\begin{pmatrix}\lambda&0\\0&\mu\end{pmatrix}\Rightarrow X_A(x)=(x-\lambda)(x-\mu)$ wir wissen dass $X_A(A)=0_{2\times 2}$ und wir wissen das der minimale polynom der Charakteristische Polynom teilt. Wenn also $\mu\neq\lambda\Rightarrow m_A(x)=X_A(x)$ aber wenn $\lambda=\mu\Rightarrow m_A(x)=(x-\lambda)^2$}
+  \item{$A=\begin{pmatrix}\lambda&0\\0&\mu\end{pmatrix}\Rightarrow X_A(x)=(x-\lambda)(x-\mu)$ wir wissen dass $X_A(A)=0_{2\times 2}$ und wir wissen das der minimale polynom der Charakteristische Polynom teilt. Wenn also $\mu\neq\lambda\Rightarrow m_A(x)=X_A(x)$ aber wenn $\lambda=\mu\Rightarrow m_A(x)=x-\lambda$}
+  \item{Sei $A=\begin{pmatrix}\lambda&0&0\\0&\lambda&0\\0&0&\mu\end{pmatrix}\mspc X_A(x)=(\lambda-x)^2(\mu-x)\Rightarrow m_A(x)=(\lambda-x)(\mu-x) \smspc\lambda\neq\mu$ Wenn $\mu=\lambda\smspc m_a(x)=x-\lambda$}
+  \item{$A=J_n(\lambda)\Rightarrow X_A(x)=(\lambda-x)^n\Rightarrow m_A(x)=X_A(x)$ }
+  \item{$A=\lambda id_n\Rightarrow X_A(x)=(\lambda-x)^n$ und $m_A(x)=x-\lambda$}
 \end{itemize}
+
 \end{document}
 
