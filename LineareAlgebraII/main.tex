@@ -231,6 +231,26 @@ Gilt dies also für jede Matrix?
 
 \subsection{Übungsstunde}
 Die geometrische vielfachheit vom Jordanblock ist immer $1$ und seine algebraische vielfachheit ist immer $n$:\[X_{J_{n}}(X)=(\lambda-x)^n\mspc g_\lambda=1\mspc a_\lambda=n\]
-
+\textbf{Cayley Hamilton} $A\in M_{n\times n} \Rightarrow X_A(A)=0_{n\times n}$
+\newline\textbf{Beweis}\[(A-xid_n)adj(A-xid_n)=X_A(x)id_n\mspc (*)\] Hier schreibe man $adj(A-xI_n)=(p_{ij}(x))$ wobei $p_{ij}(x)\in K[x]$ mit $deg(p_{ij})\le n-1$
+\newline \textbf{Bemerkung 11.3.2} \[adj(A-xid_n)=B_{n-1}x^{n-1}+...+B_1x+B_0\smspc B_i\in M_{n\times n }(K)\]\[X_A(x) id_n=(-1)^n(x^n+a_{n-1}x^{n-1}+...+a_0)\]Wir setzen diese letze gleichung in $(*)$ ein und bekommen \[AB_0=(-1)^na_0 id_n\]
+\[-B_0+AB_1=(-1)^na_1 id_n\]
+und so weiter bis:
+\[-B_{n-1}=(-1)^nid_n\]
+Und zu zeigen ist \[X_A(A)==_{n\times n}\Leftrightarrow (-1)^nA^n+a_{n-1}A^{n-1}+...+a_1A+a_0id_n=0_{n\times n}\]
+Wir konnen jede gleichung vom system mit $A^i$ multiplizieren (wo $i=deg$ der linie) und summieren dass alles zusammen. Wir finden dass die Summe $=0$ und dass $X_A(A)=0_{n\times n}$
+\subsection{Jordansche Normalform} \textbf{Definition  Theorem} sei $\lambda\in K$ und $n\ge1$ der Jordanblock der länge $n$ und Eigenwert $\lambda$ ist folgende Matrix:\[J_n(\lambda)=\begin{pmatrix}\lambda&1&\smspc&0\\\smspc&\ddots&\ddots&\smspc\\0&\smspc&\lambda\end{pmatrix}\]
+\textbf{Lemma 12.1.1:} $X_{J_n}(x)=(\lambda-x)^n$ und $\lambda$ ist der Einzige eigenwert, $g_\lambda=1$ und $a_\lambda=n$ mit $m_{J_n}(x)=(-1)^nX_{J_n}(x)$ \newline
+\textbf{Theorem 12.1.2} Jordansche Normalenfor, Sei $T:V\rightarrow V$ Dann $\exists B$ eine Basis von $V$ so dass 
+\[[T]^B_B=\begin{pmatrix}J_{n_1}(x_1)&\smspc&\smspc&0\\\smspc&J_{n_2}(x_2)&\smspc&\smspc\\\smspc&\smspc&\ddots&\smspc\\0&\smspc&\smspc&J_{n_k}(x_k)\end{pmatrix}\]
+Dies darstelleung ist eindeutig bis auf die Vertauschung der Blocke. \newline
+\textbf{Theorem 12.1.3} Sei $A\in M_{n\times n} (K)$ dann $\exists B\in GL_n(K)$ so dass $B^{-1}AB$ die Jordansche Normalenform hat.
+\textbf{Lemma 12.2.2} Sei $C\in M_{n\times n}(K)$ wober $C=\begin{pmatrix}A&0\\0&B\end{pmatrix}$ und $A,B\in M_{(n-2)\times (n-2)}(K)$ Definiert jetzt $U_<e_1,...,e_i>,W=<e_i,...e_n>$ 
+Sei $v=u+w\in V\neq0_v,u\in U,w\in W$ Dann ist $v$ denau dann ein Eigenvektor von $T_C$ mit Eigenwert $\lambda$ wenn $T_A(u)=\lambda_u \cap T_B(w)\lambda w$ 
+$E_\lambda (T_C)=E_\lambda(T_A)\bigoplus E_\lambda(T_B)\Rightarrow g_\lambda(T_c)=g_\lambda(T_A)+g_\lambda(T_B)$
+\newline\textbf{Satz 12.2.3} Sei $T:V\rightarrow V$ linear und Nimm an $\exists B$ Basis von V So dass $[T]^B_B$ die Diagonal Jordansche normalenform annimt und sei $\lambda$ Eigenwert von $T$ Dann gilt $g_\lambda=\#\lbrace i|1\le i\le k, \alpha_i=\lambda\rbrace$
+$a_\lambda=\sum_{\alpha_i=\lambda}\lambda_i=$ Die länge des gsten Jordanblock mit eigenwert $\lambda =s(\lambda)=\max\lbracen_j|1\le j\le k, \alpha_j=\lambda\rbrace$
+\textbf{Beweis} $B=\lbrace b_1^{(1)},...,b_{n,1}^{(1)}, ...... ,b_{1n}^{(k)},...,b_{kn}^{(k)}\rbrace$
+Sei $W_i=<b_1^{(i)},...,b_n^{(n)}>\Rightarrow V=\bigoplus W_i$ und $T$
 \end{document}
 
