@@ -1,6 +1,8 @@
 \documentclass{article}
 \usepackage{geometry}
 \usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 \geometry{margin=1.5cm}
 \author{Benjamin Dropmann}
 
@@ -184,7 +186,6 @@ Wo $A$ und $B$ ovn Randbedinugen kommen, (z.B feste Seite: $u(x=0)=u(x=l)=0$)
 Falls mehrere linear POlarisierte Wellen Uberlagert werden, und es zwischen diese Wellen einen Phasenunterschid gibt, dann ensteht eine Elliptisch-Polarisierte Welle
 \newline\textbf{Beispielaufgben} Angenommen wir haben eune Uberlagerung von:\[y_1(x,t)=5\cos(kx-\omega t)\vec{e_x}\]
 \[y_2(x,t)=2\cos(kx+\omega t)\vec{e_y}\]Hier ist die resultierende Welle immer noch linear polarisiert.
-=======
 Ich habe viel verpasst, laufende Wellen, Stehende Wellen ist keine losung der Wellengleichung.
 \newline 
     \textbf{Random Facts}
@@ -203,7 +204,7 @@ Die Normale interferenz sollte entweder destruktiv oder konstruktiv sein, aber w
     \[\xi_1(r,t)=\frac{A}{\sqrt{|r-r_2}}\cos(k|r-r_2-\omega t)\]
     Wenn $|r-r_1|-|r-r_2|=n\lambda$ dann ist der inteferenz am maximum ($n\in \mathbb{N}$)
     Die maxima sind dann an den punkte
-    \[\sqrt{(x+a)²+y²}=n\lambda+\sprt{(x-a)^2+y^2}\]
+    \[\sqrt{(x+a)^2+y^2}=n\lambda+\sqrt{(x-a)^2+y^2}\]
     Hyperbel schar
     \newline
 \subsection{Reflexion+Transmission}
@@ -213,5 +214,20 @@ Seilwelle mit eine dicke änderung in der mitte, da die welle von der Spannung a
     Transmittierte welle: $\xi_A=Ae^{i(kx_1-\omega t+\delta_T)}$\newline
 Es mussen folgende sachen Gelten:\[lim_{x\rightarrow 0_-}(\xi_A+\xi_R)=lim_{x\rightarrow x_+}\xi_T\]
 Die Vertikale kräfte links und rechts der Grenzfläche mussen gleich sein.
->>>>>>> 7050a3c07de41f9774c2f861d7485d9d1fd20610
-\end{document}
+\newline
+\textbf{Wiederholung} Sei ein Seil mit eine Grenzfläche wo sich der Seil ändert, dann gibt es eine Einlaufende, Transmittierte und Reflektierte Welle. Man kann folgende gleichung aufstellen:
+\[\alpha=\frac{k_2\cdot S_2}{k_1\cdot S_1}=\sqrt{\frac{S_2\cdot\rho_2}{S_1\cdot\rho_1}}\text{ Wobei } k \text{ der Wellenvektor ist und } S \text{ Die seilspannung ist.}\]
+Wir konnen dann alles in unterschiedliche fälle einschachteln \begin{itemize}
+  \item{$\alpha>1\mspc\delta_R=\pi, \mspc R=\frac{\alpha+1}{\alpha-1}\cdot A,\mspc T =\frac{2A}{\alpha+1}$ und dieser Fall entspricht einen Festen Ende, also es ist wie wenn wir eine Dunne schnur die zu eine sehr dicke schnur geht.}
+  \item{$\alpha<1 \mspc \delta_R=0,\mspc R=\frac{1-\alpha}{1+\alpha}\cdot A,\mspc R=\frac{2A}{1+\alpha}$ Dieser Fall entspricht einem Losen Ende, also wenn die Dicke schnur zu eine Sehr dünne Schnur wird. }
+  \item{$\alpha=1$ Dann ist es als ob die schnur gleich geblieben wäre. }
+\end{itemize}
+\textbf{Stehende Wellen} Bei einer Stehende Welle gibt es Knoten und bäuche, die Bedingung einer Stehende Welle (im beispiel der Saite )ist $n\frac{\lambda}{2}=l$ für eine länge von $l$:\[\lambda_n=\frac{2l}{n}\Rightarrow\omega_n=k_nv= \frac{n\pi}{l}\cdot\underset{=v}{\underbrace{\sqrt{\frac{S}{\rho}}}}=n\omega_1\]
+\subsection{Fourier Transformation}
+Sei eine Welle die als Summe von Sinus und Cosinus Wellen beschrieben werden Kann:
+\[f(t)=c_0\sum_{n+1}^\infty a_n \cos(n\omega_0 t)+b_n\sin(n\omega_0t)\]
+Hier ist $c_0$ eine konstante die die Ganze Welle verschiebt: \[c_0=\frac{1}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}}f(t)dt\] 
+$a_n=\frac{2}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}} f(t)\cos(n\omega_0t)dt$ und 
+$b_n=\frac{2}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}} f(t)\sin(n\omega_0t)dt$ dd
+
+end{document}
