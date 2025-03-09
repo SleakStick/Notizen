@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{tikzit}
+\input{PhysiksStyle.tikzstyles}
 \usepackage{geometry}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -139,7 +141,6 @@ Eine welle transportiert kinetische und elastische energie, die Beträge dieser 
 \item[$1.1_b$]{Die orte einfch einsetzen und die trigonometrische vereinfachen mit den mathemathischen hilfsmitteln der formelsammlung}
 \item[$1.2_a$]{Uhr und Lineal, so dass man zeiten und abständen messen kann. Welche gössen sind gegeben, und welche sin messbar? damit vereinfachen. Die Wellenlänge kann man (theoretisch messen) also mit der Wellenlänge die distanz ausrechen.}
 \end{itemize}
-<<<<<<< HEAD
 \textbf{Stehende Welle} Die Stehende Welle ist einfach eine summe der Zwei wellen die sie aufführt.
 \subsection{Reflection und Transmission} Transmission ist in derselben richtung als einkommende Welle, Reflektierte welle dagegen
 \[\xi_A=Ae^{i(k_1x-\omega t)}\]
@@ -227,7 +228,18 @@ Wir konnen dann alles in unterschiedliche fälle einschachteln \begin{itemize}
 Sei eine Welle die als Summe von Sinus und Cosinus Wellen beschrieben werden Kann:
 \[f(t)=c_0\sum_{n+1}^\infty a_n \cos(n\omega_0 t)+b_n\sin(n\omega_0t)\]
 Hier ist $c_0$ eine konstante die die Ganze Welle verschiebt: \[c_0=\frac{1}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}}f(t)dt\] 
-$a_n=\frac{2}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}} f(t)\cos(n\omega_0t)dt$ und 
-$b_n=\frac{2}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}} f(t)\sin(n\omega_0t)dt$ dd
-
-end{document}
+\[a_n=\frac{2}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}} f(t)\cos(n\omega_0t)dt\] und 
+\[b_n=\frac{2}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}} f(t)\sin(n\omega_0t)dt\]
+\textbf{Experiment}
+Wir wollen eine Perfekte Rechteckwelle herstellen, wir nehmen also eine Grundwelle und legen dazu ihre ungerade harmonischen, mit jeweils kleinere Amplituden, so dass wir dann $\lim_{n\rightarrow \infty}$ eine Perfekte Reschteckwelle bekommen. Mit dieser methode kann man jede Welle herstellen.
+\newline
+\subsection[1.7]{Beugung, Brechung und Dispersion}
+Für die Beugung ist das Video von Veritasium sehr gut.\newline
+\textbf{1.7.1 Prinzip von Huygens} Jede Wellenfront ist eine Überlagerung von Kugelwellen. Dieses Prinzip kann erweitert werden: \newline
+Wenn z.B. licht in einen Medium eintrifft, dann werden die partikel aufgeregt in dem sie die Photone einnehmen, dann werden sie wieder ausgestrahlt und aus dieser vorstellung dieser Kugelwelle kann man die wellenfront sehr gut approximieren. Im skrip sind dazu sehr hübsche abbildungen (1.38).
+\newline\begin{center}\scalebox{0.8}{\tikzfig{Wellen_Beugung1}}\end{center} Hier kann man also die Phasenverschiebung beschreiben.($N=$ Anzahl punktquellen und $N=2M+1$) \[\Delta l =k\Delta S = \frac{2\pi}{\lambda}\Delta S=k\delta \sin(\alpha)\] UNd hier ist aber $\delta << r$ wobei $r$ der Abstand zum zuschauer ist.
+Wir schauen uns also die Überlagerung der Punktquellen am punkt $P$:\[\xi(\alpha)=\sum_{n=1}^N \frac{a}{r} e^{i(kr_n-\omega t)}\]\[r_n=r+(M+1-n)\Delta S \Rightarrow kr_n=k r+(M+1)\Delta \varphi-n\Delta l\]
+\[\xi(\alpha)=\frac{a}{r}e^{i(M+1)\Delta \varphi}\underset{\frac{e^{i\Delta\varphi(2M+2)}-e^{i\Delta\varphi}}{e^{-i\Delta\varphi}-1}}{\underbrace{\left[\sum_{n=1}^{2M+1}e^{-in\Delta \varphi}\right]}}e^{i(kr-\omega t)}\]
+Kann man das hier vereinfachen:\[\xi(\alpha)=e^{\frac{i\Delta \varphi}{2}}\cdot e^{i\Delta\varphi(M+1)}\cdot\frac{e^{i\Delta\varphi}-e^{i\Delta\varphi M}}{e^{\frac{-i\Delta \varphi}{2}}-e^{\frac{i\Delta \varphi}{2}}}\]
+Und hier alles was übrich bleibt ist \[e^{i\Delta \varphi(M+1)}\cdot\frac{\sin(N\frac{\Delta\varphi}{2})}{\sin(\frac{\Delta\varphi}{2})}\]
+\end{document}
