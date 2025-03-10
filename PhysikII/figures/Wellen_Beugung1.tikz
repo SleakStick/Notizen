@@ -1,0 +1,61 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-6, 5) {};
+		\node [style=none] (1) at (-6, -5) {};
+		\node [style=circle] (2) at (-6, 2) {};
+		\node [style=circle] (3) at (-6, 0) {};
+		\node [style=circle] (4) at (-6, -2) {};
+		\node [style=circle] (5) at (-6, -4) {};
+		\node [style=circle] (6) at (-6, 4) {};
+		\node [style=none] (7) at (-2, 7) {};
+		\node [style=none] (8) at (6.25, -4.75) {};
+		\node [style=none] (9) at (-1.25, 6) {};
+		\node [style=none] (10) at (-0.25, 4.5) {};
+		\node [style=none] (11) at (1, 2.75) {};
+		\node [style=none] (12) at (2, 1.25) {};
+		\node [style=none] (13) at (3.25, -0.5) {};
+		\node [style=none] (14) at (5.75, -3.75) {};
+		\node [style=none] (15) at (8.75, -4) {};
+		\node [style=none] (16) at (-4.75, -3.5) {};
+		\node [style=none] (17) at (-4.75, -4) {};
+		\node [style=none] (18) at (-4.75, -4) {};
+		\node [style=none] (19) at (-4.75, -3.5) {};
+		\node [style=none] (20) at (-4.75, -4) {};
+		\node [style=none] (21) at (-4.25, -3.75) {};
+		\node [style=none] (22) at (-4.25, -3.75) {$\alpha$};
+		\node [style=none] (23) at (-6, -2.75) {};
+		\node [style=none] (24) at (-5.5, -2.5) {};
+		\node [style=none] (25) at (-5.5, -3) {};
+		\node [style=none] (26) at (-5.5, -3) {$\alpha$};
+		\node [style=none] (27) at (-6.25, -3.75) {};
+		\node [style=none] (28) at (-6.5, 4) {};
+		\node [style=none] (29) at (-6.75, 2) {$Q_2$};
+		\node [style=none] (30) at (-6.75, 0) {$Q_3$};
+		\node [style=none] (31) at (-6.75, -2) {$Q_4$};
+		\node [style=none] (32) at (-6.75, -4) {$Q_5$};
+		\node [style=none] (33) at (-6.5, 4) {};
+		\node [style=none] (34) at (-6.75, 4) {$Q_1$};
+		\node [style=none] (35) at (-7.75, -2) {};
+		\node [style=none] (36) at (-7.75, -4) {};
+		\node [style=none] (37) at (-8, 10.25) {};
+		\node [style=none] (38) at (-8.25, -2.75) {};
+		\node [style=none] (39) at (-7.25, -3) {$\delta$};
+		\node [style=none] (40) at (-5, -3.25) {};
+		\node [style=none] (41) at (-4.75, -3.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (0.center) to (1.center);
+		\draw (7.center) to (8.center);
+		\draw (6) to (9.center);
+		\draw (2) to (10.center);
+		\draw (3) to (11.center);
+		\draw (4) to (12.center);
+		\draw (5) to (13.center);
+		\draw (5) to (15.center);
+		\draw [bend left=75, looseness=1.75] (19.center) to (20.center);
+		\draw (4) to (19.center);
+		\draw [bend right=75] (23.center) to (24.center);
+		\draw [style=BlackDoubleArrow] (36.center) to (35.center);
+		\draw [style=BlackDoubleArrow] (27.center) to (40.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
