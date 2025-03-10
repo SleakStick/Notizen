@@ -1,7 +1,12 @@
 \documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{multicol}
 \usepackage{tikzit}
 \input{PhysiksStyle.tikzstyles}
 \usepackage{geometry}
+\usepackage{titlesec}
+\titlespacing*{\subsubsection}{0pt}{1.2ex}{.1ex plus .2ex minus .2ex}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -9,14 +14,17 @@
 \author{Benjamin Dropmann}
 
 \newcommand{\mspc}{\hspace{0.4cm}}
+\newcommand{\experiment}{\\[2ex]\textbf{Experiment }}
 
 \begin{document}
-\section{Bonusprogramm}
+\begin{abstract}
+\subsection{Bonusprogramm}
 12 serien* 5 punkte / serie$\rightarrow$ 60 oubkte\begin{itemize}
 \item[\textbullet]{0-19 Kein bonus}
 \item[\textbullet]{20-39 Lineare interpolation}
 \item[\textbullet]{$>$40 maximaler bonus 39, 40 schon maximler bonu}
 \end{itemize}
+\end{abstract}
 \section{Wellen}
 \subsection{Federwelle} Gutes model für eine Festkoper, Transversale Anregung, senkrecht zur länge, Longitundonale Anregung, entlang der  längle des feder dings. (Elektromagnetik schwer da es in beide richtungen geht). Es gelten Folgende Bedingungen für die federwelle:
 \begin{itemize}
@@ -24,19 +32,19 @@
 \item[\textbullet]Jede masse bleibt in ruhe bis die welle sie erreicht
 \item[\textbullet]Ruckrehr zur ruhelage
 \end{itemize}
-\textbf{Amplitude} der Welle $\xi(x,t)$ ($x : Ort fur die Seilwelle, t zeit$)
-\textbf{Disersion}: Form des wellenpakets der anregung bleibt unverändert
+\subsubsection{Amplitude} der Welle $\xi(x,t)$ ($x$ : Ort fur die Seilwelle, $t$ zeit)
+\subsubsection{Dispersion}: Form des wellenpakets der anregung bleibt unverändert
 $\xi(x,t=0)=f(x)$ $f(x)$ ist die form des wellenpakets\\$x-a$ fuhrt zu einer translation der Wele ohne ändergun seiner form:
 \[c\rightarrow x-a\rightarrow \xi(x-a,t=0)\rightarrow (x+a)\]
 \[a=vt \rightarrow f(x\pm vt)\]
 \[\xi(x,t)=f(x\pm vt\] $v$ ist hier die \textbf{Phasengeschwindigkeit} der Welle.
-\subsection{Harmonische Wellene} Vom Harmonischen Oszillator, Wellengleichung herleiten, allgeimene wellengleichung finden. Eine Harmonische Welle ist eine sinus (cosinus ist besser) kurve
+\subsubsection{Harmonische Wellen} Vom Harmonischen Oszillator, Wellengleichung herleiten, allgeimene wellengleichung finden. Eine Harmonische Welle ist eine sinus (cosinus ist besser) kurve
 \[\xi(x,t)=\xi_0\cdot\sin(k(x\pm vt=f(x\pm vt)\]
-\[wellenzahlk(x+\lambda)=kx+"\pi \rightarrow k\lambda = 2\pi \rightarrow k=\frac{2\pi}{\lambda}\]
+\[\text{Wellenzahl }k(x+\lambda)=kx+2\pi \rightarrow k\lambda = 2\pi \rightarrow k=\frac{2\pi}{\lambda}\]
 $k$ ist die Wellenzahl (so dass was im sinus ist dimensionslos ist)  \[\lambda:{Wellenlange}\]
 In zwei dimensionen ist $k$ä ist ein vektor und zeigt uns die wellen direktion aus (longitude, oder senkrecht)
 \\Kreisfrequenz: $\omega=2\pi\nu=2\pi\frac{1}{T}$ Wo $T$ die Periode ist.\\$\xi(x,t)=\xi_0\sim(k(x\pm vt))=\sin(kx+kvt)=\xi_0\sin(kx\pm\omega t)$
-\subsection{Wellenglaichung in einer Dimension}
+\subsubsection{Wellenglaichung in einer Dimension}
 \[\xi(x,t)=\xi_0e^{i(kx\pm \omega t}\]
 wir leiten nach der zeit ab:
 \[\frac{\delta\xi}{\delta t}=\xi_0(-kv)cos(k(x-vt))\]
@@ -54,22 +62,20 @@ Weiter und weiter ableiten und herumschreiben:
 \[\frac{\delta f}{\delta \alpha}(\alpha(-v)+\frac{g(\beta)}{\delta \beta}(\beta(v)\]
 Für die zweite ableitung gilt diese hergehensweise auch, und wir finden dass die gleicung oben erfüllt ist und dass folgende gleichung gilt:
 \[\frac{\delta^2\xi}{\delta^2t}-v^2\frac{\delta^2\xi}{\delta^2x}=0\]
-Gute frage: jede sinusfunktion erfullt das; wir haben nur angenommen dass $x$ und $t$ einen anhang ($f$ in diesen fall) haben\\
-\textbf{EXPeriment} DNA dings, sehr wenig reibug zwischung elemente $\rightarrow$ rucktreibendende kraft sehr gering. Auch reflektion. \\
-\subsection{Wichtige dinge}
-\[x-vt=konst\]
-\[\nu=v/\lambda\]
-\subsection{Transversale Wellen}
+Gute frage: jede sinusfunktion erfullt das; wir haben nur angenommen dass $x$ und $t$ einen anhang ($f$ in diesen fall) haben
+\experiment DNA dings, sehr wenig reibug zwischung elemente $\rightarrow$ rucktreibendende kraft sehr gering. Auch reflektion. 
+
+\subsubsection{Transversale Wellen}
 \[\xi(z,t)=Af(z-vt)\]
-Diesmal aber ein Vektor ZU(*ZHU)(HZ(U*"UO)W(U*"\\
-\[xi(z,t)=A\cos(kz                omega t)\hat{x}\]
+Diesmal ist $k$  aber ein Vektor
+\[xi(z,t)=A\cos(kz\omega t)\hat{x}\]
 Anhange zur spannung(seilwelle) Seilwelle$\rightarrow$ Wellengleichung
 Wir nehmen viele kliene massenelemente den seil entlang, Dann haben wir zwei kräfte, den seil hoch/entlang und die spannung des seils/nach unten. Wir haben jetzt für eine massen element zwei funktionen $xi(x)$ und $\xi(x+dx)$ Wir brauchen also der unterschid zwischen diese zwei kräfte, die nicht entgegengesetzt sind wegen der breite des massenelements.
 \[\Delta S_y=S\sin(\alpha')-S\sin(\alpha)\]
 Herumdingen
 \[\Delta S_y=S\frac{\delta^2\xi}{\delta x^2} dx\]
 Ich habe verpasst Elastizität modul?
-\subsection{Räumliche verteilung von Wellen}
+\subsubsection{Räumliche verteilung von Wellen}
 \[\xi(x,y,z,t)=Af(kz-\omega t)\]
 Transversale Welle: Polarisationsrichtung (in x oder y schwingen, transversal aber anders)
 \[A=\begin{pmatrix}A_x\\A_y\end{pmatrix}\mspc \xi(t)=\begin{pmatrix}A_x\\A_y\end{pmatrix}\cdot e^{ikz-\omega t}\]
@@ -107,7 +113,6 @@ Energie dichte:
 \[\frac{dT}{dV}=\frac{1}{2}\rho v^2 f'^2\]
 \[\frac{dE_{el}}{dV}=\frac{1}{2}Ef'^2\]
 Pro volumen gerechnet ist die elastische und kinetische energie dieselbe. Die Gesamtenergie ist alsow $\frac{dW}{dV}=\rho v^2f'^2$\\
-\section{Ubungs stunde Wellen}
 \subsection{Wellenfunction $\xi$}
 \[\xi(x,t)=\]
 Die Form einer welle: $f(x)=\xi(x,t=0)$ ist der initiale gefrorene status einer Welle. Für jetzt, ist die Form konstant (dämpfungen sind benachlässigt). Wegen der Form der Welle, ist ort und Zeit nicht unabhängig, da die Form der Welle nur den Ort definiert bei einer konstanter Zeit.\\
@@ -128,21 +133,21 @@ Wie setzen dies zusammen und Bekommen:
 \[\frac{\delta^2 \xi}{\delta t^2}-v^2\frac{\delta^2\xi}{\delta x^2}\]
 Die Allgemeine Lösung olgt folgender Form:
 \[f(x-vt)-g(x+vt)\]
-\subsection{Arten von Wellenverbreitung}
+\subsubsection{Arten von Wellenverbreitung}
 \begin{itemize}
 \item{Transversalwelle: Auslenkung senkrecht zur geschwindigkeit}
 \item{Longitudonalwell, die Auslenkung ist parallel zur ausbreitung der Welle}
 \end{itemize}
-\subsection{Energietransport einer Welle}
+\subsubsection{Energietransport einer Welle}
 Eine welle transportiert kinetische und elastische energie, die Beträge dieser beiden einergien ist im volumen (flachenelement oder distanz) immer gleich.
-\subsection{Tipps zur Serie 1}
+\subsubsection{Tipps zur Serie 1}
 \begin{itemize}
   \item[$1.1_a$]{Vollständige Wellenfunktion finden, (wichtige dingen oben sind hilfreich)}
 \item[$1.1_b$]{Die orte einfch einsetzen und die trigonometrische vereinfachen mit den mathemathischen hilfsmitteln der formelsammlung}
 \item[$1.2_a$]{Uhr und Lineal, so dass man zeiten und abständen messen kann. Welche gössen sind gegeben, und welche sin messbar? damit vereinfachen. Die Wellenlänge kann man (theoretisch messen) also mit der Wellenlänge die distanz ausrechen.}
 \end{itemize}
-\textbf{Stehende Welle} Die Stehende Welle ist einfach eine summe der Zwei wellen die sie aufführt.
-\subsection{Reflection und Transmission} Transmission ist in derselben richtung als einkommende Welle, Reflektierte welle dagegen
+\subsubsection{Stehende Welle} Die Stehende Welle ist einfach eine summe der Zwei wellen die sie aufführt.
+\subsubsection{Reflection und Transmission} Transmission ist in derselben richtung als einkommende Welle, Reflektierte welle dagegen
 \[\xi_A=Ae^{i(k_1x-\omega t)}\]
 \[\xi_R=Ree^{i(-k_1x-\omega t +\delta_R)}\]
 \[\xi_R=Te^{e(kx-\omega t +\delta_T)}\]
@@ -161,7 +166,7 @@ Materialparameter $\alpha$ Ist ein Index von den Geschwindigkeiten der Welle in 
   \[\delta_T=0\mspc\lim_{v_1\rightarrow v_2}\xi_A=\xi_T\]
   \[\delta_T=\pi\lim_{v_1\rightarrow v_2}\xi_A=-\xi_T\]
 Es muss also $\delta_T=0$ sein da der Zweite fall unphysikalisch ist.
-\newline\textbf{Reflektierte Welle}
+\subsubsection{Reflektierte Welle}
 Es gibt nochmal die Zwei mmoglichkeiten: $\delta_R=0$ oder $\delta_R=\pi$ 
 \[A=T\pm R \text{ oder } A=\alpha T\mp R\]
 \[R=\pm\frac{1-\alpha}{1+\alpha}A\mspc T=\frac{2A}{a+\alpha}\]
@@ -172,34 +177,34 @@ Spezailfälle:
 \item{$\alpha>1\Rightarrow\delta_R=\pi$ bei $\alpha\rightarrow\infty$ wird alles reflektiert und nichts transmittiert}
 \item{$\alpha<0\Rightarrow R\ge0$ und  $\delta_R=0\Rightarrow R=\frac{1-\alpha}{1+\alpha}A,\mspc T=\frac{2A}{\alpha+1}$}
 \end{itemize}
-\subsection{Stehende Wellen} Wir haben jetzt in dem Gedanksexperiment 2 laufende Wellen, und zwei Grenzflächen $\Rightarrow \xi=2A\cos(kx-\frac{\delta_R}{2})\cos(\omega t-\frac{\delta_R}{2})$
+\subsubsection{Stehende Wellen} Wir haben jetzt in dem Gedanksexperiment 2 laufende Wellen, und zwei Grenzflächen $\Rightarrow \xi=2A\cos(kx-\frac{\delta_R}{2})\cos(\omega t-\frac{\delta_R}{2})$
 \newline Reflexion am hartem Medium:$\alpha>>1, \delta_R=\pi$
 \[\xi=2Asin(kx)\sin(\omega t)\]
-\textbf{Energieverteilung der Stehende Wellen} Kinetische Energiedichte \[\frac{dT}{dV}=\frac{1}{2}\rho\left(\frac{\delta\xi}{\delta t}\right)^2=2\rho A^2\omega^2\sin^2(kx)\cos^2(\omega t)\]
+\subsubsection{Energieverteilung der Stehende Wellen} Kinetische Energiedichte \[\frac{dT}{dV}=\frac{1}{2}\rho\left(\frac{\delta\xi}{\delta t}\right)^2=2\rho A^2\omega^2\sin^2(kx)\cos^2(\omega t)\]
 Elastische Energiedichte:
 \[\frac{1}{2}E\left(\frac{\delta \xi}{\delta x}\right)^2=2EA^2k^2\cos^2(kx)\sin^2(\omega t)\]
 \[k^2=\frac{\omega^2}{v^2}\mspc v^2=\frac{E}{\rho^2}\]
-\textbf{Eigenschwingungen Einer Seite} $\frac{\delta\xi^2}{\delta t^2}=v^2\frac{\delta^2\xi}{\delta x^2}$ Und daher $v^2=\frac{S}{\rho}$ rechnen rechnen rechnen und wir kommen auf:
+\subsubsection{Eigenschwingungen Einer Seite} $\frac{\delta\xi^2}{\delta t^2}=v^2\frac{\delta^2\xi}{\delta x^2}$ Und daher $v^2=\frac{S}{\rho}$ rechnen rechnen rechnen und wir kommen auf:
 \[u(x)=u_0\cos(kx+\phi)=A\cos(kx)+B\sin(kx)\]
 Wo $A$ und $B$ ovn Randbedinugen kommen, (z.B feste Seite: $u(x=0)=u(x=l)=0$)
 \subsection{Ubungsstunde 2}
-\textbf{Polarisation} WIr wissen dass die Ausbreitung einer transversalwelle Senkrecht zur ausbreitungsrichtung Steht. Wir nehmen an die Welle breitet sich in der $z$ richtung aus, dann kann die Auslenkung überall auf der $x-<$ Ebene statt finden.\newline Eine Welle hesiit linear falls die Ganze AUslenkung nur in eine Ebene Stattfindet.
+\subsubsection{Polarisation} WIr wissen dass die Ausbreitung einer transversalwelle Senkrecht zur ausbreitungsrichtung Steht. Wir nehmen an die Welle breitet sich in der $z$ richtung aus, dann kann die Auslenkung überall auf der $x-<$ Ebene statt finden.\newline Eine Welle hesiit linear falls die Ganze AUslenkung nur in eine Ebene Stattfindet.
 Falls mehrere linear POlarisierte Wellen Uberlagert werden, und es zwischen diese Wellen einen Phasenunterschid gibt, dann ensteht eine Elliptisch-Polarisierte Welle
-\newline\textbf{Beispielaufgben} Angenommen wir haben eune Uberlagerung von:\[y_1(x,t)=5\cos(kx-\omega t)\vec{e_x}\]
+\newline\subsubsection{Beispielaufgben} Angenommen wir haben eune Uberlagerung von:\[y_1(x,t)=5\cos(kx-\omega t)\vec{e_x}\]
 \[y_2(x,t)=2\cos(kx+\omega t)\vec{e_y}\]Hier ist die resultierende Welle immer noch linear polarisiert.
 Ich habe viel verpasst, laufende Wellen, Stehende Wellen ist keine losung der Wellengleichung.
 \newline 
-    \textbf{Random Facts}
+    \subsubsection{Random Facts}
     Sehr nahr zu einer Kugelwellenquelle ist dies keine ein dimensionale Welle, aber sehr weit, kann man es mit viele punktquellen un (eindimensionale quellen)
     \newline
-\subsection{Kohärenz}
+\subsubsection{Kohärenz}
 Wie lange ist eine Welle peridodisch (in ort und zeit)?
 Eine glühbirne z.B hat in der langen distanz, hat keine Feste Phasenbeziehung zu bestimmte Zeiten und Orten.
 Bisher haben wir angenommen dass die Welle unendlich eine sinuswelle.
 \newline
 Wir mussen interferenzen messen $\rightarrow$ interfometer. Wir messen dieselbe lichtquelle mit unterschiedliche distanzen am selben punkt, wenn da keine phase ist, dann ist die lichtquelle nicht perfekt.
 Die Normale interferenz sollte entweder destruktiv oder konstruktiv sein, aber wenn die quelle nicht perfekt, dann ist das ganze nicht perfekt und der maximum ist kleiner als wenn $x_1=x_2$
-    \subsection{zwei entgegengesetzte wellen}
+    \subsubsection{Zwei entgegengesetzte wellen}
     $\vec{r_1}=\begin{pmatrix}-a\\0\end{pmatrix}\mspc\vec{r_1}=\begin{pmatrix}-a\\0\end{pmatrix}$
     \[\xi_1(r,t)=\frac{A}{\sqrt{|r-r_1}}\cos(k|r-r_1-\omega t)\]
     \[\xi_1(r,t)=\frac{A}{\sqrt{|r-r_2}}\cos(k|r-r_2-\omega t)\]
@@ -216,26 +221,26 @@ Seilwelle mit eine dicke änderung in der mitte, da die welle von der Spannung a
 Es mussen folgende sachen Gelten:\[lim_{x\rightarrow 0_-}(\xi_A+\xi_R)=lim_{x\rightarrow x_+}\xi_T\]
 Die Vertikale kräfte links und rechts der Grenzfläche mussen gleich sein.
 \newline
-\textbf{Wiederholung} Sei ein Seil mit eine Grenzfläche wo sich der Seil ändert, dann gibt es eine Einlaufende, Transmittierte und Reflektierte Welle. Man kann folgende gleichung aufstellen:
+\subsubsection{Wiederholung} Sei ein Seil mit eine Grenzfläche wo sich der Seil ändert, dann gibt es eine Einlaufende, Transmittierte und Reflektierte Welle. Man kann folgende gleichung aufstellen:
 \[\alpha=\frac{k_2\cdot S_2}{k_1\cdot S_1}=\sqrt{\frac{S_2\cdot\rho_2}{S_1\cdot\rho_1}}\text{ Wobei } k \text{ der Wellenvektor ist und } S \text{ Die seilspannung ist.}\]
 Wir konnen dann alles in unterschiedliche fälle einschachteln \begin{itemize}
   \item{$\alpha>1\mspc\delta_R=\pi, \mspc R=\frac{\alpha+1}{\alpha-1}\cdot A,\mspc T =\frac{2A}{\alpha+1}$ und dieser Fall entspricht einen Festen Ende, also es ist wie wenn wir eine Dunne schnur die zu eine sehr dicke schnur geht.}
   \item{$\alpha<1 \mspc \delta_R=0,\mspc R=\frac{1-\alpha}{1+\alpha}\cdot A,\mspc R=\frac{2A}{1+\alpha}$ Dieser Fall entspricht einem Losen Ende, also wenn die Dicke schnur zu eine Sehr dünne Schnur wird. }
   \item{$\alpha=1$ Dann ist es als ob die schnur gleich geblieben wäre. }
 \end{itemize}
-\textbf{Stehende Wellen} Bei einer Stehende Welle gibt es Knoten und bäuche, die Bedingung einer Stehende Welle (im beispiel der Saite )ist $n\frac{\lambda}{2}=l$ für eine länge von $l$:\[\lambda_n=\frac{2l}{n}\Rightarrow\omega_n=k_nv= \frac{n\pi}{l}\cdot\underset{=v}{\underbrace{\sqrt{\frac{S}{\rho}}}}=n\omega_1\]
-\subsection{Fourier Transformation}
+\subsubsection{Stehende Wellen} Bei einer Stehende Welle gibt es Knoten und bäuche, die Bedingung einer Stehende Welle (im beispiel der Saite )ist $n\frac{\lambda}{2}=l$ für eine länge von $l$:\[\lambda_n=\frac{2l}{n}\Rightarrow\omega_n=k_nv= \frac{n\pi}{l}\cdot\underset{=v}{\underbrace{\sqrt{\frac{S}{\rho}}}}=n\omega_1\]
+\subsubsection{Fourier Transformation}
 Sei eine Welle die als Summe von Sinus und Cosinus Wellen beschrieben werden Kann:
 \[f(t)=c_0\sum_{n+1}^\infty a_n \cos(n\omega_0 t)+b_n\sin(n\omega_0t)\]
 Hier ist $c_0$ eine konstante die die Ganze Welle verschiebt: \[c_0=\frac{1}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}}f(t)dt\] 
 \[a_n=\frac{2}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}} f(t)\cos(n\omega_0t)dt\] und 
 \[b_n=\frac{2}{T}\int_{\frac{-T}{2}}^{\frac{T}{2}} f(t)\sin(n\omega_0t)dt\]
-\textbf{Experiment}
+\experiment
 Wir wollen eine Perfekte Rechteckwelle herstellen, wir nehmen also eine Grundwelle und legen dazu ihre ungerade harmonischen, mit jeweils kleinere Amplituden, so dass wir dann $\lim_{n\rightarrow \infty}$ eine Perfekte Reschteckwelle bekommen. Mit dieser methode kann man jede Welle herstellen.
 \newline
-\subsection[1.7]{Beugung, Brechung und Dispersion}
+\subsection{Beugung, Brechung und Dispersion}
 Für die Beugung ist das Video von Veritasium sehr gut.\newline
-\textbf{1.7.1 Prinzip von Huygens} Jede Wellenfront ist eine Überlagerung von Kugelwellen. Dieses Prinzip kann erweitert werden: \newline
+\subsubsection{Prinzip von Huygens} Jede Wellenfront ist eine Überlagerung von Kugelwellen. Dieses Prinzip kann erweitert werden: \newline
 Wenn z.B. licht in einen Medium eintrifft, dann werden die partikel aufgeregt in dem sie die Photone einnehmen, dann werden sie wieder ausgestrahlt und aus dieser vorstellung dieser Kugelwelle kann man die wellenfront sehr gut approximieren. Im skrip sind dazu sehr hübsche abbildungen (1.38).
 \newline\begin{center}\scalebox{0.8}{\tikzfig{Wellen_Beugung1}}\end{center} Hier kann man also die Phasenverschiebung beschreiben.($N=$ Anzahl punktquellen und $N=2M+1$) \[\Delta l =k\Delta S = \frac{2\pi}{\lambda}\Delta S=k\delta \sin(\alpha)\] UNd hier ist aber $\delta << r$ wobei $r$ der Abstand zum zuschauer ist.
 Wir schauen uns also die Überlagerung der Punktquellen am punkt $P$:\[\xi(\alpha)=\sum_{n=1}^N \frac{a}{r} e^{i(kr_n-\omega t)}\]\[r_n=r+(M+1-n)\Delta S \Rightarrow kr_n=k r+(M+1)\Delta \varphi-n\Delta l\]
@@ -244,20 +249,45 @@ Kann man das hier vereinfachen:\[\xi(\alpha)=e^{\frac{i\Delta \varphi}{2}}\cdot 
 Und hier alles was übrich bleibt ist \[e^{i\Delta \varphi(M+1)}\cdot\frac{\sin(N\frac{\Delta\varphi}{2})}{\sin(\frac{\Delta\varphi}{2})}\]
 Diese Rechnung ist exact im Limes $n\rightarrow \infty$. Die Amplitude der Welle \[\xi(\alpha)=\frac{a}{r}\frac{\sin(N\Delta\varphi/2)}{\sin(\Delta\varphi/2)}\cdot e^{i(kr-\omega t)}\]
 Und die Intensität gemittelt über ort und Zeit: \[<I>\approx\frac{a^2}{r^2}\cdot\frac{\sin^2(N\Delta \varphi/2)}{\sin^2(\Delta \varphi/2)}\]
-\textbf{1.7.2 Beugung} Wir setzen $N\rightarrow \infty$ und $\delta \rightarrow \infty$ und dazu sagen wir $N\cdot \delta =d=konst$ dann ist:\[\underset{\delta\rightarrow\infty}{\lim_{N\rightarrow\infty}}<I>\approx \lim a^2 \frac{\sin^2(\frac{1}{2}kN\delta\sin(\alpha))}{\sin^2(\frac{1}{2}k\frac{d}{N}\sin(\alpha))}\]
+\subsubsection{Beugung} Wir setzen $N\rightarrow \infty$ und $\delta \rightarrow \infty$ und dazu sagen wir $N\cdot \delta =d=konst$ dann ist:\[\underset{\delta\rightarrow\infty}{\lim_{N\rightarrow\infty}}<I>\approx \lim a^2 \frac{\sin^2(\frac{1}{2}kN\delta\sin(\alpha))}{\sin^2(\frac{1}{2}k\frac{d}{N}\sin(\alpha))}\]
 Wir kürzen Weiter mit der Approximation $sin(x)=x$ für kleine Winkel: \[\approx\underset{\delta\rightarrow\infty}{\lim_{N\rightarrow\infty}}\mspc\frac{\sin^2(\frac{1}{2}kd\sin(\alpha))}{\frac{1}{4N^2}k^2d^2\sin^2(\alpha)}=\underset{=A^2}{\underbrace{(Na)}}^2\frac{\sin^2(\frac{1}{2}\Delta\varphi)}{(\frac{1}{2}\Delta\varphi)^2}\]
 Dank dieses $\frac{sin^2(x)}{x^2}$ haben wir also bei $\frac{1}{2}\Delta\varphi=n\cdot\pi$ nullstellen und je weiter weg man ist, je kleiner die Amplitude. Das alles ist sehr eklärlich mit dem double slit experiment aus der Vorlesung.
-\newline\textbf{Doppelspalt experiment} Wir haben folgende messungen und werte:\begin{itemize}
+\experiment Spalt experiment: Wir haben folgende messungen und werte:\begin{itemize}
   \item{Spaltbreite $d$}
   \item{Phasenverschiebung $\Delta\varphi=k\cdot d\cdot\sin(\alpha)$ (Hier ist $d\cdot\sin(\alpha)$ die projezierte spaltbreite.)}
 \end{itemize}
 Wir konnen also die Beugung am einzelspalt ausrechnen 
-\begin{center}\scalebox{1.8}{\tikzfig{SpaltBeugung}}\end{center} Und hier kann man die sehr wichtige Eigenschaft der Beugung am einzelspalt klarer sehen:\[<I>\approx A^2\frac{\sin^2(\frac{1}{2}\Delta\varphi)}{(\frac{1}{2}\Delta\varphi)^2}\]
-\textbf{1.7.3 Reflexion und Brechung } (A la huygens)
+\begin{multicols}{2}
+\scalebox{1.8}{\tikzfig{SpaltBeugung}}\vfill\null
+\columnbreak
+Und hier kann man die sehr wichtige Eigenschaft der Beugung am einzelspalt klarer sehen:\[<I>\approx A^2\frac{\sin^2(\frac{1}{2}\Delta\varphi)}{(\frac{1}{2}\Delta\varphi)^2}\]
+\end{multicols}
+\subsubsection{Reflexion und Brechung } (A la huygens)
 \newline Reflexion: Warum ist die Reflexion nur unter dem selben ausgangswinkel? Es is eine Frage der Konstruktiven interferenz, alle andere Ausgangswinkel interferieren destruktiv.\newline
 Brechung: Die Erklärung ist nicht sehr gut.. aber es gilt für die Brechung und konstante fräquenz $\nu$ \[\frac{\sin(\alpha_1)}{\sin(\alpha_2)}=\frac{v_1}{v_2}=\frac{\lambda_1}{\lambda_2}\] 
 Der Fermat Prinzip ist simpler und es sagt dass: \textit{Licht sucht sich den Schnellsten Weg.}
-\newline\textbf{Totalreflexion} Wir haben unser brechungsindex $nE\frac{c}{c_i}>1$ wo $c=$ lichtgeschwindigkeit und $c_i=$ Lichtgeschwindigkeit im medium:\[\frac{\sin(\alpha_1)}{\sin(\alpha_2)}=\frac{v_1}{v_2}\Rightarrow \sin(\alpha_2)=\underset{>1}{\underbrace{\frac{c_2}{c_1}}}\underset{\le 1}{\underbrace{\sin(\alpha_1)}}>1 \]
-Und dies kann nie Passieren, also es gibt keine Brechung und keine Reflexion, also wass ist los? Es gibt keine Transmission aber es gibt ein bisschen Reflexion und das licht geht auch die Grenzfläche entlang.
-
+\subsubsection{Totalreflexion} Wir haben unser brechungsindex $nE\frac{c}{c_i}>1$ wo $c=$ lichtgeschwindigkeit und $c_i=$ Lichtgeschwindigkeit im medium:\[\frac{\sin(\alpha_1)}{\sin(\alpha_2)}=\frac{v_1}{v_2}\Rightarrow \sin(\alpha_2)=\underset{>1}{\underbrace{\frac{c_2}{c_1}}}\underset{\le 1}{\underbrace{\sin(\alpha_1)}}>1 \]
+Und dies kann nie Passieren, also es gibt keine Brechung und keine Reflexion, also wass ist los? Es gibt keine Transmission aber es gibt ein bisschen Reflexion und das licht geht auch die Grenzfläche entlang.\newline
+\subsection{Dispersion und Gruppengeschwindigkeit} $v_{ph}:$ Die Phasengewschwindigkeit ist die Geschwindigkeit mit welcher sich ein punkt mit konstanter Phase bewegt. In anderen Worten, wenn wir überlagerte wellen haben, ist die Phasengeschwindigkeit die geschwindigkeit des Punktes den wir auf der Welle "Fest Machen". und die Gruppen geschwindigkeit, ist die Geschwindigkeit der Knoten, in deren die kleinere Wellen minimisieren.
+\begin{multicols}{2}
+  \scalebox{1}{\tikzfig{Wellenpaket}}
+  Links sieht man sehr gut wie ein Wellenpaket definiert ist, die Geschwindigkeit des Maximums ist die Gruppengeschwindigkeit, sie geht in der Selben richtung als die Phasengeschwindigkeit ist aber immer kleiner.
+\end{multicols}
+Man kann so eine Welle mit folgende Gleichung definierien
+\[\xi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}A(k)e^{i(kx-\omega(k) t)}\mspc dk\]
+Wobei $A(k)$ die Amplitudenfunktion ist und $\omega(k)$ die sogenannte dispersion ist.\newline
+Wir schauen uns den allgemeinen fall an wo $k\neq0$. Wir wählen $\varkappa$ so dass $k_0-\varkappa \le k\le k_0+\varkappa$ wobei der $k_0$ bezuglich des "Schwerpunkts" (maximum) des Wellenpakets. (ich finde $\lambda$ zwischen zwei maxima und finde damit $k_0$).
+Wir konnen also Folgende vereinfachung machen:\[\xi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{k-\varkappa}^{k+\varkappa}A(k) e^{i(kx-\omega(k)t)}\mspc dk=\frac{1}{\sqrt{2\pi}}\int_{-\varkappa}^{\varkappa}A(k_0+\varkappa') e^{i(k(\varkappa')x-\omega(k)t)}\mspc d\varkappa'\]
+Dass wird mit $\omega=\omega(k)$ um $k=k_0$ herum, also: $\omega(k)=\omega(k_0)+\varkappa' \frac{d\omega}{dk}\left.\right|_{k=k_0}$ und also:\[\xi(x,t)=\frac{1}{\sqrt{2\pi}}e^{i(k_0x-\omega(k_0)t)}\int_{-\varkappa}^{\varkappa} A(k_0+\varkappa')e^{i(\varkappa'(x-\omega't))}\mspc d\varkappa'\]
+Dass integral ist auch seine eigene funktion die von $k$ und $\varkappa$ abhängt, diese funktion nennt man \textit{enveloppe}. Man schreibt also:
+\[\xi(x,t)\approx \frac{1}{\sqrt{2\pi}} e^{i(kx-\omega(k_0)t)} \cdot G(x-v_gt)\] wobei $v_g=\frac{d\omega}{dk}\left.\right|_{k=k_0}$ die Gruppengeschwindigkeit ist und $v_{ph}=\frac{\omega}{k}$ die Phasengeschwindigkeit.\newline
+Wenn $\frac{d\omega}{dk}=\frac{\omega}{k}\Rightarrow\omega=v\cdot k$ dann ist $v=v_g=v_{ph}$ und man nennt dass eine Lineare Dispersion, wenn die fräquenz linear vom wellenvektor abhängt.\newline
+Wenn $\frac{dv_p}{dk}<0\mspc \frac{dv_p}{d\lambda}>0$ ist es die Normale dispersion.
+\newline Wenn $\frac{dv_p}{dk}>0\mspc\frac{dv_p}{d\lambda}<0$ Heisst es Anormale dispersion.\newline
+Wenn wir lichtwellen in einem Medium haben dann gibt es ein Brechungsindex (der von der Wellenlänge abhängt) und daher $n=n(\lambda)$ und daher gibt es Dispersion. 
+\subsection{Dopplereffekt} Was hier neu ist, ist dass die Quelle und der Beobnachter konnen sich bewegen.
+\subsubsection{Beobachter ruht, Quelle bewegt sich} Sagen wir dass der beobachter die Wellenberge zählt über einen zeitraum $\Delta t$ , dann ist die anzahl wellenberge $n_\lambda=\nu_Q\Delta t$
+man kann auch sagen: $n_\lambda=\nu_Q\Delta t+\frac{v_B\Delta t}{\lambda}$ Also die fräquenz das der Beobachter misst ist: \[\nu_b=\frac{n_\lambda}{\Delta t}=\nu_Q+\frac{v_Q}{\lambda}\]
+\subsubsection{Beobachter bewegt, Quelle ruht} Wenn der beobachter sich bewegt, ist die situation gleich, die relative geschwindigkeit ist zu nehmen.
 \end{document}
+
