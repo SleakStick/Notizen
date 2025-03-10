@@ -242,4 +242,21 @@ Wir schauen uns also die Überlagerung der Punktquellen am punkt $P$:\[\xi(\alph
 \[\xi(\alpha)=\frac{a}{r}e^{i(M+1)\Delta \varphi}\underset{\frac{e^{i\Delta\varphi(2M+2)}-e^{i\Delta\varphi}}{e^{-i\Delta\varphi}-1}}{\underbrace{\left[\sum_{n=1}^{2M+1}e^{-in\Delta \varphi}\right]}}e^{i(kr-\omega t)}\]
 Kann man das hier vereinfachen:\[\xi(\alpha)=e^{\frac{i\Delta \varphi}{2}}\cdot e^{i\Delta\varphi(M+1)}\cdot\frac{e^{i\Delta\varphi}-e^{i\Delta\varphi M}}{e^{\frac{-i\Delta \varphi}{2}}-e^{\frac{i\Delta \varphi}{2}}}\]
 Und hier alles was übrich bleibt ist \[e^{i\Delta \varphi(M+1)}\cdot\frac{\sin(N\frac{\Delta\varphi}{2})}{\sin(\frac{\Delta\varphi}{2})}\]
+Diese Rechnung ist exact im Limes $n\rightarrow \infty$. Die Amplitude der Welle \[\xi(\alpha)=\frac{a}{r}\frac{\sin(N\Delta\varphi/2)}{\sin(\Delta\varphi/2)}\cdot e^{i(kr-\omega t)}\]
+Und die Intensität gemittelt über ort und Zeit: \[<I>\approx\frac{a^2}{r^2}\cdot\frac{\sin^2(N\Delta \varphi/2)}{\sin^2(\Delta \varphi/2)}\]
+\textbf{1.7.2 Beugung} Wir setzen $N\rightarrow \infty$ und $\delta \rightarrow \infty$ und dazu sagen wir $N\cdot \delta =d=konst$ dann ist:\[\underset{\delta\rightarrow\infty}{\lim_{N\rightarrow\infty}}<I>\approx \lim a^2 \frac{\sin^2(\frac{1}{2}kN\delta\sin(\alpha))}{\sin^2(\frac{1}{2}k\frac{d}{N}\sin(\alpha))}\]
+Wir kürzen Weiter mit der Approximation $sin(x)=x$ für kleine Winkel: \[\approx\underset{\delta\rightarrow\infty}{\lim_{N\rightarrow\infty}}\mspc\frac{\sin^2(\frac{1}{2}kd\sin(\alpha))}{\frac{1}{4N^2}k^2d^2\sin^2(\alpha)}=\underset{=A^2}{\underbrace{(Na)}}^2\frac{\sin^2(\frac{1}{2}\Delta\varphi)}{(\frac{1}{2}\Delta\varphi)^2}\]
+Dank dieses $\frac{sin^2(x)}{x^2}$ haben wir also bei $\frac{1}{2}\Delta\varphi=n\cdot\pi$ nullstellen und je weiter weg man ist, je kleiner die Amplitude. Das alles ist sehr eklärlich mit dem double slit experiment aus der Vorlesung.
+\newline\textbf{Doppelspalt experiment} Wir haben folgende messungen und werte:\begin{itemize}
+  \item{Spaltbreite $d$}
+  \item{Phasenverschiebung $\Delta\varphi=k\cdot d\cdot\sin(\alpha)$ (Hier ist $d\cdot\sin(\alpha)$ die projezierte spaltbreite.)}
+\end{itemize}
+Wir konnen also die Beugung am einzelspalt ausrechnen 
+\begin{center}\scalebox{1.8}{\tikzfig{SpaltBeugung}}\end{center} Und hier kann man die sehr wichtige Eigenschaft der Beugung am einzelspalt klarer sehen:\[<I>\approx A^2\frac{\sin^2(\frac{1}{2}\Delta\varphi)}{(\frac{1}{2}\Delta\varphi)^2}\]
+\textbf{1.7.3 Reflexion und Brechung } (A la huygens)
+\newline Reflexion: Warum ist die Reflexion nur unter dem selben ausgangswinkel? Es is eine Frage der Konstruktiven interferenz, alle andere Ausgangswinkel interferieren destruktiv.\newline
+Brechung: Die Erklärung ist nicht sehr gut.. aber es gilt für die Brechung und konstante fräquenz $\nu$ \[\frac{\sin(\alpha_1)}{\sin(\alpha_2)}=\frac{v_1}{v_2}=\frac{\lambda_1}{\lambda_2}\] 
+Der Fermat Prinzip ist simpler und es sagt dass: \textit{Licht sucht sich den Schnellsten Weg.}
+\newline\textbf{Totalreflexion} Wir haben unser brechungsindex $nE\frac{c}{c_i}>1$ wo $c=$ lichtgeschwindigkeit und $c_i=$ Lichtgeschwindigkeit im medium:\[\frac{\sin(\alpha_1)}{\sin(\alpha_2)}=\frac{v_1}{v_2}\Rightarrow \sin(\alpha_2)=\underset{>1}{\underbrace{\frac{c_2}{c_1}}}\underset{\le 1}{\underbrace{\sin(\alpha_1)}}>1 \]
+Und dies kann nie Passieren, also es gibt keine Brechung und keine Reflexion, also wass ist los? Es gibt keine Transmission aber es gibt ein bisschen Reflexion und das licht geht auch die Grenzfläche entlang.
 \end{document}

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741552963.07344 "main.tex" "main.pdf" "main" 1741552963.47712 0
+["pdflatex"] 1741604185.58852 "main.tex" "main.pdf" "main" 1741604186.01598 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1736268207 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1736268207 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1736268207 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -23,6 +23,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1736268207 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1736268207 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1736268207 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1736268207 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1736268207 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1736268207 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1736268207 30251 6afa5cb1d0204815a708a080681d4674 ""
@@ -36,6 +37,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1736268207 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1736268207 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1736268207 32716 08e384dc442464e7285e891af9f45947 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1736268207 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1736268207 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1736268207 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1736268207 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -146,10 +148,11 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1736268207 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740579717.79217 5318467 8236939515598d005dfbcc2e1a40f206 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740579683 7112989 be661d4c3a09fcc18a03425a43b063f1 ""
-  "PhysiksStyle.tikzstyles" 1741551135.01986 522 53940920035a2929f014855e91525792 ""
-  "figures/Wellen_Beugung1.tikz" 1741551149.7905 2567 a36e12fdf2a7ee9bbbe58666f94304f8 ""
-  "main.aux" 1741552963.42973 3064 895cdd4ea6d40ed622a8a0a38a8515f7 "pdflatex"
-  "main.tex" 1741552962.76414 19708 43a2441c8b85354e4a141dce845fd659 ""
+  "PhysiksStyle.tikzstyles" 1741601893.28193 479 9786b99dadac9f73314971229b83cc4e ""
+  "figures/SpaltBeugung.tikz" 1741602054.7868 1380 25ce1e75efea9624def86a8c0eb65d67 ""
+  "figures/Wellen_Beugung1.tikz" 1741601722.53157 2561 8683b61fd49cd718a5c3f87f5d458c83 ""
+  "main.aux" 1741604185.96969 3064 2781bc02a7919348bcfe943f75365b0a "pdflatex"
+  "main.tex" 1741604183.79359 22347 b9a7003ab5ed5def07c76725269f4972 ""
   "tikzit.sty" 1741551366.90665 1248 43e1a5fcf14fc024e289b1463d1206ce ""
   (generated)
   "main.aux"
