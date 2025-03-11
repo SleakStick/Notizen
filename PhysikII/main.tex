@@ -289,5 +289,25 @@ Wenn wir lichtwellen in einem Medium haben dann gibt es ein Brechungsindex (der 
 \subsubsection{Beobachter ruht, Quelle bewegt sich} Sagen wir dass der beobachter die Wellenberge zählt über einen zeitraum $\Delta t$ , dann ist die anzahl wellenberge $n_\lambda=\nu_Q\Delta t$
 man kann auch sagen: $n_\lambda=\nu_Q\Delta t+\frac{v_B\Delta t}{\lambda}$ Also die fräquenz das der Beobachter misst ist: \[\nu_b=\frac{n_\lambda}{\Delta t}=\nu_Q+\frac{v_Q}{\lambda}\]
 \subsubsection{Beobachter bewegt, Quelle ruht} Wenn der beobachter sich bewegt, ist die situation gleich, die relative geschwindigkeit ist zu nehmen.
+
+%---------------Elektrostatik----------------------
+
+\section{Elektrostatik} Hier geht es um ruhende Ladungen.
+\subsubsection{Elektrische Ladung}\begin{multicols}{2} \begin{itemize}\item{Eine Elektrische ladung ist ähnlich zu einer Masse aber fur die Elektrostatik.} \item{Hier gibt es auch zwei typen von Ladungen; positiv und negativ.} \item{Es wird im Coulomb gemessen} \item{Es gilt die Ladungserhaltung für ein geschlossenes system.} \item{Wenn ein Positives und Negatives teilchen mit der selben Ladung, dann sieht es von aussen als ob es keine Ladung gäbe.} \item{Ladungen gibt es nur in Diskrete Einheiten $e=1,6\cdot10^{-19}C$}\item{Ladungen sind punktquellen}\end{itemize}\end{multicols}
+\subsubsection{Coulombgesetz} Die Kraft zwischen zwei Ladungen ist wie folgt gegeben:\[F_{2,1}=k\frac{q_1\cdot q_2}{r_{2,1}^2}\]Wo $q_1, q_2$ die Ladungen der teilchen ist. Da es kein $-$ vorzeichen gibt, stossen sich zwei ähnlich geladene Teilchen ab.
+\newline Haben wir viele Ladungen im system, dann ist die Kraft auf dem Teilchen $j$ \[\vec{F_{j}}=\frac{1}{4\pi\varepsilon_0}\sum_{i\neq j}\frac{q_i\cdot q_j}{r_{i,j}^2}\]
+\subsubsection{Energie einer Ladungsverteilung} \[W=\int_\infty^{r_{2,1}}-\vec{F_{2,1}}(\vec{r)\vec{ds}}\] und hier ist auch $\vec{ds}=\vec{r_{2,1}}dr$ Wenn man also $F_{2,1}$ einsetzt bekommt man:\[frac{1}{4\pi\varepsilon_0}\frac{q_1\cdot q_2}{r}\left.\right|^\infty_{r_{2,1}}=\frac{1}{4\pi\varepsilon_0}\frac{q_1\cdot q_2}{r_{2,1}}\]
+  Dies kann man auch auf $n$ Teilchen verallgemeinern in derselben art wie wir die Kraft auf $n$ Teilchen verallgemeinert haben. Und daher auch die Gesamtenergie.
+\subsubsection{Coulomb konstante vom kristallgitter} Sei ein Kristallgitter, dann ist seine Coulomb Wechselwirkungskraft eine konstante zahl die die Summe der Coulomb kräfte zwischen ein teilchen und alle andere.
+\subsection{Das elektrische Feld}Das Elektrische Feld Ist gegeben durch die Kraft die eine probeladung spüren wurde am punkt:\[\vec{E}(\vec{r_0})=\frac{1}{4\pi\varepsilon_0}\sum_{i=1}^n\frac{q_i}{|\vec{r_0}-\vec{r_i}|^3}(\vec{r_0}-\vec{r_i}))=\frac{\vec{F_0}}{q_0}\]
+\[\vec{=q\vec{E}\mspc\vec{E}=\lim_{q\rightarrow0} \frac{\vec{F}}{q}}\]
+\subsubsection{Feldlinien} Der Elektrische Feld ist ein Vektorfeld, als sind die Feldlinien ähnlich zu der vom Vektorveld
+\subsubsection{Ladungsverteilungen} \[\vec{E}(\vec{r})=\frac{1}{2\pi\varepsilon_0}\cdot\int_{R^3}\frac{\rho(\vec{r_i})}{|\vec{r}-{\vec{r'}}|^3}(\vec{r}-\vec{r'})d\vec{r'}\]
+\subsection{Das Gaussche Gesetz} Der Fluss $d\Phi=\vec{E}\cdot\vec{da}$ Daher ist der Gesamtfluss \[\Phi=\int d\Phi=\int_{\partial V}\vec{E}\vec{da\Phi=\int d\Phi=\int_{\partial V}\vec{E}\vec{da}}\] Wobei $\vec{da}$ ein infinitesimales flächenvektor.
+Der Fluss ist die Menge von Feld der durch eine Fläche geht. Feld der durch eine Fläche geht. Für eine Ladungsverteilung ist der fluss gegeben durch:\[\Phi=\int_{\partial V}\vec{E}\vec{da}=\frac{1}{\varepsilon_0}\sum q_i=\frac{1}{\varepsilon_0}\int\rho(\vec{r'})d\vec{r}'\]
+Man merkt auch die Schreibweise $d\vec{r}=d^3r=dV=dx\cdot dy\cdot dz$
+%--------------------bei 2.6 aufnahme starten--------------------
+
 \end{document}
+
 
