@@ -296,7 +296,7 @@ man kann auch sagen: $n_\lambda=\nu_Q\Delta t+\frac{v_B\Delta t}{\lambda}$ Also 
 \subsubsection{Elektrische Ladung}\begin{multicols}{2} \begin{itemize}\item{Eine Elektrische ladung ist ähnlich zu einer Masse aber fur die Elektrostatik.} \item{Hier gibt es auch zwei typen von Ladungen; positiv und negativ.} \item{Es wird im Coulomb gemessen} \item{Es gilt die Ladungserhaltung für ein geschlossenes system.} \item{Wenn ein Positives und Negatives teilchen mit der selben Ladung, dann sieht es von aussen als ob es keine Ladung gäbe.} \item{Ladungen gibt es nur in Diskrete Einheiten $e=1,6\cdot10^{-19}C$}\item{Ladungen sind punktquellen}\end{itemize}\end{multicols}
 \subsubsection{Coulombgesetz} Die Kraft zwischen zwei Ladungen ist wie folgt gegeben:\[F_{2,1}=k\frac{q_1\cdot q_2}{r_{2,1}^2}\]Wo $q_1, q_2$ die Ladungen der teilchen ist. Da es kein $-$ vorzeichen gibt, stossen sich zwei ähnlich geladene Teilchen ab.
 \newline Haben wir viele Ladungen im system, dann ist die Kraft auf dem Teilchen $j$ \[\vec{F_{j}}=\frac{1}{4\pi\varepsilon_0}\sum_{i\neq j}\frac{q_i\cdot q_j}{r_{i,j}^2}\]
-\subsubsection{Energie einer Ladungsverteilung} \[W=\int_\infty^{r_{2,1}}-\vec{F_{2,1}}(\vec{r)\vec{ds}}\] und hier ist auch $\vec{ds}=\vec{r_{2,1}}dr$ Wenn man also $F_{2,1}$ einsetzt bekommt man:\[frac{1}{4\pi\varepsilon_0}\frac{q_1\cdot q_2}{r}\left.\right|^\infty_{r_{2,1}}=\frac{1}{4\pi\varepsilon_0}\frac{q_1\cdot q_2}{r_{2,1}}\]
+\subsubsection{Energie einer Ladungsverteilung} \[W=\int_\infty^{r_{2,1}}-\vec{F_{2,1}}(\vec{r)\vec{ds}}\] und hier ist auch $\vec{ds}=\vec{r_{2,1}}dr$ Wenn man also $F_{2,1}$ einsetzt bekommt man:\[\frac{1}{4\pi\varepsilon_0}\frac{q_1\cdot q_2}{r}\left.\right|^\infty_{r_{2,1}}=\frac{1}{4\pi\varepsilon_0}\frac{q_1\cdot q_2}{r_{2,1}}\]
   Dies kann man auch auf $n$ Teilchen verallgemeinern in derselben art wie wir die Kraft auf $n$ Teilchen verallgemeinert haben. Und daher auch die Gesamtenergie.
 \subsubsection{Coulomb konstante vom kristallgitter} Sei ein Kristallgitter, dann ist seine Coulomb Wechselwirkungskraft eine konstante zahl die die Summe der Coulomb kräfte zwischen ein teilchen und alle andere.
 \subsection{Das elektrische Feld}Das Elektrische Feld Ist gegeben durch die Kraft die eine probeladung spüren wurde am punkt:\[\vec{E}(\vec{r_0})=\frac{1}{4\pi\varepsilon_0}\sum_{i=1}^n\frac{q_i}{|\vec{r_0}-\vec{r_i}|^3}(\vec{r_0}-\vec{r_i}))=\frac{\vec{F_0}}{q_0}\]
@@ -304,10 +304,33 @@ man kann auch sagen: $n_\lambda=\nu_Q\Delta t+\frac{v_B\Delta t}{\lambda}$ Also 
 \subsubsection{Feldlinien} Der Elektrische Feld ist ein Vektorfeld, als sind die Feldlinien ähnlich zu der vom Vektorveld
 \subsubsection{Ladungsverteilungen} \[\vec{E}(\vec{r})=\frac{1}{2\pi\varepsilon_0}\cdot\int_{R^3}\frac{\rho(\vec{r_i})}{|\vec{r}-{\vec{r'}}|^3}(\vec{r}-\vec{r'})d\vec{r'}\]
 \subsection{Das Gaussche Gesetz} Der Fluss $d\Phi=\vec{E}\cdot\vec{da}$ Daher ist der Gesamtfluss \[\Phi=\int d\Phi=\int_{\partial V}\vec{E}\vec{da\Phi=\int d\Phi=\int_{\partial V}\vec{E}\vec{da}}\] Wobei $\vec{da}$ ein infinitesimales flächenvektor.
-Der Fluss ist die Menge von Feld der durch eine Fläche geht. Feld der durch eine Fläche geht. Für eine Ladungsverteilung ist der fluss gegeben durch:\[\Phi=\int_{\partial V}\vec{E}\vec{da}=\frac{1}{\varepsilon_0}\sum q_i=\frac{1}{\varepsilon_0}\int\rho(\vec{r'})d\vec{r}'\]
+Der Fluss ist die Menge von Feld der durch eine Fläche geht. Feld der durch eine Fläche geht. Für eine Ladungsverteilung ist der fluss gegeben durch:\[\Phi=\int_{\partial V}\vec{E}\vec{da}=\frac{1}{\varepsilon_0}\sum q_i=\frac{1}{\varepsilon_0}\int_V\rho(\vec{r'})d\vec{r}'\]
 Man merkt auch die Schreibweise $d\vec{r}=d^3r=dV=dx\cdot dy\cdot dz$
+\subsubsection{Ladunsverteilung auf einer Kugeloberfläche}\[\rho(\vec(r)=\left\lbrace\begin{matrix}0&r<R\\\rho_0&r=R\\0&r>0\end{matrix}\right.\] Und daher kann man auch \[q=\int \rho(\vec{r})d\vec(r)\Rightarrow \vec(E)\vec(r)\left\lbrace\begin{matrix}0&r<R\\\frac{1}{4\pi\varepsilon_0}\cdot\frac{q}{r}&r>R\end{matrix}\right.\]
+Dasselbe kann man mit einen Zylinder und eine Unendliche fläche Machen. Beispiele Stehen im skript.
 %--------------------bei 2.6 aufnahme starten--------------------
-
+\subsection{Die Energie Des Feldes}Fur eine Kugelaschale gilt:\[\rho(r)=\left\lbrace\begin{matrix}\frac{q}{4\pi R^2d}&\mspc&R<r<R+d\\0&mspc&\text{sonst}\end{matrix}\right.\]
+Der Feld ausserhalb ist wie ein Feld von einer Punktquelle:
+\subsubsection{Druck}\[p=\frac{\text{Kraft}}{\text{Fläche}}=\frac{dqE(\vec{r})}{dA}=E_{Aus}\cdot\frac{q}{4\pi R^2d}\int_0^d\frac{r}{d}dr=\varepsilon_0\cdot E_{Aus}^2\frac{1}{2}\]
+Und dann die Energiedichte $u=p=\frac{dW}{dV}$ und $u=\frac{\varepsilon_0}{2}E^2$ Daher \[U=\int_V\frac{\varepsilon_0}{2}E^2dV\]
+\subsubsection{Das Elektrische Potential} Wir gehen wie mit der Gravitation, vom Punkt $a$ zum punkt $b$ und dann ist die Arbeit \[W_{ba}=-\int_b^aq\vec{E}\mspc d\vec{s}\]Und dann geht auch:\[\oint\vec{E}\mspc d\vec{s}=0\]
+Also hier ist der Potentialdifferenz (was später mit Spannung zu tun hat) \[ \phi_{ba}=\int_a^b\vec{E}\mspc d\vec{s}\] \[\text{grad}(\phi)\Rightarrow\vec{\nabla}d\vec{s}=d\phi=\frac{\partial\phi}{\partial x}+\frac{\partial\phi}{\partial y}+\frac{\partial\phi}{\partial z}\]
+Die Ladung und der Potential mehrere Teilchen, ist analog aber als summe über $n$ Ladungen definiert.
+\subsubsection{Potentiale Einfacher Ladungsverteilung} Der Einfachste teil ist der Platten condensator
+\begin{multicols}{2}
+$\phi_{ba}=\-\int_a^b\vec{E} ds=E(z_b)-z_a)=E\Delta z)$\newline Und dann ist die Energie $W_{ba}=q_0E\Delta z$
+\vfill\null\columnbreak
+\scalebox{1}{\tikzfig{Plattencondensator1}}
+\end{multicols}
+\subsubsection{Potential einer Punktladung} Wir haben eine Punktladung $\phi_{ba}=-\int_a^b \vec{E}ds$ wobei \[\vec{E}d\vec{s}=\frac{1}{4\pi \varepsilon_0}...\] Und dann ist der Potential unterschied
+\[\phi_{ba}=\phi(b)-\phi(a)=\phi_r(r_0)-0=-\int_\infty^{r_0}\frac{1}{4\pi\varepsilon_0}\frac{1}{r^2}dr=\frac{q}{4\pi\varepsilon_0}\cdot\int_{r_0}^\infty=\frac{1}{4\pi\varepsilon_0}\]
+\subsubsection{Potential einer Geladenen Scheibe} Wir Haben jetzt eine Scheibe, der Potential vom Feld dieser Geladenen SCheibe ist
+\subsection{Der Satz von gauss} Sei $F()\vec{r})$ ein Vektor feld, dann ist \[\text{div}\vec{F}(\vec{r})=\lim_{V\rightarrow0}\frac{1}{V}\int_{\partial V}\vec{F}d\vec{a}\]
+Und \[\Phi=\int_{\partial}\vec{F}d\vec{a}\] Dies heisst dass wenn wir zwei kleine Volumen, dann ist der fluss auf der Grenzseite von 1 nach 2 gleich - der Fluss von der Grenzfläche von 2 nach 1. Also wir konnen:
+\[\Phi=\sum_i\int_{\partial V_i}\vec{F}d\vec{a}=\sum_iV_i\int_{\partial V_i}\frac{\vec{F}d\vec{a}}{V_i}\] Und da $\int_{\partial V}\vec{F}d\vec{a}=\int_{V}div(\vec{F}dV)$ Gilt:\[\Phi=\int_{\partial V}\vec{E}d\vec{a}=\frac{1}{\varepsilon}\int_V\rho dV=\int_Vdiv\vec{E}dV\]
+Und dann kommt die erste Maxwell gleichung:\[\text{div}(\vec{E}=\frac{\rho}{\varepsilon_0})\]
+Physikalish heisst dies das ladungen siend die Quellen der Elektrischen Felder
+\subsection{Das Laplace Operator}\[\left.\begin{matrix}\vec{E}=-\vec{\nabla}\Phi\\\vec{\nabla}\vec{E}=\frac{\rho}{\varepsilon_0}\end{matrix}\right\rbrace 
+\Delta \Phi=\vec{\nabla}\vec{\nabla}\Phi=\vec{\nabla}(-\vec{E})=\frac{\rho}{\varepsilon_0}\]
+\subsection{Der Satz von Stokes} Sei $C=\int_{\partial A} \vec{F}\vec{ds}$ ein Linienintegral dann ist $c=\sum A_i\int_{\partial A}\frac{\vec{F}\cdot\vec{ds}}{...}$ Jai pas abschrieben (deux denieres minutes du vours)
 \end{document}
-
-

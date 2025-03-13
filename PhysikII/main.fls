@@ -318,6 +318,9 @@ INPUT C:\Users\Benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tf
 INPUT .\figures\Wellenpaket.tikz
 INPUT .\figures\Wellenpaket.tikz
 INPUT figures\Wellenpaket.tikz
+INPUT .\figures\Plattencondensator1.tikz
+INPUT .\figures\Plattencondensator1.tikz
+INPUT figures\Plattencondensator1.tikz
 INPUT main.aux
 INPUT C:\Users\Benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\Benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk

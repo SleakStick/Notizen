@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741684471.03341 "main.tex" "main.pdf" "main" 1741684474.1756 0
+["pdflatex"] 1741861834.95196 "main.tex" "main.pdf" "main" 1741861837.32761 0
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1740673091 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0900.pk" 1741679449 10472 3f4abac6a1e7a3f463124e66af317a31 ""
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1735424699 11548 c8973c1c68aefebcc5118b7265d9f7dc ""
@@ -204,11 +204,12 @@
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1700599895 32515 51caec75eda9c8890135f12f1a4eddc3 ""
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "PhysiksStyle.tikzstyles" 1741679410 492 9786b99dadac9f73314971229b83cc4e ""
+  "figures/Plattencondensator1.tikz" 1741860247 1296 76d39badd615011830e979686d7aa85e ""
   "figures/SpaltBeugung.tikz" 1741679410 1412 25ce1e75efea9624def86a8c0eb65d67 ""
   "figures/Wellen_Beugung1.tikz" 1741679410 2622 8683b61fd49cd718a5c3f87f5d458c83 ""
   "figures/Wellenpaket.tikz" 1741679410 1565 6081cc5aea20a4089681ef3144e99d3b ""
-  "main.aux" 1741684473 6218 9dc307c9c99f054ebea3e844989271f6 "pdflatex"
-  "main.tex" 1741684466 29552 7c83cecf4c53dbd7ad2527a68adb7358 ""
+  "main.aux" 1741861836 7438 5aa5cc8dfcdbb494f30430466c85fd5b "pdflatex"
+  "main.tex" 1741861834 33346 a2e977bed2bb5cbaf833e9f46ba0000a ""
   "tikzit.sty" 1741679410 1248 bd3a4ee1dccdce0fc641973c4461749d ""
   (generated)
   "main.aux"
