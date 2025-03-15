@@ -275,7 +275,15 @@ Sei $v=u+w\in V\neq0_v,u\in U,w\in W$ Dann ist $v$ denau dann ein Eigenvektor vo
 $E_\lambda (T_C)=E_\lambda(T_A)\bigoplus E_\lambda(T_B)\Rightarrow g_\lambda(T_c)=g_\lambda(T_A)+g_\lambda(T_B)$
 \newline\textbf{Satz 12.2.3} Sei $T:V\rightarrow V$ linear und Nimm an $\exists B$ Basis von V So dass $[T]^B_B$ die Diagonal Jordansche normalenform annimt und sei $\lambda$ Eigenwert von $T$ Dann gilt $g_\lambda=\#\lbrace i|1\le i\le k, \alpha_i=\lambda\rbrace$
 $a_\lambda=\sum_{\alpha_i=\lambda}\lambda_i=$ Die länge des gsten Jordanblock mit eigenwert $\lambda =s(\lambda)=\max\lbrace n_j|1\le j\le k, \alpha_j=\lambda\rbrace$
-\textbf{Beweis} $B=\lbrace b_1^{(1)},...,b_{n,1}^{(1)}, ...... ,b_{1n}^{(k)},...,b_{kn}^{(k)}\rbrace$
+\newline\textbf{Beweis} $B=\lbrace b_1^{(1)},...,b_{n,1}^{(1)}, ...... ,b_{1n}^{(k)},...,b_{kn}^{(k)}\rbrace$
 Sei $W_i=<b_1^{(i)},...,b_n^{(n)}>\Rightarrow V=\bigoplus W_i$ und $T$ 
+\newline Sei $T_V\rightarrow V$ linear und $\lambda$ ein Eigenwert von $T$ Dann ist \[\tilde{E_\lambda}=\bigcup_{k\ge1}^{\infty}\ker(T-\lambda id_v)^k\] Der Verallgemeinerte Eigenraum von $\lambda$, wo alle Vektoren die sich durch eine Potenz von $T$ auf einen Skalar von sich selber SChicken lassen.\newline
+Wenn $T$ Diagonlisierbar ist, dann ist $V$ Die direkte summe der $E_\lambda$'s
+\newline\textbf{Vermutung} \[V=\bigoplus_{\lambda=\text{Eigenwert}}\tilde{E_\lambda}\]
+\newline\textbf{Lemma 12.3.3} Sei $n=\dim(V)$ dann gilt $\tilde{E_\lambda}=\ker(T-\lambda id_v)^n$
+\newline\textbf{Beweis} Sei $V\in \tilde{E_\lambda}$ und sei $k$ minimal so dass $T-\lambda id_v)^kv=0_v$ und $(T-\lambda id_v)^{k-1}v\neq 0$ So ein $k$ muss es per definition Geben. Wir wenden jetzt Lemma 12.2.2 an, dann sind 
+$v,sv,\cdots,s^{k-1}v$ linear unabhängig, und daraus folgt $k\le n$
+\newline\textbf{Definition 12.3.4} Sei $v\in \tilde{E_\lambda}$ mit $v\neq 0$ und $k\ge1$ minimal so dass $(T.\lambda id_v)^kv=0_v$ Dann ist $\lbrace v,(T-\lambda id_v)v, \cdots ,(T-\lambda id_v)^{k-1}v\rbrace$ die Jordankette von $v$ der länge $k$
+\newline\textbf{Bemerkung12.3.5} $(T-\lambda id_v)^{k-1}v=w$ ist ein Eigenvektor von $T$ mit Eigenwert $\lambda$
+\newline\textbf{Beweis} $Tw=\lambda w\Leftrightarrow (T-\lambda id_v)w=0_v\Leftrightarrow (T-\lambda id_v)^k v=0_v$
 \end{document}
-
