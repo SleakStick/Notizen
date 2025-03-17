@@ -20,6 +20,7 @@
 \newcommand{\theorem}[1]{\subsubsection*{Theorem {#1}}}
 \newcommand{\lemma}[1]{\subsubsection*{Lemma {#1}}}
 \newcommand{\definition}[1]{\subsubsection*{Definition {#1}}}
+\newcommand{\behauptung}[1]{\subsubsection*{Behauptung {#1}}}
 
 \geometry{margin=1.5cm}
 \begin{document}
@@ -39,7 +40,7 @@ Als polynom in $\mathbb{C}[x]$ gilt $f(x)=(x+1)(x+i)(x-i)$
 \item[2.]{$p>2\hspace{0.5cm}g(x)=x^p\in\mathbb{F}_p[x]\mspc$ }
 \end{itemize}
 $\mathbb{F}_p=[a_nx^n+...+a_1x+a_0|n\ge0,a_i\in\mathbb{F}_p]$ Und $g(x)=x^p-1=(x-1)^p$ (leicht ausrechnen)
-\\\bemerkung{9.0.13} Analogien $\mathbb{Z}\leftrightarrow K[X]$
+bemerkung{9.0.13} Analogien $\mathbb{Z}\leftrightarrow K[X]$
 \begin{center}
 \begin{tabular}{c|c}
 	$\mathbb{Z}$&$K[x]$\\\hline
@@ -247,7 +248,7 @@ Gilt dies also für jede Matrix?
 
 Gilt also dass $g(x)=X_A(x)$ für jede Matrix $A$?
 
-\textbf{Vermutung:} Sei $A\in M_{n\times n}(K)$ dann ist $X_A(A)=0_{n \times n}$ Hier kommen wir später zuruck
+\behauptung{} Sei $A\in M_{n\times n}(K)$ dann ist $X_A(A)=0_{n \times n}$ Hier kommen wir später zuruck
 \definition{11.1.8} Sei $T:V\rightarrow V$ linear. Das minimale Polynom ist das monische ($\neq 0$) Polynom kleinsetn Grades $m_T(x)\in K[x]$ so dass $m_T(T)=0_V$
  \lemma{11.1.9:} Seien $m(x)$ und $m'(x)$ beide Monisch, vom kleinsten Grad $d\ge1$ so dass $m(T)=m'(T)=0_V$. Dann gilt $m(x)=m'(x)$.
 \beweis Nimm an dass $m(x)\neq m'(x)$ Dann sei \[g(x)=m(x)-m'(x)\neq\Rightarrow deg(g)<d\text{ und } g(T)=0_V\]Was ein Widerspruch bringt.
@@ -285,12 +286,12 @@ $a_\lambda=\sum_{\alpha_i=\lambda}\lambda_i=$ Die länge des gsten Jordanblock m
 Sei $W_i=<b_1^{(i)},...,b_n^{(n)}>\Rightarrow V=\bigoplus W_i$ und $T$ 
  Sei $T_V\rightarrow V$ linear und $\lambda$ ein Eigenwert von $T$ Dann ist \[\tilde{E_\lambda}=\bigcup_{k\ge1}^{\infty}\ker(T-\lambda id_v)^k\] Der Verallgemeinerte Eigenraum von $\lambda$, wo alle Vektoren die sich durch eine Potenz von $T$ auf einen Skalar von sich selber SChicken lassen.
 Wenn $T$ Diagonlisierbar ist, dann ist $V$ Die direkte summe der $E_\lambda$'s
-\textbf{Vermutung} \[V=\bigoplus_{\lambda=\text{Eigenwert}}\tilde{E_\lambda}\]
+\behauptung{} \[V=\bigoplus_{\lambda=\text{Eigenwert}}\tilde{E_\lambda}\]
 \lemma{12.3.3} Sei $n=\dim(V)$ dann gilt $\tilde{E_\lambda}=\ker(T-\lambda id_v)^n$
 \beweis Sei $V\in \tilde{E_\lambda}$ und sei $k$ minimal so dass $T-\lambda id_v)^kv=0_v$ und $(T-\lambda id_v)^{k-1}v\neq 0$ So ein $k$ muss es per definition Geben. Wir wenden jetzt Lemma 12.2.2 an, dann sind 
 $v,sv,\cdots,s^{k-1}v$ linear unabhängig, und daraus folgt $k\le n$
-\definition{12.3.4} Sei $v\in \tilde{E_\lambda}$ mit $v\neq 0$ und $k\ge1$ minimal so dass $(T.\lambda id_v)^kv=0_v$ Dann ist $\lbrace v,(T-\lambda id_v)v, \cdots ,(T-\lambda id_v)^{k-1}v\rbrace$ die Jordankette von $v$ der länge $k$
-\textbf{Bemerkung 12.3.5} $(T-\lambda id_v)^{k-1}v=w$ ist ein Eigenvektor von $T$ mit Eigenwert $\lambda$
+\definition{12.3.4} Sei $v\in \tilde{E_\lambda}$ mit $v\neq 0$ und $k\ge1$ minimal so dass $(T-\lambda id_v)^kv=0_v$ Dann ist $\lbrace v,(T-\lambda id_v)v, \cdots ,(T-\lambda id_v)^{k-1}v\rbrace$ die Jordankette von $v$ der länge $k$
+\bemerkung{12.3.5} $(T-\lambda id_v)^{k-1}v=w$ ist ein Eigenvektor von $T$ mit Eigenwert $\lambda$
 \beweis $Tw=\lambda w\Leftrightarrow (T-\lambda id_v)w=0_v\Leftrightarrow (T-\lambda id_v)^k v=0_v$
 \bemerkung{12.3.6} Jeder eigenvektor von $T$ bildet/ist eine Jordankette von länge $1$.
 \beispiel{12.3.7}\begin{itemize}
@@ -306,5 +307,25 @@ $v,sv,\cdots,s^{k-1}v$ linear unabhängig, und daraus folgt $k\le n$
   \end{multicols}}
 \item{Wir haben jetzt: $J_2(\lambda)-\lambda id_n=\begin{pmatrix}0&1\\0&0\end{pmatrix}=S$ Dann ist $\ker{S^2}=K^2$ und doch $\ker(S)=<e_1>$ dass heisst wir haben eine Jordankette $e_2\rightarrow e_1\rightarrow 0$}
 \end{itemize}
-\satz{SUpertiptiop} $$
+\lemma{12.3.8} $\tilde{E_\lambda}$ ist ein $T$ invarianter unterraum von $V$. ($T$ invariant heisst: $T(\tilde{E_\lambda})\subset\tilde{E_\lambda}$)
+\beweis Sei $v\in\tilde{E_\lambda}\Leftrightarrow(T-\lambda id_v)^n v=0_v$. Zu zeigen ist $Tv\in \tilde{E_\lambda}$ Dies ist klar. Wir nehmen dann $(T-\lambda id_V)^nTv=T(T-\lambda id_V)^n v=T0_V=0_V$ Da $T$ kommutiert
+\satz{12.3.9} $\lambda$ ist der Einzige Eigenwert von $T|_{\tilde{E_\lambda}}$
+\beweis Sei $v\in \tilde{E_\lambda}$ mit Eigenwert  $\mu$ d.h. $Tv=\mu v$. Sei $k\ge 1$ minimal so dass $(T-\lambda id_V)^kv=0$. Sei $w=(T-\lambda id_v)^{k-1}v$ da die $k-1$ Potenz der Einzige eigenvektor der Jordankette ist.
+Dann gilt $(T-\lambda id_V)w=0\Leftrightarrow Tw=\lambda w$ aber $(T-\mu id_v)w=(T-\mu id_V)(T-\lambda id_V)^{k-1}v=(T-\lambda id_V)^{k-1}(T-\mu id_v)v=0_V$ Also gibt es hier einen Widerspruch da ein vektor nicht zwei unterschiedliche Eigenwerte haben kann, d.h. $\lambda= \mu$
+\newline Sei $A=\begin{pmatrix}\lambda&1&0&0\\0&\lambda&1&0\\0&0&\lambda&1\\0&0&0&\lambda\end{pmatrix}$ Dann ist $\lambda$ der Eigenwert von $A$ mit $X_A(x)=(\lambda-x)^4$. $\ker(A-\lambda id)=<e_1>=E_\lambda$
+Wass passiert wenn wir jetzt $\tilde{E_\lambda}$ suchen: \[\tilde{E_\lambda}=\underset{=E_\lambda}{\underbrace{\ker(A-\lambda id)}}\cup \underset{=<e_1,e_2>}{\underbrace{\ker(A-\lambda id)^2}}\cup \underset{=<e_1,e_2,e_3>}{\underbrace{\ker(A-\lambda id)^3}}\cup \underset{N^4=0_{4\times 4}\Rightarrow \ker=K}{\underbrace{\ker(A-\lambda id)^4}}\]
+Also ist $\tilde{E_\lambda}=K$
+\korollar{12.3.10} Sei $T'=T|_{\tilde{E_\lambda}}$ Dann gilt dass $X_{T'}(x)=(\lambda-x)^{k\lambda}$ mit $k\lambda\le a_\lambda(T)$
+\beweis Dies ist klar da hier hat $T'$  $\lambda$ als einziges eigenwert, und der $X_{T'}(x)$ muss ja $X_T(x)$ Teilen.
+\lemma{12.3.11} Seien $\mu,\lambda$ verschieden Eigenwerte von $T$ dann gilt $\tilde{E_\lambda}\cap \tilde{E_\mu}=\lbrace 0_V\rbrace$ und daher gilt $\tilde{E_\lambda}+\tilde{E_\mu}=\tilde{E_\lambda} \oplus \tilde{E_\mu}$
+\lemma{12.3.12} Es seien $\lambda_1,\cdots\lambda_k$ verschiedene Eigenwerte von $T$ Dann gilt $\sum_{i=1}^k \tilde{E_{\lambda_i}}=\bigoplus_{i=1}^k \tilde{E_{\lambda_i}}$
+\behauptung{} $V$ ist die Direkte summe seiner Verallgemeinerten Eigenräume.
+\beweis Die idee ist dass wir ein $T$-invarianten Unterraum $U\subset V$ finden so dass $V=(\bigoplus \tilde{E_{\lambda_i}})\oplus U$
+$\ker(T-\lambda -id_v)^n \oplus U =V$ Hier kann man $U=im(T-\lambda id_v)$ nehmen, da $\ker \oplus im = K$
+\lemma{12.3.14} Sei $T:V\rightarrow V$ mit $\dim(V)=n$ Linear, $\lambda$ ein Eigenwert und $g(x)=(x-\lambda)^n$ dann ist im$(g(T))$ eom $T$-invarianter unterraum von $V$ und es gilt das $V= \tilde{E_\lambda}\oplus \text{im}(g(T))$
+\beweis Zu beweisen: $w\in im(g(T))$ Dass ist einfach, $Tw\neq 0\Leftrightarrow w=g(T)v$ für $v\in V$ $g(T)Tv=Tg(T)v=Tw\Rightarrow Tw\in$ im$(g(T))$
+Mit dem Theorem 4.2.9 ($dim(V)=dim(\ker(V))+$im$(V)$) ist jetzt nur zu zeigen ist das $\ker(g(T))\cap$ im$(g(T)) =\lbrace 0_V\rbrace$ Sei $w\in$ im$(g(T))$ also $w=g(T)v$ und wenn $w\in \tilde{E_\lambda}$ dann gilt
+$g(T)w=0_v$ das ist aber dass gleiche als $(T-\lambda id_v)^{2n}v=0_v\Rightarrow (T-\lambda id_v)^n v=0_v$
+\lemma{12.3.14} Sei $\mu\neq\lambda$ Eigenwerte. Dann gilt $\tilde{E_\mu}\in$  im$(g(T))$
+\theorem{12.3.15} Sei $T:V\rightarrow V$ linear dann gilt \[V=\bigoplus_{\lambda: \text{ Eigenwert}} \tilde{E_\lambda}\]
 \end{document}
