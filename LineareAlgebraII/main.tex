@@ -212,9 +212,12 @@ Doch $u_1,...,u_k$ sind linear unabhängig und wenn $u_i\neq 0_v\smspc \forall i
   \item{$\lambda I_n \smspc g_\lambda=a_\lambda=n$}
 \end{itemize}
 Man merkt dass:
-\satz{10.5.4} $T:V\rightarrow V$ mir Eigenwert $\lambda$ Dann gilt $g_\lambda\le a_\lambda$
-\beweis Sei $v_1,...,v_k$ eine Basis von $E_\lambda,v_k$ eine Basis von $E_\lambda$ und wir erweitern sie zu einer Basis $B=\lbrace v_1,...,v_k,v_{k+1},...,v_n\rbrace$ von $V$. Dann ist $[T]^B_B=\begin{pmatrix}\lambda I_k&C\\0&D\end{pmatrix}$ Dann ist
-$\det([T]^B_B-xI_n)=(\lambda-x)^k\cdot\det(D-xI_{n-k})$ das bedeutet dass $k\le a_\lambda$ da im $\det(D-xI_{n-k})$ auch eine Nullstelle vorkommen kann.
+Copy
+\satz{10.5.4} $T:V\rightarrow V$ mit Eigenwert $\lambda$. Dann gilt $g_\lambda \le a_\lambda$.
+\beweis Sei $v_1, \ldots, v_k$ eine Basis von $E_\lambda$ und wir erweitern sie zu einer Basis $B = \{v_1, \ldots, v_k, v_{k+1}, \ldots, v_n\}$ von $V$. Dann ist
+\[[T]^B_B = \begin{pmatrix} \lambda I_k & C \\ 0 & D \end{pmatrix}\]Dann ist
+\[\det([T]^B_B - xI_n) = (\lambda - x)^k \cdot \det(D - xI_{n-k})\]
+das bedeutet, dass $k \le a_\lambda$, da in $\det(D - xI_{n-k})$ auch eine Nullstelle vorkommen kann.
 
 \korollar{10.5.5} Es seien $\lambda_1,...,\lambda_k$ unterschiedliche Eigenwerte von $T$, dann gilt: \[T \text{ ist diagonalisierbar }\Leftrightarrow g_{\lambda_i}=a_{\lambda_i}\smspc \forall i\]
 \beweis Korollar 10.4.10 sagt dass \[T\text{ ist Diagonalisierbar }\Leftrightarrow V=E_{\lambda_1}\bigoplus...\bigoplus E_{\lambda_k}\Leftrightarrow \dim(V)=\sum\dim(E_{\lambda_i})=\sum g_{\lambda_i}\le\sum a_{\lambda_i}=n=\dim(V)\]

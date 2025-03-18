@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741861834.95196 "main.tex" "main.pdf" "main" 1741861837.32761 0
+["pdflatex"] 1742289301.15376 "main.tex" "main.pdf" "main" 1742289303.90104 0
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1740673091 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0900.pk" 1741679449 10472 3f4abac6a1e7a3f463124e66af317a31 ""
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1735424699 11548 c8973c1c68aefebcc5118b7265d9f7dc ""
@@ -208,8 +208,8 @@
   "figures/SpaltBeugung.tikz" 1741679410 1412 25ce1e75efea9624def86a8c0eb65d67 ""
   "figures/Wellen_Beugung1.tikz" 1741679410 2622 8683b61fd49cd718a5c3f87f5d458c83 ""
   "figures/Wellenpaket.tikz" 1741679410 1565 6081cc5aea20a4089681ef3144e99d3b ""
-  "main.aux" 1741861836 7438 5aa5cc8dfcdbb494f30430466c85fd5b "pdflatex"
-  "main.tex" 1741861834 33346 a2e977bed2bb5cbaf833e9f46ba0000a ""
+  "main.aux" 1742289303 8252 f8705061efc266bb181fab1051a10345 "pdflatex"
+  "main.tex" 1742289296 35616 799f76f0c44cd50a776dea047b655dfd ""
   "tikzit.sty" 1741679410 1248 bd3a4ee1dccdce0fc641973c4461749d ""
   (generated)
   "main.aux"

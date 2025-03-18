@@ -112,7 +112,7 @@ Elastische energie:
 Energie dichte:
 \[\frac{dT}{dV}=\frac{1}{2}\rho v^2 f'^2\]
 \[\frac{dE_{el}}{dV}=\frac{1}{2}Ef'^2\]
-Pro volumen gerechnet ist die elastische und kinetische energie dieselbe. Die Gesamtenergie ist alsow $\frac{dW}{dV}=\rho v^2f'^2$\\
+Pro volumen gerechnet ist die elastische und kinetische energie dieselbe. Die Gesamtenergie ist alow $\frac{dW}{dV}=\rho v^2f'^2$\\
 \subsection{Wellenfunction $\xi$}
 \[\xi(x,t)=\]
 Die Form einer welle: $f(x)=\xi(x,t=0)$ ist der initiale gefrorene status einer Welle. Für jetzt, ist die Form konstant (dämpfungen sind benachlässigt). Wegen der Form der Welle, ist ort und Zeit nicht unabhängig, da die Form der Welle nur den Ort definiert bei einer konstanter Zeit.\\
@@ -333,4 +333,22 @@ Physikalish heisst dies das ladungen siend die Quellen der Elektrischen Felder
 \subsection{Das Laplace Operator}\[\left.\begin{matrix}\vec{E}=-\vec{\nabla}\Phi\\\vec{\nabla}\vec{E}=\frac{\rho}{\varepsilon_0}\end{matrix}\right\rbrace 
 \Delta \Phi=\vec{\nabla}\vec{\nabla}\Phi=\vec{\nabla}(-\vec{E})=\frac{\rho}{\varepsilon_0}\]
 \subsection{Der Satz von Stokes} Sei $C=\int_{\partial A} \vec{F}\vec{ds}$ ein Linienintegral dann ist $c=\sum A_i\int_{\partial A}\frac{\vec{F}\cdot\vec{ds}}{...}$ Jai pas abschrieben (deux denieres minutes du vours)
+\section{Elektrische Leiter} Da der Untershcied zwischen die Leitfähigkeit vom Isolator und die vom Leiter, isit in der nähe von $10^20$ Daher schauen wir uns den Fall Leitfähigkeit für Leiter $=\infty$ / im isolator $=0$
+\newline Im Leiter, ist der Elektrische Feld $0$, die ladungen Arrangieren sich so dass ihr Feld, wenn summiert mit dem externen Feld null ist, und beim isolator gibt es keine Freie Ladungen.
+\experiment Der elektrische Feld ist an einer Spitze sehr gekrümmt, deswegen bricht es zu einer Spitze viel einfacher
+\subsection{Leiter}Hier ist das Elektrische Potential konstant $\phi$ konstant innerhalb vom Leiter. Die Oberfläche ist eine äquipotential Fläche. Daher steht das Elektrische Feld Senkrecht zur Leiteroberfläche
+Der Leiter hat also eine Oberflächenladungsdichte $\sigma$ Also je kleiner De Krümmungsradius, desto grosser $\sigma$
+\subsubsection{Beispiel der Geladene Kugeln} Beide Kugeln habem die Felder \[\phi_i=\frac{1}{4\pi\varepsilon_0}\frac{q_i}{r_i}\] Jetzt verbinden wir die zwei Kugeln so dass ihr Potential gleich wird:
+\[\frac{1}{4\pi\varepsilon_0}\frac{q_1}{r_1}=\frac{1}{4\pi\varepsilon_0}\frac{q_2}{r_2}\]Und Alles kurzt sich auf:\[\frac{q_1}{q_2}=\frac{r_1}{r_2}\]
+\subsection{Das Allgemeine Elektrostatische Problem} Leiter Seien im Vakuum und haben keine Ladung $\Rightarrow \Delta\phi=0$ Wir Haben also Folgende (Neumann) Randbedigungen:\begin{itemize}
+  \item{$\phi_k$ ist für alle Leiter Definiiert (Dirichlet Randbegdiung)}
+  \item{$Q_k$ ist definiert (Neumann Randbedigung)}
+  \item{Eine Mischung aus $\phi_k$ und $Q_k$ ist bekannt}
+\end{itemize}
+\subsubsection{Influenz} Ladungen im Lieter verschieben isch im externen Elektrischen Feld aber nur Ladunged auf der Oberfläche \[\int \sigma_\text{ind} da=0=\text{Gesamtladung}\]
+\subsubsection{Der Eindeutigkeitssatz} Wir haben eine Gegebene Menge von Randbedingungen, Dann gibt es nur eine losung für $\phi(\vec{r})$ und für $\vec{E}(\vec{r})$
+\subsubsection{Faraday'sche Käfige} Wir haben eine Hohle leiter Struktur dann haben wir keine Ladung im hohlraum, da es Kein Feld im Leiter gibt, daher auch im hohlraum auch nicht. Es können Keine Elektrische Felder von draussen hereindringen.
+$\int \vec{E}\vec{da}=0\Rightarrow \vec{E}=0$
+\subsubsection{Spiegelladungen} Was ist der Elektrische Feld Zweier Punktladungen
 \end{document}
+

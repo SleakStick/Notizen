@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.17)  13 MAR 2025 11:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.17)  18 MAR 2025 10:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -928,7 +928,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 273--275
 [][]
  []
 
-[10] [11] [12] (figures/Plattencondensator1.tikz) [13] (main.aux)
+[10] [11] [12] (figures/Plattencondensator1.tikz) [13] [14] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -967,9 +967,9 @@ sers/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.
 pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (13 pages, 313408 bytes).
+Output written on main.pdf (14 pages, 318409 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
+ 161 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
