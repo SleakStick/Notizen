@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1742213513.08299 "main.tex" "main.pdf" "main" 1742213513.33385 0
+["pdflatex"] 1742235619.80723 "main.tex" "main.pdf" "main" 1742235620.06922 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1736268207 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1736268207 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1736268207 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -62,8 +62,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1736268207 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740579717.79217 5318467 8236939515598d005dfbcc2e1a40f206 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740579683 7112989 be661d4c3a09fcc18a03425a43b063f1 ""
-  "main.aux" 1742213513.3007 142 a5b9dff198b4d57d0074884bcb1c2c5f "pdflatex"
-  "main.tex" 1742213511.64682 34502 ecddfa2752cf850bbd713e9f01932170 ""
+  "main.aux" 1742235620.03374 142 33a02c495f61a78984f0d60babe62c29 "pdflatex"
+  "main.tex" 1742235618.13024 36445 1634f8e33428d85bd832e930041b9e2f ""
   (generated)
   "main.aux"
   "main.log"
