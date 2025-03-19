@@ -1,526 +1,310 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.17)  18 MAR 2025 10:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Arch Linux) (preloaded format=pdflatex 2025.3.17)  19 MAR 2025 11:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**./main.tex
-(main.tex
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+**main.tex
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count187
-\c@section=\count188
-\c@subsection=\count189
-\c@subsubsection=\count190
-\c@paragraph=\count191
-\c@subparagraph=\count192
-\c@figure=\count193
-\c@table=\count194
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.rev
-ision.tex)
+\c@part=\count196
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+ (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen141
-\Gin@req@width=\dimen142
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
-sty
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
-y
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
--common.tex
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks18
-\pgfutil@tempdima=\dimen143
-\pgfutil@tempdimb=\dimen144
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
--latex.def
-\pgfutil@abb=\box51
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
-code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+\pgfutil@tempdima=\dimen144
+\pgfutil@tempdimb=\dimen145
+) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box52
+) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
-sty
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
-sty
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s.code.tex
+ (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
-.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks19
 \pgfkeys@temptoks=\toks20
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
-libraryfiltered.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks21
 ))
-\pgf@x=\dimen145
-\pgf@y=\dimen146
-\pgf@xa=\dimen147
-\pgf@ya=\dimen148
-\pgf@xb=\dimen149
-\pgf@yb=\dimen150
-\pgf@xc=\dimen151
-\pgf@yc=\dimen152
-\pgf@xd=\dimen153
-\pgf@yd=\dimen154
+\pgf@x=\dimen146
+\pgf@y=\dimen147
+\pgf@xa=\dimen148
+\pgf@ya=\dimen149
+\pgf@xb=\dimen150
+\pgf@yb=\dimen151
+\pgf@xc=\dimen152
+\pgf@yc=\dimen153
+\pgf@xd=\dimen154
+\pgf@yd=\dimen155
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count195
-\c@pgf@countb=\count196
-\c@pgf@countc=\count197
-\c@pgf@countd=\count198
+\c@pgf@counta=\count270
+\c@pgf@countb=\count271
+\c@pgf@countc=\count272
+\c@pgf@countd=\count273
 \t@pgf@toka=\toks22
 \t@pgf@tokb=\toks23
 \t@pgf@tokc=\toks24
-\pgf@sys@id@count=\count199
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
-fg
+\pgf@sys@id@count=\count274
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s-pdftex.def
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s-common-pdf.def
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
-)))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-ssoftpath.code.tex
+))) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count266
-\pgfsyssoftpath@bigbuffer@items=\count267
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-sprotocol.code.tex
+\pgfsyssoftpath@smallbuffer@items=\count275
+\pgfsyssoftpath@bigbuffer@items=\count276
+) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+)) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
-Package xcolor Info: Model `RGB' extended on input line 1366.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-e.code.tex
+ (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
-.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
-code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
-r.code.tex
-\pgfmath@dimen=\dimen155
-\pgfmath@count=\count268
-\pgfmath@box=\box52
+ (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen156
+\pgfmath@count=\count277
+\pgfmath@box=\box53
 \pgfmath@toks=\toks25
 \pgfmath@stack@operand=\toks26
 \pgfmath@stack@operation=\toks27
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.basic.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.trigonometric.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.random.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.comparison.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.base.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.round.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.misc.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
-ions.integerarithmetics.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
-code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
-.code.tex
-\c@pgfmathroundto@lastzeros=\count269
-))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
-tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-epoints.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count278
+)) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen156
-\pgf@picmaxx=\dimen157
-\pgf@picminy=\dimen158
-\pgf@picmaxy=\dimen159
-\pgf@pathminx=\dimen160
-\pgf@pathmaxx=\dimen161
-\pgf@pathminy=\dimen162
-\pgf@pathmaxy=\dimen163
-\pgf@xx=\dimen164
-\pgf@xy=\dimen165
-\pgf@yx=\dimen166
-\pgf@yy=\dimen167
-\pgf@zx=\dimen168
-\pgf@zy=\dimen169
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-epathconstruct.code.tex
+\pgf@picminx=\dimen157
+\pgf@picmaxx=\dimen158
+\pgf@picminy=\dimen159
+\pgf@picmaxy=\dimen160
+\pgf@pathminx=\dimen161
+\pgf@pathmaxx=\dimen162
+\pgf@pathminy=\dimen163
+\pgf@pathmaxy=\dimen164
+\pgf@xx=\dimen165
+\pgf@xy=\dimen166
+\pgf@yx=\dimen167
+\pgf@yy=\dimen168
+\pgf@zx=\dimen169
+\pgf@zy=\dimen170
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen170
-\pgf@path@lasty=\dimen171
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-epathusage.code.tex
+\pgf@path@lastx=\dimen171
+\pgf@path@lasty=\dimen172
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen172
-\pgf@shorten@start@additional=\dimen173
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-escopes.code.tex
+\pgf@shorten@end@additional=\dimen173
+\pgf@shorten@start@additional=\dimen174
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box53
-\pgf@hbox=\box54
-\pgf@layerbox@main=\box55
-\pgf@picture@serial@count=\count270
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-egraphicstate.code.tex
+\pgfpic=\box54
+\pgf@hbox=\box55
+\pgf@layerbox@main=\box56
+\pgf@picture@serial@count=\count279
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen174
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-etransformations.code.tex
+\pgflinewidth=\dimen175
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen175
-\pgf@pt@y=\dimen176
-\pgf@pt@temp=\dimen177
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-equick.code.tex
+\pgf@pt@x=\dimen176
+\pgf@pt@y=\dimen177
+\pgf@pt@temp=\dimen178
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-eobjects.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-epathprocessing.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-earrows.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen178
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-eshade.code.tex
+\pgfarrowsep=\dimen179
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen179
-\pgf@sys@shading@range@num=\count271
-\pgf@shadingcount=\count272
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-eimage.code.tex
+\pgf@max=\dimen180
+\pgf@sys@shading@range@num=\count280
+\pgf@shadingcount=\count281
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-eexternal.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box56
+\pgfexternal@startupbox=\box57
 )
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-elayers.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-etransparency.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-epatterns.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
-erdf.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
-shapes.code.tex
+))) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box57
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
-plot.code.tex
+\pgfnodeparttextbox=\box58
+) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
-mp-version-0-65.sty
+) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen180
-\pgf@nodesepend=\dimen181
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
-mp-version-1-18.sty
+\pgf@nodesepstart=\dimen181
+\pgf@nodesepend=\dimen182
+) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
-y
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
-ty
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
-.code.tex))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
-.tex))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
-code.tex
+)) (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen182
-\pgffor@skip=\dimen183
+\pgffor@iter=\dimen183
+\pgffor@skip=\dimen184
 \pgffor@stack=\toks28
 \pgffor@toks=\toks29
-))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z\tikz.code.tex
+)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
-aryplothandlers.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count273
-\pgfplotmarksize=\dimen184
+\pgf@plot@mark@count=\count282
+\pgfplotmarksize=\dimen185
 )
-\tikz@lastx=\dimen185
-\tikz@lasty=\dimen186
-\tikz@lastxsaved=\dimen187
-\tikz@lastysaved=\dimen188
-\tikz@lastmovetox=\dimen189
-\tikz@lastmovetoy=\dimen190
-\tikzleveldistance=\dimen191
-\tikzsiblingdistance=\dimen192
-\tikz@figbox=\box58
-\tikz@figbox@bg=\box59
-\tikz@tempbox=\box60
-\tikz@tempbox@bg=\box61
-\tikztreelevel=\count274
-\tikznumberofchildren=\count275
-\tikznumberofcurrentchild=\count276
-\tikz@fig@count=\count277
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
-matrix.code.tex
+\tikz@lastx=\dimen186
+\tikz@lasty=\dimen187
+\tikz@lastxsaved=\dimen188
+\tikz@lastysaved=\dimen189
+\tikz@lastmovetox=\dimen190
+\tikz@lastmovetoy=\dimen191
+\tikzleveldistance=\dimen192
+\tikzsiblingdistance=\dimen193
+\tikz@figbox=\box59
+\tikz@figbox@bg=\box60
+\tikz@tempbox=\box61
+\tikz@tempbox@bg=\box62
+\tikztreelevel=\count283
+\tikznumberofchildren=\count284
+\tikznumberofcurrentchild=\count285
+\tikz@fig@count=\count286
+ (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count278
-\pgfmatrixcurrentcolumn=\count279
-\pgf@matrix@numberofcolumns=\count280
+\pgfmatrixcurrentrow=\count287
+\pgfmatrixcurrentcolumn=\count288
+\pgf@matrix@numberofcolumns=\count289
 )
-\tikz@expandcount=\count281
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibrarytopaths.code.tex
+\tikz@expandcount=\count290
+ (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.cod
-e.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore
-.code.tex
+))) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 \t@pgfplots@toka=\toks30
 \t@pgfplots@tokb=\toks31
 \t@pgfplots@tokc=\toks32
-\pgfplots@tmpa=\dimen193
-\c@pgfplots@coordindex=\count282
-\c@pgfplots@scanlineindex=\count283
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplots
-sysgeneric.code.tex))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplot
-slibrary.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompat
-ib\pgfplotsoldpgfsupp_loader.code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
-aryfpu.code.tex)
+\pgfplots@tmpa=\dimen194
+\c@pgfplots@coordindex=\count291
+\c@pgfplots@scanlineindex=\count292
+ (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
 \t@pgf@toka=\toks33
 \t@pgf@tokb=\toks34
 \t@pgf@tokc=\toks35
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompat
-ib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
-sutil.code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
-e\pgfplotsliststructure.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
-e\pgfplotsliststructureext.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
-e\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count284
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
-e\pgfplotsmatrix.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
-plotstableshared.code.tex
-\c@pgfplotstable@counta=\count285
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count293
+) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count294
 \t@pgfplotstable@a=\toks36
+) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count295
+ (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen195
+\pgfdecoratedremainingdistance=\dimen196
+\pgfdecoratedinputsegmentcompleteddistance=\dimen197
+\pgfdecoratedinputsegmentremainingdistance=\dimen198
+\pgf@decorate@distancetomove=\dimen199
+\pgf@decorate@repeatstate=\count296
+\pgfdecorationsegmentamplitude=\dimen256
+\pgfdecorationsegmentlength=\dimen257
 )
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
-e\pgfplotsdeque.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
-sbinary.code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
-sbinary.data.code.tex))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
-sutil.verb.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibr
-arypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count286
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
-rypgfplots.surfshading.pgfsys-pdftex.def)))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
-scolormap.code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
-scolor.code.tex))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstac
-kedplots.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplot
-handlers.code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmesh
-plothandler.code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmesh
-plotimage.code.tex)))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.sca
-ling.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoor
-dprocessing.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.err
-orbars.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.mar
-kers.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotstick
-s.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.pat
-hs.code.tex)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibrarydecorations.code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
-decorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen194
-\pgfdecoratedremainingdistance=\dimen195
-\pgfdecoratedinputsegmentcompleteddistance=\dimen196
-\pgfdecoratedinputsegmentremainingdistance=\dimen197
-\pgf@decorate@distancetomove=\dimen198
-\pgf@decorate@repeatstate=\count287
-\pgfdecorationsegmentamplitude=\dimen199
-\pgfdecorationsegmentlength=\dimen256
-)
-\tikz@lib@dec@box=\box62
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
-ions\pgflibrarydecorations.pathmorphing.code.tex))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibrarydecorations.pathreplacing.code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
-ions\pgflibrarydecorations.pathreplacing.code.tex))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
-rarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count288
-\pgfplots@xmin@reg=\dimen257
-\pgfplots@xmax@reg=\dimen258
-\pgfplots@ymin@reg=\dimen259
-\pgfplots@ymax@reg=\dimen260
-\pgfplots@zmin@reg=\dimen261
-\pgfplots@zmax@reg=\dimen262
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibraryplotmarks.code.tex
+\tikz@lib@dec@box=\box63
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count297
+\pgfplots@xmin@reg=\dimen258
+\pgfplots@xmax@reg=\dimen259
+\pgfplots@ymin@reg=\dimen260
+\pgfplots@ymax@reg=\dimen261
+\pgfplots@zmin@reg=\dimen262
+\pgfplots@zmax@reg=\dimen263
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
-aryplotmarks.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
-Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count289
-\mult@box=\box63
-\multicol@leftmargin=\dimen263
-\c@unbalance=\count290
-\c@collectmore=\count291
-\doublecol@number=\count292
-\multicoltolerance=\count293
-\multicolpretolerance=\count294
-\full@width=\dimen264
-\page@free=\dimen265
-\premulticols=\dimen266
-\postmulticols=\dimen267
-\multicolsep=\skip50
-\multicolbaselineskip=\skip51
-\partial@page=\box64
-\last@line=\box65
-\mc@boxedresult=\box66
-\maxbalancingoverflow=\dimen268
-\mult@rightbox=\box67
-\mult@grightbox=\box68
-\mult@firstbox=\box69
-\mult@gfirstbox=\box70
-\@tempa=\box71
+))) (/usr/share/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
+\c@tracingmulticols=\count298
+\mult@box=\box64
+\multicol@leftmargin=\dimen264
+\c@unbalance=\count299
+\c@collectmore=\count300
+\doublecol@number=\count301
+\multicoltolerance=\count302
+\multicolpretolerance=\count303
+\full@width=\dimen265
+\page@free=\dimen266
+\premulticols=\dimen267
+\postmulticols=\dimen268
+\multicolsep=\skip51
+\multicolbaselineskip=\skip52
+\partial@page=\box65
+\last@line=\box66
+\mc@boxedresult=\box67
+\maxbalancingoverflow=\dimen269
+\mult@rightbox=\box68
+\mult@grightbox=\box69
+\mult@firstbox=\box70
+\mult@gfirstbox=\box71
 \@tempa=\box72
 \@tempa=\box73
 \@tempa=\box74
@@ -556,225 +340,181 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box104
 \@tempa=\box105
 \@tempa=\box106
-\c@minrows=\count295
-\c@columnbadness=\count296
-\c@finalcolumnbadness=\count297
-\last@try=\dimen269
-\multicolovershoot=\dimen270
-\multicolundershoot=\dimen271
-\mult@nat@firstbox=\box107
-\colbreak@box=\box108
-\mc@col@check@num=\count298
-)
-(tikzit.sty
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibrarybackgrounds.code.tex
+\@tempa=\box107
+\c@minrows=\count304
+\c@columnbadness=\count305
+\c@finalcolumnbadness=\count306
+\last@try=\dimen270
+\multicolovershoot=\dimen271
+\multicolundershoot=\dimen272
+\mult@nat@firstbox=\box108
+\colbreak@box=\box109
+\mc@col@check@num=\count307
+) (./tikzit.sty (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@layerbox@background=\box109
-\pgf@layerboxsaved@background=\box110
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibraryarrows.code.tex
+\pgf@layerbox@background=\box110
+\pgf@layerboxsaved@background=\box111
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
-aryarrows.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen272
-))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibraryshapes.code.tex
+\arrowsize=\dimen273
+)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibraryshapes.geometric.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
-pgflibraryshapes.geometric.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibraryshapes.misc.code.tex
+)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
 File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
-pgflibraryshapes.misc.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
 File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibraryshapes.symbols.code.tex
+)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
 File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
-pgflibraryshapes.symbols.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
 File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibraryshapes.arrows.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
 File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
-pgflibraryshapes.arrows.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
 File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibraryshapes.callouts.code.tex
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
-pgflibraryshapes.callouts.code.tex))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
-z/libraries\tikzlibraryshapes.multipart.code.tex
+)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
 File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
-pgflibraryshapes.multipart.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodepartlowerbox=\box111
-\pgfnodeparttwobox=\box112
-\pgfnodepartthreebox=\box113
-\pgfnodepartfourbox=\box114
-\pgfnodeparttwentybox=\box115
-\pgfnodepartnineteenbox=\box116
-\pgfnodeparteighteenbox=\box117
-\pgfnodepartseventeenbox=\box118
-\pgfnodepartsixteenbox=\box119
-\pgfnodepartfifteenbox=\box120
-\pgfnodepartfourteenbox=\box121
-\pgfnodepartthirteenbox=\box122
-\pgfnodeparttwelvebox=\box123
-\pgfnodepartelevenbox=\box124
-\pgfnodeparttenbox=\box125
-\pgfnodepartninebox=\box126
-\pgfnodeparteightbox=\box127
-\pgfnodepartsevenbox=\box128
-\pgfnodepartsixbox=\box129
-\pgfnodepartfivebox=\box130
+\pgfnodepartlowerbox=\box112
+\pgfnodeparttwobox=\box113
+\pgfnodepartthreebox=\box114
+\pgfnodepartfourbox=\box115
+\pgfnodeparttwentybox=\box116
+\pgfnodepartnineteenbox=\box117
+\pgfnodeparteighteenbox=\box118
+\pgfnodepartseventeenbox=\box119
+\pgfnodepartsixteenbox=\box120
+\pgfnodepartfifteenbox=\box121
+\pgfnodepartfourteenbox=\box122
+\pgfnodepartthirteenbox=\box123
+\pgfnodeparttwelvebox=\box124
+\pgfnodepartelevenbox=\box125
+\pgfnodeparttenbox=\box126
+\pgfnodepartninebox=\box127
+\pgfnodeparteightbox=\box128
+\pgfnodepartsevenbox=\box129
+\pgfnodepartsixbox=\box130
+\pgfnodepartfivebox=\box131
 )))
-\pgf@layerbox@edgelayer=\box131
-\pgf@layerboxsaved@edgelayer=\box132
-\pgf@layerbox@nodelayer=\box133
-\pgf@layerboxsaved@nodelayer=\box134
-) (PhysiksStyle.tikzstyles)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+\pgf@layerbox@edgelayer=\box132
+\pgf@layerboxsaved@edgelayer=\box133
+\pgf@layerbox@nodelayer=\box134
+\pgf@layerboxsaved@nodelayer=\box135
+) (./PhysiksStyle.tikzstyles) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+ (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count299
-\Gm@cntv=\count300
-\c@Gm@tempcnt=\count301
-\Gm@bindingoffset=\dimen273
-\Gm@wd@mp=\dimen274
-\Gm@odd@mp=\dimen275
-\Gm@even@mp=\dimen276
-\Gm@layoutwidth=\dimen277
-\Gm@layoutheight=\dimen278
-\Gm@layouthoffset=\dimen279
-\Gm@layoutvoffset=\dimen280
+\Gm@cnth=\count308
+\Gm@cntv=\count309
+\c@Gm@tempcnt=\count310
+\Gm@bindingoffset=\dimen274
+\Gm@wd@mp=\dimen275
+\Gm@odd@mp=\dimen276
+\Gm@even@mp=\dimen277
+\Gm@layoutwidth=\dimen278
+\Gm@layoutheight=\dimen279
+\Gm@layouthoffset=\dimen280
+\Gm@layoutvoffset=\dimen281
 \Gm@dimlist=\toks37
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+) (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box135
-\beforetitleunit=\skip52
-\aftertitleunit=\skip53
-\ttl@plus=\dimen281
-\ttl@minus=\dimen282
+\ttl@box=\box136
+\beforetitleunit=\skip53
+\aftertitleunit=\skip54
+\ttl@plus=\dimen282
+\ttl@minus=\dimen283
 \ttl@toksa=\toks38
-\titlewidth=\dimen283
-\titlewidthlast=\dimen284
-\titlewidthfirst=\dimen285
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2023/05/13 v2.17o AMS math features
-\@mathmargin=\skip54
+\titlewidth=\dimen284
+\titlewidthlast=\dimen285
+\titlewidthfirst=\dimen286
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip55
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+ (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks39
-\ex@=\dimen286
-))
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+\ex@=\dimen287
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen287
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+\pmbraise@=\dimen288
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count302
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count303
-\leftroot@=\count304
-LaTeX Info: Redefining \overline on input line 399.
-LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count305
-\DOTSCASE@=\count306
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box136
-\strutbox@=\box137
-LaTeX Info: Redefining \big on input line 722.
-LaTeX Info: Redefining \Big on input line 723.
-LaTeX Info: Redefining \bigg on input line 724.
-LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen288
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count307
-LaTeX Info: Redefining \bmod on input line 905.
-LaTeX Info: Redefining \pmod on input line 910.
-LaTeX Info: Redefining \smash on input line 940.
-LaTeX Info: Redefining \relbar on input line 970.
-LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count308
-\dotsspace@=\muskip16
-\c@parentequation=\count309
-\dspbrk@lvl=\count310
+\inf@bad=\count311
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count312
+\leftroot@=\count313
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count314
+\DOTSCASE@=\count315
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box137
+\strutbox@=\box138
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen289
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count316
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count317
+\dotsspace@=\muskip17
+\c@parentequation=\count318
+\dspbrk@lvl=\count319
 \tag@help=\toks40
-\row@=\count311
-\column@=\count312
-\maxfields@=\count313
+\row@=\count320
+\column@=\count321
+\maxfields@=\count322
 \andhelp@=\toks41
-\eqnshift@=\dimen289
-\alignsep@=\dimen290
-\tagshift@=\dimen291
-\tagwidth@=\dimen292
-\totwidth@=\dimen293
-\lineht@=\dimen294
+\eqnshift@=\dimen290
+\alignsep@=\dimen291
+\tagshift@=\dimen292
+\tagwidth@=\dimen293
+\totwidth@=\dimen294
+\lineht@=\dimen295
 \@envbody=\toks42
-\multlinegap=\skip55
-\multlinetaggap=\skip56
+\multlinegap=\skip56
+\multlinetaggap=\skip57
 \mathdisplay@stack=\toks43
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+) (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count314
-\l__pdf_internal_box=\box138
-) (main.aux)
+) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count323
+\l__pdf_internal_box=\box139
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -791,34 +531,26 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count315
-\scratchdimen=\dimen295
-\scratchbox=\box139
-\nofMPsegments=\count316
-\nofMParguments=\count317
+\scratchcounter=\count324
+\scratchdimen=\dimen296
+\scratchbox=\box140
+\nofMPsegments=\count325
+\nofMParguments=\count326
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count318
-\MPscratchDim=\dimen296
-\MPnumerator=\count319
-\makeMPintoPDFobject=\count320
+\MPscratchCnt=\count327
+\MPscratchDim=\dimen297
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
 \everyMPtoPDFconversion=\toks45
-)
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package pgfplots notification 'compat/show suggested version=true': document ha
-s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -855,19 +587,20 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
-
-
-(C:\Users\Benja\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+
 [1
 
-{C:/Users/Benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+[2]
+
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
@@ -878,7 +611,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
 
-[4] [5]
+
+
+[4]
+
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 191--193
 
  []
@@ -893,6 +630,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--200
 
  []
 
+
+
 [6]
 Underfull \hbox (badness 10000) in paragraph at lines 213--216
 
@@ -902,6 +641,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--216
 Underfull \hbox (badness 10000) in paragraph at lines 221--224
 
  []
+
+
 
 [7]
 Underfull \hbox (badness 10000) in paragraph at lines 237--241
@@ -918,58 +659,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--245
 
  []
 
-(figures/Wellen_Beugung1.tikz) [8] (figures/SpaltBeugung.tikz)
+(./figures/Wellen_Beugung1.tikz)
+
+[8] (./figures/SpaltBeugung.tikz)
 Underfull \hbox (badness 10000) in paragraph at lines 269--271
 
  []
 
-[9] (figures/Wellenpaket.tikz)
+
+
+[9] (./figures/Wellenpaket.tikz)
 Underfull \hbox (badness 10000) in paragraph at lines 273--275
 [][]
  []
 
-[10] [11] [12] (figures/Plattencondensator1.tikz) [13] [14] (main.aux)
+
+
+[10]
+
+[11]
+
+[12] (./figures/Plattencondensator1.tikz)
+
+[13]
+
+[14] (./main.aux)
  ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26972 strings out of 474486
- 701666 string characters out of 5743755
- 1947542 words of memory out of 5000000
- 48812 multiletter control sequences out of 15000+600000
- 568504 words of font info for 76 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 99i,12n,107p,727b,844s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Benja\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk> <C:\Users\Benja\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm0900.pk><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Benja/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Benja/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Benja/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Be
-nja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/
-Users/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmmi9.pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmr10.pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr5.pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Benja/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Benja/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Benja/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ben
-ja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/U
-sers/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.
-pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb><C:/Users/Benja/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (14 pages, 318409 bytes).
+ 26967 strings out of 475171
+ 692928 string characters out of 5767103
+ 1190600 words of memory out of 5000000
+ 49520 multiletter control sequences out of 15000+600000
+ 569272 words of font info for 76 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 99i,12n,105p,725b,844s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (14 pages, 308531 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

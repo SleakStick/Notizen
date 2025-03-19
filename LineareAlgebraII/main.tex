@@ -212,12 +212,11 @@ Doch $u_1,...,u_k$ sind linear unabhängig und wenn $u_i\neq 0_v\smspc \forall i
   \item{$\lambda I_n \smspc g_\lambda=a_\lambda=n$}
 \end{itemize}
 Man merkt dass:
-Copy
-\satz{10.5.4} $T:V\rightarrow V$ mit Eigenwert $\lambda$. Dann gilt $g_\lambda \le a_\lambda$.
-\beweis Sei $v_1, \ldots, v_k$ eine Basis von $E_\lambda$ und wir erweitern sie zu einer Basis $B = \{v_1, \ldots, v_k, v_{k+1}, \ldots, v_n\}$ von $V$. Dann ist
-\[[T]^B_B = \begin{pmatrix} \lambda I_k & C \\ 0 & D \end{pmatrix}\]Dann ist
-\[\det([T]^B_B - xI_n) = (\lambda - x)^k \cdot \det(D - xI_{n-k})\]
-das bedeutet, dass $k \le a_\lambda$, da in $\det(D - xI_{n-k})$ auch eine Nullstelle vorkommen kann.
+
+\satz{10.5.4} $T:V\rightarrow V$ mir Eigenwert $\lambda$ Dann gilt $g_\lambda\le a_\lambda$
+\beweis Sei $v_1,...,v_k$ eine Basis von $E_\lambda,v_k$ eine Basis von $E_\lambda$ und wir erweitern sie zu einer Basis \[B=\lbrace v_1,...,v_k,v_{k+1},...,v_n\rbrace\]
+von $V$. Dann ist \[[T]^B_B=\begin{pmatrix}\lambda I_k&C\\0&D\end{pmatrix}\] Dann ist
+$\det([T]^B_B-xI_n)=(\lambda-x)^k\cdot\det(D-xI_{n-k})$ das bedeutet dass $k\le a_\lambda$ da im $\det(D-xI_{n-k})$ auch eine Nullstelle vorkommen kann.
 
 \korollar{10.5.5} Es seien $\lambda_1,...,\lambda_k$ unterschiedliche Eigenwerte von $T$, dann gilt: \[T \text{ ist diagonalisierbar }\Leftrightarrow g_{\lambda_i}=a_{\lambda_i}\smspc \forall i\]
 \beweis Korollar 10.4.10 sagt dass \[T\text{ ist Diagonalisierbar }\Leftrightarrow V=E_{\lambda_1}\bigoplus...\bigoplus E_{\lambda_k}\Leftrightarrow \dim(V)=\sum\dim(E_{\lambda_i})=\sum g_{\lambda_i}\le\sum a_{\lambda_i}=n=\dim(V)\]
@@ -274,7 +273,7 @@ und so weiter bis:
 \[-B_{n-1}=(-1)^nid_n\]
 Und zu zeigen ist \[X_A(A)==_{n\times n}\Leftrightarrow (-1)^nA^n+a_{n-1}A^{n-1}+...+a_1A+a_0id_n=0_{n\times n}\]
 Wir konnen jede gleichung vom system mit $A^i$ multiplizieren (wo $i=deg$ der linie) und summieren dass alles zusammen. Wir finden dass die Summe $=0$ und dass $X_A(A)=0_{n\times n}$
-\subsection*{Jordansche Normalform} \definition{ Theorem} sei $\lambda\in K$ und $n\ge1$ der Jordanblock der länge $n$ und Eigenwert $\lambda$ ist folgende Matrix:\[J_n(\lambda)=\begin{pmatrix}\lambda&1&\smspc&0\\\smspc&\ddots&\ddots&\smspc\\0&\smspc&\lambda\end{pmatrix}\]
+\section*{Jordansche Normalform} \definition{ Theorem} sei $\lambda\in K$ und $n\ge1$ der Jordanblock der länge $n$ und Eigenwert $\lambda$ ist folgende Matrix:\[J_n(\lambda)=\begin{pmatrix}\lambda&1&\smspc&0\\\smspc&\ddots&\ddots&\smspc\\0&\smspc&\lambda\end{pmatrix}\]
 \lemma{12.1.1} $X_{J_n}(x)=(\lambda-x)^n$ und $\lambda$ ist der Einzige eigenwert, $g_\lambda=1$ und $a_\lambda=n$ mit $m_{J_n}(x)=(-1)^nX_{J_n}(x)$ 
 \theorem{12.1.2} Jordansche Normalenfor, Sei $T:V\rightarrow V$ Dann $\exists B$ eine Basis von $V$ so dass 
 \[[T]^B_B=\begin{pmatrix}J_{n_1}(x_1)&\smspc&\smspc&0\\\smspc&J_{n_2}(x_2)&\smspc&\smspc\\\smspc&\smspc&\ddots&\smspc\\0&\smspc&\smspc&J_{n_k}(x_k)\end{pmatrix}\]
@@ -331,5 +330,15 @@ Mit dem Theorem 4.2.9 ($dim(V)=dim(\ker(V))+$im$(V)$) ist jetzt nur zu zeigen is
 $g(T)w=0_v$ das ist aber dass gleiche als $(T-\lambda id_v)^{2n}v=0_v\Rightarrow (T-\lambda id_v)^n v=0_v$
 \lemma{12.3.14} Sei $\mu\neq\lambda$ Eigenwerte. Dann gilt $\tilde{E_\mu}\in$  im$(g(T))$ und im$((T-\lambda id_v)^n)$ ist $T$ invariant
 \theorem{12.3.15} Sei $T:V\rightarrow V$ linear dann gilt \[V=\bigoplus_{\lambda: \text{ Eigenwert}} \tilde{E_\lambda}\]
-
+\beweis Induction über die $n=\dim V$ Es sei $\lambda$ ein Eigenwert dann gilt vom lemma 12.3.14 dass $V=\tilde{E_\lambda}\oplus$ im$(T-\lambda id_v)^n)$. Sei $U=(T-\lambda id_v)^n$ Dann ist $U$ $T$-invariant und es gilt dass $\dim(U)<n$, dauraus folgt dass \[U =\bigoplus_{\mu\text{ Ew von } T|_{\mu}}\tilde{E_\mu}\Rightarrow V=\tilde{E_\lambda}\oplus\bigoplus_{\mu}\tilde{E_\mu}\] 
+Dank dieses Resultat, können wir dann annehmen dass $V=\tilde{E_\lambda}$, daher um Theorem 12.1.2 zu zeigen, reicht es zu zeigen dass jeder $\tilde{E_\lambda}$ eine Jordanbasis besitzt
+\subsection*{Beweis der Jordanschen Normalenform}
+Wir Fangen mit dem Spezialfall $S:V\rightarrow V$ nilpotent
+\theorem{12.4.1} Sei $V$ n-dimensional und $S:V\rightarrow V$ nilpotent dann $\exists k \ge , n, \cdots n_k \le 1$ so dass $n_1+\cdots+n_k=n$ und eine Basis $B$ von $V$ die aus Jordanketten der länge $n_i$ besteht. 
+\[B=\lbrace S^{n_1-1}u_1, ..., Su_1, u_1, S^{n_2-1}u_2,..., Su_2, u_2,\cdots ,S^{n_k-1}u_k,..., Su_k, u_k\rbrace \mspc \forall S^{n_i}u_i\neq 0\]
+Die $n_i$ sind hier auch eindeutig bestimmt. Diese Basis der solchen Form, heisst Jordanbasis.
+\bemerkung{12.4.3}Die abbildungsmatrix $[S]$ in der Jordanbasis $B$ nimmt folgende form an:\[[S]_B^B=\begin{pmatrix}J_{n_1}(0)& & 0\\&\ddots&\\0&&J_{n_k}(0)\end{pmatrix}\] Was die Jordan'sche normalenform annimt
+\beweis Dass beweist man mit Induktion über $n$-dim von $V$. $n=1$ ist klar. Dann nehmen wir an es klappt für $dim V<n$ Beachte dass $S(V)\subsetneq V$ weil $\ker(S)\supsetneq 0_v$. Also im Fall $\ker(S)=V$ dann ist $S$ die nullabbildung und das Theorem hält.
+Also ist $\ker(S)\neq\lbrace 0_v\rbrace$. \newline
+\textbf{Induktionshypothese:} $\exists v_1 ... v_l\in S(V)$ und $b_1, ... ,b_l\ge1$ so dass $\sum b_i=\dim S(V)$ und \[B'=\lbrace v_1, ... S^{b_1-1}v_1, v_2,...,S^{b_2-1}v_2,...,v_l,..S^{b_l -1}v_l\rbrace\] Eine Basis von $S(V)$
 \end{document}
