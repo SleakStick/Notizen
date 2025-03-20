@@ -350,5 +350,39 @@ Der Leiter hat also eine Oberflächenladungsdichte $\sigma$ Also je kleiner De K
 \subsubsection{Faraday'sche Käfige} Wir haben eine Hohle leiter Struktur dann haben wir keine Ladung im hohlraum, da es Kein Feld im Leiter gibt, daher auch im hohlraum auch nicht. Es können Keine Elektrische Felder von draussen hereindringen.
 $\int \vec{E}\vec{da}=0\Rightarrow \vec{E}=0$
 \subsubsection{Spiegelladungen} Was ist der Elektrische Feld Zweier Punktladungen
+\subsubsection{Dipole} Ein Dipol
+\[\phi(r)=\frac{-q}{pi\varepsilon_0} \left(\frac{1}{r_1}-\frac{1}{r_2}\right)\]
+\[r_i^2=\frac{l^2}{4}+r^2-\]
+mit der Naherung $l<<r$ bekommt man $r_1\approx r^2+l r \cos(\theta)$
+\[\frac{1}{r_1}-\frac{1}{r_2}=\frac{1}{r}\left[1-\frac{1}{2}\frac{l}{r}\cos(\theta)- \left(1+\frac{l}{2r}\cos(\theta)\right)\right]=-\frac{l}{r^2}\cos(\theta)\]
+Und dann ist der Potential \[\phi(r)=\frac{1}{4\pi\varepsilon}\frac{ql}{r^2}\cos(\theta)\]
+Und dann ist \[q\cdot l=p\text{ Dipolmoment }\]
+Dass Elektrische Feld kann man mit $\vec{E}=-\text{grad}(\phi)$\[=\frac{\partial \phi}{\partial r}\vec{e_r}-\frac{1}{r}\frac{\partial\phi}{\partial \theta}\vec{e_\theta}\]
+\[E_r=\frac{1}{4\pi \varepsilon_0}\cdot \frac{2p}{r^3}\]
+\[E_\theta=\frac{p\sin(\theta)}{4\pi\varepsilon_0 r^3}\]
+\subsubsection{Letifähige kugel im homogenen Elektrischen Feld} Die Ladungen in der Kugel werden sich in der Kugel so arrangieren so dass in der Kugel kein Feld ist. 
+Wir können die ladungen in dieser kugel als viele Dipole vereinfachen. Wir konnen auch schreiben:$\vec{E_{ext}=E_o\vec{e_z}}$ Und dann lässt siche der Potential als funktion schreiben $\phi(r,\theta, \varphi)=E_0r\cos(\theta)$. Hiermit kann man also 
+die viele Ladungen als dipole behandeln und damit der gesamtfeld ausrechnen mit der hilfe von wie es aussieht.
+\subsection{Kondensator} Wir haben ein Leiter mit potential $\phi_1\neq0$ und dann ist seine Ladung $Q=C\phi$ wobei $C$ die Kapazitanz ist.
+\subsubsection{Plattenkondensator} Wir haben zwei Parallele Platten mit abstand $d$ und fläche $A>>d$ Der elektrische Feld $E=\frac{V}{d}$ und die Ladungsdichte pro fläche ist $\delta =\varepsilon_1\cdot E=\varepsilon\frac{V}{d}$
+Also ist dei Gesamtladung $Q=A\delta=\frac{A\varepsilon}{d}V$ und wir bekommen $C=\frac{A\varepsilon}{d}$.
+\subsubsection{Gespeicherte Energie} Sage wir bringen eine ladung $dQ$ auf dem Kondensator, die Energie die wir gebraucht haben um diese Ladung dort zu bringen ist
+\[dW=\int\vec{F}\vec{ds}=\int dQ\cdot \vec{E}\cdot \vec{ds}=\int dQ\frac{V}{d}\cdot ds=dQ\frac{V}{d}\int ds=V\cdot dQ\]
+\[dW=\phi dQ=\frac{Q}{C}dQ\] EIne grosse ladung Q wird von einer Platte zum anderen transportiert.
+\[W=\frac{1}{C}\int_0^Q Q'dQ=\frac{Q^2}{2C}\]
+Was ist denn die Gebrauchte energie für $Q= e$ (Wir nehmen $C=1nF$ an) Dann kommt $W=10^{-5}eV$ oder null, da diese energie so klein.
+\newline DIe ionisieringsenergie vom Wasserstoff atomkann man mit dieser Kapazitanz formel rechnen!
+\[W=\frac{Q^2}{2C}=\frac{C}{2}V^2=\frac{Q}{2}V\]
+\subsubsection{Parallel und serien schaltung von Kapazitäten} In parallel, mussen alle Obere Platten den selben Potenzial haben, gleichfalls fur die untere Platten.
+\[Q=(v_1-v_2)\sum C_i=C(V_1-V_2)\Rightarrow C=\sum C_i\] Also die kapazitanz ist einfach die summe aller kapazitasten
+\newline Jetzt Schalten wir alle unser Kondensatoren in serie:
+\[V_1-V_{n+1}=(V_1-V_2)+(V_2-V_3)+....+(V_n-V_{n+1})\Rightarrow Q_1=Q_2=...=Q_n\Rightarrow C=\frac{1}{\sum\frac{1}{C_i}}\]
+\subsubsection{Allgemeine Kondensator-Systeme} Wir haben einen Ramen der Potential $\phi=0$ definiert. Wir haben im ramen eine insel mit ladung $Q_1$ und eine Andere mit $Q_2$ und $Q_3$ usw
+Ich lege das potential $\phi_1$ auf insel eins. dann ist ihre ladung: $Q_1=C_{11}\phi_1$ Dann bekommen alle andere Inseln $Q_k=C_{k_1}\phi_1$ Also im allgemeinen sagen wir:
+\[Q_j=C_{ij}\phi_i\mspc Q=\begin{pmatrix}Q_1\\Q_2\\\vdots\\Q_k\end{pmatrix}\mspc \phi=\begin{pmatrix}\phi_1\\\phi_2\\\vdots\\\phi_k\end{pmatrix}\]
+Und die Kapazität ist eine matrix $k\times k$
+\section{Elektrische ströme} Die idee ist, z.B. Wir habe ein Zylinder und innen Fliessen Ladungen. Wir Defininieren die Stromstärke: \[I=\frac{dQ}{dt}\] die mittlere drift geschwindigkeit $\overline{v}$
+Due Elektronen werden auf einer seite Beschleunigt und auf der andere werden si abgebremst von Störungen im Kristall gitter, Gitterschwingungen. Das heisst die Elektronen geben energie ab und bekommen energei vom elektrischen Feld. 
+Für die Stromstärke gilt $\Delta N$ die Zahl der Ladungsträger ist, $A$ die Querschnitsfläche ist: \[\Delta N=nA\Delta x=n A \overline{v}\Delta t\]
 \end{document}
 
