@@ -2,6 +2,10 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{titlesec}
+\titlespacing*{\subsubsection}{0pt}{1.2ex}{.1ex plus .2ex minus .2ex}
 
 \geometry{margin=1.5cm}
 
@@ -9,39 +13,51 @@
 \title{Analysis II}
 \newcommand{\mspc}{\hspace{0.7cm}}
 \newcommand{\smspc}{\hspace{0.3cm}}
+
+\newcommand{\satz}[1]{\subsubsection*{Satz {#1}}}
+\newcommand{\korollar}[1]{\subsubsection*{Korollar {#1}}}
+\newcommand{\beweis}{\\\textbf{Beweis }}
+\newcommand{\beispiel}[1]{\subsubsection*{Beispiele {#1}}}
+\newcommand{\bemerkung}[1]{\subsubsection*{Bemerkung {#1}}}
+\newcommand{\theorem}[1]{\subsubsection*{Theorem {#1}}}
+\newcommand{\lemma}[1]{\subsubsection*{Lemma {#1}}}
+\newcommand{\definition}[1]{\subsubsection*{Definition {#1}}}
+\newcommand{\behauptung}[1]{\subsubsection*{Behauptung {#1}}}
+\newcommand{\proposition}[1]{\subsubsection*{Proposition {#1}}}
+
 \begin{document}
 \maketitle
 
 \section{Metrische Räume}
-\textbf{Skalarproduct} Seien zwei vektoren $x,y\in\mathbb{R}^n$ dann ist der skalaproduktwie Folgt definiert: \[x\cdot y=<x,y>=\sum_{i=1}^nx_iy_i\]
-\textbf{Eufklidische Norm} Sei $x\in \mathbb{R}^n$ dann ist die Euklidische norm des Vektors \[||x||=\sqrt{\sum_{i=1}^nx_i^2}\]
-\textbf{Euklidischer Abstand  } \[d(x,y)=\sqrt{\sum^n_{i=1}(x_i-y_i)^2}\]
-\textbf{Dreiecksungleichung  }$\forall x,y,zin\mathbb{R}^n\rightarrow||x-z||\le||x-y||+||y-z||$
-\textbf{Metrische Räume} Ein metrische (M.R) $(X,d)$ ist eine nicht-leere menge $X$ zusammen mit einer funktion $d:X\times X\rightarrow[0;\infty[$ Welche die folgenden Eigenschaften besitzt:
+\subsubsection*{Skalarproduct} Seien zwei vektoren $x,y\in\mathbb{R}^n$ dann ist der skalaproduktwie Folgt definiert: \[x\cdot y=<x,y>=\sum_{i=1}^nx_iy_i\]
+\subsubsection*{Eufklidische Norm} Sei $x\in \mathbb{R}^n$ dann ist die Euklidische norm des Vektors \[||x||=\sqrt{\sum_{i=1}^nx_i^2}\]
+\subsubsection*{Euklidischer Abstand  } \[d(x,y)=\sqrt{\sum^n_{i=1}(x_i-y_i)^2}\]
+\subsubsection*{Dreiecksungleichung  }$\forall x,y,zin\mathbb{R}^n\rightarrow||x-z||\le||x-y||+||y-z||$
+\subsubsection*{Metrische Räume} Ein metrische (M.R) $(X,d)$ ist eine nicht-leere menge $X$ zusammen mit einer funktion $d:X\times X\rightarrow[0;\infty[$ Welche die folgenden Eigenschaften besitzt:
 \begin{itemize}
 \item[1.]{Positiv definiert $\forall x,y\in X\mspc d(x,y)=0\Leftrightarrow x=y$}
 \item[2.]{Symmetrie $\forall x,y \in X\mspc d(x,y)=d(y,x)$}
 \item[3.]{Dreiecksungleichung $\forall x,y,z\in X\mspc d(x,z)\le d(x,y)+d(y,z)$}
 \end{itemize}
-\textbf{Folgen} Sei $X$ eine Menge dann ist $(a_n)_{n\in\mathbb{N}_0}$ eine Folge $\mathbb{N}_0\rightarrow X$ mit dem bild $a_n=a(n)$.\newline
-\textbf{Konvergenz einer Folge in X} $(dim(x\ge1)$ Sei $(X,d)$ ein M.R. und $(a_n)_{n\in\mathbb{N}_0}$ eine Folge.  Dann konvergiert die folge auf eine zahl $A\in X$ falls.
+\subsubsection*{Folgen} Sei $X$ eine Menge dann ist $(a_n)_{n\in\mathbb{N}_0}$ eine Folge $\mathbb{N}_0\rightarrow X$ mit dem bild $a_n=a(n)$.
+\subsubsection*{Konvergenz einer Folge in X} $(dim(x\ge1)$ Sei $(X,d)$ ein M.R. und $(a_n)_{n\in\mathbb{N}_0}$ eine Folge.  Dann konvergiert die folge auf eine zahl $A\in X$ falls.
 \[\forall\varepsilon>0\mspc\exists N>0:\mspc d(a_n,A)<\epsilon\]
-Falls es kein $A$ gibt dann divergiert die Folge.\newline
-\textbf{Teilfolgen} Sei ein M.R. $(X,d)$ und $(a_n)_{n\in\mathbb{N}_0}$ eine folge, dann existier eine teilfolge $(x_{n_k})_{n\in\mathbb{N}_0}$ wobei $(n_k)_{k\in\mathbb{N}_0}$ eine Folge von reellen Zahlen ist.\newline
-\textbf{Häufungspunkt} Sei $(X,d)$ ein M.R. und $(a_n)_{n\in\mathbb{N}_0}$ eine Folge. $A\in X$ ist ein Häufungspunkt der Folge falls es eine Teilfolge die auf $A$ Konvergiert.\newline
-\textbf{Satz} $y\subset X$ Teilmenge eines M.R. $(X,d)$ $x\in X$ ist Häufungspunkt von $y$ falls eine Folge $(y_n)_{n\in\mathbb{N}_0}$ existiert welche gegen $x$ konvergiert.
-\newline\textbf{Lemma} Es sei $(x_n)_{n\in\mathbb{N}_0}$ eine Folge im Metrischen Raum $(X,d)$ mit $x\in X$ Dann konvergiert $(x_n)_{n\in\mathbb{N}_0}$ genau dann wenn jede Teilfolge $(x_{n_k})_{k\in\mathbb{N}_0}$ eine Teilfolge $(x_{n_{m_k}})_{k\in\mathbb{N}_0}$ die gegen $x$ konvergiert.
-\newline\textbf{Lemma}Eine Folfe in $(\mathbb{R}^n, d(x,y)=||x-y||)$ Konvergiert genau dann wenn sie koordinaten weise konvergiert.
+Falls es kein $A$ gibt dann divergiert die Folge.
+\subsubsection*{Teilfolgen} Sei ein M.R. $(X,d)$ und $(a_n)_{n\in\mathbb{N}_0}$ eine folge, dann existier eine teilfolge $(x_{n_k})_{n\in\mathbb{N}_0}$ wobei $(n_k)_{k\in\mathbb{N}_0}$ eine Folge von reellen Zahlen ist.
+\subsubsection*{Häufungspunkt} Sei $(X,d)$ ein M.R. und $(a_n)_{n\in\mathbb{N}_0}$ eine Folge. $A\in X$ ist ein Häufungspunkt der Folge falls es eine Teilfolge die auf $A$ Konvergiert.
+\subsubsection*{Satz} $y\subset X$ Teilmenge eines M.R. $(X,d)$ $x\in X$ ist Häufungspunkt von $y$ falls eine Folge $(y_n)_{n\in\mathbb{N}_0}$ existiert welche gegen $x$ konvergiert.
+\lemma{} Es sei $(x_n)_{n\in\mathbb{N}_0}$ eine Folge im Metrischen Raum $(X,d)$ mit $x\in X$ Dann konvergiert $(x_n)_{n\in\mathbb{N}_0}$ genau dann wenn jede Teilfolge $(x_{n_k})_{k\in\mathbb{N}_0}$ eine Teilfolge $(x_{n_{m_k}})_{k\in\mathbb{N}_0}$ die gegen $x$ konvergiert.
+\lemma{}Eine Folfe in $(\mathbb{R}^n, d(x,y)=||x-y||)$ Konvergiert genau dann wenn sie koordinaten weise konvergiert.
 \subsection{Cauchy Folge}Eine Folge $(a_n)_{n\in\mathbb{N}_0}$ in einem Metrischen Raum $(X,d)$ heisst cauchy foglge falls:\[\forall \varepsilon >0 \mspc \exists N>0 \text{ So dass } \forall m,n >N: \mspc d(a_n,a_m)<\varepsilon\]
-\textbf{Lemma} Analog zur Folgen in $\mathbb{R}$ gilt:
+\lemma{} Analog zur Folgen in $\mathbb{R}$ gilt:
 \begin{itemize}
 \item{Jede Cauchy-Folge ist beschränkt,$\Leftrightarrow \exists K\in\mathbb{R}$ so dass $ d(a_n,a_0\le K \forall n\in \mathbb{N}_0$}
 \item{Jede Konvergente Folge ist eine Cauchy-Folge.}
 \item{Eine Cauchy Folge konvergiert genau dann wenn sie eine konvergente Teilfolge besitzt}
 \end{itemize}
-\textbf{Vollstandigkeit} Eine Metrischer Raum heisst vollständig falls jede Cauchy-Folge in $X$ Konvergiert.
-\newline\textbf{Theorem} Für alle $n\ge1$ ist $\mathbb{R}^n$ mit der Standard metrik ist Vollständig.\newline
-\textbf{Beweis} Analog zur tatsache, das in $\mathbb{R}^n$ konvergenz im Metrischen Raum äquivalent ist zur Koordinaten-weise konvergenz: Eine Cauchy-Folge in $\mathbb{R}^n$ zu sein ist äquivalent zur Tatsache dass jede Koordinate eine Cauchy-Folge liefert (in den Reelen zahlen).\newline
+\subsubsection*{Vollstandigkeit} Eine Metrischer Raum heisst vollständig falls jede Cauchy-Folge in $X$ Konvergiert.
+\theorem{} Für alle $n\ge1$ ist $\mathbb{R}^n$ mit der Standard metrik ist Vollständig.
+\beweis Analog zur tatsache, das in $\mathbb{R}^n$ konvergenz im Metrischen Raum äquivalent ist zur Koordinaten-weise konvergenz: Eine Cauchy-Folge in $\mathbb{R}^n$ zu sein ist äquivalent zur Tatsache dass jede Koordinate eine Cauchy-Folge liefert (in den Reelen zahlen).
 In den Reellen Zahlen konvergieren alle Cauchy-Folgen, Daher muss die Behauptung stimmen. Q.E.D.
 \subsection{Topologie Metrischer Raume}
 Es sei $(X,d)$ ein Metrischer Raum, $x\in X$ und $r>0$ eine reelle Zahl. Der offene Ball um den Punkt $x$ mit radius $r$ ist die Menge:\[B_r(x)=B(x,r:=\left[y\in X|\mspc d(x,y)<r\right]\]
@@ -53,33 +69,33 @@ Sei $(X,d)$ ein Metrischer Raum und $A\subset X$ eine Teilmenge
 :=\bigcap \left[A\subset U|U \text{ ist abgeschlossen}\right]\] und ist die kleinste abgeschlossene Menge welche $A$ enthält.}
 \item{Dr Tipologische Rabd von $A$ ist $\overline{A}/A^o$}
 \end{itemize}
-Beispiel, in $\mathbb{R}$ mit $A=]0,1[\rightarrow A^o=]0,1[$ und $\overline{A}=[0,1]$ dann ist der Rand: $\left\lbrace 0\right\rbrace\cup\left\lbrace1\right\rbrace$.\newline
-\textbf{Proposition} Es sei $(X,d)$ ein Metrischer Raum:
+Beispiel, in $\mathbb{R}$ mit $A=]0,1[\rightarrow A^o=]0,1[$ und $\overline{A}=[0,1]$ dann ist der Rand: $\left\lbrace 0\right\rbrace\cup\left\lbrace1\right\rbrace$.
+\proposition{} Es sei $(X,d)$ ein Metrischer Raum:
 \begin{itemize}
 \item{Eine Teilmenge $A\subset X$ ist genau dann offen, alls für jede konvegente Folge $(x_n)_{n\in\mathbb{N}_0}$ mit grenzwert $x\in A$ gilt:\[\exists N\in\mathbb, \forall n>N \mspc x:n\in A\]}
 \item{Eine Teilmenge $A\subset X$ ist genau dann abgeschlossen falls fur jede konvergente Folge $(x_n)_{n\in\mathbb{N}_0}\subset A$ mit grenzwert $x\in A$ ist $x\in A$}
 \end{itemize}
-\textbf{Beweis} Fall der Offene Menge:\newline
+Der beweis läuft wie folgt ab:
+\beweis Fall der Offene Menge:
 "$\Rightarrow$" Es sei $(x_n)_{n\in\mathbb{N}_0 }$ eine Konvergente Folge mit grenzwert $x\in A$. Gemäss vorassetzung wissen wir, dass die Teilmenge $A$ offen ist Da $A$ offen ist, und $x\in A$ gibt es ein Offenen Ball $B(x,\varepsilon)\subset A$. Für dieses $\varepsilon>0 \exists N\in\mathbb{N}_0$ (wegen der Konvergenz der betrachteten Folge) $d(x,x_n)<\varepsilon$ (Konvergente folgen sind in $X$ Cauchy-Folgen) dies Bedeutet das FOlgeglieder 
 mit index $n>N$ in $B(x,\varepsilon)$\newline
 "$\Leftarrow$" Wir nehmen jetzt an das $A\subset X$ nicht offen ist. Dies bedeutet dass $\exists x\in A \varepsilon>0 \mspc B(x,\varepsilon)/A\neq\emptyset$
 Insbesonde konnen wir $\varepsilon=2^{-1}$ betrachten und eine Folge $(x_n)_{n\in\mathbb{N}}$ konstruiren mit $x_n\in B(x,2^{2{-n}})/A$ Es gilt für diese Folge aber auch dass Folgende $x_n\rightarrow x\in A$ \newline
 Der Fall der Geschlossene Menge:\newline
-"$\Rightarrow$" Wir nehmen an dass $A$ abgeschlossen ist. Wir betrachten dann eine beliebige FOlge $(x_n)_{n\in\mathbb{N}}$ mit $x_n\rightarrow x\in X$ Da $V:=X/A=A^c$ offen ist, kann der Grenzwert $x$ nicht in dieser offennen Menge liegen, da sonst die Folgenglieder ab einen bestimmten Index ebenfalls in dieser Offenene Menge liegen müssen, damit muss gelten dass:$x\in A$\newline
+"$\Rightarrow$" Wir nehmen an dass $A$ abgeschlossen ist. Wir betrachten dann eine beliebige Folge $(x_n)_{n\in\mathbb{N}}$ mit $x_n\rightarrow x\in X$ Da $V:=X/A=A^c$ offen ist, kann der Grenzwert $x$ nicht in dieser offennen Menge liegen, da sonst die Folgenglieder ab einen bestimmten Index ebenfalls in dieser Offenene Menge liegen müssen, damit muss gelten dass:$x\in A$\newline
 "$\Leftarrow$" Wir nehmen an dass $A$ nicht abgeschlossen ist, dann ist $A^c$ nicht offen Dies bedeutet dass: $\exists y\in A^c \forall \varepsilon>0 \mspc B(y,\varepsilon) \cap A \neq \emptyset$ Damit kann man eine Folge konstruiren 
-$(x_n)_{n\in\mathbb{N}}$ mit $d(y,x_n)<\varepsilon \mspc \Rightarrow\mspc x\rightarrow y\in A^c$ Dann ist de beweis fertig Dann ist de beweis fertig.\newline
-\noindent
-\textbf{Proposition} Es sei $(X,d)$ ein Metrischer Raum. Eine folge $(x_n)_{n\in\mathbb{N}_0}$ konvergiert genau dann gegen $x$ wenn alle offene Mengen $U$ gilt:\[\exists N\in \mathbb{N}\forall n>N\mspc x_n\in U\]\newline
-\textbf{Beweis}
+$(x_n)_{n\in\mathbb{N}}$ mit $d(y,x_n)<\varepsilon \mspc \Rightarrow\mspc x\rightarrow y\in A^c$ Dann ist de beweis fertig Dann ist de beweis fertig.
+\proposition{} Es sei $(X,d)$ ein Metrischer Raum. Eine folge $(x_n)_{n\in\mathbb{N}_0}$ konvergiert genau dann gegen $x$ wenn alle offene Mengen $U$ gilt:\[\exists N\in \mathbb{N}\forall n>N\mspc x_n\in U\]
+\beweis
 "$\Rightarrow$" Sei $(x_n)_{n\in\mathbb{N}}$ eine gegen $x$ konvergierende Folge, es sei ausserdem $U$ offen mit $x\in U$. Da $U$ offen ist: $\exists \varepsilon >0 B(x,\varepsilon)$ Dann gilt auch \[\forall \varepsilon \exists N\in\mathbb{N} \forall n>N \mspc d(x,x_n)<\varepsilon\]
 \newline
-"$\Leftarrow$" $\forall \epsilon \mspc B(x, \epsilon)$ ist offen. Und es gilt $\exists N\in\mathbb{N} : x_n\in\forall n>N B(x, \varepsilon)$ Dies bedeutet gemäss definition dass $\underset{n\rightarrow\infty}{lim} x_n=x$. \newline
-\textbf{Korollar} Es sei $X$ eine Menge und $d_1, d_2$ zwei verschieden Metriken. Dann haben $(X,d_1), (X, d_2)$ genau dann die selben konvergente Folgen wenn die Topologien von $d_1$ und $d_2$ ubereinstimmen. 
-\newline\subsection{Banachscher Fixpunkttheorem}
+"$\Leftarrow$" $\forall \epsilon \mspc B(x, \epsilon)$ ist offen. Und es gilt $\exists N\in\mathbb{N} : x_n\in\forall n>N B(x, \varepsilon)$ Dies bedeutet gemäss definition dass $\underset{n\rightarrow\infty}{lim} x_n=x$. 
+\korollar{} Es sei $X$ eine Menge und $d_1, d_2$ zwei verschieden Metriken. Dann haben $(X,d_1), (X, d_2)$ genau dann die selben konvergente Folgen wenn die Topologien von $d_1$ und $d_2$ ubereinstimmen. 
+\subsection{Banachscher Fixpunkttheorem}
 Sei $(X,d)$ Ein Vollständiger Metrischer raum mit eine Abbildung $f:X\rightarrow X$ die Lipschitz stetig ist mit $L<1$\[\forall x,x'\in X\mspc d(f(x),f(x'))\le Ld(x,x')\]
 Dann gibt es ein wert $z\in X$ wofür $f(z)=z$
-\newline
-\textbf{Beweis der Existenz des Fixpunkts} Wir nehmen $x\in x_0$ beliebig, dann konstruiren wir iterativ eine Folge in $X$ und zwar wie folgt: $x_{n+1}:=f(x_n)$ Dies ergibt tatsächlich eine Folge $(x_n)n\in\mathbb{N}_0$ Als nächstes wollen wir Zeigen dass diese Folge eine Cauchy-Folge ist.
+
+\subsubsection*{Beweis der Existenz des Fixpunkts} Wir nehmen $x\in x_0$ beliebig, dann konstruiren wir iterativ eine Folge in $X$ und zwar wie folgt: $x_{n+1}:=f(x_n)$ Dies ergibt tatsächlich eine Folge $(x_n)n\in\mathbb{N}_0$ Als nächstes wollen wir Zeigen dass diese Folge eine Cauchy-Folge ist.
 \begin{itemize}
   \item{$d(x_{n+1},x_n)=d(f(x_n),f(x_{n-1}))=d(f^n(x_0),f^n(x_0))\le L^nd(x_1,x_0)$}
   \item{$d(x_m,x_n)\le \sum_{k=n}^{m-1}d(x_{k+1}^,x_k)\le\sum_{k=n}a^{m-1}L^kd(x_1,x_0)=d(x_1,x_0)\sum_{k=n}^{m-1}l^k$ Und diese Reihe ist für $L<1$ $\forall n,m\in \mathbb{N}_0$ und sogar $m\rightarrow\infty$ konvergent.
@@ -88,37 +104,42 @@ Dann gibt es ein wert $z\in X$ wofür $f(z)=z$
 Es bleibt noch zu zeigen dass $\overline{x}$ ein Fixpunkt ist:
 \[f(\overline{x})=\lim_{}\]
 \subsection{Kompaktheit} Ein Intervall $I\subset\mathbb{R}$ ist kompakt genau dann wenn $I$ beschränkt und abgeschlossen ist. Die beschränktheit geht aber nicht trivial in den Metrischen Raum über.
-\newline\textbf{Definition} Sei $(X,d)$ ein Metrischer Raum, und $K$ Eine Teilmenge.\begin{itemize}
+\definition{} Sei $(X,d)$ ein Metrischer Raum, und $K$ Eine Teilmenge.\begin{itemize}
   \item{K heisst Folgenkompakt falls jede Folge $(x_n)_{n\in\mathbb{N}_0}\subset K$ eine in $K$ konvergente Teilfolge.}
 \item{K heisst Topologisch Kompakt falls jede Familie von Offenen Mengen $\mathbb{U}:=\left\lbrace\mathbb{U}_i\right\rbrace_i\in I$, welche $K$ uberdeckt, also dass:\[K\subset\bigcup\mathbb{U}=\bigcup_{i\in I}U_i\] eine Endliche Teilüberdeckung besitzt, (eine endliche familie welche $K$ immer noch überdeckt.)}
 \end{itemize}
-\textbf{Definition} Sei $(X,d)$ ein metrischer und $K\subset X$ eine Teilmenge. $K$ heisst totalbeschränkt, falls $\forall r>0\smspc \exists x_1,...,x_n\in K$ so dass $\bigcup B_i$ (wobei $B_i=B(x_i,r)$) $K$ überdeckt.\newline
-\textbf{Beispiel} Das intervall $I=[0,1[$ ist beschränkt aber nicht abgeschlossen (im sinne von Analysis I). WIr bemerken auch dass es nicht Topologisch kompakt ist da\[\lbrace\mathbb{U}_i\rbrace_{i\in\mathbb{N}}\smspc \mathbb{U}_i=[0,1-2^{-i}[ \] Keine endliche Teilüberdeckung von $I$ besitzt.\newline
-\textbf{Bemerkung} Es sei $(X,d)$ ein Metrischer Raum. Falls $(X,d)$ totalbeschränkt ist so ist es auch beschränkt d.h. $\exists d$ so dass $\lim \sup d(x,y)<\infty$\newline
-\textbf{Bemerkung} Ein beschränkter Metrischer Raum muss nicht totalbeschrankt sein. Hier ein Gegenbeispiel\[X=\mathbb{N} \smspc d(n,m)=arctan(|n-m|)\Rightarrow r=\frac{\pi}{8}\text{ Dann ist der Raum nicht mit endlichen bällen überdeckbar}\]
-\newpage\textbf{Theorem} Es sei $(X,d)$ ein metrischer Raum und $K\subset X$ eine Teillmenge, dann sind folgende aussagen äquivalent:
+\definition{} Sei $(X,d)$ ein metrischer und $K\subset X$ eine Teilmenge. $K$ heisst totalbeschränkt, falls $\forall r>0\smspc \exists x_1,...,x_n\in K$ so dass $\bigcup B_i$ (wobei $B_i=B(x_i,r)$) $K$ überdeckt.
+\beispiel{} Das intervall $I=[0,1[$ ist beschränkt aber nicht abgeschlossen (im sinne von Analysis I). WIr bemerken auch dass es nicht Topologisch kompakt ist da\[\lbrace\mathbb{U}_i\rbrace_{i\in\mathbb{N}}\smspc \mathbb{U}_i=[0,1-2^{-i}[ \] Keine endliche Teilüberdeckung von $I$ besitzt.
+\bemerkung{} Es sei $(X,d)$ ein Metrischer Raum. Falls $(X,d)$ totalbeschränkt ist so ist es auch beschränkt d.h. $\exists d$ so dass $\lim \sup d(x,y)<\infty$
+\bemerkung{} Ein beschränkter Metrischer Raum muss nicht totalbeschrankt sein. Hier ein Gegenbeispiel\[X=\mathbb{N} \smspc d(n,m)=arctan(|n-m|)\Rightarrow r=\frac{\pi}{8}\text{ Dann ist der Raum nicht mit endlichen bällen überdeckbar}\]
+\newpage\theorem{} Es sei $(X,d)$ ein metrischer Raum und $K\subset X$ eine Teillmenge, dann sind folgende aussagen äquivalent:
 \begin{itemize}
   \item{$K$ ist Folgenkompakt}
   \item{$K$ ist Topologish  kompakt}
   \item{$K$ ist vollstänfig und totallbeschränkt}
 \end{itemize}
 Wir nennen hier die Teilmenge einfach Kompakt.
-\newline\textbf{Lemma} Es sei $(X,d)$ ein metrischer Raum. Dann ist $K\subset X$ genau dann topologisch kompakt falls für alle Familien $\mathbb{A}:=\lbrace A_i\rbrace_{i\in I}$ abgeschlossener Teilmengen, jede Schnittmenge endlicher vieler Mengen aus $\mathbb{A}$ einen nicht leeren Schnitt mit $K$ besitzt, ist auch $K\cup\bigcup_{i\in I} A_i$ nicht leer.
-\newline\textbf{Lemma Diagonalfolge} Es seien $\mathbb{N}0\supset N_0\supset N_1\supset ...$ eine unendliche Familie einander verschachteter Mengen. Des Weitern besitze jede Mengen $N_k$ unendlich viele Elemente.
-Dann existiert eine streng monoton wachsende Funktion $f:\mathbb{N}_0\rightarrow \mathbb{N}_0$ mit der Eigenschaft $f(k)\in N_k \smspc \forall k\in\mathbb{N}_0$.\newline
-\textbf{Beweis} Die Funktion $f$ wird iterativ konstruirt, Als erstes wählen wir $f(0)$ beliebig aus $N_0$ und dann für jedes nachfolgende $f(k):=\min\lbrace m\in\mathbb{N}_0\cup N_k\rbrace$\newline
-\textbf{Korollar} Es sei $(X,d)$ ein metrischer Raum $A\subset X$ eine abgeschlossene Teilmenge und $K\subset X$ eine kompakte Teilmenge. Dann ist $A\cap K$ kompakt.\newline
-\noindent\textbf{Theorem Heine Borel} Eine Teilmenge $K\subset \mathbb{R}^n$ ist genau dann kompakt wenn sie abgeschlossen und beschränkt ist.
-\textbf{Beweis}  \newline Hinrichtung "$\Rightarrow$" Es sei $K$ Kompakt, Dann ist $K$ insbesondere totalbeschränkt. Die Abgeschlossenheit von $K$ folgt aus dem vorherigen Korollar.
+\lemma{} Es sei $(X,d)$ ein metrischer Raum. Dann ist $K\subset X$ genau dann topologisch kompakt falls für alle Familien $\mathbb{A}:=\lbrace A_i\rbrace_{i\in I}$ abgeschlossener Teilmengen, jede Schnittmenge endlicher vieler Mengen aus $\mathbb{A}$ einen nicht leeren Schnitt mit $K$ besitzt, ist auch $K\cup\bigcup_{i\in I} A_i$ nicht leer.
+\lemma{Diagonalfolge} Es seien $\mathbb{N}0\supset N_0\supset N_1\supset ...$ eine unendliche Familie einander verschachteter Mengen. Des Weitern besitze jede Mengen $N_k$ unendlich viele Elemente.
+Dann existiert eine streng monoton wachsende Funktion $f:\mathbb{N}_0\rightarrow \mathbb{N}_0$ mit der Eigenschaft $f(k)\in N_k \smspc \forall k\in\mathbb{N}_0$.
+\beweis Die Funktion $f$ wird iterativ konstruirt, Als erstes wählen wir $f(0)$ beliebig aus $N_0$ und dann für jedes nachfolgende $f(k):=\min\lbrace m\in\mathbb{N}_0\cup N_k\rbrace$
+\korollar{} Es sei $(X,d)$ ein metrischer Raum $A\subset X$ eine abgeschlossene Teilmenge und $K\subset X$ eine kompakte Teilmenge. Dann ist $A\cap K$ kompakt.
+\noindent\subsubsection*{Theorem Heine Borel} Eine Teilmenge $K\subset \mathbb{R}^n$ ist genau dann kompakt wenn sie abgeschlossen und beschränkt ist.
+\beweis  \newline Hinrichtung "$\Rightarrow$" Es sei $K$ Kompakt, Dann ist $K$ insbesondere totalbeschränkt. Die Abgeschlossenheit von $K$ folgt aus dem vorherigen Korollar.
 \newline Rückrichtung "$\Leftarrow$" Für die Rückrichtung müssen wir nur nachweisen dass $K$ vollständig und totalbeschränkt ist.
 \begin{itemize}
   \item[]{Vollständigkeit:  Aus der Tatsache dass $\mathbb{R}$ vollständig (vollständig=Cauchy$\Rightarrow$Konvergent) ist, muss $\mathbb{R}^n$ vollständig sein und daher auch $K\subset \mathbb{R}^n$}
   \item[]{Totalbeschränkteit:   $K$ ist beschränkt, d.h. $\exists N\in\mathbb{N}_0$ so dass $K\subset[-2^N,2^N]$ Nun sei $r>0$ vorgegeben, dann wählen wir $M$ so dass $2^-M<\frac{r}{\sqrt{n}}$. Dann betrachten wir de bälle dessen Mittelpunkte auf den folgenden Gitter:\[y=(y_1,...y_n)\in\mathbb{Z}\text{ mit } -2^{N+M}\le y_i\le2^{N+M}\]$\rightarrow z_i=2^{-M}y_i$ Die bälle sind $B_i=B(r,z_i)$ und hier brauchen wir nur endlich viele bälle und überdeckt die gnaze Teilmenge. }\end{itemize}
 \noindent
-\textbf{Theorem} Es seien $(X,d_X)$ und $(Y,d_Y)$ zwei metrische Räume, $f:X\rightarrow Y$ eine stetige Abbildung und $K\subset X$ eine Kompakte Teilmenge von $X$ Dann ist $f(K)$ eine kompakte teilmenge von $Y$ (Der satz hat Kobel Keller mathematisch falsch ausgesagt, wir haben noch nicht $f(K)$ definiert...)\newline
-\textbf{Beweis} Hier geben wir nur die Struktur des Beweises an:\newline Wir benutzen einerseits die Beschreibung der stetigkeit als Folgenstetigkeit und andererseits die Beschreibung der Kompaktheit als Folgenkompaktheit\newline 
+\theorem{} Es seien $(X,d_X)$ und $(Y,d_Y)$ zwei metrische Räume, $f:X\rightarrow Y$ eine stetige Abbildung und $K\subset X$ eine Kompakte Teilmenge von $X$ Dann ist $f(K)$ eine kompakte teilmenge von $Y$
+\beweis Hier geben wir nur die Struktur des Beweises an:\newline Wir benutzen einerseits die Beschreibung der stetigkeit als Folgenstetigkeit und andererseits die Beschreibung der Kompaktheit als Folgenkompaktheit\newline 
 Zu zeigen jede Folge im Bild von $K$ unter $f,f(K)$ hat eine konvergente Teilfolge.
-\textbf{Proposition} Es seien $(X,d_X)$ und $(Y,d_Y)$ zwei metrische Räume, $f:X\rightarrow Y$ eine stetige Abbildung. Falls $X$ kompakt ist, ist $f$ gleichmässig stetig\newline
+\proposition{} Es seien $(X,d_X)$ und $(Y,d_Y)$ zwei metrische Räume, $f:X\rightarrow Y$ eine stetige Abbildung. Falls $X$ kompakt ist, ist $f$ gleichmässig stetig
+\beweis Wenn $X$ kompakt ist, dann ist auch $f(X)\subseteq Y$ kompakt und daher auch Beschränkt. Wir setzen also $inf(f(X))=m$ und $M=sup(f(X))$ also ist \[\forall x,y\in X\mspc\frac{|f(x)-f(y)|}{|x-y|}\le\frac{M-m}{|f^{-1}(M)-f^{-1}(m)|}\] 
+Also kann man hiermit $\delta$ definieren $\forall \varepsilon$
+\korollar{} Es seien $(X, d_X)$ und $(Y=\mathbb{R}, d_Y=|\cdot|)$ Metrische Räum, $f:X\rightarrow Y$ eine Stetige Abbildung und $K\subset X$ eine kompakte teilmenge von $X$ 
+Dann nimmt $f$ ihr Maximum und ihr Minimum an:
+\[f(\underline{x}\le f(x))\le f(\overline{x}) \mspc \forall x \in K\]
 
 \end{document}
 
