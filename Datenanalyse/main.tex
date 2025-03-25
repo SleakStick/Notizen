@@ -16,5 +16,14 @@
 
 \begin{document}
 \maketitle
-\section{Kovarianz und Autokovarianz}
+%\section{Kovarianz und Autokovarianz}
+\section{Fouriertranform}
+Wir können jede Funktion auf einem beschränkte Zetiperiode als eine Summe von Trigonometrischen funktionen defnieren. Wenn ich eine funktion $x_{t_k}$ habe dann kann ich eine frequenz hier einsetzen: (in theorie ist dies ein Integral aber hier handelt es sich um diskrete daten)
+\[X(f_n)=\frac{1}{N}\sum_{k=0}{N-1}x(t_k)e^{-i2\pi f_nt_k}\]
+und ich bekomme ein anteil der trigonometrischen funktionen von dieser fräquenz in der funktion.\newline
+Wie man das praktisch macht, man misst für alle frequenzen die Gleichung und dann bekommt man den anteil dieser fräquenz auf der funktion welche wir den Fouriertransform machen
+\subsubsection{Aliasing} Man muss aufpassen wenn man eine Welle misst, wenn $\Delta t>\frac{1}{\nu}$ dann ist unsere messung okay, man braucht also mindestens zwei messpunkte pro oszillation der Welle, sonst kann ein Fall von Aliasing passieren wo wir eine höhere fräquenz messen als was eigentilch ist.
+\subsubsection{Gabors limit} Wenn sag ich dass eine fräquenz nicht im Transform auftaucht? Gabors limit besagt dass je langer ein signal ist in der zeit, desto besser kann die präzision der messung vom signal sein: $\sigma_t\cdot\sigma_f\ge\frac{1}{2}$. Wobei $\sigma$ die auflösung der Messung ist.
+Daher limitiert die Messzeit $t_{tot}$ $\sigma_t$. Wenn man den Fouriertransform von einer funktion mit eine auflösung $\sigma_t$, mit eine kleinere auflösung misst, bekommt man nicht mehr information, die zwei werte sind dann auf distanzen kleine als $\sigma_t$ korreliert und bringen nicht neue information.
+Zusätslich ist die Maximale frequenz die ich messen kann ist $f_{max}=\frac{1}{2\Delta t}$ die minimale frequenz lässt sich analog finden aber die negative Fourierwerte haben nicht mehr information als die positive
 \end{document}
