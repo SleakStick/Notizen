@@ -383,6 +383,47 @@ Ich lege das potential $\phi_1$ auf insel eins. dann ist ihre ladung: $Q_1=C_{11
 Und die Kapazität ist eine matrix $k\times k$
 \section{Elektrische ströme} Die idee ist, z.B. Wir habe ein Zylinder und innen Fliessen Ladungen. Wir Defininieren die Stromstärke: \[I=\frac{dQ}{dt}\] die mittlere drift geschwindigkeit $\overline{v}$
 Due Elektronen werden auf einer seite Beschleunigt und auf der andere werden si abgebremst von Störungen im Kristall gitter, Gitterschwingungen. Das heisst die Elektronen geben energie ab und bekommen energei vom elektrischen Feld. 
-Für die Stromstärke gilt $\Delta N$ die Zahl der Ladungsträger ist, $A$ die Querschnitsfläche ist: \[\Delta N=nA\Delta x=n A \overline{v}\Delta t\]
+Für die Stromstärke gilt $\Delta N$ die Zahl der Ladungsträger ist, $A$ die Querschnittsfläche ist: \[\frac{dQ}{dt}=q\lim_{\Delta t\rightarrow 0}\frac{\Delta N}{Delta t}=n A \overline{v}q\]
+\subsubsection{Stromdichte}Dei Stromdichte ist der Strom pro fläche:\[\vec{J}=nq\vec{\overline{v}}\] Also ist der Strom $I_A=\vec{J}\cdot\vec{A}=J\cdot A\cos(\theta)$ Also ist die Stromdichte wie folgt definiert:\[\left|\vec{J}\right|=\frac{I}{A\cos(\theta)}\]
+Die Stromdichte ist eine Grösse mit eine Richtung und intensität, diese Grösse ist also relevanter als der Strom (meistens). Seiein Mehrehre teilchen, dann ist die stromdichte:
+\[\vec{J}=\sum_in_iq_i\vec{v_i}\mspc\Rightarrow\mspc I_A=\int \vec{J}\vec{da}=\sum\lambda_iq_i\overline{v_i}\text{ alle parallel also kein vektorpfeil auf } v\]
+\subsubsection{Driffgeschwindigkeit} Die ladungsträgerdichte ist : $n=\frac{\rho N_A}{M}=8\cdot 10^{2@} cm^{-3}$ Dann ist also:\[\left|\vec{v}\right|=\frac{1}{neA}=\frac{IM}{\rho N_A e A}\approx 6\frac{m}{tag}\]
+\subsubsection{Dride modell} Was ist den mit der Mittlere geschwindigkeit? Der modell von Dride ist wie Folgt:\[m\dot{v}=ma=-e\left|\vec{E}\right|\] Wir haben aber eine Dämpfung im system (sonst explodiert die energie im system nach unsere differentialgleichung)
+\[m\dot{v}+\frac{m}{\tau}v_D=-e\left|\vec{E}\right|\] Wobei $\tau$ der Energieverlust ist. Der Stationäre Zustad ist $\dot{v}=0$\[\vec{V_D}=\frac{-e}{m}\tau\vec{E}\]
+Dieser $\tau$ ist in der grössenordnung von milisecunden, also geben ladungsträger ihre ladungen sehr schnell ab sobald sie beschleunigt werden. Dies ist der Grund für der Joule effekt
+\subsubsection{Ladungserhaltung}
+Wir haben hier eine fläche und wir rechnen den Strom durch diese fläche:\[I_{\partial V}=-\int_V\frac{d \rho}{dt}dV\]
+Den kann man aber auch mit \[I_{\partial V}=\int_V\vec{\nabla}\vec{J}dV\]
+Also bekommen wir daraus die Kontinuitätsgleichung die wir auch aus der Maxwellgleichung herleiten können:\[\vec{\nabla}\cdot\vec{J(\vec{r})}=-\frac{d\rho(\vec{r})}{dt}\] Die divergenz von $J$ hat mit die Quellene des Vektorfelds zu tun, also ist es null
+ist die dichte linear und es gibt weder Quelle noch senkloch
+\subsubsection{Das Gesetz von Ohm}
+Wenn wir ein geschlossenes leiter mit eine Spannungsquelle haben, dann können wir dank der nicht konservativheit der Spannungsquelle (z.B. Batterie Chemie $\Rightarrow$ Spannung aber nicht andersherum) folgende gleichung setze
+\[\oint\vec{E}\vec{ds}\neq0\]
+Von der Stromdichte kann man zuruck zum elektrischen feld zuruck:\[\vec{J_i}=\vec{\sigma}\cdot\vec{E}\mspc\sigma\text{ ist hier die Leitfähigkeit}\]
+\subsubsection{Widerstand eines Schaltelements}
+Die Gleichung vorhin ist äquivalent zu:\[R=\frac{V}{I}\]Und wir können dann setzen dass:\[I=JA\mspc V=E\cdot l\mspc R=\rho\frac{l}{A}=\frac{l}{A}\frac{a}{\sigma}\]
+Der unterschied zwischen Widerstand und Leitfähigkeit ist dass der Widerstand konstant ist wenn die Leitfähigkeit microskopisch ist und daher auch nicht konstant??
+\subsubsection{Schaltkreise mit diskrete komponenten} Wenn wir viele widerstände haben, die alle in serie sind, dann gilt $v_i=R_iI_i$. Zusätlich gilt es dass von jedem knoten ausgesehen ist die summe aller ströme null: $\sum I_i=0$ Dies gilt da es sonst die kontinuitätsgleichung nicht erfüllt weil wenn die Summe nicht null wäre, dann
+hätte der Knoten einen Ladungszufuhr/verlust.
+Zum schluss, gilt auch dass wenn wir ein mal im kreis gehen, dann ist die Summe aller spannungen $=0$ $\sum V_i=0$
+\newline Nach dem Ohm'schen gesetz ist auch klar dass die gesamtspannung die summe der einzigen Spannungen um jeden widerstand ist, daher kann man einfach die Serienschaltung zweier Widerstände als die summe der Widerstände rechnen. Analog kann man von der zweiten obigen regel 
+finden dass die Parallel schaltung zweier widerstände einfach durch einen Widerstand der durch der inverse der summe der Inversen definiert ist:
+\[\left\lbrace\begin{matrix}\text{Serienschaltung: }&R_{tot}=\sum R_i\\\text{Parallelschaltung: }&R_{tot}=\frac{1}{\sum \frac{1}{R_i}}\end{matrix}\right.\]
+\subsubsection{Energieumwandlung in Widerstände}
+Die Leistung ist $P=\frac{dW}{dt}=\dot{Q}V=IV$ und also ist die leistung:\[P=IV=I^2R=\frac{V^2}{R}\]
+\subsubsection{Der Innenwiderstand}
+Wenn wir einfach eine Spannungsquelle auf einen widerstand stellen, und dann den Widerstand $R$ gegen $0$ gehen lassen. Dann wäre theoretisch der Strom unendlich, anstatt hat die Spannunsquelle ein inneres Widerstand der Immer grösser ist als die äussere Widerstände die angeschlossen sind, sonst liefert die quelle ihre spannung nicht mehr (sonst wäre $I\rightarrow \infty$ )
+\subsection{Schaltkreise mit Kondensatoren}
+\begin{multicols}{2}
+Wir nehmen zuerst einen Schaltkreis mit eine Kondensator, ein Wirderstand und ein Kondensator, jetzt hängt der Strom ven der Zeit ab.\vfill\null\columnbreak
+\begin{center}
+\scalebox{1.2}{\tikzfig{RCSchaltkreis}}\end{center}
+\end{multicols}
+Entlang des Kondensators gilt $\frac{dQ}{dt}=I(t)$ und Die Kirchhof regel gilt für die Schleife: $IR+\frac{Q}{C}=0$. Hierraus kann man die Differentialgleichung:
+\[R\frac{dQ}{dt}+\frac{Q}{C}=0\] lösen und man findet die Ladung des Kondensators:
+\[Q(t)=Ae^{-\frac{t}{RC}}\] Wobei wir die Zeitkonstante $\tau=RC$ definieren
+Die umgewandelte energie vom Widerstand ist \[W=\frac{1}{2}CV_0^2\] und der Ladestrom ist \[I(t)=\frac{V_0}{R}e^{-\frac{t}{RC}}\]
+\section{Relativitätstheorie}
+Galilei hat sich überlegt dass Zeit und Raum isotrop sind, also dass Zeit und Raum sind absolut, dass es ein Zentrum von welchen man alles messen kann, irgendwo im universum gibt es eine Absolute uhr die die Zeit definiert. Mit diesen prinzipien kann
+man schon viel herausfinden und ausrechnen. Also bis Galilei gilt dass alle Intertialsysteme sind äquivalent, und dies ist sogar nach einstein geblieben.
 \end{document}
-
