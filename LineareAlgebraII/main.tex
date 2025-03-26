@@ -359,7 +359,23 @@ Der beweis ist komplex, den Beweis mit einen konkreten beispiel auszuführen ist
 \subsection*{12.5 Berechnung der Jordan normalenform}
 \beispiel{12.5.1} Was ist die JNF der Folgenden Matrix?\[A=\begin{pmatrix}1&1&6&-2\\0&1&-3&2\\0&0&1&0\\0&0&-2&2\end{pmatrix}\in M_{4\times4}(\mathbb{C})\]
 $\mathbf{X_A(x)}$ \textbf{, Eigenwerte und vielfachheiten finden}. In diesem Fall $X_A(x)= (1-x)^3(2-x)\Rightarrow \lambda_1=1\smspc\lambda_2=2$ Da $1=g_{\lambda_1}\neq a_{\lambda_1}=3$
-und $a_{\lambda_2}=g_{\lambda_2}=1$ Dann wissen wir dass Die anzahl jordanblöcke von einen Eigenwert $\lambda$ die geometrische vielfacheit $g_\lambda$ ist, Um zu wissen wie gross die Dazugehörigen JB sind schaut man sich die Dazugehörige Jordanketten an, bzw wir schauen $\forall i\in E_\lambda$ ob $\exists?v\in K$ so dass $(D-\lambda id_V)v=i$ wenn nein dann ist die Kette von länge 1 und wenn ja dann mindestens von länge 2. \[\Rightarrow[A]_B^B=\begin{pmatrix}J_{a_{\lambda_1}}(\lambda_1)&0\\0&J_{a_{\lambda_2}}(\lambda_2)\end{pmatrix}=\begin{pmatrix}1&1&0&0\\0&1&1&0\\0&0&1&0\\0&0&0&2\end{pmatrix}\]
+und $a_{\lambda_2}=g_{\lambda_2}=1$ Dann wissen wir dass Die anzahl jordanblöcke von einen Eigenwert $\lambda$ die geometrische vielfacheit $g_\lambda$ ist, Um zu wissen wie gross die Dazugehörigen JB sind schaut man sich die Dazugehörige Jordanketten an, bzw wir schauen $\forall i\in E_\lambda$ ob $\exists?v\in K$ so dass $(D-\lambda id_V)v=i$ wenn nein dann ist die Kette von länge 1 und wenn ja dann mindestens von länge 2, die Lange des Kurzestens Jordanblock ist auch die Potenz des minimalen Polynoms. \[\Rightarrow[A]_B^B=\begin{pmatrix}J_{a_{\lambda_1}}(\lambda_1)&0\\0&J_{a_{\lambda_2}}(\lambda_2)\end{pmatrix}=\begin{pmatrix}1&1&0&0\\0&1&1&0\\0&0&1&0\\0&0&0&2\end{pmatrix}\]
 Wir können jetzt dank der JNF eine Jordankette für $\tilde{E_{\lambda_1}}$. Daher wollen wir $v\in \mathbb{C}^4$ finden so dass \[v, (A-\lambda_1 id_V)v, \hdots , (A-\lambda_1 id_V)^2\] Eine Basis von $\tilde{E_{\lambda_1}}$ ist (wir gehen bis 2 da die länge des blocks 3 ist)
-Die Jordanbasis zu finden ist dasselbe als alle Jordanketten zu finden
+Die Jordanbasis zu finden ist dasselbe als alle Jordanketten zu finden.
+\section*{13 Euklidische und Hermitesche Räume}
+\subsection*{13.1 Normierte Räume}
+\definition{13.1.1} Es sei $K=\mathbb{R}$ oder $\mathbb{C}$ und $V$ ein $K$ vektorraum. Eine Norm auf $V$ ist ein Funktion $||\cdot||:V\rightarrow \mathbb{R}^+$. Eine Norm hat folgende Axiome:
+\begin{itemize}
+  \item[\textit{i.}]{\textbf{Dreiecksungeichung} $||u+v||\le||u||+||v||$}
+  \item[\textit{ii.}]{\textbf{Linearität} $||\lambda v||=|\lambda|\cdot||v||$}
+  \item[\textit{iii.}]{\textbf{Wohldefinitheit} $||v||=0\Rightarrow v=0_V$}
+\end{itemize}
+\beispiel{13.1.2}
+\begin{itemize}
+  \item{$||v||=\sqrt{a^2+b^2}$}
+  \item[]{$||v||=|a|+|b|$}
+  \item[]{$||v||=\sqrt[p]{|a|^p+|b|^p}$}
+  \item[]{$||v||=max(|a|,|b|)$}
+\end{itemize}
+\bemerkung{12.1.4} Sei $p\ge1$ und $v=\begin{pmatrix}x_1\\\vdots\\x_n\end{pmatrix}\in\mathbb{R}^n$ Dann definiert $||v||_p=(|x_1|+\hdots+|x_n|)^{\frac{1}{p}}$ eine Norm auf $\mathbb{R}^n$
 \end{document}
