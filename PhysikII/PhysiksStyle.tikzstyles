@@ -5,7 +5,7 @@
 
 % Node styles
 \tikzstyle{circle}=[fill=white, draw=black, shape=circle]
-\tikzstyle{new style 0}=[fill=none, draw=black, shape=rectangle]
+\tikzstyle{new style 0}=[fill=black, draw=black, shape=rectangle]
 
 % Edge styles
 \tikzstyle{BlackDoubleArrow}=[<->, draw=black]

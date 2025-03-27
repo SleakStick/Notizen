@@ -423,7 +423,33 @@ Entlang des Kondensators gilt $\frac{dQ}{dt}=I(t)$ und Die Kirchhof regel gilt f
 \[R\frac{dQ}{dt}+\frac{Q}{C}=0\] lösen und man findet die Ladung des Kondensators:
 \[Q(t)=Ae^{-\frac{t}{RC}}\] Wobei wir die Zeitkonstante $\tau=RC$ definieren
 Die umgewandelte energie vom Widerstand ist \[W=\frac{1}{2}CV_0^2\] und der Ladestrom ist \[I(t)=\frac{V_0}{R}e^{-\frac{t}{RC}}\]
+\subsection{Recap Elektrische ströme}
+\begin{itemize}
+  \item{Strom: $I=\frac{dQ}{dt}, [I]=A=\frac{C}{s}$}
+  \item{Stromdichte: $J=\frac{nq\overline{v}}$ und $I=\vec{j}\cdot\vec{A}$}
+  \item{Kontinutätsgleichung: $\vec{\nabla}\cdot\vec{J}=-\frac{d\rho}{dt}$ Dies besagt dass alle ladungen die aus ein systemfliessen, verschwinden nicht einfach. Wenn die ladungsdichte konstant ist dann fliesst soviel aus wie rein.}
+  \item{Für reale leiter gilt dass wenn wir strom durch ein Leiter senden dann verlieren wir energie, diese beziehung zwischen die material eigenschaft ist dass $\vec{J}=\sigma\cdot\vec{E}$ Dieses Sigma ist die Leitfähigkeit. Der spezifische Widerstand ist $\rho=\frac{1}{\sigma}$}
+  \item{Diese Leitfähigkeit kann macroscopish mit $U=RI$ definiert sein wobei $R$ der Widerstand ist}
+\end{itemize}
 \section{Relativitätstheorie}
 Galilei hat sich überlegt dass Zeit und Raum isotrop sind, also dass Zeit und Raum sind absolut, dass es ein Zentrum von welchen man alles messen kann, irgendwo im universum gibt es eine Absolute uhr die die Zeit definiert. Mit diesen prinzipien kann
 man schon viel herausfinden und ausrechnen. Also bis Galilei gilt dass alle Intertialsysteme sind äquivalent, und dies ist sogar nach einstein geblieben.
+\subsection{Galilei Transformationen}
+Diese Galilei Transformation schreibe ich nicht im detail ab, ich schreibe Aber die konventionen ab.
+\subsection{Grundlagen der Speziellen Relativitätstheorie}
+Sei $K$ und $K'$ inertialsysteme, die begründung für ein Intertialsystem bleibt unverändert. Jetzt sagen wir dass alle Naturgesetze in alle Inertialsysteme stimmen überein, die Lichtgeschwindigkeit ist eine Konstante für alle Inertialsysteme eine konstante die wie Folgt definiert\[c=\frac{1}{\sqrt{\varepsilon_0\cdot\mu_0}}=299'792'458[m\cdot s^{-1}]\]
+\subsection{Uhren und Massstäbe}Sei einen Sende und einen Spiegel, der sender Schickt ein lichtstrahl ab, der Spiegel reflektiert und der sender empfängt den. Was ist jetzt $\Delta t$ zwisch absendezeit und empfangzeit in unterschiedliche Inertialsysteme.
+Im ruhenden System $K'$ ist $\Delta t=\frac{l}{c}\cdot 2$. Jetzt stehen wir neben ein Wagen mit konstanter geschwindigkeit $v$ und schauen auf demselben experiment der jetzt von uns ausgesehen nicht ruhen ist. Jetzt ist der neue $(c\cdot\Delta t)^2=(v\Delta t) ^2\Rightarrow\Delta t=frac{l}{\sqrt{c^2-v^2}}$ da der Wagen auch eine Distanz zurucklegt was die distanz vom licht länger macht.
+Wir finden also dass:
+\[\frac{\Delta t}{\Delta t'}=\frac{c}{\sqrt{c^2- v^2}}\mspc (\beta=\frac{v}{c}\mspc \gamma=\frac{1}{\sqrt{1-\beta}}\ge1)\]
+Also von aussen gesehen geht die Zeit schneller vorbei: $\Delta t =\gamma \Delta t'$
+\subsubsection{Lorenzkontraktion} Also jetzt machen wir denselben experiment, aber sodass dass licht in geschwidikeitrichtung strahlt, so dass wir die Distanz messen können, wir senden den Lichtstrahl aus un messen diesmal die zeit vom inertialsystem selber und von aussen.
+Auf dem Wagen gilt:
+\[\Delta t'=\frac{2l'}{c}\]
+und von aussen gesehen gilt:
+\[\Delta t=\frac{l}{c-v}=\frac{2l}{c}\gamma^2=2l\gamma\]
+Also von aussengesehen würde man sagen dass der Wagen kürzer: $l'=\gamma l$
+\subsection{Höhestrahlung} Es gibt mehrehre Elementarteilchen: $e^{-},p,n,\mu$ Der letzt, der muon, hat eine Lebensdauer von $2\mus$. Wenn die mit der Lichtgeschwindigkeit gehen und die and der Atmosphäroberfläche erzeugt werden. Dann brauchen sie c.a. 70 Lebensdauer
+um bis zur erdoberfläche anzukommen. Die muonen haben doch eine Sehr schnelle geschwindikeit und daher auch ein grosses $\beta=0.99998$ und daher $\gamma\approx 70$ daher ist im system des Muons als ob die Erde sich auf ihr mit fast lichtgeschwindikgeit auf sich her bewegt, und daher ist die distanz die der Muon hinterlegen muss, c.a. 70 mal kleiner.
+Aus unsere sicht, bewegt sich der Muon sehr schnell also von unserem system ausgesehen ist ihre Zeit viel langsamer und es hat also eine Lebensdauer die 70 mal grösser scheint, daher kann man muon auf der Erdoberfläche sehen und Messen.
 \end{document}

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1742895026.21281 "main.tex" "main.pdf" "main" 1742895029.35928 0
+["pdflatex"] 1743070874.22094 "main.tex" "main.pdf" "main" 1743070879.42423 0
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1742894357 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0900.pk" 1741679449 10472 3f4abac6a1e7a3f463124e66af317a31 ""
   "C:/Users/Benja/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1735424699 11548 c8973c1c68aefebcc5118b7265d9f7dc ""
@@ -204,14 +204,14 @@
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty" 1736608268 48766 87a17a4ef312a39cd43896e34a679a56 ""
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1700599895 32515 51caec75eda9c8890135f12f1a4eddc3 ""
   "C:/Users/Benja/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "PhysiksStyle.tikzstyles" 1742894222 544 e7810f7efd1a0ddb81cceb4a2cadcad2 ""
+  "PhysiksStyle.tikzstyles" 1743070872 545 fba8f6a008182c7e4bbd614d9c04c68f ""
   "figures/Plattencondensator1.tikz" 1741860247 1296 76d39badd615011830e979686d7aa85e ""
   "figures/RCSchaltkreis.tikz" 1742894358 1118 77dc7accd63e211b6cb87d7b4302493b ""
   "figures/SpaltBeugung.tikz" 1741679410 1412 25ce1e75efea9624def86a8c0eb65d67 ""
   "figures/Wellen_Beugung1.tikz" 1741679410 2622 8683b61fd49cd718a5c3f87f5d458c83 ""
   "figures/Wellenpaket.tikz" 1741679410 1565 6081cc5aea20a4089681ef3144e99d3b ""
-  "main.aux" 1742895028 10662 c472814fa819185064af522e41913e9f "pdflatex"
-  "main.tex" 1742895025 45613 5849e66a2fdc9f7555f5dff52c212fc6 ""
+  "main.aux" 1743070878 11150 e6786e5be5ee1c69f6b2aedd7c848175 "pdflatex"
+  "main.tex" 1743070632 47552 216106dd9481ddc61ad05c4c1dca97bd ""
   "tikzit.sty" 1741679410 1248 bd3a4ee1dccdce0fc641973c4461749d ""
   (generated)
   "main.aux"
