@@ -2,6 +2,9 @@
 \title{Lineare Algebra II}
 \author{Benjamin Dropmann}
 \usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{tikzit}
+\input{linAlg.tikzstyles} 
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -377,5 +380,22 @@ Die Jordanbasis zu finden ist dasselbe als alle Jordanketten zu finden.
   \item[]{$||v||=\sqrt[p]{|a|^p+|b|^p}$}
   \item[]{$||v||=max(|a|,|b|)$}
 \end{itemize}
-\bemerkung{12.1.4} Sei $p\ge1$ und $v=\begin{pmatrix}x_1\\\vdots\\x_n\end{pmatrix}\in\mathbb{R}^n$ Dann definiert $||v||_p=(|x_1|+\hdots+|x_n|)^{\frac{1}{p}}$ eine Norm auf $\mathbb{R}^n$
+\bemerkung{13.1.4} Sei $p\ge1$ und $v=\begin{pmatrix}x_1\\\vdots\\x_n\end{pmatrix}\in\mathbb{R}^n$ Dann definiert $||v||_p=(|x_1|+\hdots+|x_n|)^{\frac{1}{p}}$ eine Norm auf $\mathbb{R}^n$
+\beispiel{13.1.5} $V$ ist ein Vektorraum der Stetige funktionen $f:[0,1]\rightarrow \mathbb{R}$ Dann definieren wir $|f|_{max}=max\lbrace|f(x)|, x\in[0,1]\rbrace$
+\definition{12.1.6} Sei $v\in V$ ein Einheitsvektor, dann iglt $||v||=1$ und die Distasnz zwischen zwei vektoren $u,v \in V$ ist $||u-v||=d(u,v)$
+\bemerkung{13.1.7} Es sei $v\in V, v\neq 0$ Dann ist $\frac{v}{||v||}$ ein Einheitsvektor, nähmlich die normalisierung von $v$.
+\bemerkung{13.1.8}Die Menge der Einheitsvektoren kann von der Norm viel varianz ziehen. Wir schauen uns zum beispielGgg die menge von Einheitsvektoren in $\mathbb{R}^2$ an:
+\begin{center}
+{\ctikzfig{Einheitsvektoren}}
+\scriptsize \textit{Die menge der Einheitsvektoren unterschiedlicher p-normen}\normalsize
+\end{center}
+Für $p=\infty$ kann man auch die maximumsnorm von vorher nehmen.
+\subsection*{13.2 Innere Produkte}
+\definition{13.2.1} Sei $V$ ein $\mathbb{R}$ vektorraum. Dann ist ein Inneres Produkt auf $V$ ist eine funktion $<\cdot>:V\times V\rightarrow\mathbb{R}$ so dass :
+\begin{itemize}
+  \item{Symmetrie: $<u,v>=<v,u>\smspc\forall u,v\in V$}
+  \item{Bilinearität: $<\alpha u,v> = alpha<u,v>$ und $<u+v,w>=<u,w>+<v,w>$ Und natürlich das gleiche in der zweiten variable}
+  \item{Positiv definitheit: $<v,v>>0\smspc\forall v\neq0_v$}
+\end{itemize}
+Wenn wir $(V,<\cdot>)$ nehmen dann ist dass ein Euklidischer Raum.
 \end{document}

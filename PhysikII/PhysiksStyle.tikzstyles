@@ -12,3 +12,6 @@
 \tikzstyle{SolidLine}=[-]
 \tikzstyle{RedDoubleArrow}=[draw=black, <->]
 \tikzstyle{dashedBlack}=[-, dashed]
+\tikzstyle{Redline}=[-, draw=red]
+\tikzstyle{greenline}=[-, draw=green]
+\tikzstyle{blueline}=[-, draw=blue]
