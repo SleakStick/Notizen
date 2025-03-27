@@ -398,4 +398,24 @@ Für $p=\infty$ kann man auch die maximumsnorm von vorher nehmen.
   \item{Positiv definitheit: $<v,v>>0\smspc\forall v\neq0_v$}
 \end{itemize}
 Wenn wir $(V,<\cdot>)$ nehmen dann ist dass ein Euklidischer Raum.
+\beispiel{13.2.2} Der Standard innere Produkt ist $\mathbb{R}^n\times\mathbb{R}\rightarrow\mathbb{R}$ wobei $<e_i,e_j>=\delta_{ij}$
+\beispiel{13.2.3}Sei $V=\mathbb{R}^2$ und sei $u=\begin{pmatrix}x_1\\y_1\end{pmatrix}$ und $v=\begin{pmatrix}x_2\\y_2\end{pmatrix}$ dann ist $<u,v>=2x_1x_2-x_1y_2-y_1x_2+y_1y_2$ dies ist ein inneres produkt da es Symetrisch ist (klar), bilinear da nur lineare termen vorkommen und positiv da es immer positiv ist wenn wir den selben vektor zweimal nehmen.
+\bemerkung{13.2.4} Eine wichtige bemerkung ist dass dieses inneres Produkt auch als matrix multiplication dargestellt werden kann.
+Zum beispiel kann man der vorherige Beispiel wie folgt definieren: $<u,v>=u^t\begin{pmatrix}2&-1\\-1&1\end{pmatrix}v$. Für dass Standard innere Produkt ist $<u,v>=u^tv$.
+\beispiel{13.2.5} Seien $a\le b$ und $C[a,b]=\lbrace f:[a,b]\rightarrow\mathbb{R}\rbrace$ wobei $f$ stetig ist. Wir definieren also $<f,g>=\int_a^b f(x)g(x)dx$ als inneres Produkt. Die Symmetrie und linearität sind offensichtlich und sei $f\in C[a,b]\smspc f\neq0$ Dann $\exists y\in [a,b],\delta>0$ so dass 
+$[y-\delta,y+delta]$ und $f(x)\neq 0$ $\forall x \in [y-\delta,y+\delta]$  dann gilt $<f,f>=\int_a^b f(x)^2dx\ge\int_{y-\delta}^{y+\delta}f(x)^2dx\ge2\delta min_{[y-\delta,y+\delta]}f(x)>0$
+\definition{13.2.6} Sei $V$ ein $\mathbb{C}$ vektorraum, ein Inneres Produkt ist $<\cdot>:V\times V\rightarrow \mathbb{C}$ Dies ist der Hermitesche Produkt und es ist:
+\begin{itemize}
+  \item{Linearität der ersten Variable: $<v_1+v_2,w>=<v_1,w>+<v_2,w>$ und $<\alpha v,w>=\alpha<v,w>$} 
+  \item{Sesquilinearität in der Zweiten Variable: $<v,w_1+w_2>=<v,w_1>+<v,w_2>$ und $<v,\alpha w>=\overline{\alpha}<v,w>$}
+  \item{Hermitesche eigenschaft: $<v,w>=\overline{<w,v>}\Rightarrow <v,v>\in \mathbb{R}$}
+  \item{Positivität: $<v,v>>0\forall v\neq 0$}
+\end{itemize}
+$(V,<\cdot>)$ ist eine Hermitescher oder unitärer raum. Das standard innere Produkt auf $\mathbb{C}^n$ ist $<u,w>=\sum_{i=1}^nx_i\overline{y_i}$
+\lemma{13.2.9} Sei $V$ ein  Euklidischer oder Hermitescher VR dann gilt:
+\begin{itemize}
+  \item{$<0_v,v>=<v,0_v>=0$}
+  \item{$<v,w>=0$ dann gilt $v=0$ oder $w=0$}
+  \item{Wenn $<v,w_1>=<v,w_2>\smspc\forall v\in V$ dann ist $w_1=w_2$}
+\end{itemize}
 \end{document}
