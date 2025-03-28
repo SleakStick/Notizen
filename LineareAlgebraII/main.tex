@@ -382,7 +382,7 @@ Die Jordanbasis zu finden ist dasselbe als alle Jordanketten zu finden.
 \end{itemize}
 \bemerkung{13.1.4} Sei $p\ge1$ und $v=\begin{pmatrix}x_1\\\vdots\\x_n\end{pmatrix}\in\mathbb{R}^n$ Dann definiert $||v||_p=(|x_1|+\hdots+|x_n|)^{\frac{1}{p}}$ eine Norm auf $\mathbb{R}^n$
 \beispiel{13.1.5} $V$ ist ein Vektorraum der Stetige funktionen $f:[0,1]\rightarrow \mathbb{R}$ Dann definieren wir $|f|_{max}=max\lbrace|f(x)|, x\in[0,1]\rbrace$
-\definition{12.1.6} Sei $v\in V$ ein Einheitsvektor, dann iglt $||v||=1$ und die Distasnz zwischen zwei vektoren $u,v \in V$ ist $||u-v||=d(u,v)$
+\definition{13.1.6} Sei $v\in V$ ein Einheitsvektor, dann iglt $||v||=1$ und die Distasnz zwischen zwei vektoren $u,v \in V$ ist $||u-v||=d(u,v)$
 \bemerkung{13.1.7} Es sei $v\in V, v\neq 0$ Dann ist $\frac{v}{||v||}$ ein Einheitsvektor, nähmlich die normalisierung von $v$.
 \bemerkung{13.1.8}Die Menge der Einheitsvektoren kann von der Norm viel varianz ziehen. Wir schauen uns zum beispielGgg die menge von Einheitsvektoren in $\mathbb{R}^2$ an:
 \begin{center}
@@ -418,4 +418,17 @@ $(V,<\cdot>)$ ist eine Hermitescher oder unitärer raum. Das standard innere Pro
   \item{$<v,w>=0$ dann gilt $v=0$ oder $w=0$}
   \item{Wenn $<v,w_1>=<v,w_2>\smspc\forall v\in V$ dann ist $w_1=w_2$}
 \end{itemize}
+\satz{13.2.10} Sei $(V,<\cdot>)$ eine Euklidischer oder Hermitescher raum dann definieren wir $||v||=\sqrt{<v,v>}$ dann ist $|\cdot|$. Hier ist der problem die Dreiecksunglechung
+\lemma{13.2.11 Cauchy-Schwarz ungleichung} besagt dass $|<u,v>|\ge||u||\cdot||v||\smspc\forall u,v\in V$ mit gleichheit wenn $u\in<v>$ also wenn $u$ und $v$ linear abhängig sind.
+\beweis Wenn $u$ oder $v$ der nullvektor ist dann ist es Klar. Winn nehmen an dass $u\neq 0_v$ WIr definieren jetzt $\lambda=\frac{<u,v>}{||u||^2}$ und $w=v-\lambda u$ dieser Vektor ist was übrig bleibt nach der Projektion von $v$ auf $u$. Wir merken dass $<w,u>=<v,u>-\lambda<u,u>=0$
+Nun gilt \[0\ge||w||^2=<v-\lambda u,v-\lambda u>=||v||^2-\lambda\overline{\lambda}||u||^2-\overline{\lambda}\lambda||u||^2+\lambda\overline{\lambda}||u||^2=||v||^2-\frac{|<u,v>|}{||u||^2}\Rightarrow |<u,v>|\le||u||\cdot||v||\]
+\beweis \textbf{von Satz 13.2.10} Für Hermitesche VR da für euklidische VR analog gelten. Seien $u,v\in V$ dann gilt $||u+v||^2=<u+v,u+v>=||u||^2+2Re(<u,v>)+||v||^2$ Beachte $\forall z \in \mathbb{C}$ gilt $Re(z)\le |z|$
+Dass bedeutet dass $Re(<u,v>)\le|Re(<u,v>)|\le |<u,v>|$ und also $||u+v||^2\le||u||^2+2|<u,v>|+||v||^2\le(||u||+||v||)^2$
+\lemma{13.2.12} Sei $(V,<\cdot>)$ ein Euklidischer Raum dann gilt $<u,v>=\frac{1}{2}(||u+v||-||u||^2-||v||^2)$ wobei $||\cdot||$ die induzierte Norm ist. Der Beweis ist durch Expansion gemacht, und mit diesem Lemma kann man zeigen dass nicht alle Normen aus einen Inneren Produkt stammen.
+\subsection*{Konstruktion von innere Produkte}
+\beispiel{13.3.1} Sei $A\in M_{n\times n}(\mathbb{R})$ Wir definieren $(\cdot,\cdot)_A:\mathbb{R}^n\times\mathbb{R}^n\rightarrow \mathbb{R}$ mit $(u,v)_A=u^tQv$. Diese Paarung ist bilinear aber nicht unbedingt für alle Matrizen $A$ symmetrisch: z.B $A=\begin{pmatrix} 1&1\\0&1\end{pmatrix}$ geht es nicht.
+Wir Brauchen eine Invariante matrix unter der transposition
+\definition{13.3.2} Eine Matrix $A\in M_{n\times n}(K)$ ist symmetrisch wen $A=A^t$
+\lemmat{13.3.3} Es sei $A\in M_{n\times n}(K)$ symmetrisch dann gilt dass $(u,v)_A=(v,u)_A$ 
+
 \end{document}
