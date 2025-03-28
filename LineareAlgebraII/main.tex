@@ -429,6 +429,38 @@ Dass bedeutet dass $Re(<u,v>)\le|Re(<u,v>)|\le |<u,v>|$ und also $||u+v||^2\le||
 \beispiel{13.3.1} Sei $A\in M_{n\times n}(\mathbb{R})$ Wir definieren $(\cdot,\cdot)_A:\mathbb{R}^n\times\mathbb{R}^n\rightarrow \mathbb{R}$ mit $(u,v)_A=u^tQv$. Diese Paarung ist bilinear aber nicht unbedingt für alle Matrizen $A$ symmetrisch: z.B $A=\begin{pmatrix} 1&1\\0&1\end{pmatrix}$ geht es nicht.
 Wir Brauchen eine Invariante matrix unter der transposition
 \definition{13.3.2} Eine Matrix $A\in M_{n\times n}(K)$ ist symmetrisch wen $A=A^t$
-\lemmat{13.3.3} Es sei $A\in M_{n\times n}(K)$ symmetrisch dann gilt dass $(u,v)_A=(v,u)_A$ 
-
+\lemma{13.3.3} Es sei $A\in M_{n\times n}(K)$ symmetrisch dann gilt dass $(u,v)_A=(v,u)_A$ 
+\definition{13.3.4} Eine Matrix $A\in M_{n\times n} (K) $ ist Positiv definit wenn sie Symmetrisch ist und alle ihre Eigenvektoren Positiv sind, anallog kann man sagen dass wenn $\forall x\neq0 \in V$ $x^tAx>0$ gilt.
+\satz{13.3.7} Sei $A\in M_{n\times n}(\mathbb{R})$ dann ist $(\cdot,\cdot)_A$ genau dann ein Inneres Produkt wenn $A$ Positiv definit ist 
+\definition{13.3.9} Es sei $B\in M_{n\times n}(\mathbb{C})$ dann definieren wir $(\cdot,\cdot):\mathbb{C}^n\times\mathbb{C}^n\rightarrow \mathbb{C}$ mit $(u,v)_B=u^tB\overline{v}$
+\definition{13.3.10} Schreibe $\overline{B}=(\overline{b_{ij}})$ die adjungierte Matrix von $B$ ist die matrix $B^*=\overline{B^t}$ wir sagen dass $B$ Hermitesch ist wenn $B=B^*$
+\beispiel{13.3.11}
+\begin{itemize}
+  \item{$A=\begin{pmatrix}-1&1+i&2i\\1-i&0&1-2i\\-2i&1+2i&1\end{pmatrix}\Rightarrow$ Hermitesch}
+  \item{$B=\begin{pmatrix}-i&1+1&2i\\1-i&0&1-2i\\-2i&1+2i&i\end{pmatrix}\Rightarrow$ Nicht Hermitesch da auf der Ditagonale $i$ ist}
+\end{itemize}
+Sei $B=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ ist Hermitesch wenn $a,d\in \mathbb{R}$ und $c=\overline{b}$
+\bemerkung{13.3.12} Wenn $B$ hermitesch ist dann erfüllt $(\cdot,\cdot)_B$ alle kriterium des Komplexen inneren Produktes\newline
+Und Sei $B$ Hermitesch und $v\in\mathbb{C}^n$ Dann gilt $(v,v)_B\in\mathbb{R}$ um dies zu beweisen Schaut man sich $\overline{(v,v)_B} $ an.
+\definition{13.3.13} Eine Hermitesche Matrix $B\in M_{n\times n}(\mathbb{C})$ Wenn $v^tB\overline{v}>0\smspc\forall v\neq0$
+\satz{13.3.15} Sei $B\in M_{n\times n}(\mathbb{C})$ dann ist $(\cdot,\cdot)_B$ ein Inneres Produkt wen $B$ Hermitesch und Positiv definit ist
+\beweis $"\Leftarrow"$ ist offensichtlich.\newline
+$"\Rightarrow"$ Wir nehmen An $(\cdot,\cdot)$ ein Inneres Produkt ist, dann ist $B$ Hermitesch da: $b_{ij}=)\overline{b_{ji}}\smspc\forall i,j$ Da $b_{ij}=(e_i,e_j)_B=\overline{(e_j,e_i)}=\overline{b_{ji}}$
+Und Positiv definitheit zu zeigen: \[(v,v)_B>0\smspc\forall v\in\mathbb{C}^n, v\neq 0\Leftrightarrow B\text{ ist positiv definit}\]
+\subsection*{13.4 Orthogonalität}
+\definition{13.4.1} Sei $V$ ein Inneres Produkt raum. Orthogonalität ist wie folgt definiert
+\begin{itemize}
+  \item{$v,w\in V$ sind Orthogonal wenn $<v,w>=0$ man Schreibt $u\perp v$}
+  \item{$S\subset V$ ist ein Orthogonales system wenn $u\perp v\smspc \forall u,v\in V$ mit $u\neq v$}
+  \item{Ein Orthogonales system $S$ ist Orthonormal wenn $||v||=1\smspc\forall v\in S$}
+\end{itemize}
+\beispiel{13.4.2}
+\begin{itemize}
+  \item{Die elemente der Standarbasis $e_1,\hdots,e_n$ in $\mathbb{R}^n$ sind alle orthogonal aufeinander.}
+  \item{Jeder Vektor ist orthogonal zu $0_v$}
+\end{itemize}
+\satz{13.4.3 Satz des pythagoras} Sei $(V,<\cdot>)$ ein inneren Produkt raum und seien $u,v\in V$ mit $u\perp v$ dann gilt\[||u+v||^2=||u||^2+||v||^2\]
+\beweis Expandieren
+\definition{13.4.4} Es sei $(V,<\cdot,\cdot>)$ ein IP raum und $v\neq0\in V$ dann definiren wir die projektion $proj_v:V\rightarrow V$ und mit $u\rightarrow \frac{<u,v>}{<v,v>}\cdot v$
+\bemerkung{13.4.5} $u\in V$ ist orthogonal zu $v\Leftrightarrow proj_v(u)=0$
 \end{document}
