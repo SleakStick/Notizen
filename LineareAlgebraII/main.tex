@@ -15,6 +15,8 @@
 \newcommand{\mspc}{\hspace{0.7cm}}
 \newcommand{\smspc}{\hspace{0.3cm}}
 
+\newcommand{\kk}[1]{\left<\left<{#1}\right>\right>}
+
 \newcommand{\satz}[1]{\subsubsection*{Satz {#1}}}
 \newcommand{\korollar}[1]{\subsubsection*{Korollar {#1}}}
 \newcommand{\beweis}{\\\textbf{Beweis }}
@@ -462,5 +464,28 @@ Und Positiv definitheit zu zeigen: \[(v,v)_B>0\smspc\forall v\in\mathbb{C}^n, v\
 \satz{13.4.3 Satz des pythagoras} Sei $(V,<\cdot>)$ ein inneren Produkt raum und seien $u,v\in V$ mit $u\perp v$ dann gilt\[||u+v||^2=||u||^2+||v||^2\]
 \beweis Expandieren
 \definition{13.4.4} Es sei $(V,<\cdot,\cdot>)$ ein IP raum und $v\neq0\in V$ dann definiren wir die projektion $proj_v:V\rightarrow V$ und mit $u\rightarrow \frac{<u,v>}{<v,v>}\cdot v$
-\bemerkung{13.4.5} $u\in V$ ist orthogonal zu $v\Leftrightarrow proj_v(u)=0$
+\lemma{13.4.7} $u\in V$ ist orthogonal zu $v\Leftrightarrow proj_v(u)=0$
+\subsection*{13.5 Gram-Schmidt orthogonalisierung}
+\satz{13.5.1} Sei $(V,<\cdot,\cdot>)$ ein IP raum. Wenn $S\subseteq V$ ein orthogonales system ist das nicht den $0_v$ enthält dann sind die elemente von $S$ alle linear unabhängig. Zusätslich wenn $v_1,\hdots,v_n$ ein orthogonales system ist mit $v_i\neq0\smspc\forall i$ und $v=\sum\alpha_i v_i$ dann gilt $\alpha_i=\frac{<v,v_i>}{<v_i,v_i>}$
+\beweis Es seien $v_i,\hdots,v_n\subset S$ und wir nehmen an dass $\alpha_i$ existieren so dass $\alpha_iv_i+\hdots+\alpha_nv_n=0_V$ wir nehmen dann den vektor $<\alpha_iv_i+\hdots+\alpha_nv_n,v_i=<0_v,v_i>=0=\sum\alpha_j<a_j,v_iA=\alpha_i\underset{\neq0}{\underbrace{<v_i,v_i>}}\Rightarrow \alpha_i=0$
+Also müssen alle vektoren in $S$ lineare unabhängig.
+\korollar{13.5.2} Ein Orthogonales System in einem n-dimensionalen VR, dass nicht den nullvektor enthält hat höchstens $n$ vektoren.\newline Ab jetzt ist $\kk{\cdots}$ die lineare hülle und $<\cdot,\cdot>$ das innere produkt
+\theorem{13.5.4 Der Gram-Schmidt Orthogonalisierungsverfahren} Sei $(V,<\cdot,\cdot>)$ eom IP raum und sei $n=\dim(V)$ mit basis $v_1,\hdots, v_n$. Definiere $w_1,\hdots,w_n\in V$ so dass:
+\[w_i=\left\lbrace\begin{matrix}w_1=v_1\\2\ge j\ge n\text{ sei }w_j=v_j-\sum_{i=1}^{j-1}proj_{w_i}(v_j)\end{matrix}\right.\]
+Dann ist $w_1,\hdots,w_n$ eine Orthogonale Basis von $V$
+\beispiel{13.5.6} Seien $v_1=\begin{pmatrix}1\\1\\0\end{pmatrix},\smspc v_2=\begin{pmatrix}2\\1\\1\end{pmatrix}$ Dann ist $w_1=v_1$ und $w_2=\frac{1}{2}\begin{pmatrix}1\\-1\\2\end{pmatrix}=v_2-proj_{w_1}(v_2)$
+\beweis \textbf{Vom theorem GS} Wir benutzen eine Induktion über $j$:
+\begin{itemize}
+  \item[1.]{$w_i\neq0_v\smspc\forall 1\le i\le j$}
+  \item[2.]{$w_1,\cdots,w_j$ ist ein orthogonales system und linear unabhängig}
+  \item[3.]{$\kk{w_1,\cdots,w_j}=\kk{v_1,\cdots v_j}$}
+\end{itemize}
+Bedingungen 1. bis 3. sind erfüllt also ist die Induktionshypothese erfüllt. Wir nehmen also an es gilt für $j-1$: 
+Wenn $w_j=0_v$ dann gilt $v_j=\sum \frac{<v_j,w_i>}{<w_i,w_i>}w_i\in \kk{w_1,\cdots w_{j-1}}=\kk{v_i\cdots v_{j-1}}$ dies gibt aber ein Widerspruch da  $v_1,\cdots,v_j$ eine Bassis ist und daher linear unabhängig.
+Zu zeigen jetzt bleibt dass \[<w_j,w_i>=0\smspc\forall 1\le i\le j-1\] \[<w_j,w_k>=\left<v_j-\sum_{i=1}^{j-1}\frac{<v_j,w_i>}{<w_i,w_i>}
+,w_k\right>=<v_j,v_k>-\sum_{i=1}^{j-1}\frac{<v_j,w_i>}{<w_i,w_i>}\underset{=\delta_{ij}}{\underbrace{<w_i,w_k>}}=<v_j,w_k>-\frac{<v_j,w_k>}{<w_k,w_k>}\left<w_k,w_k\right>\]
+Und jetzt endlich bleibt noch die Induktionshypothese $\kk{w_1,\cdots, w_{j}}=\kk{v_1,\cdots v_{j}}$:
+\[v_j-w_j\in \kk{w_1,\cdots, w_{j-1}}\Rightarrow\left<\left<v_1,\cdots,v_j\right>\right>=\kk{w_1,\cdots w_j}\]
+\korollar{13.5.5} Sei $(V,<\cdot,\cdot>)$ ein enldich-dim IP raum dann besitzt $V$ eine orthonormale Basis $v_1,\cdots,v_p$ Dann gilt für $v=\alpha_1v_1+\cdots+\alpha_nv_n$ wobei $\alpha_i=<v,v_i>$ und $||v||^2=\sum|\alpha_i|^2$
+\bemerkung{13.5.9} Sei $V$ ein $K$-VR mit $K=\mathbb{R}$ oder $\mathbb{C}$ endlich dimensional und die Basis $v_1,\cdots,v_n$. Dann existiert ein Inneres Produkt so dass die basis Orthonormal ist.
 \end{document}
