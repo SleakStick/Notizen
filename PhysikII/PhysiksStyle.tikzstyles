@@ -6,6 +6,7 @@
 % Node styles
 \tikzstyle{circle}=[fill=white, draw=black, shape=circle]
 \tikzstyle{new style 0}=[fill=black, draw=black, shape=rectangle]
+\tikzstyle{triangle}=[fill=white, draw=black, shape=triangle]
 
 % Edge styles
 \tikzstyle{BlackDoubleArrow}=[<->, draw=black]

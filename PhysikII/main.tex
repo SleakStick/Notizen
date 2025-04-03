@@ -48,7 +48,7 @@ In zwei dimensionen ist $k$ä ist ein vektor und zeigt uns die wellen direktion 
 \[\xi(x,t)=\xi_0e^{i(kx\pm \omega t}\]
 wir leiten nach der zeit ab:
 \[\frac{\delta\xi}{\delta t}=\xi_0(-kv)cos(k(x-vt))\]
-\[\frac{\\delta^2\xi}{\delta^2t}=\xi_0(-kv)^2sin(k(x-vt))\]
+\[\frac{\delta^2\xi}{\delta^2t}=\xi_0(-kv)^2sin(k(x-vt))\]
 ncahc dem ort ableiten
 \[\frac{\delta\xi}{\delta x}=\xi_0kcos(k(x-vt))\]
 \[\frac{\delta^2\xi}{\delta^2x}=\xi_0k^2sin(k(x-vt))\]
@@ -473,11 +473,26 @@ Wir untersuchen jetzt teile $\mathit{i., ii.}$ und $\mathit{iii.}$
 Also dann bleibt nur noch:\[x'^2+y'^2+z'^2=c^2\] Und in beide Systeme ist diese Kugelwelle eine Kugelwelle.
 \subsection{Addition von Parallelen Geschwindigkeiten} Wir erwarten vom ergebnis dass, sei $\vec{v}$ die Relativgeschwindigkeit der zwei systeme, dann solte gelten dass die Addition von $(u<<c) + (v<<c)=u-v$, wie dass der Newton beschrieben hat. Aber wenn wir $(u\approx c)+(v\approx c)\approx c$
 \subsubsection{Lorentz transformation für Geschwindigkeiten} Wir wissen wie die Spezielle Relativität die Zeit und distanz ändert, wie sieht es für geschwindigkeiten aus.
-\[z'=\gamma(z-vt)Rightarrow dz'=\gamma(dz-vdt)\mspc\text{und}\mspc t'=\gamma(t-\frac{v}{c^2}z)\Rightarrow dt'=\gamma(dt-\frac{v}{c^2}dz)\]
+\[z'=\gamma(z-vt)\Rightarrow dz'=\gamma(dz-vdt)\mspc\text{und}\mspc t'=\gamma(t-\frac{v}{c^2}z)\Rightarrow dt'=\gamma(dt-\frac{v}{c^2}dz)\]
 Wir brauchen für die Geschwindigkeiten $\frac{dz}{dt}=u$ und $\frac{dz'}{dt'}=u'$:
 \[\frac{dz'}{dt}=\frac{dz-vdt}{dt-\frac{v}{c^2}dz}=\frac{\frac{dz}{dt}-v}{1-\frac{v}{c^2}\frac{dz}{dt}}\]Und wir bekommen also die additionsformel Fur relativistische gescwindigkeiten:
 \[\boxed{u'=\frac{u-v}{1-\frac{v}{c^2}u}}\]
 Diese Formel passt unsere Vorher da wenn $u\approx c$ dann ist $u'=\frac{c-v}{1-\frac{vc}{c^2}}=c$ 
-
+\subsection{Gleichzeitigkeit}
+Sei einen Laser der auf einen Prisma strahlt und dann in zwei geteilt wird, nach link und nach rechts wo sich jeweils detektor finden so dass die distanz zwischen prisma und detector $l$ ist. Dann würden sich die detektor beide gleichzeitig einschalten
+Wenn wir jetzt aber in einem konstant beschleunigten Inertialsystem $K'$ sind der sich entlang $l$ mit der Geschwindikeit bewegt:
+\[x_1^\mu=\begin{pmatrix}ct\\l\\0\\0\end{pmatrix}\mspc\text{und}\mspc x_2^\mu\begin{pmatrix}ct\\-l\\0\\0\end{pmatrix}\] Und in diesem Fall heisst gleichzeitigkeit $t_1=t_2=t$. Im bewegten koordinatensystem $K'$ benutzt man die Lorentz transformation und findet:
+\[ct_1'=\gamma(ct-\beta x_1)?\gamma(ct-\beta l)\mspc\text{und}\mspc ct_2'=\gamma(ct+\beta l)\] Dann ist die Zeit differenz 
+$\Delta t' =\frac{1}{c}(ct_2'-ct_1')=\frac{1}{c}\left\lbrace\gamma(ct+\beta l)-\gamma(ct-\beta l)\right\rbrace=\frac{1}{c}2\beta\gamma l\neq 0$ 
+Und hier gibt es einen Zeit unterschied, die Gleichzeitigkeit zweier Ereignisse ist Systemabhängig und der Zeitunterschied zwischen dieser Ereignisse hängt von der geschwindigkeit.
+\subsubsection{Invarianz des Raum zeit intervalls} 
+Wir wissen ja schon dass bei Galilei, die Räumliche entfernung von Punkten durch $\Delta r^2=\Delta x^2+\Delta y^2+\Delta z^2$ definiert ist. Doch bei der Relativitätstheorie, haben wir dann einen Tensor mit eine Extra räumlich variable $ct$ die die Zeit Charakterisiert:
+\[x_1^\mu=\begin{pmatrix}ct_1'\\x_1'\\y_1'\\z_1'\end{pmatrix}\mspc\text{und}\mspc x_2^\mu=\begin{pmatrix}ct_2'\\x_2'\\y_2'\\z_2'\end{pmatrix}\]
+Wir rechnen dann die Räumliche distanz:
+\[\Delta z' = z_1'+z_2'=\gamma(z_2'-\beta c t_2)-\gamma(z_1-\beta ct_1)=\gamma(z_2-z_1)-\beta\gamma(ct_2-ct_2)=\gamma(\Delta z-\beta c\Delta t)\]
+Also die Distanz zwischen zwei punkten ist keine Absolute Grösse, es höngt vom $\Delta t$ ab, im 4er Vektor kann man es wie Folgt schreiben:
+\[\begin{pmatrix}\Delta ct'\\\Delta x'\\\Delta y'\\\Delta z'\end{pmatrix}=\begin{pmatrix}\gamma(c\Delta t-\beta\Delta z)\\\Delta x\\\Delta y\\\gamma(\Delta z-\beta c\Delta t)\end{pmatrix}\]
+Also ist $\Delta t\neq\Delta t'$, $\Delta z\neq \Delta z'$ und $\Delta r\neq\Delta r'$
+Wir können jedoch den Raumzeit intervall anschauen: $\Delta s^2=(c\Delta t)^2-\Delta r^2=(c\Delta t)^2-\Delta x^2-\Delta y^2-\Delta z^2$ hier kann man auch ähnlichkeiten zur Punktquelle der Welle die wir zuvor betrachtet haben, wo der Quadrat der Entfernung durch die Differenz de Quadraten vom Zeitunterschied und vom Räumlichen unterschied ist.
+Diese Grösse ist Lorentz invariant, wenn ich also zwei punkte im vierdimensionalen Raumzeit, dann ist dieses Raumzeitintervall Lorentz invariant. 
 \end{document}
-

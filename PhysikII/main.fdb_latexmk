@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743688566.68073 "main.tex" "main.pdf" "main" 1743688567.34991 0
+["pdflatex"] 1743696384.19143 "main.tex" "main.pdf" "main" 1743696384.85566 0
   "/home/ben/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk" 1743683121.75265 10448 c88d2d9d79b2e02b504e9f70635baa07 ""
   "/home/ben/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1743584226.66047 11524 9c1046deb61a79d08a3c69ea91060d71 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1742685315 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
@@ -206,13 +206,13 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1742685315 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1743546712 30070 2c390b00126b1036e8876b6c3ea4d747 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1743584170 2008233 010df0691d321c6ad966ba12d642a8d4 ""
-  "PhysiksStyle.tikzstyles" 1743582927.7958 653 2b53fcc045b982e96b7ded91aad4babc ""
+  "PhysiksStyle.tikzstyles" 1743691042.04941 715 933db66d3294c6f52e372297ccea366e ""
   "figures/Plattencondensator1.tikz" 1743582927.8298 1296 76d39badd615011830e979686d7aa85e ""
   "figures/SpaltBeugung.tikz" 1743582927.83068 1380 25ce1e75efea9624def86a8c0eb65d67 ""
   "figures/Wellen_Beugung1.tikz" 1743582927.83068 2561 8683b61fd49cd718a5c3f87f5d458c83 ""
   "figures/Wellenpaket.tikz" 1743582927.83068 1532 6081cc5aea20a4089681ef3144e99d3b ""
-  "main.aux" 1743688567.29717 11906 18ce45c0e7a21175eae84cdd1512ee1d "pdflatex"
-  "main.tex" 1743688566.44553 52175 71c620f2483aedb45b385c7586f47dc0 ""
+  "main.aux" 1743696384.80296 12149 dc2620eb941c012cc8af86a692bafda4 "pdflatex"
+  "main.tex" 1743696382.78879 54877 7f122f93b91227eed6018c5ae84b2f31 ""
   "tikzit.sty" 1743582927.83338 1248 43e1a5fcf14fc024e289b1463d1206ce ""
   (generated)
   "main.aux"
