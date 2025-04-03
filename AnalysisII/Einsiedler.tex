@@ -43,5 +43,33 @@ Falls die Funktion $2$-mal stetig differenzierbar ist dann gilt:
 \[\int_a^bf(t)\dd{t}=\frac{h}{2}\left(f(x_0)+2f(x_1)+\cdots+2f(x_{n-1}))+f(x_n)\right)+F_2\mspc F_2=\frac{M_2(b-a)^3}{6n^2}\]
 Man kann auch für $f$ vier mal differenzierbar und $n$ gerade eine solche abschätzung machen, dies ist die Simpson Regel:
 \[\int_a^b f(t)\dd{t}=\frac{h}{3}\left(f(x_0)+4f(x_1)+2f(x_2)+4f(x_3)+\cdots+4f(x_{n-1})+f(x_n)\right)+F_4\mspc F_4\le\frac{M_4(b-1)^5}{45n^4}\]
-
+\section*{9. Metrische Räume}
+\subsection*{9.1 Konvergenz in Metrische Räume}
+\definition{Metrischer Raum} Ein Metrischer Raum ist eine Menge $X$ mit eine Abbildung $d:X\times X\rightarrow \mathbb{R}_{\ge 0}$ Mit folgende Eigenschaften
+\begin{itemize}
+  \item[i.]{\textbf{Definitheit} $\forall x,y\in X$ gilt $d(x,y)=0\Leftrightarrow x_y$}
+  \item[ii.]{\textbf{Symmetrie} $d(x,y)=d(y,x)\smspc\forall x,y\in X$}
+  \item[iii.]{\textbf{Dreiecksungleichung} $\forall x,y,z\in X$ gilt $d(x,z)\le d(x,y)+d(y,z)$}
+\end{itemize}
+Das $d$ hier ist einfach eine Abstandsfunktion, die einen Abstand zwischen zwei elemente der Menge anteilt. Diese Abbildung ist die Metrik.
+$X$ kann $\mathbb{R}$, $\mathbb{C}$ oder sogar $\mathbb{R}^n$ sein, die Metrik $d$ kann irgendeine Funktion sein:
+\begin{itemize}
+  \item{$d(x,y)=|x-y|$ bei $X=\mathbb{R}$ oder $\mathbb{C}$}
+  \item{$d_2(x,y)=||x-y||_2=\sqrt{\sum_{j=1}^d (x_j-y_j)^2}$}
+  \item{$d_1(x,y)=||x,y||_1=\sum_{j=1}^d|x_j-y_j|$}
+  \item{$d_\infty=||x-y||_\infty=max_i|x_i-y_i|$}
+\end{itemize}
+\definition{Norm} Ein Normierter, Reeller Vektorraum ist ein Vektorraum $V$ uber $\mathbb{R}$ gemeinsam mit eine Abbildung $||\cdot||:V\rightarrow R_{\ge0}$ mit fonlgende Eigenschaften
+\begin{itemize}
+  \item{\textbf{Definitheit} $||v||=0\Leftrightarrow v=0$}
+  \item{\textbf{Homogeneitat} $||tv||=|t|\cdot||v||$}
+  \item{\textbf{Dreiecksungleichung} $||u+v||\le||u||+||v||$}
+\end{itemize}
+Diese Abbildung $||\cdot||$ wird norm genannt wenn diese Axiome $\forall v,u\in V$ gelten
+\lemma{}Eine Norm auf $V$ definiert eine Metrik $d(v,w)=||v-w||$ \beweis Die Axiome der Norm passen mit dieser Definition mit den Axiomen der Metrik.
+\beispiel{Paris/SNCF-Metrik}
+Diese Metrik ist auf $X=\mathbb{C}$ definiert, Die Metrik bekommt ihr namen vom Fakt dass es in Frankreich mit der bahn, sehr leicht ist von irgendwo nach Paris hinzukommen, und von Paris aus irgendwo anders zu gehen.
+Die Metrik ist also \[d(z,w)=\left\lbrace\begin{matrix}|z|+|w|&\text{Wenn }\not\exists \lambda\smspc w=\lambda z\\|z-w|&\text{Wenn} \exists \lambda \smspc w=\lambda z\end{matrix}\right.\]
+Diese Metrik ist sehr Komisch aber respektiert immer doch die Axiome. Die Konvergenz, die bald definiert wird, hat Komische Konvergenz da sogar wenn punkte optisch sehr nah miteinander aussehen, sind die wegen der Metrik doch nicht. Deswegen, nehmen wir öftestens Normen auf Teilmengen als Metriken.
+\definition{} Sei $X$ ein Metrischer Raum, 
 \end{document}
