@@ -426,9 +426,11 @@ Die umgewandelte energie vom Widerstand ist \[W=\frac{1}{2}CV_0^2\] und der Lade
 \subsection{Recap Elektrische ströme}
 \begin{itemize}
   \item{Strom: $I=\frac{dQ}{dt}, [I]=A=\frac{C}{s}$}
-  \item{Stromdichte: $J=\frac{nq\overline{v}}$ und $I=\vec{j}\cdot\vec{A}$}
-  \item{Kontinutätsgleichung: $\vec{\nabla}\cdot\vec{J}=-\frac{d\rho}{dt}$ Dies besagt dass alle ladungen die aus ein systemfliessen, verschwinden nicht einfach. Wenn die ladungsdichte konstant ist dann fliesst soviel aus wie rein.}
-  \item{Für reale leiter gilt dass wenn wir strom durch ein Leiter senden dann verlieren wir energie, diese beziehung zwischen die material eigenschaft ist dass $\vec{J}=\sigma\cdot\vec{E}$ Dieses Sigma ist die Leitfähigkeit. Der spezifische Widerstand ist $\rho=\frac{1}{\sigma}$}
+  \item{Stromdichte: $J=\frac{nq\overline{v}}{A}$ und $I=\vec{j}\cdot\vec{A}$}
+  \item{Kontinutätsgleichung: $\vec{\nabla}\cdot\vec{J}=-\frac{d\rho}{dt}$ Dies besagt dass alle ladungen die aus ein 
+    systemfliessen, verschwinden nicht einfach. Wenn die ladungsdichte konstant ist dann fliesst soviel aus wie rein.}
+  \item{Für reale leiter gilt dass wenn wir strom durch ein Leiter senden dann verlieren wir energie, diese beziehung
+    zwischen die material eigenschaft ist dass $\vec{J}=\sigma\cdot\vec{E}$ Dieses Sigma ist die Leitfähigkeit. Der spezifische Widerstand ist $\rho=\frac{1}{\sigma}$}
   \item{Diese Leitfähigkeit kann macroscopish mit $U=RI$ definiert sein wobei $R$ der Widerstand ist}
 \end{itemize}
 \section{Relativitätstheorie}
@@ -436,7 +438,7 @@ Galilei hat sich überlegt dass Zeit und Raum isotrop sind, also dass Zeit und R
 man schon viel herausfinden und ausrechnen. Also bis Galilei gilt dass alle Intertialsysteme sind äquivalent, und dies ist sogar nach einstein geblieben.
 \subsection{Galilei Transformationen}
 Diese Galilei Transformation schreibe ich nicht im detail ab, ich schreibe Aber die konventionen ab.
-\subsection{Grundlagen der Speziellen Relativitätstheorie}
+\subsection{Grundlagen der Speziellen Relativitätstheorie} 
 Sei $K$ und $K'$ inertialsysteme, die begründung für ein Intertialsystem bleibt unverändert. Jetzt sagen wir dass alle Naturgesetze in alle Inertialsysteme stimmen überein, die Lichtgeschwindigkeit ist eine Konstante für alle Inertialsysteme eine konstante die wie Folgt definiert\[c=\frac{1}{\sqrt{\varepsilon_0\cdot\mu_0}}=299'792'458[m\cdot s^{-1}]\]
 \subsection{Uhren und Massstäbe}Sei einen Sende und einen Spiegel, der sender Schickt ein lichtstrahl ab, der Spiegel reflektiert und der sender empfängt den. Was ist jetzt $\Delta t$ zwisch absendezeit und empfangzeit in unterschiedliche Inertialsysteme.
 Im ruhenden System $K'$ ist $\Delta t=\frac{l}{c}\cdot 2$. Jetzt stehen wir neben ein Wagen mit konstanter geschwindigkeit $v$ und schauen auf demselben experiment der jetzt von uns ausgesehen nicht ruhen ist. Jetzt ist der neue $(c\cdot\Delta t)^2=(v\Delta t) ^2\Rightarrow\Delta t=frac{l}{\sqrt{c^2-v^2}}$ da der Wagen auch eine Distanz zurucklegt was die distanz vom licht länger macht.
@@ -449,7 +451,33 @@ Auf dem Wagen gilt:
 und von aussen gesehen gilt:
 \[\Delta t=\frac{l}{c-v}=\frac{2l}{c}\gamma^2=2l\gamma\]
 Also von aussengesehen würde man sagen dass der Wagen kürzer: $l'=\gamma l$
-\subsection{Höhestrahlung} Es gibt mehrehre Elementarteilchen: $e^{-},p,n,\mu$ Der letzt, der muon, hat eine Lebensdauer von $2\mus$. Wenn die mit der Lichtgeschwindigkeit gehen und die and der Atmosphäroberfläche erzeugt werden. Dann brauchen sie c.a. 70 Lebensdauer
+\subsection{Höhestrahlung} Es gibt mehrehre Elementarteilchen: $e^{-},p,n,\mu$ Der letzt, der muon, hat eine Lebensdauer von $2\mu s$. Wenn die mit der Lichtgeschwindigkeit gehen und die and der Atmosphäroberfläche erzeugt werden. Dann brauchen sie c.a. 70 Lebensdauer
 um bis zur erdoberfläche anzukommen. Die muonen haben doch eine Sehr schnelle geschwindikeit und daher auch ein grosses $\beta=0.99998$ und daher $\gamma\approx 70$ daher ist im system des Muons als ob die Erde sich auf ihr mit fast lichtgeschwindikgeit auf sich her bewegt, und daher ist die distanz die der Muon hinterlegen muss, c.a. 70 mal kleiner.
 Aus unsere sicht, bewegt sich der Muon sehr schnell also von unserem system ausgesehen ist ihre Zeit viel langsamer und es hat also eine Lebensdauer die 70 mal grösser scheint, daher kann man muon auf der Erdoberfläche sehen und Messen.
+\subsubsection{Spezielle Relativitätsprinzip}
+Wir suchen jetzt eine Grosse die unabhängig die Unabhängig von der wahl des inertialsystem ist. Sei eine Punktformige lichtquelle, wenn diese sich bewegt, dann ist ihre hintergelassene Wellenform ausgezogen. Wir wissen jetzt aber dass diese punktquelle unabhängig vom Inertialsystem ist. \[x^2+y^2+z^2=r^2=c^2t^2\] Wir hätten aber gern dass diese Punktquelle form invariant ist und immer eine Punktquelle bleibt
+Bei Galilei würde man dass wie folgt rechnen:
+\[\left.\begin{matrix}ct=ct'\\x=x'\\y=y'\\z=z'+\beta ct'\end{matrix}\right\rbrace\Rightarrow x^2+y^2+z^2=x'^2+y'^2+(z'+\beta ct')^2=c^2t^2\]\[\Rightarrow x'^2+y'^2+z'^2=c²t'^2-\left[2\beta z'ct'+\underset{\neq 0}{\underbrace{\beta^2c^2t'^2}}\right]\]
+Also wenn die Kugelwelle Schnell geht dann ist ihre ausbreitung nicht mehr Kugelformig.
+\subsubsection{Lorentz-Transformation}
+Wir schauen uns jetzt die Transformation an die wie folgt definiert ist:
+\[\begin{pmatrix}t'\\x'\\y'\\z'\end{pmatrix}=\begin{pmatrix}\gamma\left(t-\frac{v}{c^2}z\right)\\x\\y\\\gamma(z-vt)\end{pmatrix}\mspc\text{und}\mspc \begin{pmatrix}t\\x\\y\\z\end{pmatrix}=\begin{pmatrix}\gamma\left(t'-\frac{v}{c^2}z'\right)\\x'\\y'\\\gamma(z'+vt')\end{pmatrix}\]
+Wir haben mit dieser transformation alle notige informationen um dieselbe information wie vorher zu rechnen, $x^2+y^2+z^2=(ct)^2$ ist also die Kugelwelle und unter der Transformation gilt:
+\[x'^2+y'^2+\gamma^2(z'+vt')=c^2\gamma^2\left(t'+\frac{v}{c^2}z'\right)^2\Rightarrow x'^2+y'^2+z'^2=c^2\gamma^2\left(t'^2+2\frac{v}{c^2}t'z'+\frac{v^2}{c^4}z'^2\right)-\gamma^2(z'^2+2z'vt'+v^2t'^2)+z'^2\]
+Was äquivalent ist zu:
+\[x'^2+y'^2+z'^2=t'^2\underset{\mathit{i.}}{\underbrace{(c^2\gamma^2-\gamma^2v^2)}}+z't'\underset{\mathit{ii.}}{[\underbrace{c^2\gamma^22\frac{v}{¢^2}-2\gamma^2v]}}+z'^2\underset{\mathit{iii.}}{\underbrace{[c^2\gamma^2\frac{v^2}{c^4}-\gamma^2+1]}}\]
+Wir untersuchen jetzt teile $\mathit{i., ii.}$ und $\mathit{iii.}$
+\[(\mathit{i.:})\mspc\gamma^2 (c^2-v^2)=\frac{1}{1-\frac{v^2}{c^2}}(c^2-v^2)=\frac{c^2(c^2-v^2)}{c^2-v^2}=c^2\]
+\[(\mathit{ii.:}) \mspc c^2\gamma^22\frac{v}{c^2}-2\gamma^2v=2\gamma^2[v-v]=0\]
+\[(\mathit{iii.:})\mspc c^2\gamma^2\frac{v^2}{c^4}-\gamma^2+1=0\]
+Also dann bleibt nur noch:\[x'^2+y'^2+z'^2=c^2\] Und in beide Systeme ist diese Kugelwelle eine Kugelwelle.
+\subsection{Addition von Parallelen Geschwindigkeiten} Wir erwarten vom ergebnis dass, sei $\vec{v}$ die Relativgeschwindigkeit der zwei systeme, dann solte gelten dass die Addition von $(u<<c) + (v<<c)=u-v$, wie dass der Newton beschrieben hat. Aber wenn wir $(u\approx c)+(v\approx c)\approx c$
+\subsubsection{Lorentz transformation für Geschwindigkeiten} Wir wissen wie die Spezielle Relativität die Zeit und distanz ändert, wie sieht es für geschwindigkeiten aus.
+\[z'=\gamma(z-vt)Rightarrow dz'=\gamma(dz-vdt)\mspc\text{und}\mspc t'=\gamma(t-\frac{v}{c^2}z)\Rightarrow dt'=\gamma(dt-\frac{v}{c^2}dz)\]
+Wir brauchen für die Geschwindigkeiten $\frac{dz}{dt}=u$ und $\frac{dz'}{dt'}=u'$:
+\[\frac{dz'}{dt}=\frac{dz-vdt}{dt-\frac{v}{c^2}dz}=\frac{\frac{dz}{dt}-v}{1-\frac{v}{c^2}\frac{dz}{dt}}\]Und wir bekommen also die additionsformel Fur relativistische gescwindigkeiten:
+\[\boxed{u'=\frac{u-v}{1-\frac{v}{c^2}u}}\]
+Diese Formel passt unsere Vorher da wenn $u\approx c$ dann ist $u'=\frac{c-v}{1-\frac{vc}{c^2}}=c$ 
+
 \end{document}
+
