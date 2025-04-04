@@ -321,6 +321,12 @@ INPUT ./figures/Plattencondensator1.tikz
 INPUT ./figures/Plattencondensator1.tikz
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT ./figures/ZeitKegeln1.tikz
+INPUT ./figures/ZeitKegeln1.tikz
+INPUT ./figures/ZeitKegeln1.tikz
+INPUT ./figures/RelativWagen1.tikz
+INPUT ./figures/RelativWagen1.tikz
+INPUT ./figures/RelativWagen1.tikz
 INPUT main.aux
 INPUT /home/ben/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk
 INPUT /home/ben/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk
