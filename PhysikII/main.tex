@@ -511,6 +511,7 @@ Wir schauen uns jetzt an wann dass $\Delta t$ minimal wird, dies Passiert wenn $
 \subsubsection*{Raumartigkeit}Das ganze gilt naturlich auch bei Raumartigkeit:
 \[\Delta s^2<0\Rightarrow (c\Delta t)^2-\Delta l^2<0\Rightarrow\Delta l=\sqrt{(c\Delta t)^2-\Delta s^2}\]Und daher bei gleichzeitigkeit, $(c\Delta t)^2=0\Rightarrow \Delta l=\sqrt{-\Delta s^2}$
 \subsubsection*{Lichtkegel} auf dem Lichtkegel gilt $\Delta s^2=0$ und dort gilt auch $(c\Delta t)^2=\Delta x^2+\Delta y^2+\Delta z^2$
+\newpage
 \subsection*{Energie Impuls und Masse}
 \subsubsection*{Aquivalenz von Masse und Energie}
 \begin{multicols}{2}Wir machen hier ein Gedanksexperiment, Sei wir haben einen Wagen, welches genau in der Mitte auf eine Spitze balanciert ist. Was hier links zu sehen ist\vfill\null\columnbreak\scalebox{0.7}{\tikzfig{RelativWagen1}}\end{multicols}
@@ -518,5 +519,14 @@ Dann Schicken wir aus der Linken seite einen Photon, daher gibt es einen Impuls 
 \[s=v\Delta t=\frac{E}{2Mc}\cdot\frac{l}{c}=\frac{E}{2Mc^2}l\] Der Rohr hat sich also um eine Distanz $s$ verschoben aber ist nicht aus dem gleichgewicht gekommen da es keine Kräfte von aussen gibt, daher muss die massemverteilung anders sein.
 Was hier Passiert ist dass der Photon keine Masse hat, aber energie, also gibt den Photon seine Energie als mass ab. Hier ist also das Gleichgewicht nach der übertragung:
 \[\left(\frac{l}{2}+s\right)\left(M-m\right)=\left(\frac{l}{2}-s\right)(M+m)\mspc\Longrightarrow \mspc2sM=lm\]
-\[\Longrightarrow E=mc^2\]
+\[\Longrightarrow \boxed{E=mc^2}\]
+\subsection*{Vierergeschwindigkeit}
+\[u^\mu=\frac{dx^\mu}{d\tau}=\begin{pmatrix}\frac{d(ct)}{d\tau}\\\frac{d\vec{r}}{d\tau}\end{pmatrix}\]
+Wobei $dt=-\gamma d\tau$ und $\tau$ die Eigenzeit ist.
+\subsubsection*{Geschwindigkeit im Bewegten system}
+\[\frac{d\vec{r}}{d\tau}=\underset{=\vec{v}}{\underbrace{\frac{d\vec{r}}{dt}}}\cdot\underset{=\gamma}{\underbrace{\frac{dt}{d\tau}}}=c\gamma\vec{\beta}\mspc\vec{\beta}=\frac{1}{c}\vec{v}\]
+\subsubsection*{Energie und Impuls eines Massenpunktes}Wir nehmen den Impuls auch als Vierervektor:\[p^\mu=\begin{pmatrix}m\gamma c\\m\vec{\beta}\gamma c\end{pmatrix}=m u^\mu\]
+wir setzen $\beta\rightarrow0$ und $\gamma\rightarrow 1$:\[\lim_{\beta\rightarrow0}p^\mu=\begin{pmatrix}mc\\m\vec{v}\end{pmatrix}=\begin{pmatrix}\frac{E_0}{c}\\\vec{p}\end{pmatrix}\]
+Am ende finden wir:\[\vec{p}=m\vec{v}\gamma=\frac{m\vec{v}}{\sqrt{1-\beta^2}}\]
+\[E^2-\vec{p}^2\cdot c^2=m^2c^4\]
 \end{document}
