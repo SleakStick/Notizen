@@ -522,4 +522,32 @@ $B\in M_{n\times n}(\mathbb{C})$ ist unitär wenn die Spaltenvektoren eine Ortho
 Wir haben also die Mengen von Unitäre und Orthogonale Matrizen $O(n)$ und $U(n)$
 \lemma{13.7.3} \[A\in O(n)\Leftrightarrow A^{-1}=A^t\]\[B\in U(n)\Leftrightarrow B^{-1}=B^*=\overline{B}^t\]
 \beweis Zu zeigen ist dass $AA^t=id_n$ Die Spaltenvektoren $(v_1,...,v_n)=A$: $(A^tA)_{ij}=<v_i,v_j>=\delta_{ij}$ da der Standard IP von der $id_n$ Matrix definiert ist. Wenn wir transponieren.
+\bemerkung{13.7.4} Es ist eigentlich ganze egal ob wir die spalten oder die Zeilen anschauen, solange einer von den zweien eine Orthonormale Basis bildet, dann macht est die andere.
+\satz{13.7.5} $O(n)$ und $U(n)$ sind untergruppen von $GLn(\mathbb{R})$ und $GLn(\mathbb{C})$ respektiv.
+\beweis $id_n\in O(n)$ und wenn $A\in O(n)\Rightarrow A^t\in O(n)\Rightarrow A^{-1}\in O(n)$. Letzlich, seien $A,B\in O(n)$ dann $(AB)^{-1}=B^{-1}A^{-1}=b^tA^t=(AB)^t$
+\theorem{13.7.6}
+Sei $A\in GLn(\mathbb{R})$ dann $\exists Q\in O(n)$ und eine Obere Dreiecksmatrix $R\in GLn(\mathbb{R})$ so dass $A=QR$\newline
+Dasselbe gilt Für Unitäre Matrizen auf $\mathbb{C}$
+\beweis Sei $K=\mathbb{R}$ oder $\mathbb{C}$. Dann haben wir $A\in GL_n(K)$. Schreibe $A=(v_1,..., v_n)$ mit $v_i\in K^n$ eine Basis von $K^n$. In $K^n$ und diese Basis $A$ können wir Gram Schmidt eine Orthonormale Basis $w_1,...,w_n$ ehalten.\[\forall i\le i\le n\smspc \kk{v_1,...,v_i}=\kk{w_1,...,w_i}\mspc\text{es gilt:}\mspc v_i<v_1,w_1>w_1+...+<v_i,w_i>w_i\]
+Wir folgern aus dem obigen dass: \[\begin{matrix}v_1=<v_1,w_1>w_1\\v_2=<v_1,w_1>w_1+<v_2,w_2>w_2\\v_3=<v_1,w_1>w_1+<v_2,w_2>w_2+<v_3,w_3>w_3\\\vdots\end{matrix}\]
+Sei also $Q=(w_1,...,w_n)\in O(n)$ (analog für $U(n)$). Dann ist:
+\[R=\begin{pmatrix}<v_1,w_1>&<v_2,w_1>&<v_3,w_1>&\hdots&<v_n,w_1>\\0&<v_2,w_2>&<v_3,w_2>&\hdots&<v_n,w_2>\\\vdots&&<v_3,w_3>&\hdots&<v_n,w_3>\\\vdots& & &\ddots&\\0&\hdots&\hdots& &<v_n,w_n>\end{pmatrix}\]
+Um diese $Q$ und $R$ zu finden muss man die Gram-Schmidt orthogonalisierungsverfahrung machen.
+\theorem{13.7.9} Sei $A\in M_{n\times n}(K)$ mit $r=rk(A)$. dann existiren Matrizen $Q\in O(n)$ (oder $U(n)$ für $K=\mathbb{C}$) und $R=\begin{pmatrix}C&*\\0&0\end{pmatrix}$ mit $C\in M_{n\times n}(K)$ obere Dreiecksmatrix so dass $A=QR$
+\bemerkung Die $QR$ Zerlegung ist nicht eindeutig, zum beispiel kann man $A=QR=(-Q)(-R)$ Schreiben.
+\satz{13.7.16} Es sei $A\in GL_n(\mathbb{R})$ dann gibt es eine eindeutig bestimmte Matrix $Q\in O(n)$ und Dreiecksmatrix $R\in GL_n(\mathbb{R})$ mit positiven diagonalen so dass $A=QR$
+\newpage
+\subsection*{13.8 Dualräume von IP-Räume}
+Sei $(V,<\cdot,\cdot>)$ ein endlich-dim IP-Raum über $K$. Dann ist $V^*=Hom_K(V,K)$
+Wir Behaupten also dass es ein Kanonischer Isomorphismus $\Phi:V\tilde{\Rightarrow} V^*$
+\definition{13.8.1} Sei $U\in V$, dann definiere $\varphi_U:V\rightarrow K$ mit $\varphi_U(v)=<v,u>$
+\lemma{13.8.2} $\forall u\in V$ ist $\varphi_u\in V^*$ \beweis Die Eigenschaft vom IP reicht um dies zu beweisen.
+\theorem{13.8.3 Darstellungssatz von Riesz} Sei $(V,<\cdot,\cdot>)$ ein IP raum über $K$. Sei $\varphi\in V^*$ dann
+$\exists!u\in V$ so dass $\varphi=\varphi_u$ (daher $\varphi(v)=<u,v>\smspc\forall v\in V$)
+\beweis Wir machen hier den Beweis für $K=\mathbb{C}$ der Beweis für $\mathbb{R}$ läuft analog ab. Sei also $e_1,...,e_n$ eine Orthonormale Basis von $V$ dann kann man 
+$v=\sum_{i=1}^n<v,e_i>e_i$ Dann ist $\varphi(v)=\sum_{i=1}^n<v,e_i>\varphi(e_i)$ Hier kann man also den $u$ ablesen:
+\[=\left<v_,\sum_{i=1}^n\overline{\varphi(e_i)}\cdot e_i\right>\mspc\Rightarrow\mspc u=\sum_{i=1}^n\overline{\varphi(e_i)}e_i\]
+Jetzt bleibt noch zu zeigen dass $u$ eindeutig ist. Wir nehmen also an dass $\varphi_u=\varphi_u$ dann gilt also $<w,v>=<u,w>$ $\forall v\in V$ Und wir finden dass $<v,u-w>=0$ $\forall v\in V\Rightarrow w-u=0\Rightarrow w=u$
+\satz{13.8.6} Es sei $(V,<\cdot,\cdot>)$ ein IP-Raum über $K$ mit dimension $n$ und es sei $U\subseteq V$ dann ist $\Phi(U^\perp)=$Annilhator von $V$ (Annilhator ist dei Menge aller $\lbrace \gamma\in V^*|U\in ker(\gamma)\rbrace$)
+\beweis $w\in U^\perp$ heisst dass $<u,v>=0$ $\forall v\in U$ Was eigentlich die definition des Annilhators entspricht
 \end{document}
