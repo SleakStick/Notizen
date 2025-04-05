@@ -73,5 +73,15 @@ Die Metrik ist also \[d(z,w)=\left\lbrace\begin{matrix}|z|+|w|&\text{Wenn }\not\
 Diese Metrik ist sehr Komisch aber respektiert immer doch die Axiome. Die Konvergenz, die bald definiert wird, hat Komische Konvergenz da sogar wenn punkte optisch sehr nah miteinander aussehen, sind die wegen der Metrik doch nicht. Deswegen, nehmen wir öftestens Normen auf Teilmengen als Metriken.
 \definition{Konvergenz in einem Metrischen Raum} Sei $X$ ein Metrischer Raum, und $x_n$ eine Folge in $X$ und $z\in X$ Wir sagen dass $x_n$ gegen $z$ konvergiert und schreiben $\lim_n\rightarrow\infty x_n=z$ falls \[\forall \varepsilon>0 \exists N\smspc \forall n>N: \smspc d(x_n,z)<\varepsilon\]
 \definition{Offene Ball} Sei $X$ ein Metrischer Raum. Der Offene Ball um $x_0\in X$ mit radius $r>0$ ist durch \[B_r(x_0)=\left\lbrace \left. x\in X\right|d(x,x_0)<r\right\rbrace\] definiert. Eine Menge $U\subset X$ heisst umgebung von $x_0$ falls es ein $\exists r>0$ so dass $B_r(x_0)=\subseteq U$. Mann kann auch dieser Bälle benutzen um die Konvergenz zu definieren. 
-  \beispiel{Der Raum der Stetigen Funktionen} Sei $a<b\in\mathbb{R}$ Wir definieren $V=C([a,b])$ ein Vektorraum. Wir definieren dann die Norm $||f||_\infty=max_{x\in[a,b]}|f(x)|$ Für eine Stetige funktion $f\in V$ Dann ist $V$ ein Reeller Vektorraum, $||\cdot||$ ist eine Norm und die Konvergenz von $f_n\in V$ gegen $f\in V$ ist gleichbedeutend zur gleichmässige Konvergenz 
+\beispiel{Der Raum der Stetigen Funktionen} Sei $a<b\in\mathbb{R}$ Wir definieren $V=C([a,b])$ ein Vektorraum. Wir definieren dann die Norm $||f||_\infty=max_{x\in[a,b]}|f(x)|$ Für eine Stetige funktion $f\in V$ Dann ist $V$ ein Reeller Vektorraum, $||\cdot||$ ist eine Norm und die Konvergenz von $f_n\in V$ gegen $f\in V$ ist gleichbedeutend zur gleichmässige Konvergenz 
+\beweis Angenommen $f_n\in V$ Konvergiert für $n\rightarrow \infty$ gegen $f \in V$. Diese aussage ist analog zu:
+\[\forall \varepsilon >0\smspc \exists N\in \mathbb{N} \text{ so dass } \forall n>N \smspc d(f_n,f)=||f_n-f||_\infty<\varepsilon\]
+Die unendlich norm hier ist definiert wie $\max_{[a,b]}(f_n-f)$ Also gilt $\forall x\in [a,b]$\[|f_n(x)-f(x)|\le||f_n-f||_\infty<\varepsilon\] Doch den $N$ haben wir vor den $x$ gewählt, daher ist dies auch gliechmässig konvergent.
+\[\forall \varepsilon< 0\smspc \exists N\in \mathbb{N}\smspc \forall n< N\smspc\forall x\in[a,b]\text{ gilt } |f_n(x)-f(x)|\le\varepsilon\]
+\bemerkung{} $||\cdot||_\infty$ ist eine Norm:
+\begin{itemize}
+  \item[i]{$||f||_\infty=0\Longleftrightarrow f=0$}
+  \item[ii]{$||\lambda f||_\infty=max_{[a,b]}|s\cdot f(x)|=|s|\cdot max_{[a,b]}|f(x)|=|s|\cdot||f||_\infty$}
+  \item[iii]{$f_1,f_2\in V$ dann ist $||f_1+f_2||_\infty=max_{[a,b]}\underset{=|f_1(x)|+|f_2(x)|}{\underbrace{|f_1(x)+f_2(x)|}}\le||f_1||_\infty+||f_2||_\infty$ (dies ist nicht klar aber es beweist die Dreiecksungleichung)}
+\end{itemize}
 \end{document}
