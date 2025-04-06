@@ -2,6 +2,7 @@
 
 \usepackage{geometry}
 \usepackage{amsmath}
+\usepackage{hyperref}
 \usepackage{amssymb}
 \usepackage{multicol}
 
@@ -16,6 +17,24 @@
 
 \begin{document}
 \maketitle
+\section{TLDR}
+\begin{tabular}{c|c|c}
+  \textbf{Name}&\textbf{Bedeutung}&\textbf{Formel}\\
+  \hline\\
+\hyperlink{messfehler}{Messfehler}&Der Messfehler ist die abweichung vom gemessenen Wert zum theoretischen oder erwateten Wert&$e=\tilde{x}-x_1 $
+\hline\\
+\hyperlink{}
+\end{tabular}
+\hypertarget{messfehler}{\section{Messfehler}}
+{Messen} wir einen Wert von welchen wir schon eine Theoretische einschätzung $\tilde{x}$ haben, sei der gemessen Wert $x_1$ dann haben wir einen \textbf{Massfehler} $e=\tilde{x}-x_1$.
+Dieser Fehler kann systematisch (es kommt bei jeder Messung gleich vor) oder Zufällig (es war ein Zufall dass es diesmal den wert $e$ angenommen hat, und es könnte nächstes mal irgeindein Wert annehmen).
+\subsection{Wiederholtes Messen}
+Mit einer Wiederholung des Messens, kann man dieses Zufällige Fehler minimiseren. Mit viele Messwerte kann man den \textbf{Empirischen Mittelwert}:
+\[\overline{x}=\frac{1}{N}\sum_{n=1}^N x_n\] und die \textbf{Empirische Varianz}:\[\Delta_x^2=\frac{1}{N-1}\sum_{n=1}^N(x_n-\overline{x})^2\]Berechnen. Die \textbf{Empirische Standardabweichung} ist ähnlich definiert: $\Delta_x=\sqrt{\Delta_x^2}$
+\newline Wenn wir Viele Messungen haben, können wir in einem Histogramm darstellen in dem wir Bins (wertebereiche) defnieren und die Anzahl messung in jedes Bin darstellen.
+Wir können dann dieses Histogramm eine Funktion zuordnen die ungefähr diese anpasst. So eine Funktion heisst Probability Mass Funktion und hat die Eigenschaften dass: $0\le P(x_n)\le 1$ und $\sum P(x_n)=1$ wobei $x_n$ eine bin ist und $P(x_n)$ Die wahrscheinlichkeit dass eine Messung in diese Bin reinfällt.
+Wenn diese Funktion nicht mehr Diskret definiert ist sondern Kontinuirlich dann nennt man diese Probability Density Funktion und beugt sich zur Eigencshaften $\int_{-\infty}^\infty f(x)=1$ und $0\le f(x)$ hier ist die Wahrscheilichkeit dass $a\le x\le b$ vom integral $P(a\le x\le b)=\int_a^b f(x) dx$
+
 %\section{Kovarianz und Autokovarianz}
 \section{Fouriertranform}
 Wir können jede Funktion auf einem beschränkte Zetiperiode als eine Summe von Trigonometrischen funktionen defnieren. Wenn ich eine funktion $x_{t_k}$ habe dann kann ich eine frequenz hier einsetzen: (in theorie ist dies ein Integral aber hier handelt es sich um diskrete daten)
