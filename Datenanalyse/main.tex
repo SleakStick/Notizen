@@ -18,11 +18,15 @@
 \begin{document}
 \maketitle
 \section{TLDR}
-\begin{tabular}{c|p{9cm}|c}
+\begin{tabular}{c|p{8cm}|c}
   \textbf{Name}&\textbf{Bedeutung}&\textbf{Formel}\\
   \hline
   \hyperlink{messfehler}{Messfehler}&Der Messfehler ist die abweichung vom gemessenen Wert $x_1$ zum theoretischen oder erwateten Wert$\tilde{x}$ &$e=\tilde{x}-x_1 $\\
-  \hline\hyperlink{PDF}{Probability Density Function}&Dies ist eine Funktion $f$ (Probability Mass Funktion falls diskret) die die wahrscheinlichkeit $P_{a,b}(x)$ dass eine variable $x$ zwischen zwei punkte $a,b$ fällt&$P_{a,b}(x)=\int_a^bf(x)dx$
+  \hline\hyperlink{PDF}{Probability Density Function}&Dies ist eine Funktion $f$ (Probability Mass Funktion falls diskret) die die wahrscheinlichkeit $P_{a,b}(x)$ dass eine variable $x$ zwischen zwei punkte $a,b$ fällt&$P_{a,b}(x)=\int_a^bf(x)dx$\\
+  \hline\hyperlink{Normalverteilung}{Normalverteilung}&Die Normalverteilung ist eine Funktion $f$ mit variablen $\mu:$Erwartungswert und $\sigma:$Standardabweichung, die sehr oft die verbreitung zufälliger Datenaufnahmen spiegelt&$f(x,\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$\\
+  \hline\hyperlink{Binomialverteilung}{Binomialverteilung}& Die Binomialverteilung beschreibt die wahrscheinlichkeit dass in $n$ Versuchen das ereigniss mit Wahrscheinlichkeit $P(u)=p$ genau $k$ mal vorkommt & $ B(k|p,n)=\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}$\\
+  \hline\hyperlink{mittelwertfehler}{Mittelwertfehler}& Der Fehler des Mittelwerts bei einer wiederholung einer Messwiederhulung auf $N$ mal, wobei $\sigma$ die Standardabweichung ist &$\Delta \mu=\frac{\sigma}{\sqrt{N}}$\\
+
 \end{tabular}
 \hypertarget{messfehler}{\section*{Messfehler}}
 {Messen} wir einen Wert von welchen wir schon eine Theoretische einschätzung $\tilde{x}$ haben, sei der gemessen Wert $x_1$ dann haben wir einen \textbf{Massfehler} $e=\tilde{x}-x_1$.
@@ -43,11 +47,20 @@ Diese PDF hat mehrere Werte die in korrelation damit sind:
   \item{Varianz: var$(x)=E((x-\mu)^2)=\int_{-\infty}^\infty(x-\mu)^2f(x)dx$ Wie zuvor. die Standardabweichung ist einfach$\sqrt{\text{var}(x)}$}
 \end{itemize}
 Momente können auch definiert werden aber sind nicht sehr nutzlich.
-\subsection*{Normalverteilung}
+\hypertarget{Normalverteilung}{\subsection*{Normalverteilung}}
 Wenn wir Zuruck zum Histogramm gehen dann ist die Funktion die diese Folgt am aller meistens eine Normalverteilung. Wenn wir viele Messungen mit einen Zufälligen Messfehler Betrachten, wird dieser Histogramm eine Normalverteilung folgen.
 Die Definition dieser Normalverteilung ist:
 \[f(x,\mu,\sigma)=\frac{1}{\sigma\sqrt{2\cdot\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)\]
-Wobei $\mu$ der Erwatungswert ist und $\sigma$ die Standardabweichung.
+Wobei $\mu$ der Erwatungswert ist und $\sigma$ die Standardabweichung, diese Werte müssen Experimentell gefunden werden.
+\hypertarget{Binomialverteilung}{\subsubsection*{Binomialverteilung}}
+Wenn wir zwei ereignisse $u$ und $d$ mit wahrscheilickeiten $P(u)=p$ und $P(d)=1-p=q$ respektiv haben. Dann kann man, erstens die anzahl der unterschiedlichen Reihenfolgen von $k$ objekten in $n$ plätze definieren durch $n$ "\textit{tief}" $k$\[\begin{pmatrix}n\\k\end{pmatrix}=\frac{n!}{k!(n-k)!}\] z.B. $5$ Studente in $7$ arbeitsplätze haben $\begin{pmatrix}7\\5\end{pmatrix}=21$ unterschiedliche sitzplane.
+Dann kommt Binomialverteilung die die Wahrscheinlichkeit beschreibt dass in $n$ versuchen $k$ mal den ereigniss $u$ mit wahrscheinlichkeit $P(u)=p$ vorkommt:
+\[B(k|p,n)=\begin{pmatrix}n\\k\end{pmatrix}p^k(1-p)^{n-k}\] Hier beschreibt der teil $p^k(1-p)^{n-k}$ die wahrscheinlichkeit von genau eine distribution der Ereignisse.
+Die Poissonverteilung ist die Binomiallverteilung für $\lim_{k\rightarrow k}$
+\hypertarget{mittelwertfehler}{\section*{Mittelwertfehler}}
+Wenn wir eine Messung vielmals wiederholen, dann wird die standardabweichung ab einen Punkt nicht mehr viel variieren, doch mit mehr messpunkte, sind wir uns sicherer und sicherer dass unser Mittelwert korrekt ist. Deswegen ist der Fehler des Mittelwerts nicht einfach die Standardabweichung sondern durch:
+\[\Delta \mu=\frac{\sigma}{\sqrt{N}}\]
+
 %\section{Kovarianz und Autokovarianz}
 \section*{Fouriertranform}
 Wir können jede Funktion auf einem beschränkte Zetiperiode als eine Summe von Trigonometrischen funktionen defnieren. Wenn ich eine funktion $x_{t_k}$ habe dann kann ich eine frequenz hier einsetzen: (in theorie ist dies ein Integral aber hier handelt es sich um diskrete daten)
