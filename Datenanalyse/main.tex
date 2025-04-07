@@ -18,31 +18,44 @@
 \begin{document}
 \maketitle
 \section{TLDR}
-\begin{tabular}{c|c|c}
+\begin{tabular}{c|p{9cm}|c}
   \textbf{Name}&\textbf{Bedeutung}&\textbf{Formel}\\
-  \hline\\
-\hyperlink{messfehler}{Messfehler}&Der Messfehler ist die abweichung vom gemessenen Wert zum theoretischen oder erwateten Wert&$e=\tilde{x}-x_1 $
-\hline\\
-\hyperlink{}
+  \hline
+  \hyperlink{messfehler}{Messfehler}&Der Messfehler ist die abweichung vom gemessenen Wert $x_1$ zum theoretischen oder erwateten Wert$\tilde{x}$ &$e=\tilde{x}-x_1 $\\
+  \hline\hyperlink{PDF}{Probability Density Function}&Dies ist eine Funktion $f$ (Probability Mass Funktion falls diskret) die die wahrscheinlichkeit $P_{a,b}(x)$ dass eine variable $x$ zwischen zwei punkte $a,b$ fällt&$P_{a,b}(x)=\int_a^bf(x)dx$
 \end{tabular}
-\hypertarget{messfehler}{\section{Messfehler}}
+\hypertarget{messfehler}{\section*{Messfehler}}
 {Messen} wir einen Wert von welchen wir schon eine Theoretische einschätzung $\tilde{x}$ haben, sei der gemessen Wert $x_1$ dann haben wir einen \textbf{Massfehler} $e=\tilde{x}-x_1$.
 Dieser Fehler kann systematisch (es kommt bei jeder Messung gleich vor) oder Zufällig (es war ein Zufall dass es diesmal den wert $e$ angenommen hat, und es könnte nächstes mal irgeindein Wert annehmen).
-\subsection{Wiederholtes Messen}
+\hypertarget{PDF}{\subsection*{Wiederholtes Messen}}
 Mit einer Wiederholung des Messens, kann man dieses Zufällige Fehler minimiseren. Mit viele Messwerte kann man den \textbf{Empirischen Mittelwert}:
 \[\overline{x}=\frac{1}{N}\sum_{n=1}^N x_n\] und die \textbf{Empirische Varianz}:\[\Delta_x^2=\frac{1}{N-1}\sum_{n=1}^N(x_n-\overline{x})^2\]Berechnen. Die \textbf{Empirische Standardabweichung} ist ähnlich definiert: $\Delta_x=\sqrt{\Delta_x^2}$
 \newline Wenn wir Viele Messungen haben, können wir in einem Histogramm darstellen in dem wir Bins (wertebereiche) defnieren und die Anzahl messung in jedes Bin darstellen.
+\subsection*{Probability Density Function}
 Wir können dann dieses Histogramm eine Funktion zuordnen die ungefähr diese anpasst. So eine Funktion heisst Probability Mass Funktion und hat die Eigenschaften dass: $0\le P(x_n)\le 1$ und $\sum P(x_n)=1$ wobei $x_n$ eine bin ist und $P(x_n)$ Die wahrscheinlichkeit dass eine Messung in diese Bin reinfällt.
 Wenn diese Funktion nicht mehr Diskret definiert ist sondern Kontinuirlich dann nennt man diese Probability Density Funktion und beugt sich zur Eigencshaften $\int_{-\infty}^\infty f(x)=1$ und $0\le f(x)$ hier ist die Wahrscheilichkeit dass $a\le x\le b$ vom integral $P(a\le x\le b)=\int_a^b f(x) dx$
-
+Diese PDF hat mehrere Werte die in korrelation damit sind:
+\begin{itemize}
+  \item{Modus: $x_\text{mode}:\left.\frac{df(x)}{dx}\right|_{x_\text{mode}}=0$  ist der Wert bei dem die function ihr maximum annimt}
+  \item{Median $x_\text{median}:\int_{-\infty}^{x_\text{median}}f(x)dx=\frac{1}{2}$ ist der Wert bei welchem die Wahrscheinlichkeiten auf jeder seite dieses Punktes zu legen gleich sind}
+  \item{Halbwertsbreite: $f(a)=f(b)=\frac{1}{2}f(x_\text{mode})\Longrightarrow H_\text{breite}=b-a$ Ist die breite der Verteilung beim Halben wert des Maximalwertes.}
+  \item{Erwartungswert: $\mu=E(x)=\int_{-\infty}^\infty xf(x)dx$ der wert $x$ für welches $f(x)=x_\text{mode}$}
+  \item{Varianz: var$(x)=E((x-\mu)^2)=\int_{-\infty}^\infty(x-\mu)^2f(x)dx$ Wie zuvor. die Standardabweichung ist einfach$\sqrt{\text{var}(x)}$}
+\end{itemize}
+Momente können auch definiert werden aber sind nicht sehr nutzlich.
+\subsection*{Normalverteilung}
+Wenn wir Zuruck zum Histogramm gehen dann ist die Funktion die diese Folgt am aller meistens eine Normalverteilung. Wenn wir viele Messungen mit einen Zufälligen Messfehler Betrachten, wird dieser Histogramm eine Normalverteilung folgen.
+Die Definition dieser Normalverteilung ist:
+\[f(x,\mu,\sigma)=\frac{1}{\sigma\sqrt{2\cdot\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)\]
+Wobei $\mu$ der Erwatungswert ist und $\sigma$ die Standardabweichung.
 %\section{Kovarianz und Autokovarianz}
-\section{Fouriertranform}
+\section*{Fouriertranform}
 Wir können jede Funktion auf einem beschränkte Zetiperiode als eine Summe von Trigonometrischen funktionen defnieren. Wenn ich eine funktion $x_{t_k}$ habe dann kann ich eine frequenz hier einsetzen: (in theorie ist dies ein Integral aber hier handelt es sich um diskrete daten)
 \[X(f_n)=\frac{1}{N}\sum_{k=0}{N-1}x(t_k)e^{-i2\pi f_nt_k}\]
 und ich bekomme ein anteil der trigonometrischen funktionen von dieser fräquenz in der funktion.\newline
 Wie man das praktisch macht, man misst für alle frequenzen die Gleichung und dann bekommt man den anteil dieser fräquenz auf der funktion welche wir den Fouriertransform machen
-\subsubsection{Aliasing} Man muss aufpassen wenn man eine Welle misst, wenn $\Delta t>\frac{1}{\nu}$ dann ist unsere messung okay, man braucht also mindestens zwei messpunkte pro oszillation der Welle, sonst kann ein Fall von Aliasing passieren wo wir eine höhere fräquenz messen als was eigentilch ist.
-\subsubsection{Gabors limit} Wenn sag ich dass eine fräquenz nicht im Transform auftaucht? Gabors limit besagt dass je langer ein signal ist in der zeit, desto besser kann die präzision der messung vom signal sein: $\sigma_t\cdot\sigma_f\ge\frac{1}{2}$. Wobei $\sigma$ die auflösung der Messung ist.
+\subsubsection*{Aliasing} Man muss aufpassen wenn man eine Welle misst, wenn $\Delta t>\frac{1}{\nu}$ dann ist unsere messung okay, man braucht also mindestens zwei messpunkte pro oszillation der Welle, sonst kann ein Fall von Aliasing passieren wo wir eine höhere fräquenz messen als was eigentilch ist.
+\subsubsection*{Gabors limit} Wenn sag ich dass eine fräquenz nicht im Transform auftaucht? Gabors limit besagt dass je langer ein signal ist in der zeit, desto besser kann die präzision der messung vom signal sein: $\sigma_t\cdot\sigma_f\ge\frac{1}{2}$. Wobei $\sigma$ die auflösung der Messung ist.
 Daher limitiert die Messzeit $t_{tot}$ $\sigma_t$. Wenn man den Fouriertransform von einer funktion mit eine auflösung $\sigma_t$, mit eine kleinere auflösung misst, bekommt man nicht mehr information, die zwei werte sind dann auf distanzen kleine als $\sigma_t$ korreliert und bringen nicht neue information.
 Zusätslich ist die Maximale frequenz die ich messen kann ist $f_{max}=\frac{1}{2\Delta t}$ die minimale frequenz lässt sich analog finden aber die negative Fourierwerte haben nicht mehr information als die positive
 \end{document}
