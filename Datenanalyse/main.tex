@@ -60,7 +60,21 @@ Die Poissonverteilung ist die Binomiallverteilung für $\lim_{k\rightarrow k}$
 \hypertarget{mittelwertfehler}{\section*{Mittelwertfehler}}
 Wenn wir eine Messung vielmals wiederholen, dann wird die standardabweichung ab einen Punkt nicht mehr viel variieren, doch mit mehr messpunkte, sind wir uns sicherer und sicherer dass unser Mittelwert korrekt ist. Deswegen ist der Fehler des Mittelwerts nicht einfach die Standardabweichung sondern durch:
 \[\Delta \mu=\frac{\sigma}{\sqrt{N}}\]
-
+\hypertarget{fehlerfortplanzung}{\subsection*{Fehlerfortplanzung}}
+Wenn wir experimentell was bestätigen wollen misst man meistens nicht sofort die wichtige Grösse sonderne eine Andere mit
+deren man die wichtige grössen rechnen kann. Doch die unsicherheiten können sehr schnell schwierige beiträge zur rechnung bringen.
+Deswegen gibt es eine einfachere Methode die uns hilft diese Fehlerfortpflanzung abzuschätzen im fall von einer Normalverteilten PDF
+wo die funktion $f$ nur von einen fehlerbehafteten Messgrösse $x$ abhängt. 
+Dann kann man die Taylorentwicklung des ersten Grades benutzen um folgendes Zusammenhang zu finden
+\[\Delta f(x)=f(\overline{x}-\Delta x)-f(\overline{x})=\left.\frac{\partial f}{\partial x}\right|_{\overline{x}}\Delta x\]
+Wobei $\Delta$ einen Fehler bezeichnet, $\overline{x}$ der punkt um deren wir den Fehler berechnen. Die standardabweichung lässt sich auch derselben weise rechnen:
+\[\sigma_f=\left.\frac{\partial f}{\partial x}\right|_ {\overline{x}}\sigma_x\]
+\hypertarget{mehrdimensionaleFehlerfortpflanzung}{\subsubsection*{Mehrdimensional Fehlerfortplanzung}}
+Wir können es erweitern bis zum fall wo die funktion $f$ von mehrere Fehler behafteten Messgrössen. In diesem Fall hängt der
+Fehler $\Delta f$ auch von der Kovarianz zwischen $x$ und $y$ die zwei Messgrössen.
+\[\sigma_f^2=(\partial_x,\partial_y)f\begin{pmatrix}\sigma_x^2&\sigma_{xy}^2\\\sigma_{xy}^2&\sigma_y\end{pmatrix}\begin{pmatrix}\partial_x\\\partial_y\end{pmatrix}f\]
+Wenn die kovarianz $\sigma_{xy}=0$ dann ist dies einfach eine Diagonale Matrix und es wird zu summe:
+\[\sigma_f^2=\sum_{n=1}^N\left(\frac{\partial f}{\partial x_n}\right)\sigma_{x_n}^2\]
 %\section{Kovarianz und Autokovarianz}
 \section*{Fouriertranform}
 Wir können jede Funktion auf einem beschränkte Zetiperiode als eine Summe von Trigonometrischen funktionen defnieren. Wenn ich eine funktion $x_{t_k}$ habe dann kann ich eine frequenz hier einsetzen: (in theorie ist dies ein Integral aber hier handelt es sich um diskrete daten)
