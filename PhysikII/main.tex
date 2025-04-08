@@ -45,6 +45,7 @@ $\xi(x,t=0)=f(x)$ $f(x)$ ist die form des wellenpakets\\$x-a$ fuhrt zu einer tra
 $k$ ist die Wellenzahl (so dass was im sinus ist dimensionslos ist)  \[\lambda:{Wellenlange}\]
 In zwei dimensionen ist $k$ä ist ein vektor und zeigt uns die wellen direktion aus (longitude, oder senkrecht)
 \\Kreisfrequenz: $\omega=2\pi\nu=2\pi\frac{1}{T}$ Wo $T$ die Periode ist.\\$\xi(x,t)=\xi_0\sim(k(x\pm vt))=\sin(kx+kvt)=\xi_0\sin(kx\pm\omega t)$
+
 \subsubsection{Wellenglaichung in einer Dimension}
 \[\xi(x,t)=\xi_0e^{i(kx\pm \omega t}\]
 wir leiten nach der zeit ab:
@@ -529,3 +530,29 @@ Wobei $dt=-\gamma d\tau$ und $\tau$ die Eigenzeit ist.
 wir setzen $\beta\rightarrow0$ und $\gamma\rightarrow 1$:\[\lim_{\beta\rightarrow0}p^\mu=\begin{pmatrix}mc\\m\vec{v}\end{pmatrix}=\begin{pmatrix}\frac{E_0}{c}\\\vec{p}\end{pmatrix}\]
 Am ende finden wir:\[\vec{p}=m\vec{v}\gamma=\frac{m\vec{v}}{\sqrt{1-\beta^2}}\]
 \[E^2-\vec{p}^2\cdot c^2=m^2c^4\]
+\subsubsection*{Ladungsinvarianz}
+Die elektrische Ladung $Q$ ist Lorentzinvariant, sie ist unabhängig vom Inertialsystem. Die Form  des Assoziierten Elektrischen Feld mag komisch oder anders sein, die ladung die sie beiträgt bleibt unändert.
+\subsubsection*{Transformation elektrischer Felder}
+Sei ein unendliche ausgedehnter Plattenkondensator. Wenn wir in einem System (ruhend) den Elektrischen Feld beobacthen, dann ist es einfach:\[E=\frac{\rho}{\varepsilon_0}\] durch Gauss definiert, wobei $\rho$ die Ladungsdichte ist.\newline
+Wenn der Beobachter sich parallel zu den Elektrischen Feldlinien bewegt mit gechwindigkeit $v$. Dann beobachtet er den Elektrischen-Feld $E'$ und die Ladungsdichte $\rho$
+\newline Wenn nochmals, der Beobachter sich in $K''$ befindet, welches die Feldlinien orthogonal zugerichtet ist. Aus seiner sicht sind die Ladungen näher zusammen, also wenn die Länge um $\gamma$ kürzer ist, dann ist seine beobachtete Ladungsdichte $\gamma \rho$ und daher auch der Elektrische-Feld: $E''=\gamma E$
+Ganz allgemein, ein Elektrisches Feld transformiert sich so dass \[E'_{\parallel}=E_{\parallel}\\E'_\perp=\gamma E_\perp\]
+\subsubsection*{Felder bewegter Ladung}Wir haben hier, nochmals zwei bezügsysteme $K$ und $K'$ mit koordinaten $(ct,x,z)$ welche zueinander sich mit $v$ bewegen. Dann gilt $t=\gamma(t'-\frac{v_x}{c^2}x')$, $x=\gamma(x'-v_xt')$ und $z=z'$
+\[E_x(x,z)=\frac{g}{4\pi\varepsilon_0}\frac{x}{\sqrt{x^2+z^2}^3}\]\[E_z(x,z)=\frac{g}{4\pi\varepsilon_0}\frac{z}{\sqrt{c^2+z^2}^3}\]
+Jetzt wenn wir $E'(x',z')$ betrachten dann gilt (wir setzen $t'=0$)\[E_x'(x',z')=E_x(x(x',z',t'),z(x',z',t'))=E_x(x=\gamma x',z'=z)\]
+und in $z$ richtung passiert dasselbe, also wir haben \[E_x'(x',z')=\frac{g}{4\pi\varepsilon}\frac{\gamma x'}{\sqrt{(\gamma x')^2+z'^2}^3}\]
+Das $z'$ Feld hat dieselbe Transformationen.
+\subsubsection*{Eigenschaften von $\vec{E}'$}
+\begin{itemize}
+  \item{$\frac{E_x'}{E_z'}=\frac{x}{z'}\Longrightarrow\vec{E}'$ ist Radial orientiert bezügöoch $g$}
+  \item{Jedoch ist $\vec{E}'$ Anisotrop, daher ist der Feld nicht gleich Stark in jeder Richtung verzerrt.$|\vec{E}'|=\frac{g}{4\pi\varepsilon_0}\frac{1}{r'}\frac{1-\beta^2}{\sqrt{1-\beta^2sin^2(\theta')}}$ Wobei $\theta$ der Winkel
+    Der Geschwindigkeit des Bezugsystems ist, daher ist diese Transformation nicht immer gleich in den komponent-richtungen der Geschwindigkeit.}
+\end{itemize}
+Wenn die ladung bewegt ist, dann merkt man auch dass ihr Feld nicht mehr $\nabla'\vec{E}'\neq 0$
+\subsection*{Felder Beschleunigter Ladungen} Sei eine Ladung $-q$ die bei $t=0$ auf $x=0$ sitzt, und später bei $x(T)$ diese Ladung muss daher beschleunigt sein. Wir setzen diese Beschleunigung als sehr kurz, mit länge $\tau$ so dass der Teilchen auf $v_0$ beschleunigt wird. Da der $\tau$ beliebig klein ist, können wir $x(t)\approx v_0 T$ setzen.
+Da die information sich nicht mit unendlicher Geschwindigkeit verbreitet, gibt es ein Kreis mit radius $R=cT$ ausserhalb von welches, der Elektrische Feld immer noch so aussieht als ob die Ladung bei $0$ wäre. Innerhalb vom Kreis, ist der Feld auf die neue Position der Ladung angepasst aber die Grenzfläche zwischen aktuell und altes Feld folgt immer noch der Satz von Gauss, und die müssen kontinuirlich durchgehen.
+Dieser knick, anstatt der rundung an der Grenzfläche ist ein produkt der fast unendlicher Beschleunigung.
+\subsubsection*{Abbremsung der Ladung} Ein ähnliches effekt passiert wenn eine Ladung $-q$, die sich mit gechwindigkeit $v_0$ bewegt, abgebremst wird von eine beschleunigung $-\frac{v_0}{\tau}$ wobei $\tau$ die Zeit der beschleunigung ist.Mann kann dann wieder ein Kreis mit radius $R=cT$ stellen, ausserhalb von welches, die feldlinien so tun als ob die Ladung noch mit Konstanter Geschwindigkeit unterwegs wäre.
+\subsubsection*{Bremsstrahlung} Wenn wir also eine Beschleunigung auf eine Ladung zuführen, gibt es diese Störung im Elektrischen Feld. Die eigentliche störung passiert in der dünnen Kugelschale $c(T-\tau)\le r\le cT$. Wir können unseres Feld, innerhalb der Kleinen Kugel und ausserhalb der Grossen Kugel als Radiale und Tangentiale komponente zerlegen.
+
+\end{document}
