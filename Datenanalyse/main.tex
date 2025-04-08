@@ -46,7 +46,30 @@ Diese PDF hat mehrere Werte die in korrelation damit sind:
   \item{Erwartungswert: $\mu=E(x)=\int_{-\infty}^\infty xf(x)dx$ der wert $x$ für welches $f(x)=x_\text{mode}$}
   \item{Varianz: var$(x)=E((x-\mu)^2)=\int_{-\infty}^\infty(x-\mu)^2f(x)dx$ Wie zuvor. die Standardabweichung ist einfach$\sqrt{\text{var}(x)}$}
 \end{itemize}
-Momente können auch definiert werden aber sind nicht sehr nutzlich.
+Man kann auch Momente definieren, in dem dass $n$-te moment durch:\[M_m=\int_{-\infty}^\infty x^mf(x)dx\] definiert ist. Wir finden auch dass $M_0=1$ und $M_1=E(x)=\mu$
+Die Momente können uns über die Wölbung und form der PDF sagen.
+\subsection*{Frequentistischer Wharscheinlichkeitsbegriff}
+Wenn wir eine Messung als Zufallsbegriff betrachten, dann ist die wahrscheinlichkeit dass ein Ereignis $A$ eintrtt gegeben durch $\frac{k}{n}$ wobei $k$ die anzahl ergebnisse die zu $A$ führen un $n$ die gesamtmenge ergebnisse
+\subsubsection*{Bayessche Datenanalyse}
+Wenn wir in $S$ alle möglich ereignisse haben, und darinn $a\subset S$ und $b\subset S$ zwei ereignisse mit wahrscheilichkeitene $P(a)$ und $P(b)$ respektiv. Dann ist die wahrscheilichkeit dass $b$ vorkommt, genau dann wenn $a$ vorgekommen ist durch folgende Formel gegeben
+\[P(a|b)=\frac{P(b|a)P(a)}{p(b)}\]
+Wie interpretieren wir diese ereignisse doch in der Datenanylse? Wir setzen in dieser Datenanalyse unsere Messergebnisse als $A$ und alle Mögliche Messergebnisse als $B$. (Manchmal stellt man unseres ganzes wissen von vorher als i dar.) Dann können wir die Wahrscheinlichkeit dass wir genau unsere Daten Gemessen haben mit dieser gleichung darstellen.
+Wobei wir:\begin{itemize}
+  \item{$P(B_i)$ ist die wahrscheinlichkeit dass genau $B_i$ eintritt, basiert auf unseres wissen dass wir vor dem Experiment mitbringen}
+  \item{$P(A|B)$ ist die Wahrscheinlichkeit dass unsere Daten auftreten respektiv zu unseren vorherigen Wissen.}
+\end{itemize}
+\subsubsection*{Ziegen Problem}
+Wenn wir den Ziegen Problem benutzen um die Bayesche Datenanalyse zu betrachten:
+Wir haben am anfange $P(B_i)=\frac{1}{3}$ da es $3$ turen gibt. Wenn wir aber mehr information haben, dann ist 
+
+
+\subsubsection*{Covid Test Beispiel}
+
+
+\subsubsection*{Bayessche vs. Frequentistische Datenanalyse} Wenn wir messungen durchführen, kann man sich entscheiden diese Messungen als zufall sehen, dann kann man eine Statistische und Frequentistische analysis der Daten machen.
+Diese Analyse hat jedoche einen Nachteil, wir messen oft einen Konstanten Wert, die Lichtgeschwindigkeit z.B. ist konstant aber diese Datenanalyse gibt uns die idee dass sie alle Fluktuiren anstatt, wie unsere moderen Physik kentnisse uns sage, konstante, präzise werte haben.
+Bei Bayes gibt es dieses Fehler weniger, wir betrachten wass wir nicht wissen über unsere Daten, und daher gibt es dieses Fehler nicht.
+
 \hypertarget{Normalverteilung}{\subsection*{Normalverteilung}}
 Wenn wir Zuruck zum Histogramm gehen dann ist die Funktion die diese Folgt am aller meistens eine Normalverteilung. Wenn wir viele Messungen mit einen Zufälligen Messfehler Betrachten, wird dieser Histogramm eine Normalverteilung folgen.
 Die Definition dieser Normalverteilung ist:
