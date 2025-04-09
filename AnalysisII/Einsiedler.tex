@@ -2,6 +2,8 @@
 \title{Analysis II Einsiedler Version}
 \author{Benjamin Dropmann}
 \usepackage{geometry}
+\usepackage{tikzit}
+\input{AnalysisStyle.tikzstyles}
 \usepackage{xcolor}
 \usepackage{amssymb}
 \usepackage{amsfonts}
@@ -117,5 +119,30 @@ Wenn dieses Lemma gilt sagt man das es Relativ offen ist.
 \lemma Seien $A,O\subseteq \mathbb{R}$ nichtleer und nach oben beschränkt.\begin{itemize}
   \item{Falls $A$ abgeschlossen dann gilt $sup(A)\in A$}
   \item{Falls $O$ offen ist dann gilt $sup(O)\not\in O$}
-  \end{itemize}
+\end{itemize}
+\definition{Innere Punkte} Sei $X$ ein metrischer Raum und $B\subseteq X$ 
+\begin{multicols}{2}
+\begin{itemize}
+  \item[\textit{i.}]{Wir sagen $x\in B$ ist eine Inneres Punkt falls es ein $\varepsilon > 0$ gibt mit $B_\varepsilon(x)\subseteq B$. }
+  \item[\textit{ii.}]{Dass Innere von B ist definiert durch $B^\circ=\left\lbrace x|\exists \varepsilon > 0, B_\varepsilon(x)\subseteq B\right\rbrace$ dies ist die grösste Offene Menge die immer noch in $B$ platz hat.}
+  \item[\textit{iii.}]{Wir Sagen $x\in X$ ist ein Randpunkt von $B$ falls $\forall \varepsilon > 0$ gilt $B_\varepsilon(x)\cap B\neq\emptyset\neq B_\varepsilon(x)\cap X\backslash B$ }
+  \item[\textit{iv.}]{Wir definieren den Rand durch $\partial B=\left\lbrace x\in X|x\text{ ist ein Randpunkt}\right\rbrace$}
+  \item[\textit{v.}]{Der Abschluss ist $\overline{ B}\cup \partial B=\left\lbrace x\in X|\forall \varepsilon >0:\smspc B_\varepsilon(x)\cap B\neq\emptyset\right\rbrace$ }
+\end{itemize}
+\vfill\null\columnbreak\begin{center}
+\scalebox{2}{\tikzfig{mengenAnteile}}
+\end{center}
+\end{multicols}
+\definition{Häufungspunkte} Sei $X$ ein Metrischer Raum, sei $B\subseteq X$ eine Teilmenge von $X$, wir sagen $x_0\in X$ ist ein Häufungspunkt der Menge $B$ Falls $\forall \varepsilon >0$ $\exists x\in B_\varepsilon(x)\cup B\backslash \lbrace x_0\rbrace$
+Für eine Folge $(z_n)$ ist $x_0$ ein Häufungspunkt falls $\forall \varepsilon >0$ und $N\in\mathbb{N}$ $\exists n>N$ so dass $d(z_n,x_0)<\varepsilon$
+\definition{Dichte Mengen}
+Eine Menge $B\subset X$ heisst dicht falls $\forall x_0\in X$ $\forall \varepsilon >0$ $\exists x\in B$ mit $d(x,x_0)<0$ Die menge ist also dicht wenn der Abschluss der Ganze raum ist, oder wenn $B\cup H=X$ wobei $H$ die häufungspunkte sind.
+\beispiel{Dichte Mengen}
+\begin{itemize}
+  \item[\textit{i.}]{$\left\lbrace a+b:\smspc a,b\in\mathbb{Q}\right\rbrace$ ist dicht in $\mathbb{C}$}
+  \item[\textit{ii.}]{$\mathbb{Q}^n\subset\mathbb{R}^n$ ist dicht.}
+\end{itemize}
+\definition{Abgeschloffene Mengen}Sei $X$ ein Metrischer Raum, Eine Menge $B\subset X$ heisst abgeschloffen (clopen) falls die Menge Abgeschlossen und Offen in $X$ ist.
+Der Metrische Raum $X$ heisst zusammenhängend falls $\lbrace\rbrace$ und $X$
+die einzigen Abgeschloffene Mengen von $X$ sind.
 \end{document}
