@@ -91,4 +91,9 @@ Die unendlich norm hier ist definiert wie $\max_{[a,b]}(f_n-f)$ Also gilt $\fora
   \item{Supremum norm: $||f||_\infty=max_{x\in[a,b]}|f(x)$}
 \end{itemize}
 Analog zu jeder Norm, gibt es auch die dazugehörige Metrik.
+\subsection{Topologische grundbegriffe}
+\definition{} Sei $(X,d)$ ein Metrischer Raum. Eine Teilmenge $o\subset X$ heisst offen falls gilt: \[\forall x_0\in o\smspc \exists \varepsilon >0\text{ so dass } B_\varepsilon \subset o\]Eine Teilmenge $A\subseteq X$ heisst abgeschlossen falls $X\backslash A$ offen ist.
+\beispiel{} Der Offene Ball ist wirklich offen:Sei ein Offenes Ball $B_r(x_0)\subseteq X$ dann gilt $\forall x\in B_r(x_0)$ $d(x,x_0)<r\longrightarrow \varepsilon =r-d(x,x_0)$ und dann ist $B_\varepsilon(x)\subseteq B_r(x_0)$ wass die vorherigfe definition anpasst.
+\beispiel{} $\lbrace x_0\rbrace\subseteq X$ ist eine Abgeschlossene Menge: Wir mussen also zeigen dass $O=X\backslash \lbrace x_0 \rbrace$ offen ist. Sei $x\in O$ und $\varepsilon = d(x,x_0)>0$ dann gilt $B_\varepsilon(x)\subseteq O$
+\lemma{} Sei $X$ eine Metrischer Ruam. \begin{itemize}\item{Jeder Endliche Schnitt von offenen Mengen ist offen.}\item{Jede Beliebige vereinigung von Offenen Mengen ist Offen und} \item{Jede Endliche Vereinigung von abgeschlossenen Mengen ist abgeschlossen.}\item{Jeder Belibieger Durchnitt von abgeschlossenen Mengen ist abgeschlossen.}\end{itemize}
 \end{document}
