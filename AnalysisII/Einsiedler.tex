@@ -96,4 +96,26 @@ Analog zu jeder Norm, gibt es auch die dazugehörige Metrik.
 \beispiel{} Der Offene Ball ist wirklich offen:Sei ein Offenes Ball $B_r(x_0)\subseteq X$ dann gilt $\forall x\in B_r(x_0)$ $d(x,x_0)<r\longrightarrow \varepsilon =r-d(x,x_0)$ und dann ist $B_\varepsilon(x)\subseteq B_r(x_0)$ wass die vorherigfe definition anpasst.
 \beispiel{} $\lbrace x_0\rbrace\subseteq X$ ist eine Abgeschlossene Menge: Wir mussen also zeigen dass $O=X\backslash \lbrace x_0 \rbrace$ offen ist. Sei $x\in O$ und $\varepsilon = d(x,x_0)>0$ dann gilt $B_\varepsilon(x)\subseteq O$
 \lemma{} Sei $X$ eine Metrischer Ruam. \begin{itemize}\item{Jeder Endliche Schnitt von offenen Mengen ist offen.}\item{Jede Beliebige vereinigung von Offenen Mengen ist Offen und} \item{Jede Endliche Vereinigung von abgeschlossenen Mengen ist abgeschlossen.}\item{Jeder Belibieger Durchnitt von abgeschlossenen Mengen ist abgeschlossen.}\end{itemize}
+\lemma{} Sei $X$ ein Metrischer Raum. Eine Teilmenge $O\in X$ ist Offen genau dann wenn fur jede Konvergente Folge $(x_n)\in X$ mit grenzwert $\lim_n{\rightarrow \infty} x_n\in O$  auch gilt dass fur alle bis auf endlich viele $n$ wir $x_n\in O$ haben.
+\beweis Angenommen wir haben $O\subseteq X$ eine Offene Teilmenge und $x_n$ in $X$ mit $\lim_{n\rightarrow \infty}x_n=z\in O$ Dann $\exists \varepsilon >0$ mit $B_\varepsilon (z)\subseteq O$. Wegen $lim_{n\rightarrow \infty}x_n=z$ gibt es ein $N$ mit $x_n\in V_\varepsilon(z)\subseteq O$ $\forall n>N$.\newline
+Angenommen, $O\subseteq X$ ist nicht offen, daher gilt\[\exists z\in O\text{ so dass } \forall \varepsilon>0\smspc B_\varepsilon (z)\not\subseteq O\] Wir setzen $\varepsilon=\frac{1}{n}$ und finden ein $x_n$ mit $x_n\in B_{\frac{1}{n}}(z)\backslash O$ es gilt $\lim_{n\rightarrow \infty} x_n=z\in O$ doch $x_n\not\in O\smspc \forall n\in \mathbb{N}_0$
+\lemma{} Eine Teilmenge $A\subseteq X$ ist abgeschlossen genau dann wenn fur jede Folge $x_n$ in A mit $\lim_{n\rightarrow\infty}x_n\in X$ auch $\lim_{n\rightarrow \infty}n\in A$ gilt.
+\beweis Wir nehmen an dass $A$ abgeschlossen ist. mit $x_n\in A$ fur $n\in \mathbb{N}$ und $\lim_{n\rightarrow\infty}x_n\in X$ Falls der Grenzwert $\lim_{n\rightarrow\infty}x_n\in X\backslash A$ dann würde aus dem ersten Teil folgen dass $x_n\in X\backslash A$ fur die aller meisten $n$. Doch wie in den ersten Teil des beweises davor, kann dies nicht gelten, also \[\Longrightarrow \lim_{n\rightarrow\infty}x_n\in A\]
+\newline Falls aber $A$ nicht abgeschlossen ist so ist $O=X\backslash A$ nicht offen und wir können eine Folge $x_n\in A$ finden mit $\lim_{n\rightarrow\infty}x_n=z\in X\backslash A$. Der beweis ist mir nicht klar... $\approx 1$h 23.02
+\bemerkung{} Sei $X$ ein Metrischer Raum und $Y\subseteq X$ eine Teilmenge. Dann ist auch $Y$ ein Metrischer Raum. Wir können die metrik $d:X\times X\rightarrow \mathbb{R}$ auf $d:Y\times Y\rightarrow \mathbb{R}$ einschränken, dann kann man von diesen $Y$ offene und abgeschlossen Mengen definieren.
+\beispiel{} Sei $X=\mathbb{R}\supseteq Y=[-1,1]$ Wir können dann offene Bälle in $Y$ betrachten: $B^Y_1(1)=(0,1]\subset Y$ offen
+\lemma{} Sei $X\supseteq Y$ wie vorhin, dann ist eine Teilmenge $O_Y\subseteq Y$ genau dann offen genau dann wenn es eine offene Teilmenge $O_X\subseteq X$ gibt mit $O_Y=O_X\cap Y$. Die gleiche Aussage gilt analog für abgeschlossene Mengen.
+\beweis Angenommen $O_X\subseteq X$ ist offen. Wir definieren dann $O_Y=Y\cap O_X$ und zeigen dass $O_Y$ offen in $Y$ ist. Sei $y\in O_Y$ dann gibt es ein $\varepsilon >0$ mit $B_\varepsilon^X(y)\subseteq O_X$ und es gilt also
+\[\Longrightarrow B_\varepsilon^Y(y)=B_\varepsilon^X(y)\cap Y\subseteq O_X\cap Y=O_Y\]
+Der Zweite Teil ist dass wir die Offene Menge in $X$ bilden müssen. $O_Y\subseteq Y$ offen. $\forall Y\in O_Y$ $\exists \varepsilon_y$ mit $B_{\varepsilon_y}^Y(y)\subseteq O_Y$ da $O_Y$ von annahme offen in $Y$ ist. Wir definieren jetzt \[O_X=\bigcup_{y\in O_Y}B_{\varepsilon_y}^X(y)\]
+Dies ist Offen in $X$. Behauptung, $O_Y=Y\cap O_X$ dann muss ich die Zwei richtungen dieser gleichung zeigen.
+\begin{itemize}
+  \item[\textit{i.}]{Sei $y\in O_Y$ dann gilt dass $y\in B_{\varepsilon_y}^Y(y)\subseteq O_X$ (klar da $y$ der Zentrum vom Ball $B_{\varepsilon_y}^X(y)$ ist) was die richtung $\subseteq$ beweist}
+  \item[\textit{ii.}]{Sei umgekehrt $z\in Y\cap O_X$ also existiert ein $y\in O_Y$ mit $z\in B_{\varepsilon_y}^X(y)$ da so mein $O_X$ definiert ist. Aber mein $z$ ist ja auch in $Y$ und ich kann auch $z\in B_{varepsilon_y}^Y(y)\subseteq O_Y$ was dann die richtung $\supseteq$ beweist.}
+\end{itemize}
+Wenn dieses Lemma gilt sagt man das es Relativ offen ist.
+\lemma Seien $A,O\subseteq \mathbb{R}$ nichtleer und nach oben beschränkt.\begin{itemize}
+  \item{Falls $A$ abgeschlossen dann gilt $sup(A)\in A$}
+  \item{Falls $O$ offen ist dann gilt $sup(O)\not\in O$}
+  \end{itemize}
 \end{document}
