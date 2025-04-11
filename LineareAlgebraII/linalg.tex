@@ -8,6 +8,7 @@
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{amsmath}
+\usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{titlesec}
 \titlespacing*{\subsubsection}{0pt}{1.2ex}{.1ex plus .2ex minus .2ex}
@@ -550,4 +551,62 @@ $v=\sum_{i=1}^n<v,e_i>e_i$ Dann ist $\varphi(v)=\sum_{i=1}^n<v,e_i>\varphi(e_i)$
 Jetzt bleibt noch zu zeigen dass $u$ eindeutig ist. Wir nehmen also an dass $\varphi_u=\varphi_u$ dann gilt also $<w,v>=<u,w>$ $\forall v\in V$ Und wir finden dass $<v,u-w>=0$ $\forall v\in V\Rightarrow w-u=0\Rightarrow w=u$
 \satz{13.8.6} Es sei $(V,<\cdot,\cdot>)$ ein IP-Raum über $K$ mit dimension $n$ und es sei $U\subseteq V$ dann ist $\Phi(U^\perp)=$Annilhator von $V$ (Annilhator ist dei Menge aller $\lbrace \gamma\in V^*|U\in ker(\gamma)\rbrace$)
 \beweis $w\in U^\perp$ heisst dass $<u,v>=0$ $\forall v\in U$ Was eigentlich die definition des Annilhators entspricht
+\definition{Erinnerung} Seien $V,W$ vektorräume und $T:V\rightarrow W$ dann ist die Duale abbildung $T^*:W^*\rightarrow V^*$ wobei $l\rightarrow l\circ T$
+Jetzt wollen wir diese Duale Abbildung mit dem rieszschen Abbildunngssatz zusammenhängen.
+\bemerkung{} Seie $(V\cdot,\cdot>_v)$, $(W,<\cdot,\cdot>)$ IP Räume und $T:V\rightarrow W$ linear. Es sei $\varphi_w\in W^*$ daher ist $\varphi_w(w')=<w',w>_W$ Wenn wir also $T^*(\varphi_w)\in V^*$ dann ist dies analog zu $T^*(\varphi_w)(v)=(\varphi_w\circ T)(v)=<T(v),w>_w\cdot$
+Der Rieszche Darstellungssatz sagt doch dass $\exists v'\in V$ so dass $T^*(\varphi_w)(v)=<v,v')_v\Longrightarrow <T(v),w>=<v,v'>_v$ wobei $v'$ von $w$ abhängt. Dass heisst wir ordnen Jedem $w\in W$ ein Element $v'\in V$ zu. Dies ist die Adjungierte Abbildung, man nennt $v'=T^*(w)$
+\subsection*{13.9 Die adjungierte Abbildung}
+%TODO Adjungierte Matrix und Dualräume verstehen.
+ Seien $(V,<\cdot,\cdot>_v)$ und $(W,<\cdot,\cdot>_w)$ IP Räume über $K$
+\definition{13.9.1} Sei $T:V\rightarrow W$ linear, die adjungierte Abbildung $T^*$ ist die Abbildung $T^*:W\rightarrow V$ so dass $<T(v),w>_w=<v,T^*(w)>_v$ wobei $w\in W$ und $v\in V$
+\bemerkung{13.9.2} Es ist nicht (noch nicht) klar das $T^*$ existiert. 
+\satz{13.9.3} $T^*$ ist Wohldefiniert (existiert und eindeutig) und linear.
+\beweis Sei $w\in W$ und wir betrachten dann $\lambda_w\in V^*$ gegeben durch $\lambda_w(v)=<T(v),w>$ dann mit den Rieszschen Abbildungssatz: $\exists ! v'\in V$ so dass $\lambda_w(v)=<v,v'>_v\Leftrightarrow <T(v),w>_w=<v,v'>$. 
+Wir definieren jetzt $T^*(w)=v'$, dann gilt per definition dass $<T(v),w)>_w=<v,T^*(w)>_v$ Dies gibt eine Abbildung $T^*:W\rightarrow V$ mit der gerade definierte Eigenschaft.
+\behauptung{} $T^*$ ist linear
+\beweis Zu zeigen ist dass
+Wir müssen zuerst $T^*(w_1+w_2)=T^*(w_1)+T^*(w_2)$ zeigen. Diese aussage ist analog zu $\Leftrightarrow <v,T^*(w_1+w_2)>=<v,T^*(w_1)+T^*(w_2)>_v$
+aber \[<v,T^*(w_1)+T^*(w_2)>= <T(v),w_1+w_2>=<T(v),w_1>+<T(v),w_2>=<v,T^*(w_1)>+<v,T^*(w_2)>=<v,T^*(w_1,w_2)>\] Was dies beweist\newline
+Dann muss man Zeigen dass $T^*(\alpha w)=\alpha T^*(w)$ Dies ist äquivalent zu $<v,T^*(\alpha w)>=<T(v),\alpha w>=\overline{\alpha}<T(v),w>=<v,\alpha T^*(w)>$ was dies auch beweist
+\bemerkung{13.9.4}\begin{itemize}
+  \item[\textit{i.}]{$id_v:V\rightarrow V$ also ist $id_v=id^*_v$}
+  \item[\textit{ii.}]{Sei $T:V\rightarrow V$ und seine Adjungierte $T:W\rightarrow V$. Dann ist $(T^*)^*:V\rightarrow W=T$\newline
+    \beweis Wir müssen nur die Charakteristische Eigenschaft prüfen: \[<w,T(v)>_w =<T^*(w),v>_v=<w,(T^*)^*(v)>_w\Longrightarrow (T^*)^*=T\]}
+\end{itemize}
+\satz{13.9.6} Es sei $T^*_\text{dual}:W^*\rightarrow V^*$ die duale Abbildung. Dann kommutiert folgendes diagramm:
+\newline\begin{center}
+\scalebox{1.4}{$\begin{matrix} & W & \overset{T^*}{\rightarrow}&V & \\ \Phi_w &\downarrow&\circlearrowleft&\downarrow&\Phi_v\\ & W^*&\overset{T^*_\text{dual}}{\rightarrow}&V^*&\end{matrix}$}
+\end{center}
+Daher ist $T^*=\Phi_v^{-1}\circ T^*_\text{dual}\circ\Phi_w$
+%TODO 09.04. 1:00:54
+\satz{13.9.7} Sei $B$ und $C$ orthonormale Basen von $V$ und $W$ Dann ist $A=[T]^B_C=a_{ij}$ und $a_{ji}=<T(v_i),w_j>$
+\satz{13.10.2} Es gilt dass $[T^*]^C_B=([T]^B_C)^*$ die adjungierte Abbildungsmatrix ist die Adjungierte Matrix der Abbildung:
+\beweis $A=(a_{ij})=[T]^B_C$ und $B=(b_{ij})=[T^*]^C_B$ zu zeigen ist dass $b_{ij}=\overline{a_{ji}}$ \[b_{ij}=<T^*(w_j),v_i>=\overline{<T(v_i),w_j>}=\overline{a_{ji}}\]
+\korollar{13.10.3} Sei $A\in M_{n\times m}(K)$ Betrachte $K^m$ und $K^n$ als IP Räume mit Standard IP. Dann gilt dass $(T_A)^*=T_{A^*}$
+\section{Spektraltheorie}\subsection{Normale Endomorphismen}\definition{14.1.1} Sei $(V,<\cdot,\cdot)$ ein IP Raum über $K$ entweder $\mathbb{R}$ oder $\mathbb{C}$ und sei $T:V\rightarrow V$ linear. Dann ist $T$ orthogonal diagonalisierbar wenn $V$ eine orthogonale Basis von Eigenvektoren hat. \beispiel{14.1.2}\begin{itemize}\item[\textit{i.}]{Sei $V=\mathbb{R}^2$ mit Standard Innerem Produkt und\[A=\begin{pmatrix}3&1&1&3\end{pmatrix}\Longrightarrow\text{Eigenwerte sind } \mathbb{E}=\left\lbrace2,4\right\rbrace\text{, und eigenvektoren }\mathbb{V}=\left<\begin{pmatrix}1\\-1\end{pmatrix},\begin{pmatrix}1\\1\end{pmatrix}\right>\] Also ist diese Abbildung orthogonal diagonalisierbar}\item[\textit{ii.}]{Sei $V=\mathbb{R}^2$ und \[B=\begin{pmatrix}1&-3\\3&1\end{pmatrix}\] Dann sind die Eigenvektoren $\lambda_1,2=1\pm3i$ und die Eigenvektoren $w_1=\begin{pmatrix}1\\i\end{pmatrix}$ und $w_2=\begin{pmatrix}1\\-i\end{pmatrix}$}\item{Sei in $\mathbb{R}^2$ und $C=\begin{pmatrix}1&-2\\1&4\end{pmatrix}$ diese matrix ist diagonalisierbar aber nicht orthogonal diagonalisierbar}\end{itemize}\lemma{14.1.3} Wenn $T$ orthogonal diagonalisierbar ist dann gilt dass $T\circ T^*=T^*\circ T$ \beweis Sei $B$ eine orthonormale Basis von Eigenvektoren, dann ist $[T]^B_B$ diagonal, und daher auch die adjungierte, und daraus folgt dass die Diagonale Matrizen kommutieren.
+\definition{14.1.4} Sei $(V,<\cdot,\cdot>)$ ein IP-Raum, dann ist $T:V\rightarrow V$ normal falls $T\circ T^*=T^*\circ T$ und die Matrix $A\in M_{n\times n}(K)$ ist normal wenn $A\cdot A^*=A^*\cdot A$ 
+\bemerkung{14.1.5} Wenn $A$ normal ist, dann ist $T_A:K^n\rightarrow K^n$ normal bezüglich den Standard IP
+\lemma{14.1.6} Wenn $T:V\rightarrow V$ normal ist dann ist $[T]^B_B$ normal wenn $B$ eine Orthonormale Basis ist.
+\bemerkung{14.1.7} \begin{itemize}
+  \item[\textit{i.}]{Diagonale Matrizen sind Normal}
+  \item[\textit{ii.}]{Unitäre und orthonormale Matrizen sind normal, da $U^{-1}=U^*$}
+  \item[\textit{iii.}]{Hermitesche Matrizen sind Normal}
+  \item[\textit{iv.}]{Wenn $A$ und $B$ normal sind dann ist $A\cdot B$ nicht unbedingt Normal}
+  \item[\textit{v.}]{Wenn $A,B$ Normal und kommutieren dann ist ihr produkt Normal}
+\end{itemize}
+Ist jetzt aber jede Normale Matrix orthogonal diagonaliserbar
+\beispiel{14.1.9}
+ Sei $A=\begin{pmatrix}2i&i-1\\i+1&1\end{pmatrix}$ dann ist $A^*=\begin{pmatrix}2i&1-i\\-1-i&-i\end{pmatrix}$ mit eigenwerten von $A$ $\lambda_1=0$ und $\lambda_2=3i$ eigenvektoren $v_1=\begin{pmatrix}1-i\\2i\end{pmatrix}$ und $v_2=\begin{pmatrix}1+i\\-1\end{pmatrix}$ Die eigenwerte von $A^*$ sind $\mu_1=\overline{\lambda_1}=0$ und $\mu_2=\overline{3i}=-3i$, die eigenvektoren sind gleich und bilden eine Orthonormale Basis.
+\lemma{14.1.10} Sei $(V,<\cdot,\cdot>)$ ein IP-Raum mit $T:V\rightarrow V$ linear. Dann gilt\begin{itemize}
+  \item[\textit{i.}]{$||T(v)||=||T^*(v)||$}
+  \item[\textit{ii.}]{$\forall \lambda \in K$ ist $T-\lambda id_v$ normal}
+  \item[\textit{iii.}]{Wenn $v$ ein Eigenvektor von $T$ ist mit $T(v)=\lambda v$ dann ist $v$ auch ein Eigenvektor von $T^*$ mit $T^*(v)=\overline{\lambda}v$}
+  \item[\textit{iv.}]{Seien $v_1$ und $v_2$ eigenvektoren von $T$ mit verschieden Eigenwerte, dann gilt $v_1\perp v_2$ }
+\end{itemize}
+\beweis\begin{itemize}
+  \item[\textit{i.}]{Wir nehmen $||T(v)||^2=<T(v),T(v)>=<v,T^*(T(v))>=\cdots=<T^*(v),T(v)>=||T^*(v)||$}
+  \item[\texit{ii.}]{übung}
+  \item[\textit{iii.}]{Sei $v$ ein Eigenvektor von $T$ dann gilt dass $T(v)=\lambda v\Leftrightarrow(T-\lambda id_v)(v)=0_v$ Zu zeigen ist jetzt dass $(T^*-\overline{\lambda}\cdot id_v)(v)=0_v$ Was das gleiche ist zu sagen $||(T^*-\overline{\lambda}id_v)(v)||=0$ und wenn $T-\lambda id_v$ normal ist dann folgt aus \textit{ii.} dass $||(T-\lambda\cdot id_v)^*(v)||=0=||T^*-\overline{\lambda}id_v||=0$}
+  \item[\textit{iv.}]{ Sei $\lambda_{1,2}$ Eigenwerte von $v_1$ nud $v_2$ dann ist \[\lambda_1<v_1,v_2>=<\lambda_1 v_1,v_2>=<T(v_1),v_2>=v_1,T^*(v_2)>=<v_1,\overline{\lambda}v_2>=\lambda_2<v_1,v_2>\] und daher ist $\lambda_1=\lambda_2$}
+\end{itemize}
 \end{document}
