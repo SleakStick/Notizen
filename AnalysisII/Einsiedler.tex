@@ -168,5 +168,20 @@ wir setzten $\delta=\frac{1}{n}$ und finden eine Folge $x_n$ in $X$ mit $d(x_n,x
 \end{itemize}
 \textbf{Beweis} Angenommen, $f$ ist Stetig, in jedem punkt ist $f$ $\varepsilon$-$\delta$ stetig. Sei $O\subseteq Y$ offen, wir wollen zeigen dass $f^{-1}(O)\subseteq X$ dann auch offen ist. Sei also $x_0\in f^{-1}(O)$ dann gilt $f(x_0)\in O$ Dann gibt es ein $\varepsilon > 0$ mit $B_\varepsilon^Y(f(x_0))\subseteq O$ und daher $\exists \delta>0$ os dass $d(x,x_0)<\delta\Longrightarrow d(f(x),f(x_0))<\varepsilon$ also $f(x)\in O$ und $x\in f^{-1}(O)$ also gilt $B_\delta^X(x_0)\subseteq f^{-1}(O)$
 $f^{-1}(O)$ ist also eine Offene Teilmenge von $X$.
-\definition{} Eine Funktion $f:X\rightarrow Y$ heisst gleichmässig stetig falls $\foralla \varepsilon >0$ $\exists \delta > 0$ so dass $\forall x_0,x_1\in X$ gilt $d(x_0,x_1)<\delta\Rightarrow d(f(x_0),f(x_1))<\varepsilon$
+\definition{} Eine Funktion $f:X\rightarrow Y$ heisst gleichmässig stetig falls \[\forall \varepsilon >0\smspc\exists \delta > 0\text{ so dass }\forall x_0,x_1\in X\mspc d(x_0,x_1)<\delta\Rightarrow d(f(x_0),f(x_1))<\varepsilon\]
+\definition{Lipschitz Stetig} Eine funktion $f$ ist Lipschitz Stetig falls es eine konstante $L\ge 0$ gibt so dass \[\exists L\ge 0\smspc d(f(x_0),f(x_1))\le Ld(x_0,x_1)\mspc \forall x_0,x_1\in X\]
+\definition{} Seien $X,Y$ metrische Räume, $x_0$ ein Häufungspunkt von $X$ und $f:X\backslash\lbrace x_0\rbrace\rightarrow Y$ eine funktion. Wir sagen $f$ Strebt gegen $y_0\in >$ für $x\rightarrow x_0$ ($\lim_{x\rightarrow x_0}f(x)=y_0$) falls \[\forall  \varepsilon>0\smspc\exists\delta >0\smspc\forall x\in X\backslash \lbrace x_0\rbrace\smspc d(x,x_0)<\delta\Rightarrow d(f(x),y_0)<\varepsilon\]
+\lemma{Afwahrung der Stetigkeit}
+Stetig sind folgende Funktionen
+\begin{multicols}{2}
+\begin{itemize}
+  \item{$+:\mathbb{C}\rightarrow\mathbb{C}$}
+  \item{$\cdot:\mathbb{C}\rightarrow\mathbb{C}$}
+  \item{$(\cdot)^{-1}:\mathbb{C}\rightarrow\mathbb{C}$}
+  \item{Polynome in $\mathbb{C}[t]$ }
+  \item{$\exp(x)=e^x$}
+  \item{$\sqrt{\cdot}$}
+  \item{Alle Trigonometrische Funktionen}
+\end{itemize}
+\end{multicols}
 \end{document}
