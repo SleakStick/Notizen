@@ -175,13 +175,20 @@ $f^{-1}(O)$ ist also eine Offene Teilmenge von $X$.
 Stetig sind folgende Funktionen
 \begin{multicols}{2}
 \begin{itemize}
-  \item{$+:\mathbb{C}\rightarrow\mathbb{C}$}
-  \item{$\cdot:\mathbb{C}\rightarrow\mathbb{C}$}
-  \item{$(\cdot)^{-1}:\mathbb{C}\rightarrow\mathbb{C}$}
+  \item{$+:\mathbb{C}^2\rightarrow\mathbb{C}$}
+  \item{$\cdot:\mathbb{C}^2\rightarrow\mathbb{C}$}
+  \item{$(\cdot)^{-1}:\mathbb{C}^2\rightarrow\mathbb{C}$}
   \item{Polynome in $\mathbb{C}[t]$ }
   \item{$\exp(x)=e^x$}
   \item{$\sqrt{\cdot}$}
   \item{Alle Trigonometrische Funktionen}
 \end{itemize}
 \end{multicols}
+\begin{itemize}
+  \item{\textit{i.} Seien $X,Y,Z$ metrische Räume, Falls $f:X\rightarrow Y$ und $g:Y\rightarrow Z$ stetig sind, dann ist auch $f\circ g:\rightarrow Z$ Stetig}
+  \item{\textit{ii.} Eine Funktion $f:X\rightarrow \mathbb{R}^m$ ist stetig genau dann wenn $\pi_j\circ f$ wobei $\pi_j$ die Projektionsfunktion ist, stetig ist $\forall j<n\in \mathbb{N}$}
+\end{itemize}
+\textbf{Beweis} Sei $f:X\rightarrow Y$ und $f:Y\rightarrow Z$ stetig, Für eine Offene Teilmenge $O\subseteq Z$ gilt dann dass $g^{-1}(O)\subseteq Y$ offen ist und dann $f^{-1}(g^{-1}(O))\subseteq X$ ist offen. Doch die Charakterisierung $(f\circ g)(O)\subseteq X$ ist offen und somit ist die charakteriesierung de rStetigkeit in der vorletzen bemerkung erfüllt.
+\newline Sei nun $f:X\rightarrow \mathbb{R}^m$ eine Funktion, falls $f$ stetig ista, dann sind auch $\pi_j\circ f:X\rightarrow \mathbb{R}$ für jedes $j\in \left\lbrace 1,\cdots,m\right\rbrace$
+
 \end{document}
