@@ -142,7 +142,30 @@ Eine Menge $B\subset X$ heisst dicht falls $\forall x_0\in X$ $\forall \varepsil
   \item[\textit{i.}]{$\left\lbrace a+b:\smspc a,b\in\mathbb{Q}\right\rbrace$ ist dicht in $\mathbb{C}$}
   \item[\textit{ii.}]{$\mathbb{Q}^n\subset\mathbb{R}^n$ ist dicht.}
 \end{itemize}
-\definition{Abgeschloffene Mengen}Sei $X$ ein Metrischer Raum, Eine Menge $B\subset X$ heisst abgeschloffen (clopen) falls die Menge Abgeschlossen und Offen in $X$ ist.
+\definition{Zusammenhängende Mengen}Sei $X$ ein Metrischer Raum, Eine Menge $B\subset X$ heisst abgeschloffen (clopen) falls die Menge Abgeschlossen und Offen in $X$ ist.
 Der Metrische Raum $X$ heisst zusammenhängend falls $\lbrace\rbrace$ und $X$
 die einzigen Abgeschloffene Mengen von $X$ sind.
+\bemerkung{} $X\in\mathbb{R}$ ist genau dann zusammenhängend als eigenstädinger Metrischer Raum, wenn $X$ ein Intervall ist. Diese Proposition ist sehr wichtig, da sehr viele sachen in Analysis von Intervallen abhängen.
+\beweis Wir nehmen zuerst an das $X$ kein Intervall ist, dann $\exists z\in\mathbb{R}\backslash X$ so dass $B_1=(-\infty,z)\cap X\neq \emptyset$ und $B_2=(z,\infty)\cap X\neq\emptyset$ Daraus folgt also dass $B_1$ und $B_2$ abgeschloffen sind, und $X$ ist nicht zusammenhängend. Wir haben gerade zwischen infimum und den supremum eine zahl gefunden, die nicht in der Menge drinn ist (es muss sie geben sonst ist es ein Intervall. Und da 
+$B_1$ und $B_2$ komplemente voneinander sind, und beide offen sind, dann sind sie abgeschloffene Menge in $X$. \newline
+Falls die Menge $X$ doch ein Intervall ist, und $B\subset X$ ist eine abgeschloffene Teilmenge, mit $B\neq\emptyset$ und $B\neq X$ Da $B$ nicht lehr ist $\exists a\in B$ und $\exists b\in X\backslash B$ wenn $a<b$ nicht gilt, dann wähle ich ein neues $B$ bis dies gilt. Da $B$ offen ist, gilt $\exists \varepsilon >0$ so dass $B_\varepsilon^X(a)\subseteq B$ Daher gilt $[a,a+\varepsilon)\subseteq (a-\varepsilon,a+\varepsilon)\cap X$
+Wir definieren also $s=\sup(B\cap[a,b])=\sup(B\cup(B\cup(a,b))$ daher ist das $B=A\cup X$ und die Menge $A$ abgeschlossen in $\mathbb{R}$ ist. Daher sind $B\cap[a,b]$ und $B\cap (a,b)$ auch noch abgeschlossen. und wir finden dass $s\in B\cap [a,b]$ weil es offen ist, und $s\not\in B\cap(a,b)$ da es Offen ist, was ein widerspruch ist.
+\lemma{} Sei $X$ ine Metrischer Raum, und $y_1,y_2\subseteq X$ zwei zusammenhängende Teilmengen, falls $y_1\cap y_2\neq\emptyset$ dann ist $y_1\cup y_2$ zusammenhängend.
+\beweis Angenommen $B\subseteq y_1\cup y_2$ ist eine relativ abgeschloffene Teilmenge, sei $z\in y_1\cap y_2$. Wir nehmen an dass $B\neq \emptyset$ und $x_1\in B\cup y_1$ Dann gilt $B\cap y_1$ abgeschloffen ist, da $y_1$ zusammenhängend ist, gilt $v\cap y_1=y_1$, und insbesondere gilt also dass $z\in B$ und dass $B\cap y_2=y_2$ und ist $B=y_1\cup y_2$.
+\subsection*{Stetigkeit}
+\definition{Stetigkeit} Seien $X,Y$ zwei metrische Räume und $f:X\rightarrow Y$ eine Funktion, wir sagen dass $f$ auf $x_0$ $\varepsilon$-$\delta$ stetig ist falls \[\forall \varepsilon >0\smspc\exists \delta > 0\smspc\forall x\in X:d(x,x_0)<\delta\Longrightarrow d(f(x),f(x_0))<\varepsilon\]
+\definition{Folgenstetigkeit} Man sagt dass $f$ Folgenstetig ist falls für jede FOlge $(x_n)\in X$ mit grenzwert $\lim_{n\rightarrow \infty} x_n=x_0$ auch $\lim_{n\rightarrow \infty} f(x_n)=f(x_0)$
+\lemma{} Es gilt $f$ ist in $x_0\in X$ $\varepsilon$-$\delta$ stetig genau dann wenn $f$ in $x_0$ foglenstetig ist.
+\beweis $\Longrightarrow$ angenommen $f$ ist $\varepsilon$-$\delta$ stetig und $x_n$ ist eine Folge mit $\lim_{n\rightarrow\infty}=x_0$. Sei $\varepsilon>0$, dann $\exists\delta >0$ so dass $d(x,x_0)\delta\Rightarrow d(f(x),f(x_0))<\varepsilon$. Da $\lim_{n\rightarrow\infty}x_n=x_0$ ist, gilt $\exists N$ so dass $d(x_n,x_0)<\delta$ $\forall n>N$. Es folgt also dass $d(f(x_n),d(x_0))< \varepsilon$ $\forall n>N$. Da $\varepsilon > 0$ beliebig war, gilt also $\lim_{n\rightarrow\infty}f(x_n)=f(x_0)$ Was dies Richtung beweist\newline
+$\Longleftarrow$ Angenommen $f$ ist in $x_0$ nicht $\varepsilon$-$\delta$ stetig. Dann gilt \[\exists\varepsilon_0 >0\smspc\forall \delta >0\smspc \exists x_\delta \in X\text{ mit } d(x_\delta,x_0)<\delta\text{ aber } d(f(x_\delta)),f(x_0))\ge \varepsilon_0\]
+wir setzten $\delta=\frac{1}{n}$ und finden eine Folge $x_n$ in $X$ mit $d(x_n,x_0)<\frac{1}{n}\rightarrow 0$ und $d(f(x_n),f(x_0))\ge\varepsilon_0$ also $\lim_{n\rightarrow\infty}x_n=x_0$ aber $\lim_{n\rightarrow \infty}f(x_n)\neq f(x_0)$ und daher ist $f$ auch nicht Folgenstetig ist.
+\definition{} $f$ ist stetig falls es in jedem punkt $\varepsilon$-$\delta$ stetig ist.
+\bemerkung{} Seien $X,Y$ metrsiche Räume und $f:X\rightarrow Y$ eine Funktion, äquivalent sind folgende aussagen:
+\begin{itemize}
+  \item[\textit{i.}]{ $f$ ist Stetig}
+  \item[\textit{ii·}]{$f$ ist an jedem Punk folgenstetig}
+  \item[\textit{iii.}]{Das urbild einer Offene Menge ist Offen , $O\subseteq Y$ ist offen, dann ist $f^{-1}(O)\subseteq X$ ist auch offen. (analog für abgeschlossen.)}
+\end{itemize}
+\beweis Angenommen, $f$ ist Stetig, in jedem punkt ist $f$ $\varepsilon$-$\delta$ stetig. Sei $O\subseteq Y$ offen, wir wollen zeigen dass $f^{-1}(O)\subseteq X$ dann auch offen ist. Sei also $x_0\in f^{-1}(O)$ dann gilt $f(x_0)\in O$ Dann gibt es ein $\varepsilon > 0$ mit $B_\varepsilon^Y(f(x_0))\subseteq O$ und daher $\exists \delta>0$ os dass $d(x,x_0)<\delta\Longrightarrow d(f(x),f(x_0))<\varepsilon$ also $f(x)\in O$ und $x\in f^{-1}(O)$ also gilt $B_\delta^X(x_0)\subseteq f^{-1}(O)$
+$f^{-1}(O)$ ist also eine Offene Teilmenge von $X$.
 \end{document}
