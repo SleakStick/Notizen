@@ -530,7 +530,37 @@ Wobei $dt=-\gamma d\tau$ und $\tau$ die Eigenzeit ist.
 wir setzen $\beta\rightarrow0$ und $\gamma\rightarrow 1$:\[\lim_{\beta\rightarrow0}p^\mu=\begin{pmatrix}mc\\m\vec{v}\end{pmatrix}=\begin{pmatrix}\frac{E_0}{c}\\\vec{p}\end{pmatrix}\]
 Am ende finden wir:\[\vec{p}=m\vec{v}\gamma=\frac{m\vec{v}}{\sqrt{1-\beta^2}}\]
 \[E^2-\vec{p}^2\cdot c^2=m^2c^4\]
-\subsubsection*{Ladungsinvarianz}
+\subsubsection*{Kinetische Energie}
+Wir wissen dass \[E_\text{kin}=E_\text{tot}-mc^2=mc^2(\gamma-1)\]
+\subsection*{5.5.4 Kraft und Trägheit}
+Wenn wir einen Massenpunkt mit $v$ fast $c$ und wir beschleunigen es mehr. Es gilt ja $\vec{F}=\dot{\vec{p}}$ und die Geschwindigkeit ist \[\frac{d}{dt}v^2=\frac{d}{dt}(\vec{v}\cdot\vec{v})=\dot{\vec{v}}\cdot\vec{v}+\vec{v}\cdot\dot{\vec{v}}=2(\vec{a}\cdot \vec{v})\]\[\dot{\gamma}=\left(\frac{\vec{a}\vec{v}}{c^2}\right)\gamma^3\]
+Und die kraft kann dann mit der Formel \[\vec{F}=\frac{d}{dt}\left(m\gamma\cdot \vec{v}\right)=m\left(\frac{\vec{a}\cdot\vec{v}}{c^2}\right)\gamma^3+m\gamma\vec{a}\] Und daher muss $\vec{F}$ nicht Parallel zu $\vec{a}$ sein.
+Wir rechnen jetzt den anteil von $\vec{F}$ in $\vec{v}$ richtung: \[\vec{F}\cdot\vec{v}=m\frac{\vec{a}\vec{v}}{c^2}(\vec{v}\cdot\vec{v})=\frac{\vec{F}\cdot\vec{a}}{m\gamma^3}\]
+Und für die Beschleunigung gilt:\[m\gamma \vec{a}=\vec{F}-m\frac{\vec{F}\vec{v}}{m\gamma^3c^2}\gamma^3\vec{v}=\underset{\vec{F}_\parallel}{\underbrace{\vec{F}}}-\underset{\vec{F}_\perp}{\underbrace{\frac{1}{c^2}(\vec{F}\cdot\vec{v})\cdot\vec{v}}}\]
+Also kann man die anteile der Kraft wie Folgt Charakteriesieren:
+\[\vec{F_\parallel}=\frac{1}{c^2}(\vec{F}\cdot\vec{v})\cdot\vec{v}\]
+\[\vec{F_\perp}=\vec{F}-\frac{1}{c^2}(\vec{F}\cdot\vec{v})\cdot\vec{v}\]
+Wenn $\vec{F}\perp\vec{v}$ dann ist $\vec{F}\cdot\vec{v}=0$ und wir Finden dass $m\gamma \vec{a}=\vec{F}$ was analog zur Newton'sche gleichung ist aber mit relativistischen Faktor $\gamma$, was zu erwarten ist, doch der $m\gamma$ ist nicht die Relativistische massenerhöhung im allgemeinen Fall, es gilt nur im Fall $\vec{F}\perp\vec{v}$.
+\newline Im nächsten Schritt sieht man dass es nicht allgemein gilt. Wenn $F\parallel\vec{v}$ dann gilt \[m\gamma \vec{a}=\frac{1}{\vec{v}}(\vec{F}\cdot\vec{v})\cdot\vec{v}-\frac{1}{c^2}(\vec{F}\cdot\vec{v})\cdot\vec{v}=\left(1-\frac{v^2}{c^2}\right)\left(\vec{F}\cdot\vec{v}\right)\cdot\vec{v}=\frac{1}{\gamma^2}(\vec{F\cdot\hat{\vec{v}}})\cdot\hat{\vec{v}}\]
+Also ist \[m\gamma^3\vec{a}=(\vec{F}\cdot\hat{\vec{v}})\cdot\hat{\vec{v}}\]
+\subsection*{5.5.5 Dopplereffekt des lichts}
+Wir haben wie Immer einen $K'$, mit geschwindigkeit $\vec{v}$ in $z$ richtung unterwegs, und einen ruhenden $K$ system. Wir betrachten Photonen, und ihre Viererimpulse (von einer Welle):
+\[p'^\mu=\begin{pmatrix}\frac{E'}{c}\\k'\sin(\vartheta')\\0\\k'\cos(\vartheta')\end{pmatrix}=k'\begin{pmatrix}1\\\sin(\vartheta')\\0\\\cos(\vartheta')\end{pmatrix}\]
+Und dann durch die Lorentztransformationen kriegen wir es in $K$ zuruck:
+\[p^\mu=k\begin{pmatrix}1\\\sin(\vartheta)\\0\\\cos(\vartheta)\end{pmatrix}=\begin{pmatrix}\gamma&0&0&\beta\gamma\\0&1&0&0\\0&0&1&0\\\beta\gamma&0&0&\gamma\end{pmatrix}
+\begin{pmatrix}k'\\k'\sin(\vartheta')\\0\\k'\cos(\vartheta')\end{pmatrix}\]
+und daher ist \[p^\mu=\begin{pmatrix}k' \gamma(1+\beta\cos(\vartheta'))\\k'\sin(\vartheta')\\0\\k'\gamma(\cos(\vartheta')+\beta)\end{pmatrix}\]
+Und da wir den Photon betrachten ist $k\approx E\approx \gamma$ und $E=h\nu$ \[\frac{\nu}{\nu'}=\frac{E}{E'}=\frac{k}{k'}=\gamma(1+\beta\cos(\vartheta'))\]
+\[\cos(\vartheta)=\frac{kz}{k}=\frac{k'\gamma(\cos(\vartheta')+\beta)}{k}=\frac{\cos(\vartheta')+\beta}{1+\beta\cos(\vartheta')}\]
+Und wir finden dass die Frequenzen durch den Dopplereffekt verschoben werden, 
+\[\frac{\nu}{\nu'}=\frac{1}{\gamma(1-\beta\cos(\theta))}\] Wenn wir jetzt sagen dass die Lichtquelle sich direkt auf uns drauf bewegt 
+$\Longrightarrow \vartheta = 0$ und daher ist $\frac{\nu}{\gamma'}=\sqrt{\frac{1+\beta}{1-\beta}}\ge 1$ Also man merkt dass die Frequenz hoch geht, wir sehen eine Höhere frequenz als die Quelle ausgibt, was sin macht da die Quelle in diesem Fall sich auf uns drauf bewegt.
+\newline Wenn die Quelle weg von uns geht, $\vartheta =\frac{\pi}{2}$ und dann ist $\frac{\nu}{\gamma'}=\sqrt{\frac{1-\beta}{1+\beta}}\le 1$ Man kann von der Frequenzverschiebung allso die richtung der Quelle und auch ihre geschwindigkeit feststellen.
+
+
+
+\section*{Bewegt Elektrische Felder.}
+\subsection*{Ladungsinvarianz}
 Die elektrische Ladung $Q$ ist Lorentzinvariant, sie ist unabhängig vom Inertialsystem. Die Form  des Assoziierten Elektrischen Feld mag komisch oder anders sein, die ladung die sie beiträgt bleibt unändert.
 \subsubsection*{Transformation elektrischer Felder}
 Sei ein unendliche ausgedehnter Plattenkondensator. Wenn wir in einem System (ruhend) den Elektrischen Feld beobacthen, dann ist es einfach:\[E=\frac{\rho}{\varepsilon_0}\] durch Gauss definiert, wobei $\rho$ die Ladungsdichte ist.\newline
@@ -560,8 +590,13 @@ $q$ von $E_\perp$\[F_\parallel'=qE_\parallel'=qE_\parallel\]\[F_\perp'=qE_\perp'
 Und aus dem Labor betrachtet sind die Kräfte Lorenztransformiert:
 \[F_\parallel=F_\parallel'=qE_\parallel\]\[F_\perp=\frac{1}{\gamma}F_\perp'=\frac{1}{\gamma}q\gamma E_\perp=qE_\perp\]
 Für beobachter im system $K$ ist diese Kraft, die $E$ auf $q$ ausübt unabhängig ob die Ladung $q$ sich bewegt oder nicht
-\subsubsection{Wechselwirkungen zwischen bewegten ladungen}
+\subsubsection*{Wechselwirkungen zwischen bewegten ladungen}
 Sei ein Kupferdraht mit einen Strom der sich dadurch bewegt, dann ist $\lambda$ die Stromdichte. Die Ladungen sind auf einer Seite des Drahtes positiv und auf der andere seite Negativ. Wenn wir also eine Testladung $q$ im bewegten system $K'$
- %Review second hour of redif
+ %TODO Review second hour of redif
+\subsection*{Recap}
+\subsubsection*{Lorentzkraft} \[\vec{F}=q(\vec{E}+\vec{v}\times\vec{B})\]
+\subsubsection*{Amperesche Gesetz}\[\oint\vec{B}d\vec{s}=\mu_0 I\]
+Wir wissen auch dass die Ladungsdichte nicht Lorentzinvariant ist. Der Elektrische Feld ist auch nicht invariant obwohl die Ladung selber, es ist.\newline
+Zusätslich, wenn eine Ladung ruht, gibt es ein Elektrisches Feld, aber Kein Magnetfeld, doch wenn sie Beschleunigt ist, dann bekommt man zusätslich ein Magnetisches Feld.
 \end{document}
 
