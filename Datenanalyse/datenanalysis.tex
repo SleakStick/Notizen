@@ -48,6 +48,8 @@ Diese PDF hat mehrere Werte die in korrelation damit sind:
 \end{itemize}
 Man kann auch Momente definieren, in dem dass $n$-te moment durch:\[M_m=\int_{-\infty}^\infty x^mf(x)dx\] definiert ist. Wir finden auch dass $M_0=1$ und $M_1=E(x)=\mu$
 Die Momente können uns über die Wölbung und form der PDF sagen.
+\newline Das $m$-te Moment ist, im Fall der Binomialverteilung:\[M_m=\sum_{k=0}^Nk^m\begin{pmatrix}N\\k\end{pmatrix}p^kq^{N-k}\Longrightarrow M_{m+1}=NpM_m+pq\frac{\partial M_m}{\partial p}\]
+
 \subsection*{Frequentistischer Wharscheinlichkeitsbegriff}
 Wenn wir eine Messung als Zufallsbegriff betrachten, dann ist die wahrscheinlichkeit dass ein Ereignis $A$ eintrtt gegeben durch $\frac{k}{n}$ wobei $k$ die anzahl ergebnisse die zu $A$ führen un $n$ die gesamtmenge ergebnisse
 \subsubsection*{Bayessche Datenanalyse}
@@ -64,7 +66,7 @@ Wir haben am anfange $P(B_i)=\frac{1}{3}$ da es $3$ turen gibt. Wenn wir aber me
 
 
 \subsubsection*{Covid Test Beispiel}
-
+%TODO
 
 \subsubsection*{Bayessche vs. Frequentistische Datenanalyse} Wenn wir messungen durchführen, kann man sich entscheiden diese Messungen als zufall sehen, dann kann man eine Statistische und Frequentistische analysis der Daten machen.
 Diese Analyse hat jedoche einen Nachteil, wir messen oft einen Konstanten Wert, die Lichtgeschwindigkeit z.B. ist konstant aber diese Datenanalyse gibt uns die idee dass sie alle Fluktuiren anstatt, wie unsere moderen Physik kentnisse uns sage, konstante, präzise werte haben.
@@ -79,6 +81,9 @@ Wobei $\mu$ der Erwatungswert ist und $\sigma$ die Standardabweichung, diese Wer
 Wenn wir zwei ereignisse $u$ und $d$ mit wahrscheilickeiten $P(u)=p$ und $P(d)=1-p=q$ respektiv haben. Dann kann man, erstens die anzahl der unterschiedlichen Reihenfolgen von $k$ objekten in $n$ plätze definieren durch $n$ "\textit{tief}" $k$\[\begin{pmatrix}n\\k\end{pmatrix}=\frac{n!}{k!(n-k)!}\] z.B. $5$ Studente in $7$ arbeitsplätze haben $\begin{pmatrix}7\\5\end{pmatrix}=21$ unterschiedliche sitzplane.
 Dann kommt Binomialverteilung die die Wahrscheinlichkeit beschreibt dass in $n$ versuchen $k$ mal den ereigniss $u$ mit wahrscheinlichkeit $P(u)=p$ vorkommt:
 \[B(k|p,n)=\begin{pmatrix}n\\k\end{pmatrix}p^k(1-p)^{n-k}\] Hier beschreibt der teil $p^k(1-p)^{n-k}$ die wahrscheinlichkeit von genau eine distribution der Ereignisse.
+\newline Wir können mithilfe von den Momenten finden dass $\mu=M_1=pN$ und $\sigma\sim N$
+\hypertarget{poissonverteilung}{\subsubsection*{Poissonverteilung}}
+
 Die Poissonverteilung ist die Binomiallverteilung für $\lim_{k\rightarrow k}$
 \hypertarget{mittelwertfehler}{\section*{Mittelwertfehler}}
 Wenn wir eine Messung vielmals wiederholen, dann wird die standardabweichung ab einen Punkt nicht mehr viel variieren, doch mit mehr messpunkte, sind wir uns sicherer und sicherer dass unser Mittelwert korrekt ist. Deswegen ist der Fehler des Mittelwerts nicht einfach die Standardabweichung sondern durch:
@@ -108,4 +113,5 @@ Wie man das praktisch macht, man misst für alle frequenzen die Gleichung und da
 \subsubsection*{Gabors limit} Wenn sag ich dass eine fräquenz nicht im Transform auftaucht? Gabors limit besagt dass je langer ein signal ist in der zeit, desto besser kann die präzision der messung vom signal sein: $\sigma_t\cdot\sigma_f\ge\frac{1}{2}$. Wobei $\sigma$ die auflösung der Messung ist.
 Daher limitiert die Messzeit $t_{tot}$ $\sigma_t$. Wenn man den Fouriertransform von einer funktion mit eine auflösung $\sigma_t$, mit eine kleinere auflösung misst, bekommt man nicht mehr information, die zwei werte sind dann auf distanzen kleine als $\sigma_t$ korreliert und bringen nicht neue information.
 Zusätslich ist die Maximale frequenz die ich messen kann ist $f_{max}=\frac{1}{2\Delta t}$ die minimale frequenz lässt sich analog finden aber die negative Fourierwerte haben nicht mehr information als die positive
+
 \end{document}
