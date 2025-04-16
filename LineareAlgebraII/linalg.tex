@@ -586,7 +586,7 @@ Daher ist $T^*=\Phi_v^{-1}\circ T^*_\text{dual}\circ\Phi_w$
 \section{Spektraltheorie}\subsection{Normale Endomorphismen}\definition{14.1.1} Sei $(V,<\cdot,\cdot)$ ein IP Raum über $K$ entweder $\mathbb{R}$ oder $\mathbb{C}$ und sei $T:V\rightarrow V$ linear. Dann ist $T$ orthogonal diagonalisierbar wenn $V$ eine orthogonale Basis von Eigenvektoren hat. \beispiel{14.1.2}\begin{itemize}\item[\textit{i.}]{Sei $V=\mathbb{R}^2$ mit Standard Innerem Produkt und\[A=\begin{pmatrix}3&1&1&3\end{pmatrix}\Longrightarrow\text{Eigenwerte sind } \mathbb{E}=\left\lbrace2,4\right\rbrace\text{, und eigenvektoren }\mathbb{V}=\left<\begin{pmatrix}1\\-1\end{pmatrix},\begin{pmatrix}1\\1\end{pmatrix}\right>\] Also ist diese Abbildung orthogonal diagonalisierbar}\item[\textit{ii.}]{Sei $V=\mathbb{R}^2$ und \[B=\begin{pmatrix}1&-3\\3&1\end{pmatrix}\] Dann sind die Eigenvektoren $\lambda_1,2=1\pm3i$ und die Eigenvektoren $w_1=\begin{pmatrix}1\\i\end{pmatrix}$ und $w_2=\begin{pmatrix}1\\-i\end{pmatrix}$}\item{Sei in $\mathbb{R}^2$ und $C=\begin{pmatrix}1&-2\\1&4\end{pmatrix}$ diese matrix ist diagonalisierbar aber nicht orthogonal diagonalisierbar}\end{itemize}\lemma{14.1.3} Wenn $T$ orthogonal diagonalisierbar ist dann gilt dass $T\circ T^*=T^*\circ T$ \beweis Sei $B$ eine orthonormale Basis von Eigenvektoren, dann ist $[T]^B_B$ diagonal, und daher auch die adjungierte, und daraus folgt dass die Diagonale Matrizen kommutieren.
 \definition{14.1.4} Sei $(V,<\cdot,\cdot>)$ ein IP-Raum, dann ist $T:V\rightarrow V$ normal falls $T\circ T^*=T^*\circ T$ und die Matrix $A\in M_{n\times n}(K)$ ist normal wenn $A\cdot A^*=A^*\cdot A$ 
 \bemerkung{14.1.5} Wenn $A$ normal ist, dann ist $T_A:K^n\rightarrow K^n$ normal bezüglich den Standard IP
-\lemma{14.1.6} Wenn $T:V\rightarrow V$ normal ist dann ist $[T]^B_B$ normal wenn $B$ eine Orthonormale Basis ist.
+\lemma{14.1.6} Wenn $T:V\rightarrow V$ normal ist dann ist $[T]^B_B$ normal wenn $B$ eine Orthonormale Basis von Eigenvektoren ist.
 \bemerkung{14.1.7} \begin{itemize}
   \item[\textit{i.}]{Diagonale Matrizen sind Normal}
   \item[\textit{ii.}]{Unitäre und orthonormale Matrizen sind normal, da $U^{-1}=U^*$}
@@ -609,4 +609,42 @@ Ist jetzt aber jede Normale Matrix orthogonal diagonaliserbar
   \item[\textit{iii.}]{Sei $v$ ein Eigenvektor von $T$ dann gilt dass $T(v)=\lambda v\Leftrightarrow(T-\lambda id_v)(v)=0_v$ Zu zeigen ist jetzt dass $(T^*-\overline{\lambda}\cdot id_v)(v)=0_v$ Was das gleiche ist zu sagen $||(T^*-\overline{\lambda}id_v)(v)||=0$ und wenn $T-\lambda id_v$ normal ist dann folgt aus \textit{ii.} dass $||(T-\lambda\cdot id_v)^*(v)||=0=||T^*-\overline{\lambda}id_v||=0$}
   \item[\textit{iv.}]{ Sei $\lambda_{1,2}$ Eigenwerte von $v_1$ nud $v_2$ dann ist \[\lambda_1<v_1,v_2>=<\lambda_1 v_1,v_2>=<T(v_1),v_2>=v_1,T^*(v_2)>=<v_1,\overline{\lambda}v_2>=\lambda_2<v_1,v_2>\] und daher ist $\lambda_1=\lambda_2$}
 \end{itemize}
+\theorem{14.1.11 Spektralsatz uber $\mathbb{C}$}
+Sei $(V,<\cdot,\cdot>)$ ein IP-Raum, über $\mathbb{C}$ und $T:V\rightarrow V$ linear. Dann gilt $T$ normal$\Longleftrightarrow T$ ist orthogonal Diagonalisierbar.
+\beweis\newline $"\Longrightarrow"$ Sei $\mathcal{C}=\lbrace u_1,...,u_n\rbrace$ eine Basis so dass $[T]^\mathcal{C}_\mathcal{C}$ in Jordan normalenform ist. Wir benutzen dann den Gram-Schmidt verfahren auf $\mathcal{C}$ und bekommen dann eine Orthonormale Basis $\mathcal{B}=\rbrace v_1,...v_n\lbrace$ 
+so dass $\kk{u_1,...,u_i}=\kk{v_1,...,v_i}$, span von eigenvektoren gleich bleibt, dann ist $[T]^\mathcal{B}_\mathcal{B}$ immer noch eine obere Dreiecksmatrix, in anderen Worten, $a_ij=0\smspc \forall i>j$. Wir behaupten jetzt dass $A$ diagonal ist, daher dass gilt $a_ij=0\smspc \forall i\neq j$
+Da $\mathcal{B}$ orthonormal ist, dann gilt $||T(v_1)||^2=|a_11|^2$ und dies muss $=||T^*(v_1)||^2$. Aber \[[T^*]^\mathcal{B}_\mathcal{B}=\begin{pmatrix}\overline{a_{11}}&0&\hdots\\\overline{a_{12}}&\overline{a_{22}}&\hdots\\\vdots&\vdots&\\\overline{a_{1n}}&\hdots&\end{pmatrix}\]
+Es muss doch sein Dass die Normen der Spaltenvektoren \[|a_{11}|^2+|a_{12}|^2+\cdots+|a_{1n}|^2\Rightarrow a_{12}=a_{13}=\hdots=a_{1n}=0\] Und wenn wir dieses Argument für alle Spalten vektoren benutzen finden wir dass $[T]^\mathcal{B}_\mathcal{B}$ ist diagonal.
+\newline Die $"\Longleftarrow"$ haben wir schon zuvor bewiesen
+\bemerkung{14.1.12} Die Annahme dass wir über $\mathbb{C}$ arbeiten ist nur deshalb wichtig weil wir dann wissen dass es eine Jordanbasis existiert.
+\korollar{14.1.13} Seo $(V,<\cdot,\cdot>)$ ein IP-Raum über $\mathbb{R}$ und $T:V\rightarrow V$ normal, wenn also $V$ eine Jordanbasis besitzt, dann gilt der Spektralsatz auch und dann ist $T$ orthogonal diagonalisierbar genau dann wenn $T$ normal ist.
+\korollar{14.1.14} Sei $A\in M_{n\times n}(\mathbb{C})$ normal, dann existiert eine Unitäre matrix $U\in U(n)$ so dass $U^*A U$ diagonal ist.
+\beweis $T_A:\mathbb{C}\rightarrow\mathbb{C}$ ist orthogonal diagonalisierbar, dann mit Theorem 14.1.11 und Satz 14.1.10, weiss man dass es eine Orthonormale Basis $B$
+von Eigenvektoren gibt. Zu zeigen ist also dass Basiswechselmatrix $[id_v]^\mathcal{E}_\mathcal{B}$ wobei $\mathcal{E}$ die Standardbasis ist, ist unitär.
+$U^*=[id_v]^\mathcal{B}_\mathcal{E}$ dann ist also $U\cdot U^*=[id_v]^\mathcal{E}_\mathcal{B}\cdot[id_v]^\mathcal{B}_\mathcal{E}=id_v$ Wass meint dass $U$ unitär ist.
+\theorem{14.1.15} Sei $A\in M_{n\times n}(\mathbb{C})$ eine Normal matrix, dann existiert $B$ Hermitesch und $U$ unitär so dass $BU=UB$ und $A=BU$. Und wenn $A\in Gl_n(\mathbb{C})$ (invertierbar) dann sind $B$ und $U$ eindeutig.
+\newline Die Verallgemeinerung dieses Theorems, ist dass $x\in \mathbb{C}$ sich als $x=\underset{\text{Hermitesch}}{\underbrace{r}}\underset{\text{unitär}}{\underbrace{e^{i\theta}}}$
+\beweis mit Korollar $14.1.14$ sagt dass es ein $V$ unitär gibt so dass $D=VAV^*$ diagonal. Wir Schreiben $D=RJ$ wobei $R\in M_{n\times n}(\mathbb{R}$ reelle Einträge hat und $J$ hat einträge mit norm $1$, beide Diagonal. Dann ist \[A=V^*RJV =\underset{B}{\underbrace{(V^*RV)}}\underset{U}{\underbrace{(V^*IV))}}\Longrightarrow BU=A\mspc UB=BU\]
+Dabei ist $U$ unitär da der Produkt von unitären Matrizen Unitär ist und $B$ Hermitesch ist. Die Eindeutigkeit für $A\in Gl_n(\mathbb{C})$ ist eine Aufgabe
+\subsection*{Spektraltheorie über $\mathbb{R}$}
+\lemma{14.2.1}Sei $(V,<\cdot,\cdot>)$ ein IP-Raum über $\mathbb{R}$ und sei $T:V\rightarrow V$ orthogonal diagonalisierbar. Dann gilt dass $T=T^*$
+\beweis Sei $B$ eine Orthonormale Basis von Eigenwerten, dann ist $[T]^B_B$ diagonal mit einträgen in $\mathbb{R}$ $\Longleftrightarrow$ $[T]^B_B=\left([T]^B_B\right)^t=\overline{\left([T]^B_B\right)^t} = [T^*] ^B_B$
+\definition{14.2.2}Sei $(V,<\cdot,\cdot>)$ ein IP-Raum über $K$ entweder $\mathbb{R}$ oder $\mathbb{C}$ und $T:V\rightarrow V$ dann ist $T$ selbst adjungiert wenn $T^*=T$. Eine Matrix ist Selbst adjungiert wenn seine Abbildung auch selbst adjungiert ist
+\bemerkung{14.2.3} in $K=\mathbb{C}$ ist Selbst adjungiert analog zu Hermitesch und in $K=\mathbb{R}$ ist es analog zu symmetrisch.
+\satz{14.2.4} Wenn $T:V\rightarrow V$ selbst adjungiert dann ist $[T]^B_B$ $\forall B$  selsbt adjungiert
+und Wenn $A\in M_{n\times n} (K)$ selsbst adjungiert dann ist $T_i$ selbst adjungiert bezüglich den standard IP.
+\bemerkung{14.2.5} Jede Selbst adjungiert abbildung ist normal.
+\beispiel{14.2.6}
+{\[A=\begin{pmatrix}2&1\\1&2\end{pmatrix}\mspc B=\begin{pmatrix} -1&1\\1&-1\end{pmatrix}\mspc C=\begin{pmatrix}3&2\\2&3\end{pmatrix}\]
+    Die eigenwerte sind $A: 3,1$, $B:0,2$ und $C:5,1$ Wir merken dass die Eigenwerte sind immer Reell}
+\satz{14.2.7}Sei $(V,<\cdot,\cdot>)$ ein IP-Raum über $K$ und $T:V\rightarrow V$ selbst adjungiert dann gilt
+\begin{itemize}
+  \item[\textit{i.}]{Eigenwerte von $T$ sind reell}
+  \item[\textit{ii.}]{$X_T(x)$ zerfällt Linearfaktorne über $K$}
+\end{itemize}
+\textbf{Beweis }\textit{i.} Sei $\lambda$ eigenwert mit Eigenvektor $v$ und $T$ normal und $v$ eigenwert dann ist $\overline{\lambda}$ Eigenwert von $T^*$ und da $T^*=T$ ist $\lambda=\overline{\lambda}$ und daher ist $\lambda$ reell.
+\newline \textit{ii.} Nimm an dass $K=\mathbb{R}$ sei $B$ eine Orthonormale Basis von $V$ und $A=[T]^B_B\in M_{n\times n} (\mathbb{R})$ dann ist $A$ selbst adjungiert. Ausserdem gilt $X_T(x)=X_A(x)$ da $A$ ein basiswechselmatrix. Wenn wir also einen Linearfaktor haben, ist es einen Eigenwert und dank $\textit{i.}$ rell. Wir interpretieren jetzt $A$ als einen Endomorphismus $T_A:\mathbb{C}^n\rightarrow \mathbb{C}^n$ 
+so dass $[T_A]^\mathcal{E}_\mathcal{E}=A$ dann gilt dass $X_{T_A}(x)=X_A(x)$ und $X_A(x)=\Pi_{i=1}^n(\lambda_i-x)$ $\forall \lambda_i\in\mathbb{C}$ dan den Satz 14.2.4 ist $T_A$ selbst adjungiert und $\lambda_i\in \mathbb{R}$ und der Produkt hält auch über $\mathbb{C}$
+\theorem{14.2.8}Sei $(V,<\cdot,\cdot>)$ ein IP-Raum über $\mathbb{R}$  und $\T:V\rightarrow V$ linear dann gilt $T$ orthogonal diagonalisierbar$\Longleftrightarrow$ $T$ ist Selbst adjungiert.
+\beweis Der satz 14.2.7 impliziert dass es eine Jordanbasis über $\mathbb{R}$ existiert und dann kann man wie vorher argumentieren.
 \end{document}
