@@ -598,5 +598,62 @@ Sei ein Kupferdraht mit einen Strom der sich dadurch bewegt, dann ist $\lambda$ 
 \subsubsection*{Amperesche Gesetz}\[\oint\vec{B}d\vec{s}=\mu_0 I\]
 Wir wissen auch dass die Ladungsdichte nicht Lorentzinvariant ist. Der Elektrische Feld ist auch nicht invariant obwohl die Ladung selber, es ist.\newline
 Zusätslich, wenn eine Ladung ruht, gibt es ein Elektrisches Feld, aber Kein Magnetfeld, doch wenn sie Beschleunigt ist, dann bekommt man zusätslich ein Magnetisches Feld.
+\section{Magnetische Felder}
+\subsubsection*{Definition des Magnetischen feldes}
+Sei ein Elektrisches Feld, dann haben wir auch ein elektrisches Feld, dann habe wir die kraft die eine Positive ladung mit geschwindigkeit $\vec{v}$ spürt die kraft
+\[\vec{F}=q(\vec{E}\vec{v}\times\vec{B})\]
+Im fall vom elektrischen strom, habe wir dann eine Ldungsdichte und eine Geschwindigkeit in einem draht zum Beispiel. Also man merkt 
+\[d \vec{F}=dq(\vec{v}\times \vec{B})=\lambda dl(\vec{v}\times \vec{B})=I(\vec{dl}\times \vec{B})\]
+\[B=\frac{I}{2\pi \varepsilon_0 c^2 r}\mspc \mu_0=\frac{1}{\varepsilon_0 c^2}\Rightarrow B=\mu_0 \frac{I}{2\pi r}\]
+Und dann kann man also die Kraft zwischen zwei drähte finden.
+\[B_1=\mu_0 \frac{I_1}{2\pi d }\mspc B_2=\frac{mu_0 I_2}{2\pi d }\]
+Und dann ist $\frac{\text{Kraft}}{\text{Länge}}=I_1B_2=\mu_0 \frac{I_1I_2}{2\pi d }=\frac{F_{12}}{l}=\frac{F_{21}}{l}$
+\subsection*{Das Amperesche Getsetz}
+Wir wissen schon dass $B=\frac{I }{2\pi r}$ und wenn wir also einen Linien iintegral machen:
+\[\oint^{}_{}\vec{B}\vec{\text{d}s}=2\pi rB=\mu_0 I\]
+Und dieses Linienintegral muss immer gleich sein egal welchen Weg wir nehmen:
+\[\oint^{}_{C_1}\vec{B}\vec{\text{d}s}=\oint^{}_{C_1}\vec{B}\vec{\text{d}s}\]
+Wenn wir einen Kreisintegral um einen Raum ohne Strom, dann muss es null sein, wenn kein Strom durchfliesst: $\int^{}_{}\vec{B}\vec{\text{d}s}$
+\[\int^{}_{\partial A}\vec{B}\vec{\text{d}s}=\mu_0 I=\mu_0 \int^{}_{A}\vec{J}\vec{\text{d}a}\]
+Und dank den Satz von stokes gilt $\oint^{}_{\partial A}\vec{B} \vec{\text{d}s}=\int^{}_{A}\text{rot}(\vec{B})\vec{\text{d}a}$:
+\[\vec{\nabla}\times \vec{B}=\mu_0 \vec{J}\]
+Wenn wir also eine Geschlossene oberfläche ohne Stromdurchfluss, 
+\[\int^{}_{\partial V}\vec{B}\vec{\text{d}a}=0\Rightarrow \vec{\nabla}\cdot \vec{B}=0\]
+\[\left.\begin{matrix}\vec{\nabla}\cdot \vec{B}=0\\ \vec{\nabla}\times \vec{B}=\mu_0 \vec{J}\end{matrix}\right\rbrace \text{Im stationären Fall von }\frac{\partial \rho}{\partial t}=0\]
+\subsubsection*{Eindeutigkeitssatz} Wir wissen schon dass der Elektrischen Feld Eindeutig ist, und wenn wir ein Elektrisches Feld genau nachmachen können, dann ist der Fall aus der sicht eine Ladung gleich.
+\newline Sei wir haben zwei Felder in einen Szenarion, $\vec{B_1}$ und $\vec{B_2}$ mit $\vec{B'}=\vec{B_1}-\vec{B_2}$:
+\[\vec{\nabla}\vec{B_1}=\vec{\nabla}\vec{B_2}=0\]
+\[\vec{\nabla}\times \mu_0 \vec{J}vec{\nabla}\times \vec{B_2}\mspc \Rightarrow \mspc \vec{\nabla}\times \vec{B'}=0 \Rightarrow \vec{B'}=\vec{\nabla} f\]
+Diese Funktion $f$ muss es also geben, doch dank den Laplace operator, findet man dass sie konstant sein muss, was zu einen Widerspruch führt.
+\subsection*{Potential} Wenn wir das Elektrische Feld haben, dann ist $\vec{E}=\vec{\nabla}\Phi$ und im fall vom Magnetfeld ist:
+\[\vec{B}=\vec{\nabla}\times \vec{A}\]
+Die ladungsdichte im elektrischen Feld ist:
+\[\rho(\vec{R})=\Phi(\vec{r})=\frac{1}{4\pi\varepsilon_0}\int^{}_{}\frac{\rho/\vec{r'}}{(\vec{r}-\vec{r'})}\text{d}\vec{r'}\]
+und wir suchen sowass ähnliches für den Magnetischen Feld:
+\[\vec{J}(\vec{r})\rightarrow \vec{A}(\vec{r})\rightarrow \vec{B}(\vec{r})\]
+\[(\vec{\nabla}\times \vec{B})_x=(\mu_0 \vec{J})\Rightarrow \mu_0 jx=\left[\vec{\nabla}\times (\vec{\nabla} \times\vec{A})\right]\]
+\[\partial_y(\partial_xA_y-\partial_y A_x)-\partial_z(\partial_zA_y-\partial_xA_z)=.\delta A_x+\partial(\vec{\nabla} \vec{A})\]
+\[\vec{\nabla}\vec{B}=\vec{\nabla}(\vec{\nabla}\times \vec{A})=\begin{pmatrix}\partial_x\\\partial_y\\\partial_z\end{pmatrix}\begin{pmatrix}\partial_yA_z-\partial_zA_y\\\partial_zA_y-\partial_xA_z\\\partial_x A_y-\partial_y A_x\end{pmatrix}\]
+\[\vec{\nabla}\times \vec{B}=\vec{\nabla}\times(\vec{\nabla}\times \vec{A})=\text{grad}(\underset{=0}{\underbrace{\text{div}}}\vec{A}))-\Delta \vec{A}\]
+Mit $\Delta \vec{A}=-\mu_0 \vec{J}$
+\[\vec{A}(\vec{r})=\frac{\mu_0}{4\pi}\int^{}_{}\frac{\vec{J}(\vec{r'})}{(\vec{r}-\vec{r}')}\text{d}\vec{r'}\]
+\subsection*{Das Biot-Savat'sches Gesetz}
+Wir gucken wie viel magnetfeld durch eine Fläche geht
+\[d \vec{A}=\frac{\mu_0}{4\pi r}\vec{J}dV=\frac{\mu_0}{4\pi r}I \vec{dl}\mspc \text{ Mit } \vec{dl}\parallel \vec{J}\]
+\[\vec{dB}=\frac{\mu_0}{4\pi}\left(\vec{\nabla}\frac{1}{r}\times \vec{dl}\right)=\frac{\mu_0 I }{4\pi}\left(\frac{\frac{1}{\vec{r}}}{r^2}\times \vec{dl}\right)=\frac{\mu_0 I }{4\pi r^2}=\vec{dl}\times \hat{\vec{r}}\]
+Und im allgemeinen gilt 
+\[d \vec{B}=\frac{\mu_0 I }{4\pi r^2}(\vec{J}\times\hat{\vec{r}})dV\]
+Wir gucken also mit der Folgendnen Gleichung die sicht von einer Ladung die sich mit geschwindigkeit $\vec{v}$ durch bewegt
+\[\vec{B}=\frac{\mu_0 q}{4\pi r^2}(\vec{v}\times \hat{\vec{r}})\]
+\subsubsection*{7.5.1 Schleifen und Spulen}
+%TODO drawing at 11:11 
+Uns interessiert nur $B_z(0,0,z)$, also das Magnetfeld, entlang der Symmetrieachse des Rings:
+\[B_z(0,0,z)=\oint^{}_{}\text{d}B_z=\frac{\mu_0}{4\pi}\frac{1}{R^2+z^2}\cos(\theta) \underset{z\pi R}{\underbrace{\oint^{}_{}\text{d}l}}=\frac{\mu_0}{4\pi}\frac{2\pi R I }{R^2+ z^2}\frac{R}{\sqrt{R^2+z^2}}=\frac{\mu_0 R^2 I }{2(R^2+ z^2)^{\frac{3}{2}}}\]
+Und am ursprung ist also $B_z(0,0,0)=\frac{\mu_0 I }{2R}$
+Wir setzen jetzt viele davon nebeneinander. $n$ ist die Zahl der windungen pro länge und $dz$ die distanz zwischen windungen. $d I= I n dz$ 
+\[dI = \frac{rnI }{\sin(\theta)}d\theta \Rightarrow dB_z=\frac{\mu_0 R^2}{2r^3}dI=\frac{\mu_0 R^2}{2r^3}\frac{rnI}{\sin(\theta)}d\theta=\frac{\mu_0nI\sin(\theta)}{2}d\theta\]
+Das gesamte Magnetfeld hat also \[B_z=\frac{-\mu_0nI}{2}(\cos(\theta_2)-\cos(\theta_1))\]
+Und mit den übergang zur unendlich langen Spule $\theta_1=0$ und $\theta_2=\pi$ dann ist 
+\[B_z=\mu_0 n I\]
 \end{document}
 
