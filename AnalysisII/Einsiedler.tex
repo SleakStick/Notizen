@@ -218,4 +218,50 @@ Daraus folgt dass $O=U$ und $O$ ist Zusammenhängend.
 \newline Der Erste Teil des lemmas ist Allgemein für jeden Metrischen Raum, nicht nur Offene gültig.
 \newline Sei $x_0\in X$ fest gewählt, dann gibt es noch eine Vorassetzung dass es zu jedem $x\in X$ einene weg $\gamma:[a_x,b_x]\rightarrow X$ von $\gamma(a_x)=x_0$ nach $\gamma(b_x)=x$. Daraus folgt dass $\gamma([a_x,b_x])\subseteq X$ ist zusammenhängend:
 \[X=\bigcup_{x\in X}\gamma([a_x,b_x])\] Und daraus folgt (irgendwie) dass $X$ zusammenghängend ist.
+\section*{Vollständigkeit}
+\definition{} Sei $X$ ein Metrischer Raum. Eine Folge $(x_n)$ in $X$ ist eine Cauchy-Folge falls \[\forall \varepsilon >0 \smspc \exists N\in \mathbb{N}\smspc \forall m,n \ge N:\smspc d(x_m,x_n)<\varepsilon\]
+\definition{} Der Metrische Raum $X$ heisst vollständig falls jede Cauchy-Folge in $X$ einen Grenzwert in $X$ besitzt:
+\lemma{} Eine Abgeschlossene Teilmenge $A \subseteq \mathbb{R}^d$ ist immer Vollständig.
+\beweis Angenommen $x_n$ ist eine Cauchy folge in $A\subseteq \mathbb{R}^d$. Wenn wir die Koordinaten einzeln projezieren und anschauen sind sie auch Cauchy-Folgen, $(\pi_j(x_n))_n$ ist eine Cauchy-Folge in $\mathbb{R}$ $\forall j\in\lbrace 1,\cdots , d\rbrace$ $frall j\in\lbrace 1,cds , d\rbrace$ Daher existiert (1. semester) $z_j=\lim_{n\rightarrow\infty}\pi_j(x_n)$  und dann also $\lim_{n\rightarrow\infty}(x_n)=(z_1,\cdots,z_n)\in \mathbb{R}^d$ Da $A$ abgeschlossen ist 
+und $x_1\in A$ folgt nun $z\in A$ was die Vollständigkeit impliziert.
+\definition{Lipschitz kontraktion}
+Eine Lipschitz kontraktion ist eine Abbildung $T:\mathbb{R}\rightarrow \mathbb{R}$
+\[\exists \lambda<1\smspc \forall x_1,x_2\in X\smspc d(T(x_1), T(x_1))\le \lambda d(x_1,x_2)\]
+\satz{Banachscher Fixpunktssatz}
+Sei $X$ ein Vollständiger Metrischer Raum, und $T:X \rightarrow X$ eine Lipschitz-Kontraktion, Dann existiert ein eindeutig bestimmbarer Fixpunkt $z\in X$ mit $T(z)=z$.
+\beweis Angenommen es gibt $2$ Fixpunkte, $y,z\in X$ mit $T(y)=y$ und $T(z)=z$ dann folgt dass $d(y,z)=d(T(y),T(z))\le \lambda d(y,z)$ da $\lambda <1$ ist muss $d(y,z)=0$ sein und $y=z$
+Wir wissen jetzt dass es höchstens einen Gibt, wir mussen doch beweisen dass es ihn gibt.
+\newline Sei $x_1\in X$ beliebig. Wir definieren rekursiv \[(x_n)_{n\in\mathbb{N}}:\mspc\left\lbrace\begin{matrix}x_2=T(x_1)\\x_3=T(x_2)\\\hdots\\x_{n+1}=T(x_n)\end{matrix}\right.\]
+die Bahn des punktes $x_1$ \newline \textit{Beh. I}: Falls $x_n$ einen Grenzwert in $X$ besitzt, dann ist $T(z)=z$ , und daher auch \[T(z)=T(\lim_{n\rightarrow\infty}x_n)=\lim_{n\rightarrow\infty}\underset{=x_{n+1}}{\underbrace{T(x_n)}}=z\]
+Also wenn es einen Grenzwert gibt, dann haben wir es gefunden.\newline
+\textit{Beh. II} Falls $(x_n)$ eine Cauchy folge ist, dann ist es auch konvergent, es gilt also \textit{Beh. I} und der Satz ist bewiesen
+\newline Wir müssen also nur beweisen dass $x_n$ eine Cauchy-Folge ist:
+\beweis Wir betrachten \[d(x_2,x_3)=d(T(x_1),T(x_2))\le \lambda d(x_1,x_2)\] Und wir beweisen per induktion dass $d(x_n, x_{n+1})\le \lambda^{n-1}d(x_1,x_2)$, da wenn dies Gilt, dann ist \[d(x_{n+1},x_{n+2})=d(T(x_n),T(x_{n+1}))\le \lambda d(x_n, x_{n+1})\le \lambda \lambda^{n-1}d(x_1,x_2)=\lambda^{(n+1)-1}d(x_1,x_2)\]
+Sei also $\varepsilon 0$ dann $\exists N\in \mathbb{N}$ so dass \[\frac{\lambda^{N-1}}{1-\lambda}d(x_1,x_2)<\varepsilon \text{ Da }\lambda <1 \text{ ist}\] Sei nun $n>m\ge N$ dann gilt also
+\[d(x_n,x_m)\le d(x_n,x_{n-1})+d(x_{n-1},x_{n-2})+\cdots+d(x_m,x_{m+1})\le \left(\lambda^{n-2}+\lambda^{n-3}+\cdots +\lambda^m\right)d(x_1,x_2)\le \frac{\lambda^{n-1}}{1-\lambda}d(x_1,x_2)\le \varepsilon\]
+Also ist $x_n$ eine Cauchy-Folge und daher ist der Satz bewiesen
+\subsection*{Kompaktheit}
+\definition{Kompaktheit} Ein Metrischer Raum $X$ heisst Folgenkompakt Falls jede Folge $x_n\in X$ eine Konfergente Teilfolge besitzt.
+\definition{Beschränktheit} Ein Metrischer Raum $X$ heisst beschränkt Falls $X=B_R(x_0)$ für ein $x_0$ in $X$ und $R<0$
+\lemma{} Sei $K \subseteq X$ eine Folgenkompakte Teilmenge eines Raumes $X$ dann ist $K$ beschränkt. Die Umkehrung geht nicht, falls $X=\mathbb{Q}$ dann ist $lbrace x\in Q| 0\le x \le 1\rbrace$ sowohl abgeschlossen und Beschränkt doch nicht kompakt.
+\beweis Sei $(x_n)\in K$ eine Folge mit grenzwert $z=\lim_{n\rightarrow\infty}x_n\in X$ Dann existiert eine Teilfolge $x_{n_l}$ mit $\lim_{l \rightarrow\infty}y\in K$ dann ist $z=y\in K$ dies Zeigt, dank den Lemma über characterisierung von offen und Abgeschlossene Mengen, dass $K$ abgeschlossen ist.
+\newline Sei $x_0\in K$ für jedes$K\neq B_n^K(x_0)$ dann $\forall n $ $\exists x_n\in K$ mit $d(x_n,x_0)>n$ und dies bedeutet dass es keine Konvergente Teilfolge ovn $x_n$, und die menge ist beschränkt und daher auch Kompakt. $\exists x_n\in K$ mit $d(x_n,x_0)>n$ und dies bedeutet dass es keine Konvergente Teilfolge ovn $x_n$, und die menge ist beschränkt und daher auch Kompakt. 
+\theorem{Heine-Borel} Eine Teilmenge $K \subseteq \mathbb{R}^d$ ist kompakt genau dann wenn $K$ abgeschlossen und beschränkt ist.
+\beweis Wir müssen noch abgeschlossen und beschränkt zeigen, da die andere richtung i mallgemeinen gilt und wir sie gerade bewiesen haben.
+Sei also $K\\subseteq \mathbb{R}^d$ abgeschlossen und beschränkt und sei $(x_n)_n)$ eine Folge in $K$ dann ist $(\pi_j(x_n))_n$ eine beschränkte Folge in $\mathbb{R}$ für jedes $j\in \lbrace 1,\cdots, d\rbrace$
+Wir können mithilfe der Resultate im ersten Semester eine Teilfolge finden, so dass $(\pi_j(x_{n_l}))_l$ konvergiert für jedes $j\in\lbrace 1,\cdots, d\rbrace$ daher dass $z=\lim_{l \rightarrow\infty}x_{n_l}\in \mathbb{R}^d$
+Und da $K \subseteq \mathbb{R}^d$ abgeschlossen ist, folgt dass $z\in K$ und dass is gemäss die definition der Folgenkompaktheit. 
+\definition{Überdeckungskompaktheit}
+Sei $X$ ein Metrischer Raum, eine Offene überdeckung von $X$ ist eine Menge $\mathcal{O}$ von offenen Teilmengen von $X$ so dass \[X=\bigcup_{O\in \mathcal{O}}O\]
+\newline $X$ heisst abzählbar Überdeckungskompakt falls jede abzählbare offene überdeckung von $X$ eien Endliche teilüberdeckung hat. Also wenn $\mathcal{O}=\lbrace O_1, \cdots O_n\rbrace$ endlich ist so dass $X=O_1\cup \cdots \cup O_n$
+\beispiel{} Sei $X=(0,1)$ Dann ist $\mathcal{O}=\left\lbrace(\frac{1}{n},1):n\in \mathbb{N}\right\rbrace$ 
+\satz{}
+Für einen Metrischen Raum sind folgende Eigenschaften äquivalent
+\begin{itemize}
+\item[\textit{i.}]{ Jede Folge in $X$ hat eine Konvergente Teilfolge}
+\item[\textit{ii.}]{Jede Unendliche Teilmenge $D\subseteq X$ hat einen Häufungspunkt in X.}
+\item[\textit{iii.}]{Jede Stetige funktion $f:X \rightarrow \mathbb{C }$ ist beschränkt.}
+\item[\textit{iv.}]{Jede Stetige Funktion $f: X \rightarrow \mathbb{R}$ nimmt Maximum und minimumwert ind $X$ an.}
+\item[\textit{v.}]{$X$ ist abzählbar überdeckungskompakt.}
+\end{itemize}
 \end{document} 
