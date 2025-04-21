@@ -258,10 +258,33 @@ Sei $X$ ein Metrischer Raum, eine Offene überdeckung von $X$ ist eine Menge $\m
 \satz{}
 Für einen Metrischen Raum sind folgende Eigenschaften äquivalent
 \begin{itemize}
-\item[\textit{i.}]{ Jede Folge in $X$ hat eine Konvergente Teilfolge}
-\item[\textit{ii.}]{Jede Unendliche Teilmenge $D\subseteq X$ hat einen Häufungspunkt in X.}
-\item[\textit{iii.}]{Jede Stetige funktion $f:X \rightarrow \mathbb{C }$ ist beschränkt.}
-\item[\textit{iv.}]{Jede Stetige Funktion $f: X \rightarrow \mathbb{R}$ nimmt Maximum und minimumwert ind $X$ an.}
-\item[\textit{v.}]{$X$ ist abzählbar überdeckungskompakt.}
+\item[\textit{i.}]{ Jede Folge in $X$ hat eine Konvergente Teilfolge} %--2--
+\item[\textit{ii.}]{Jede Unendliche Teilmenge $D\subseteq X$ hat einen Häufungspunkt in X.} %--1--
+\item[\textit{iii.}]{Jede Stetige funktion $f:X \rightarrow \mathbb{C }$ ist beschränkt.} %--4--
+\item[\textit{iv.}]{Jede Stetige Funktion $f: X \rightarrow \mathbb{R}$ nimmt Maximum und minimumwert ind $X$ an.} %--5--
+\item[\textit{v.}]{$X$ ist abzählbar überdeckungskompakt.} %--3--
 \end{itemize}
+\textbf{Beweis}\begin{itemize}
+  \item[\textit{i.}]{$2 \Rightarrow 1$: Sei $x_n$ eine Folge in $X$, Falls es eine Teilfolge $x_{n_k}$ mit $x_{n_k}=z$ $\forall k$ so ist dies ein Konvergente Teilfolge, ansonsten ist
+    $D=\left\lbrace x_n:n\in \mathbb{N}\right\rbrace$ eine unendliche Teilmenge von $X$. Aufgrund von \textit{ii.} existiert also ein Häufungspunkt $z\in X$ von $D$. Wir definieren nun $x_{n_k}$ rekursiv. Für $\varepsilon_1=1$ existiert ein $x_{n_1} \in D$ mit $d(x_{n_1},z)< 1$ und dann für $\varepsilon_2=\min \left\lbrace \frac{1}{2}, \lbrace d(x_{k}, z)|k\ge n_1\rbrace\backslash \left\lbrace0\right\rbrace\right\rbrace >0$ existiert ein $x_{n_2}$ mit $0<d(x_{n_2}, z)< \varepsilon_2 \le \frac{1}{2}$ Da $n_2>n_1$ ist dann kann man diese Argument für $ n \rightarrow \infty$ iterieren und wir erhalten dass dies bewiesen ist da ich auch $\varepsilon_k=\frac{1}{k}$ setzen kann.}
+  \item[\textit{ii.}]{$1 \Rightarrow 5$: Angenommen $X= \bigcup_{n=1}^\infty O_n$ für offene Teilmengen $O_n\subseteq X$ Wir nehmen indirect an dass endliche mengen nie Genügen um die Menge zu überdecken:
+    $X\backslash \bigcup_{l=1}^nO_l\neq \emptyset$ Also existiert eine Folge $x_n\in X\backslash \bigcup_{l=1}^n O_l$ also existiert eine Konvergente Teilfolge $x_{n_k}$ mit $z=\lim_{k\rightarrow\infty}x_{n_k}\in X$  
+    Falls $z\in O_l$ dann $\exists K$ mit $x_{n_k}\in O_l$ $\forall k\ge K$ Anderseits gilt $x_{n_k}\not\in O_l$ für $n_k\ge l$ Dies ist ein Widerspruch da $z$ ein Häufungspunkt ist.}
+  \item[\textit{iii.}]{$5 \Rightarrow 3$: Sei $f:X \rightarrow \mathbb{C }$ stetig, es gilt dass \[\mathbb{C}=\bigcup_{n=1}^\infty B_n^\mathbb{C }(0) \Longrightarrow X= f^{-1}(\mathbb{C})=\bigcup_{n=1}^\infty f^{-1}(B_n^\mathbb{C }(0))\]
+    und $f^{-1}(B_n^\mathbb{C }(0))\subseteq X$ ist offen da $f$ stetig ist. Daher existert wegen annahme $5$ ein $N$ mit $X=\bigcup_{n=1}^N f^{-1}(B_n^\mathbb{C }(0))=f^{-1}(B_N^\mathbb{C }(0))$ Daher gilt 
+    $|f(x)|< N$  $\forall x\in X$}
+  \item[\textit{iv.}]{$3 \Rightarrow 4$: Nach $4$ ist $f$ beschränkt, und wir können $M=\sup \left\lbrace f(x):x\in X\right\rbrace$ definieren, so dass $M>0$ wenn nicht addieren wir eine Konstante zu $f$ so dass dies gilt. Die Behauptung ist jetzt
+    dass es $x_{\text{max}}$ gibt so dass $f(x_{\text{max}})=M$ Ansonsten definieren wir $F(x)=\frac{1}{M-f(x)}:X \rightarrow \mathbb{R}$ stetige funktion, dann ist auch $F$ beschränkt, also $\exists N$ mit $F(x)<N$ $\forall x\in X$ daher ist \[\frac{1}{M-f(x)}<N \Rightarrow \frac{1}{N}<M-f(x) \Rightarrow f(x)<M-\frac{1}{N}\]Dies 
+    Widerspricht doch dass $M$ unser supremum ist, daher gilt die behauptung, und $f$ nimmt dass maximum an. Für den minimum Kann man $-f$ betrachten.}
+  \item[\textit{v.}]{$4 \Rightarrow 2$: Sei $D \subseteq X$ wir definieren $\eta(x)=\sup \left.\left\lbrace\delta\in [0,1]\right|\smspc|B_\delta (x)\cup D|\le 1 \right\rbrace$ Wobei wir hier $B_0(x)=\emptyset$ nehmen. Es gilt also
+    $\eta(x)\Leftrightarrow x$ ist ein Häfungspunkt. Angenommen $x_1, x_2\in X$ $\delta<\eta(x_1)$ und $\varepsilon=\delta-d(x_1,x_2)>0$ Dann folgt dass $B_{\varepsilon}(x_2)\subseteq B_{\delta}(x_1)$ Daraus folgt dass
+    \[|B_{\varepsilon}(x_2)\cup D|\subseteq |B_{\delta}(x_1)\cup D| \le 1\]Dies impliziert dass $\eta(x_2)\le \varepsilon=\delta-d(x_1,x_2) \Longrightarrow \eta(x_2)+d(x_1,x_2)\ge \delta$ Diese Ungleichung gilt $\forall \delta<\eta(x_1)$ also $\eta(x_1)-\eta(x_2)\le d(x_1,x_2)$ und da Kann man 
+    die Lipschitzkonstante ablesen (05.02 ~1h neue tafel abgewischt)}
+\end{itemize}
+Der Satz ist daher bewiesen 
+\lemma{} Je zwei normen auf $\mathbb{R}^n$ sind äquivalent.
+\beweis Sei $||\cdot||$ eine Norm auf $\mathbb{R}^n$ und $M=\max_{i=1}^n||e_i||$ dann gilt \[\forall v\in \mathbb{R}^n\smspc||v||=||\sum_{i=1}^ne_i||\le \sum_{j=1}^n ||v_j||\le M||v||_1\le M_n||v||_2\] Dies zeigt auch dass $||\cdot||$ lipschitz stetig ist, mit Lipschitz stetig mit Lipschitz-Konstante $M_n$ bezüglich $||\cdot||_2$ ist. \[\left|||v_1-||v_2||\right|\le||v_1||-||v_2||_2 \le M_n||v_1-v_2||_2\]
+Wir habe also eine Stetige Funktion, auf eine Kompakte Teilmenge, und diese Norm nimmt auf $\mathbb{S }^{n-1}=\left\lbrace v\in \mathbb{R}^n| \smspc ||v||_2=1\right\rbrace$ ein Minimum an, und $m=\min_{v\in \mathbb{S }^{n-1}}||v||=||v_{\text{min}}||>0$ an $v\in \mathbb{R}\backslash \left\lbrace0\right\rbrace$ gilt daher dass \[\left|\frac{v}{||v||_2}\right|=\frac{1}{||v||_2}||v||\ge m\] Es folgt also dass $||v||\ge m||v||_2$ für alle $v \in \mathbb{R}$
+\definition{} Sei $A\in M_{n\times n}(\mathbb{R})$ Dann definieren wir die Operatornorm $||A||_{\text{op}}=\max_{v\in \mathbb{R}^n\text{ mit } ||v||_2\ge 1}||Av||_2$ Für die Operatornorm von $A$ gilt $||Av||_2=||A||_{\text{op}}||v||_2$
+
 \end{document} 
