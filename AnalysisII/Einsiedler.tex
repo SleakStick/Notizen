@@ -190,4 +190,32 @@ Stetig sind folgende Funktionen
 \end{itemize}
 \textbf{Beweis} Sei $f:X\rightarrow Y$ und $f:Y\rightarrow Z$ stetig, Für eine Offene Teilmenge $O\subseteq Z$ gilt dann dass $g^{-1}(O)\subseteq Y$ offen ist und dann $f^{-1}(g^{-1}(O))\subseteq X$ ist offen. Doch die Charakterisierung $(f\circ g)(O)\subseteq X$ ist offen und somit ist die charakteriesierung de rStetigkeit in der vorletzen bemerkung erfüllt.
 \newline Sei nun $f:X\rightarrow \mathbb{R}^m$ eine Funktion, falls $f$ stetig ista, dann sind auch $\pi_j\circ f:X\rightarrow \mathbb{R}$ für jedes $j\in \left\lbrace 1,\cdots,m\right\rbrace$
-\end{document}
+\newline $"\Leftarrow"$ Angenommen dass $f$ $\pi_1\circ f,\cdots, \pi_m\circ f:\mathbb{R}\rightarrow \mathbb{R}$ stetig sind. Und sei $(x_n)$ eine Folge $x$ mit $\lim_{n \rightarrow\infty}x_n=x_0$ also folgt \[\lim_{n \rightarrow \infty}(\pi_j\circ f)(x_n)=\pi_j\circ f(x_0)\smspc \forall i\in \lbrace1,\cdots,m\rbrace\]
+und daraus folgt dass $f(x_n)=\left(\pi_1 \circ f(x_1),\cdots ,\pi_m \circ f(x_n)\right)^t \rightarrow f(x_0)$ für $n \rightarrow \infty$ Und da dies für jede Konvergente Folge gilt, ist $f$ stetig.
+\newline Das $\pi_i$ ist einfach die $i$-te Komponente der Vektorwertigen funktion.
+\beispiel{} wir definieren $f:\mathbb{R}^2\rightarrow \mathbb{R}$ wie Folgt:
+\[f(x,y)=\left\lbrace\begin{matrix}\frac{x^2y}{x^4+y^2}\text{ für }(x,y)\neq (0,0)\\0 \text{ für } (x,y)=(0,0)\end{matrix}\right.\]
+Die Stetigkeit ist hier nicht ganz klar, da um die $(0,0)$ haben wir keinen Satz der uns sagt dass dies stetig ist. Wenn wir uns die Funktion anschauen, und $x$ gegn $0$ anschauen, und umgekehrt, $y$ gegen 0. Man brauch doch nur einen fall wo $\lim_{x \rightarrow 0}f(x,g(x))\neq 0$ und hier wenn wir $g(x)=x^2$ setzen, dann findet man dass es gegen $\frac{1}{2}$ strebt, und daher ist diese Funktion nicht stetig in $(0,0)$ zumindenst 
+\bemerkung{} Um Stetigkeit zu beweisen muss man also durch verknüpungen und schon bewiesene Sätze prüfen, im fall von Fallunterscheidungen ist dies nicht ganz einfach.
+\beispiel{}
+Sei $X$ ein Metrischer Raum und $A \subseteq X$ eine Nichtleere Teilmenge. Wir definieren \[d(x,a)=\inf_{a\in A}d(x,a)\]
+Also der kleinste abstand zwischen $x$ und ein Element in $A$ also ist $d(x,A)=0 \Leftrightarrow x\in A$\newline
+Wir wollen jetzt zeigen dass $d(\cdot,A):X \rightarrow \mathbb{R}$ Lipchitz stetig ist mit Lipschitz konstante $1$
+\beweis Seien $x_0,x_1\in X$ Für alle $a\in A$ gilt dass $d(x_0,a)\le d(x_0,x_1)+d(x_1,a)$ (dreiecksungleichung) und dass ganze ist $\ge d(x,A)$ und also $ d(x_0,A)-d(x_0,x_1)\le d(x_1,a)$ und mit herumschreiben:
+\[\left| d(x_0,A)-d(x_1, A)\right|\le d(x_0,x_1)\] und da Kann man die LIpschitz konstante $1$ vor dem $d(x_0,x_1)$ ablesen.
+\lemma{} Seien $X,Y$ metrische Räume und $f:X \rightarrow Y$ stetig. Falls $X$ Zusammenhängend ist, so ist auch $f(X)$ zusammenhängend.
+\beweis Angenommen wir haben $B \subset f(X)$, relativ abgeschloffen. Dann $\exists O\subset Y$ offen mit $B=O\cap f(X)$ und dann betrachten wir $f^{-1}(B)$ und bemerken dass es genau gleich $f^{-1}(O)$ ist da die Punkte die nicht in $f(X)$ sind keinen urbild haben. Also $f^{-1}(B)=f^{-1}(O)$ ist offen da $f$ stetig ist. Zusätslich gibt es eine Abgeschlossene Menge $A\subseteq Y$ mit $B=A\cap f(X)$ mit $f^{-1}(A)=f^{-1}(B)$ ist abgeschlossen. Und daher ist dass Urbild abgeschloffen in $X$ woraus folgt dass $f^{-1}(B)=\emptyset$ oder $f^{-1}(B)=X$ und dann ist $B=\emptyset$ oder $B=X$ und die zeigt per definition dass $f(X)$ die ganze Menge ist (da $B \subseteq f(X)$).
+\definition{Weg} Ein Weg in einen Metrischen Raum $X$ ist eine Stetige abbildung $\gamma:[a,b] \rightarrow X$ wobei $a<b$ reelle Zahlen sind, $\gamma(a)$ der Startpunkt und $\gamma(b)$ der Endpunkt des Weges ist. 
+\bemerkung{Wegzusammenhängend} Wir nennen $X$ Wegzusammenhängend falls es $\forall x_0, x_1\smspc \exists$ ein Weg auf $[a,b]$ mit Startpunkt $x_0$ und Endpunkt $x_1$
+\lemma{} Falls $X$ Wegzusammenhängend ist so $X$ auch zusammenhängend. So sind auch Offene Teilmengen $O\in \mathbb{R}^k$ zusammenhängend, genau dann wenn $O$ wegzusammenhängend ist.
+\beweis (Fall \textit{2.}) Angenommen $O \subseteq \mathbb{R}^k$ ist offen und zusammenhängend. Wir wollen Zeigen dass $O$ auch wegzusammenhängend ist. ("$\Leftarrow$")\newline
+Sei $x_0\in O$ beliebig. Wir definieren dann \[U=\left\lbrace x_1\in O\left|\text{Es gibt einen Weg von }x_0 \text{ nach }x_1\right.\right\rbrace\subseteq O\]
+\begin{itemize}
+\item[\textit{i.}]{$U$ ist offen:\newline angenommen $x_1\in U \subseteq O$ da $O$ offen ist, dann $\exists \varepsilon >0$ so dass $B_\varepsilon(x_1) \subseteq O$ Durch verknüpfen (Weg von $x_0$ nach $x_1$ und dann im ball von $x_1$ zum neuen Punkt.) von Wegen erhalten wir $B_\varepsilon (x_1)\subseteq U$}
+\item[\textit{ii.}]{$U$ ist abgeschlesson, daher ist $O\backslash U$ ist auch offen, Diese Menge nennen wir $Q=O\backslash U$ per definition von $U$ gibt es für $x_1\in Q$ keinen Weg von $x_0$ nach $x_1$ dann gibt es im offenen Ball $B_{\varepsilon}(x_1)$ auch keinen weg, sonst könnten wir einfach von $x_0$ zu diesem Punkt in $B_{\varepsilon}(x_1)\subseteq O$ und dann von dort nach $x_1$ was einen Widerspruch gibt, also gitl $B_{\varepsilon} \subseteq Q$ und $U$ ist Abgeschloffen in $O$ }
+\end{itemize}
+Daraus folgt dass $O=U$ und $O$ ist Zusammenhängend.
+\newline Der Erste Teil des lemmas ist Allgemein für jeden Metrischen Raum, nicht nur Offene gültig.
+\newline Sei $x_0\in X$ fest gewählt, dann gibt es noch eine Vorassetzung dass es zu jedem $x\in X$ einene weg $\gamma:[a_x,b_x]\rightarrow X$ von $\gamma(a_x)=x_0$ nach $\gamma(b_x)=x$. Daraus folgt dass $\gamma([a_x,b_x])\subseteq X$ ist zusammenhängend:
+\[X=\bigcup_{x\in X}\gamma([a_x,b_x])\] Und daraus folgt (irgendwie) dass $X$ zusammenghängend ist.
+\end{document} 
