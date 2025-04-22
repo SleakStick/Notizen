@@ -218,7 +218,7 @@ Daraus folgt dass $O=U$ und $O$ ist Zusammenhängend.
 \newline Der Erste Teil des lemmas ist Allgemein für jeden Metrischen Raum, nicht nur Offene gültig.
 \newline Sei $x_0\in X$ fest gewählt, dann gibt es noch eine Vorassetzung dass es zu jedem $x\in X$ einene weg $\gamma:[a_x,b_x]\rightarrow X$ von $\gamma(a_x)=x_0$ nach $\gamma(b_x)=x$. Daraus folgt dass $\gamma([a_x,b_x])\subseteq X$ ist zusammenhängend:
 \[X=\bigcup_{x\in X}\gamma([a_x,b_x])\] Und daraus folgt (irgendwie) dass $X$ zusammenghängend ist.
-\section*{Vollständigkeit}
+\subsection*{Vollständigkeit}
 \definition{} Sei $X$ ein Metrischer Raum. Eine Folge $(x_n)$ in $X$ ist eine Cauchy-Folge falls \[\forall \varepsilon >0 \smspc \exists N\in \mathbb{N}\smspc \forall m,n \ge N:\smspc d(x_m,x_n)<\varepsilon\]
 \definition{} Der Metrische Raum $X$ heisst vollständig falls jede Cauchy-Folge in $X$ einen Grenzwert in $X$ besitzt:
 \lemma{} Eine Abgeschlossene Teilmenge $A \subseteq \mathbb{R}^d$ ist immer Vollständig.
@@ -286,5 +286,69 @@ Der Satz ist daher bewiesen
 \beweis Sei $||\cdot||$ eine Norm auf $\mathbb{R}^n$ und $M=\max_{i=1}^n||e_i||$ dann gilt \[\forall v\in \mathbb{R}^n\smspc||v||=||\sum_{i=1}^ne_i||\le \sum_{j=1}^n ||v_j||\le M||v||_1\le M_n||v||_2\] Dies zeigt auch dass $||\cdot||$ lipschitz stetig ist, mit Lipschitz stetig mit Lipschitz-Konstante $M_n$ bezüglich $||\cdot||_2$ ist. \[\left|||v_1-||v_2||\right|\le||v_1||-||v_2||_2 \le M_n||v_1-v_2||_2\]
 Wir habe also eine Stetige Funktion, auf eine Kompakte Teilmenge, und diese Norm nimmt auf $\mathbb{S }^{n-1}=\left\lbrace v\in \mathbb{R}^n| \smspc ||v||_2=1\right\rbrace$ ein Minimum an, und $m=\min_{v\in \mathbb{S }^{n-1}}||v||=||v_{\text{min}}||>0$ an $v\in \mathbb{R}\backslash \left\lbrace0\right\rbrace$ gilt daher dass \[\left|\frac{v}{||v||_2}\right|=\frac{1}{||v||_2}||v||\ge m\] Es folgt also dass $||v||\ge m||v||_2$ für alle $v \in \mathbb{R}$
 \definition{} Sei $A\in M_{n\times n}(\mathbb{R})$ Dann definieren wir die Operatornorm $||A||_{\text{op}}=\max_{v\in \mathbb{R}^n\text{ mit } ||v||_2\ge 1}||Av||_2$ Für die Operatornorm von $A$ gilt $||Av||_2=||A||_{\text{op}}||v||_2$
-
-\end{document} 
+\begin{itemize}
+  \item[\textit{i.}]{Es ist in der Tat eine Norm auf $M_{n\times n}(\mathbb{R})$}
+  \item[\textit{ii.}]{$||AB||_{\text{op}}\le ||A||_{\text{op}}||B||_{\text{op}}$ }
+\end{itemize}
+\beispiel{} Wir können Diese Eigenschaften benutzen um zu zeigen dass \[\exp(A)=\sum_{k=0}^{\infty}\frac{1}{k!}A^k\] Für $A\in M_{n\times n} (\mathbb{R})$.
+Wegen zwei ist $||A^k||_{\text{op}}\le ||A||_{\text{op}}^k$
+\satz{} Seien $X,Y$ metrische Räume und $f:X \rightarrow Y$ stetig. Falls $X$ kompakt ist, so ist auch $f(X)\subseteq Y$ kompakt.
+\beweis Wir nutzen hier Die überdeckung. Angenommen, wir können ohne beschränkung der Allgemeinheit $Y=f(X)$ annehmen, uns ist der rest von $Y$ egal. Und sei $O_Y=\left\lbrace O_1, O_2, \cdots, O_k\right\rbrace$ eine Abzählbare überdeckung,
+dann gilt $\forall n$ dass $f^{-1}(O_n) \subseteq X$ eine Offene Menge ist (da $f$ stetig ist). Daraus folgt dass $O_X=\left\lbrace f^{-1}(O_1),\cdots, f^{-1}(O_k)\right\rbrace$ eine Offene überdeckung von $X$ denn für $x\in X$ ist $f(x)\in Y$ und es existiert ein $n$ so dass
+$f(x)\in O_n$, also $x\in f^{-1}(O_n)$, also sind alle punkte $x\in X$ in einen ball $f^{-1}(O_n)$. Mit überdeckungskompaktheit $\exists n$ so dass $X=\bigcup_{k=1}^nf^{-1}(O_k)$ ist und dann ist $f(X)=Y=\bigcup_{k=1}^nO_k$
+\newline Der Beweis lässt sich mit alle Ander Eigenschaften Beweisen da sie alle äquivalent sind. Zum beispiel:
+\newline Wenn wir die eigenschaft dass jede Reelwertige stetige Funktion einen Maximum und einen Minimum annimt benutzen, dann müssen wir zeigen dass Jede Abbildung $\phi:Y \rightarrow \mathbb{R}$ einen Maximum und einen Minimum hat. Doch jede Funktion von $\nu: X \rightarrow \mathbb{R}$ hat einen Maximum und einen Minimum und lässt sich 
+durch ien Verknüpfung von $f \circ \phi$ darstellen, und da $f$ einen Maximum und einen Minimum Hat, muss auch $\phi$ einen Maximum und einen Minimum haben.
+\definition{Lebesgue Zahlen} Sei $X$ ein Metrischer Raum und $\mathcal{O}$ eine Offene überdeckung von $X$. Eine Zahl $r>0$ heisst Lebesgue Zahl von $\mathcal{O}$ falls $\forall x\in X$ $\exists O\in \mathcal{O}$ so dass $B_r(x)\subseteq O$
+\satz{} Sei $X$ ein Kompakter metrischer Raum, dann hat jede offene Überdeckung eine lebesgue zahl.
+\beweis Sei $\mathcal{O}$ eine offene Überdeckung. Wir definieren $\eta: X \rightarrow[0,1]$ durch \[\eta(x)=\sup \left\lbrace \varepsilon \in (0,1]|\exists O\in \mathcal{O} \text{ mit } B_{\varepsilon}(x)\subseteq O\right\rbrace\]
+Wir behaupten jetzt dass $\eta$ stetig ist, woraus folgt dass es ein Minimum auf $X$ gibt, und dann gilt dass $\eta_0=\min_{x\in X}\eta(x)$ dann ist $r=\frac{1}{2}\eta_0$ eine Lebesgue-Zahl
+\beweis Für $x_{\text{min}}\in X$ mit $\eta_0=\eta(x_{\text{min}})$ gilt dass $\eta_{x_\text{min}}>0$ und daher $\eta_0>0$ und $r>0$. Für jedes $x\in X$ gilt $\eta(x)\ge \eta_0 > r$ Aus der Definition von $\eta(x)$ folgt dass es ein $\varepsilon >r$ gibt. Und $O\in \mathcal{O}$ mit $B_{\varepsilon}(x)\subseteq O$ und daher $B_r(x) \subseteq O$ und daher ist $r$ eine Lebesgue Zahl.
+\newline Hier muss man nur noch beweisen dass $\eta(x)$ stetig ist:
+\newline Sei $x_1, x_2\in X$ und $\varepsilon<\eta(x_1)$ und $\delta= \varepsilon-d(x_1, x_2)>0$ Dann existiert ein $O\in \mathcal{O}$ mit $B_{\varepsilon}(x_1)\subseteq O$ Und von der Definition von $\delta$ findet man dass $B_{\delta}(x_2)\subseteq B_{\varepsilon}(x_1)\subseteq O$ Also gilt dass $\eta(x_2)\ge \delta= \varepsilon-d(x_1, x_2)$ und dies gilt auch falls $\delta\le 0$ ist. Also gilt 
+\[\eta(x_2)+d(x_1,x_2)\ge \varepsilon\mspc \forall \varepsilon \text{ so dass } \eta(x_1)> \varepsilon\Longrightarrow \eta(x_1)\le \eta(x_2)+d(x_1, x_2) \Longrightarrow |\eta(x_1)-\eta(x_2)|\le d(x_1,x_2)\]
+Und dann ist also $\eta(x)$ Lipschitz-Stetig mit Lipschitz-Konstante $1$.
+\definition{} Sei $X$ ein Metrischer Raum und $f:X \rightarrow \mathbb{R}$ eine beschränkte Funktion. Die Oszillation (oder Schwankung) von $f$ bei $x\in X$ ist definiert durch \[\omega (f,x)=\lim_{\delta \searrow 0}\omega(f, x, \delta) \mspc\text{   Wobei   }\mspc \omega(f,x,\delta)=\sup f(B_{\delta}(x))-\inf f(B_{\delta}(x)) \]
+Wir messen also die dicke des Funktionswert des Balls um $x$, Wenn $f$ stetig ist, dann haben werte in der nähe von $x$ auch einen Funktionswert um $f(x)$, also ist der Funktionswert vom Ball $B_{\delta}(x)$ sehr klein wenn $\delta$ sehr klein ist. Die Schwankung ist sehr klein wenn die Funktion sehr stetig ist, und nicht wenn 
+\bemerkung{} Sei $X$ ein Kompakter Metrischer Raum, und $f:X \rightarrow \mathbb{R}$ beschränkt. Angenommen es existiert ein $\eta \ge 0$ so dass $\omega(f,x)\ge \eta$ $\forall x \in X$ Dann existiert $\forall \varepsilon > 0$ ein $\delta >0$ so dass $\forall x\in X$ gilt $\omega(f,x,\delta)\le \eta + \varepsilon$
+\beweis Sei $\varepsilon >0$  Nach annahme existiert für jedes $x\in X$ ein $\delta_x>0$ mit $\omega(f,x,\delta_x)<\eta + \varepsilon$
+Damit ist $\mathcal{O}=\left\lbrace B_{\delta_x}(x):x\in X\right\rbrace$ eine Offene Überdeckung von $X$ Nach dem Obigen satz existiert eine Lebesgue Zahl $r>0$. Für jedes $x\in X$ gilt damit
+dass es ein $\tilde{x}\in X$ gibt mit der eigenschaft: \[B_r(x)\subseteq B_{\delta_{\tilde{x}}}(\tilde{x})\]\[ \Rightarrow \sup f(B_r(x))\le \sup f(B_{\delta_{\tilde{x}}}(\tilde{x}))\mspc \text{ Und }\mspc -\inf f(B_r(x))\le -\inf f(B_{\delta_{\tilde{x}}}(\tilde{x}))\]
+Dann kann man sehen dass \[\omega(f,x,r)\le \omega(f,\tilde{x}, \delta_{\tilde{x}})<\eta+\varepsilon\]
+Was genau ist was wir beweisen wollten.
+\subsection*{Fundamentalsatz der Algebra}
+\theorem{Fundamentalsatz der Algebra} Jedes Nicht-konstante Polynom in $\mathbb{C }[z]$ hat mindestens ein Nullstelle. Zusätslich, lässt sich so ein Polynom $f(z)\in \mathbb{C }[z]$ also Produkt von Linearufnktionen Schreiben.
+\beweis Es genügt zu zeigen dass $f$ eine komplexe Nullstelle besitzt dann können wir nach induktion von $n=\text{deg}(f)$ und Division anwenden (da es keinen Restterm gibt).
+\newline Falls $f(0)=0$ ist dann sind wir fertig. Ansonsted, definieren wir $M=2|f(0)|>0$
+Nach einer Proposition aus Kapitel 3, gilt dass $\lim_{z\rightarrow\infty}|f(z)|=\infty$. Insbesondere gibt es ein $R>0$ so dass $\forall z\in \mathbb{C}$ mit $|z|\ge R$ gilt also dass $|f(z)|\ge M$. Also ausserhalb vom $R$ Ball, nutzt es nicht für die Nullstellen zu suchen.
+\[K=\left\lbrace z\in \mathbb{C }| \smspc |z| \le R\right\rbrace\] Ist noch Heine-Borel Kompakt. Nach dem Satzüber Kompakten Metrische Räume, $\exists z_0 in K$ mit $|f(z_0)|=\min_{z\in K}|f(z)|$  Dann behaupten wir dass $f(z_0)=0$ 
+\beweis Es gilt dass $|f(z_0)|\le |f(0)|< M$ Daraus folgt dass $|f(z_0)|<M\le|f(z)|$ Für alle $z\in \mathbb{C }$ mit $|z|\ge R$, Daher, ist dieser $z_0$ unser minimum innerhalb und ausserhalb von unserem $R$ radius. Daher gilt zusammenfassend \[|f(z_0)|)\min_{z\in \mathbb{C }}|f(z)|\]
+Wir nehmen indirekt an dass $f(z_0)=b_0\neq 0$. Es gilt, (Taylorreihe) $f(z)=b_0+b_l(z-z_0)^l+\cdots+b_n(z-z_0)^n$ für ein $l\in \left\lbrace1, \cdots, n\right\rbrace$ und $b_l\neq 0$ und $b_{l+1}, \cdots b_n \in \mathbb{C }$
+In dem wir nur die interessante terme aufbewahren bekommt man:
+\[f(z)=b_0+b_l(z-z_0)^l+O\left((z-z_0)^{l+1}\right)=b_0\left(1+\frac{b_l}{b_0}(z-z_0)^l\right)+O\left((z-z_0)^{l+1}\right) \mspc \text{für  } z \rightarrow z_0\]
+Wir setzen $\frac{b_l}{b_0}=se^{i\psi}$ mit $\psi\in [0, 2\pi]$ und $s>0$ Wir definieren dann auc $z=z_0+re^{i\phi}$ für ein Geignetes $\phi$ und $r\searrow 0$
+Dann gilt \[f(z)=b_0\left(1+se^{\phi}r^le^{il\psi}\right)+O(r^{l+1})\mspc \text{für }r\searrow 0\]
+Wir wollen dass $\psi+l\phi=\pi$ also setzen wir $\phi=\frac{\pi-\psi}{l }$ Womit \[|f(z_0+re^{i\phi})|\le|b_0|\left(1-sr^l\right)+O\left(r^{l+1}\right)=|b_0|\left(1-sr^l+Cr^{l+1}\right)\]
+Dies gilt für alle genügend kleine $r>0$, doch es gilt für $r>0$ genügend klein auch dass:
+\[1-sr^l+Cr^{l+1}=1-r^l(s-Cr)<1\]
+und \[|f(z_0+re^{i\phi})|<|b_0|=|f(z_0)|\]
+Wass ein widerspruch ist, also $f(z_0)=0$
+\subsection*{Funktionenräume, der Raum der stetigen Funktionen}
+Sei $K$ ein kompakter metrischer Raum. Wir definieren für $n\ge 1$ den Funktionenraum $C(K,\mathbb{R}^n)=\left\lbrace f_K \rightarrow \mathbb{R}^n: \smspc \text{Stetig}\right\rbrace$ Die Maximu, supremum oder unendlich sind alle gleich:
+\[||f||_{\infty}=\max_{x\in K}||f(x)||_2\]
+für $f\in C(K, \mathbb{R}^n)$ ist eine Norm auf diesen Vektorraum bezüglich $||\cdot||_\infty$ ist die gleichmässige Konvergenz. Zusätslich ist $C(K, \mathbb{R}^n)$ bezüglich dieser Norm, vollständig.
+\beweis Sei $(f_k)\in C(K, \mathbb{R}^n)$ eine Cauchy-Folge bezüglich $||\cdot||_\infty$. Daher $\forall \varepsilon>0$ existiert ein $N$ so dass $\forall k,l\ge N$ gilt $||f_k-f_l||_\infty < \varepsilon$ Insbesondere gilt damit für jedes fest gewählt $x\in K$ die Ungleichung $||f_k(x)-f_l(x)||_2< \varepsilon$
+Insbesondere ist damit $(f_k(x))_k$ eine Cauchy-Folge in $\mathbb{R}^n$, da $\mathbb{R}^n$ vollständig ist, sind auch die einzige Komponenten cauchy-Folgen und es gilt 
+\[f(x)=\lim_{k\rightarrow\infty}f_k(x)\] und dies definiert eine Funktion $f:K \rightarrow \mathbb{R}^n$. Wenn jetzt $f$ der Gleichmässige grenzwert von $f_k$ ist, dann haben wir bewiesen was zu beweisen war.
+\newline Sei $\varepsilon > 0$ dann existiert ein $N<\in \mathbb{N}$ so dass für $k,l\ge N$ gilt: $||f_k(x)-f_l(x)||_2< \varepsilon$ Für $l \rightarrow\infty$ folgt daraus dass $||f_k(x)-f_l(x)||_2\le \varepsilon$ $\forall k\ge N$ und $x\in K$ und dass entspricht die Definition der Gleichmässigen konvergenz und der Erste teil der Obigen proposition ist bewiesen.
+\beweis \textbf{Teil 2} Wenn der Raum vollständig ist, dann st $f$ stetig, und umgekehrt (wegen cauchy-heit). Also wir müssen nun Beweisen dass $f$ stetig ist.
+\newline Sei $\varepsilon >0$ und $N\in \mathbb{N}$ so dass $\forall k,l\ge N$ $||f_k-f_l||_{\infty}< \varepsilon$. Da $f_N$ stetif ist, gibt es für $x_0\in K$ ein $\delta>0$ so dass $\forall x\in K:$ $d(x,x_0)<\delta \Rightarrow ||f_N(x)-f_n(x_0)||_2< \varepsilon$ Daraus folgt $||f(x)-f(x_0)||_2 \le ||f(x)-f_N(x)||_2+||f_N(x)-f_N(x_0)||+||f_N(x_0)-f(x_0)||_2< 2 \varepsilon$ Also ist $f$ stetig und der Raum ist vollständig.
+\section*{Mehrdimensionale Differenzialrechnung}
+Wir betrachten Funktionen \[f:U \subseteq \mathbb{R}^n \rightarrow \mathbb{R}^m\]
+Abhängig von $n$ und $m$ kann diese funktion unterschiedliche bedeutungen haben:
+\begin{itemize}
+  \item[]{$n=m=1$ In diesen Fall betrachten wir meistens die Extrmalwerte und simple ableitungen, dieser Fall wird am meisten studiert}
+  \item[]{$m=n>1$ Hier sind es Vektorfelde und wir betrachten dieser Fall meistens in der Physik}
+  \item[]{}
+\end{itemize}
+\end{document}
