@@ -84,7 +84,7 @@ Dann kommt Binomialverteilung die die Wahrscheinlichkeit beschreibt dass in $n$ 
 \newline Wir können mithilfe von den Momenten finden dass $\mu=M_1=pN$ und $\sigma\sim N$
 \hypertarget{poissonverteilung}{\subsubsection*{Poissonverteilung}}
 
-Die Poissonverteilung ist die Binomiallverteilung für $\lim_{k\rightarrow k}$
+Die Poissonverteilung ist die Binomiallverteilung für $\lim_{n\rightarrow k}$
 \hypertarget{mittelwertfehler}{\section*{Mittelwertfehler}}
 Wenn wir eine Messung vielmals wiederholen, dann wird die standardabweichung ab einen Punkt nicht mehr viel variieren, doch mit mehr messpunkte, sind wir uns sicherer und sicherer dass unser Mittelwert korrekt ist. Deswegen ist der Fehler des Mittelwerts nicht einfach die Standardabweichung sondern durch:
 \[\Delta \mu=\frac{\sigma}{\sqrt{N}}\]
@@ -113,5 +113,6 @@ Wie man das praktisch macht, man misst für alle frequenzen die Gleichung und da
 \subsubsection*{Gabors limit} Wenn sag ich dass eine fräquenz nicht im Transform auftaucht? Gabors limit besagt dass je langer ein signal ist in der zeit, desto besser kann die präzision der messung vom signal sein: $\sigma_t\cdot\sigma_f\ge\frac{1}{2}$. Wobei $\sigma$ die auflösung der Messung ist.
 Daher limitiert die Messzeit $t_{tot}$ $\sigma_t$. Wenn man den Fouriertransform von einer funktion mit eine auflösung $\sigma_t$, mit eine kleinere auflösung misst, bekommt man nicht mehr information, die zwei werte sind dann auf distanzen kleine als $\sigma_t$ korreliert und bringen nicht neue information.
 Zusätslich ist die Maximale frequenz die ich messen kann ist $f_{max}=\frac{1}{2\Delta t}$ die minimale frequenz lässt sich analog finden aber die negative Fourierwerte haben nicht mehr information als die positive
+
 
 \end{document}

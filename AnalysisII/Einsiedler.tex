@@ -348,7 +348,19 @@ Wir betrachten Funktionen \[f:U \subseteq \mathbb{R}^n \rightarrow \mathbb{R}^m\
 Abhängig von $n$ und $m$ kann diese funktion unterschiedliche bedeutungen haben:
 \begin{itemize}
   \item[]{$n=m=1$ In diesen Fall betrachten wir meistens die Extrmalwerte und simple ableitungen, dieser Fall wird am meisten studiert}
-  \item[]{$m=n>1$ Hier sind es Vektorfelde und wir betrachten dieser Fall meistens in der Physik}
-  \item[]{}
+  \item[]{$m=n>1$ Hier sind es Vektorfelde und wir betrachten dieser Fall meistens in der Physik, Oder es könnten auch Koordinatenwechsel funktionen und Polarkoordinaten seien.}
+  \item[]{$m<n$ In diesem Fall, wenn wir uns die menge $\left\lbrace f=0\right\rbrace$ anschauen, dann ist diese Lösungsmege interessant (Spätere Kapitel sehen)}
 \end{itemize}
+\subsection*{Ableitung} Wir müssen wieder von anfang an definieren. Wir betrachten hier immer Funktionen auf offenen Teilmengen $U \subseteq \mathbb{R}^n$. Diese können folgende Bedingungen erfüllen:
+\begin{itemize}
+  \item[\textit{i.}]{Die Menge ist Zusammenhängend}
+  \item[\textit{ii.}]{Die Menge ist Wegzusammenhängend}
+  \item[\textit{iii.}]{Sternförmig: also \[\exists z\in U \text{ so dass } \forall x\in U \text{ und }\forall t\in[0,1]:\smspc (1-t)z+tx\in U\]Diese Definition ist analog zur Wegzusammenhängendkeit. Da die strecken in $U$ sein müssen}
+  \item[\textit{iv.}]{Konvex, also: \[\forall x, y\in U\smspc \forall t\in [0,1] \text{ gilt } (1-t)x+ty\in U\] Diese Mengen sind sterne wo alle Punkte als zentrum betrachtet werden Können.}
+\end{itemize}
+Diese Begriffe sind Wichtig da es keine Kompaktheit gibt.
+\definition{Lineare Abbildungen} Sei $A:\mathbb{R}^n \rightarrow \mathbb{R}^m$ Dann ist diese Abbildung analog zu einer Matrix $A\in M_{n \times n}(\mathbb{R})$. Wir verwenden auch dass innere Produkt. $<\cdot,\cdot>$ und diesen gibt uns einen Isomorphismus $(\mathbb{R}^n)^*\approxeq \mathbb{R}^n$
+\definition{Ableitung} Sei $U\in \mathbb{R}^n$ offen und $f:U \rightarrow \mathbb{R}^n$ eine Funktion. Wir sagen dass $f$ in $x_0\in U$ differenzierbar ist, falls es eine Lineare Abbildung $L:\mathbb{R}^n \rightarrow \mathbb{R}^m$ gibt so dass \[f(x_0+h)=f(x_0)+L(h)+o(||h||)\mspc \text{für} h \rightarrow 0\]
+Wobei $h$ die kleine Umgebung um $x_0$ ist und $o(||h||)$ der Fehler term der Kleiner ist als $L(h)$. Wenn es dies Funktion $L$ existiert dann nennen wir $L=D_{x_0}f$ die Ableitung von $f$ bei $x_0$
+Diese Funktion $f(x_0)+L(h)$ ist eine Affine Approximation von $f$ um $x_0$ und dieses Term $0(||h||)$ schneller als linear Verschwindet. Wenn wir $f:\mathbb{R}^2 \rightarrow \mathbb{R}$ nehmen und eine Paraboloid damit bilden, dann wird diese Affine Funktion eine Tangentialebene sein die die Funktion um den Punkt $x_0$ approximiert.
 \end{document}
