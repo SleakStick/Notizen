@@ -18,16 +18,33 @@
 \begin{document}
 \maketitle
 \section{TLDR}
-\begin{tabular}{c|p{8cm}|c}
-  \textbf{Name}&\textbf{Bedeutung}&\textbf{Formel}\\
-  \hline
-  \hyperlink{messfehler}{Messfehler}&Der Messfehler ist die abweichung vom gemessenen Wert $x_1$ zum theoretischen oder erwateten Wert$\tilde{x}$ &$e=\tilde{x}-x_1 $\\
-  \hline\hyperlink{PDF}{Probability Density Function}&Dies ist eine Funktion $f$ (Probability Mass Funktion falls diskret) die die wahrscheinlichkeit $P_{a,b}(x)$ dass eine variable $x$ zwischen zwei punkte $a,b$ fällt&$P_{a,b}(x)=\int_a^bf(x)dx$\\
-  \hline\hyperlink{Normalverteilung}{Normalverteilung}&Die Normalverteilung ist eine Funktion $f$ mit variablen $\mu:$Erwartungswert und $\sigma:$Standardabweichung, die sehr oft die verbreitung zufälliger Datenaufnahmen spiegelt&$f(x,\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$\\
-  \hline\hyperlink{Binomialverteilung}{Binomialverteilung}& Die Binomialverteilung beschreibt die wahrscheinlichkeit dass in $n$ Versuchen das ereigniss mit Wahrscheinlichkeit $P(u)=p$ genau $k$ mal vorkommt & $ B(k|p,n)=\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}$\\
-  \hline\hyperlink{mittelwertfehler}{Mittelwertfehler}& Der Fehler des Mittelwerts bei einer wiederholung einer Messwiederhulung auf $N$ mal, wobei $\sigma$ die Standardabweichung ist &$\Delta \mu=\frac{\sigma}{\sqrt{N}}$\\
-
+\begin{tabular}{p{4cm}|p{8cm}|p{6cm}}
+  \textbf{Name}&\textbf{Bedeutung}&\textbf{Formel}\\\hline
+  \hyperlink{messfehler}{Messfehler}&Der Messfehler ist die abweichung vom gemessenen Wert $x_1$ zum theoretischen oder erwateten Wert$\tilde{x}$ &\[e=\tilde{x}-x_1 \]\\
+  \hline\hyperlink{PDF}{Probability Density Function}&Dies ist eine Funktion $f$ (Probability Mass Funktion falls diskret) die die wahrscheinlichkeit $P_{a,b}(x)$ dass eine variable $x$ zwischen zwei punkte $a,b$ fällt&\[P_{a,b}(x)=\int_a^bf(x)dx\]\\
+  \hline\hyperlink{Normalverteilung}{Normalverteilung}&Die Normalverteilung ist eine Funktion $f$ mit variablen $\mu:$Erwartungswert und $\sigma:$Standardabweichung, die sehr oft die verbreitung zufälliger Datenaufnahmen spiegelt&\[f(x,\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)\]\\
+  \hline\hyperlink{poissonverteilung}{Poissonverteilung}& TODO&TODO\\
+  \hline\hyperlink{Binomialverteilung}{Binomialverteilung}& Die Binomialverteilung beschreibt die wahrscheinlichkeit dass in $n$ Versuchen das ereigniss mit Wahrscheinlichkeit $P(u)=p$ genau $k$ mal vorkommt & \[ B(k|p,n)=\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\]\\
+  \hline\hyperlink{mittelwertfehler}{Mittelwertfehler}& Der Fehler des Mittelwerts bei einer wiederholung einer Messwiederhulung auf $N$ mal, wobei $\sigma$ die Standardabweichung ist &\[\Delta \mu=\frac{\sigma}{\sqrt{N}}\]\\
+  \hline\hyperlink{fehlerfortpflanzung}{Fehlerfortpflanzung}&TODO&TODO\\
+  \hline\hyperlink{mehrdimensionalefehlerfortpflanzung}{Mehrdimensionale Fehlerfortpflanzung}&TODO&TODO\\
+  \hline\hyperlink{kovarianz}{Kovarianz}&Die Kovarianz ist eine Messung der korrelation zwischen zwei Variablen. Je kleiner der Absolutwert der Kovarianz ist, je weniger sind die Variablen korreliert& cov$(x,y)=\frac{1}{N-1}\sum_{n=1}^{N}(x_n-\overline{x})(y_n-\overline{y})$ mit $N$ gross: cov\[(x,y)\approx \sigma_{xy}\]\\
+  \hline\hyperlink{normiertekovarianz}{Normierte Kovarianz}&Wenn wir ein Absolutes Messwert für die Korrelation von Variablen wollen, kann man die Kovarianz Normieren& \[\rho_{xy}=\frac{\text{cov}(x,y)}{\sigma_x\sigma_y}\] \\
+  \hline\hyperlink{autokovarianz}{Auto-Kovarianz}&Die autokovarianz ist eine Kovarianz mit einen Datensatz und denselben Datensatz in der Zeit verschoben. &\[R_{xx}(\Delta)=\frac{1}{N}\sum_{n=1}^{N}(x_n-\overline{x})(x_{n+\Delta}-\overline{x})\]\\
+  \hline\hyperlink{fouriertransform}{Fourier Transform}& Jede Funktion lässt sich als summe von Trigonometrischen Funktionen darstellen. Der Fourier Transform gibt für jede Frequenz in einem Bereich, die amplitude des summenanteils mit dieser Frequenz. Die Gleichung links gibt die Amplitude $X_n=X(f_n)$ bei der frequenz $f_n$ abhängig vom Messwert $x_k=x(t_k)$ & \[X(f_n)=\sum_{n=0}^{N-1}x(t_k) e^{-2\pi i f_n t_k}\]\\
+  \hline\hyperlink{psd}{Spektrale Leistungsdichte}& Die Spektrale Leistungsdichte ist eine Mass von der Leistung der Summenanteile Der Fourier folge mit frequenz $f_n$ & \[S_{xx}(f_n)=\frac{\Delta_t}{N}|X(f_n)|^2\]\\
+  \hline\hyperlink{parseval}{Parseval Theorem}& Das parseval Theorem besagt dass die Varianz und die Spektrale Leistungsdichte differenziell zusammenhängen und da die PSD in unkorrelierte Datensätze additiv ist, ist es auch die Varianz& \[\sigma_x^2=\Delta_f\sum_{f=-f_{\text{max}}}^{f_{\text{max}}}S_{xx}(f)\]\\
 \end{tabular}
+
+\begin{tabular}{p{4cm}|p{8cm}|p{6cm}}
+  \textbf{Name}&\textbf{Bedeutung}&\textbf{Formel}\\\hline
+  \hline\hyperlink{likelihood}{Likelyfood Funktion} &Die Likelihood-Funktion ist eine Funktion $L(x,a)$ die Von einen fixen datensatz $x=(x_0,...,x_n)$ und variable Wahrscheinlichkeitsdichtefunktion parameter $a=(a_0,...,a_n)$ eine plausibilität dass die parameter $a$ richtig sind zurückgibt. &\[L(x,a)=\prod_{i=0}^Nf(x_i, a)\]Wobei $ f(x_i,a)$ eine Wahrscheinlichkeitsfunktion ist mit parametern $a$\\
+\end{tabular}
+
+
+
+
+
 \hypertarget{messfehler}{\section*{Messfehler}}
 {Messen} wir einen Wert von welchen wir schon eine Theoretische einschätzung $\tilde{x}$ haben, sei der gemessen Wert $x_1$ dann haben wir einen \textbf{Massfehler} $e=\tilde{x}-x_1$.
 Dieser Fehler kann systematisch (es kommt bei jeder Messung gleich vor) oder Zufällig (es war ein Zufall dass es diesmal den wert $e$ angenommen hat, und es könnte nächstes mal irgeindein Wert annehmen).
@@ -63,7 +80,7 @@ Wobei wir:\begin{itemize}
 \subsubsection*{Ziegen Problem}
 Wenn wir den Ziegen Problem benutzen um die Bayesche Datenanalyse zu betrachten:
 Wir haben am anfange $P(B_i)=\frac{1}{3}$ da es $3$ turen gibt. Wenn wir aber mehr information haben, dann ist 
-
+%TODO
 
 \subsubsection*{Covid Test Beispiel}
 %TODO
@@ -97,22 +114,55 @@ Dann kann man die Taylorentwicklung des ersten Grades benutzen um folgendes Zusa
 \[\Delta f(x)=f(\overline{x}-\Delta x)-f(\overline{x})=\left.\frac{\partial f}{\partial x}\right|_{\overline{x}}\Delta x\]
 Wobei $\Delta$ einen Fehler bezeichnet, $\overline{x}$ der punkt um deren wir den Fehler berechnen. Die standardabweichung lässt sich auch derselben weise rechnen:
 \[\sigma_f=\left.\frac{\partial f}{\partial x}\right|_ {\overline{x}}\sigma_x\]
-\hypertarget{mehrdimensionaleFehlerfortpflanzung}{\subsubsection*{Mehrdimensional Fehlerfortplanzung}}
+\hypertarget{mehrdimensionalefehlerfortpflanzung}{\subsubsection*{Mehrdimensional Fehlerfortplanzung}}
 Wir können es erweitern bis zum fall wo die funktion $f$ von mehrere Fehler behafteten Messgrössen. In diesem Fall hängt der
 Fehler $\Delta f$ auch von der Kovarianz zwischen $x$ und $y$ die zwei Messgrössen.
 \[\sigma_f^2=(\partial_x,\partial_y)f\begin{pmatrix}\sigma_x^2&\sigma_{xy}^2\\\sigma_{xy}^2&\sigma_y\end{pmatrix}\begin{pmatrix}\partial_x\\\partial_y\end{pmatrix}f\]
 Wenn die kovarianz $\sigma_{xy}=0$ dann ist dies einfach eine Diagonale Matrix und es wird zu summe:
 \[\sigma_f^2=\sum_{n=1}^N\left(\frac{\partial f}{\partial x_n}\right)\sigma_{x_n}^2\]
+Um diese Sogenannte Gauss methode zu benutzen, muss $\sigma$ eigentlich nicht $0$ sein, sondern nur klein genug so dass es eine Gut genuge Approximation ist. Es muss auch Gelten dass $x_n$ statistisch unabhängig ist so dass \newline var$(x_1+x_2)=$ var$(x_1)+$var$(x_2)$
+\newline Wenn wir eine Messung angeben, und kein Fehler dazugegeben ist, dann ist dies eine Impliziete Fehler angabe, und wir nehmen an dass der Fehler die Hälfte der letzten Dezimalstelle ist.
+\section*{Korrelierte Messgrössen}
+Hier handelt es sich um Messgrössen die Korreliert sind, also welche die werte einen zusammenhang darstellen. Eine korrelierte 
+Messgrösse ist nicht immer ein Zeichen der Kausalität und kann auch zufällig korreliert sein.
+\hypertarget{kovarianz}{\subsection*{Kovarianz}} Wenn wir einen Linearen zusammenhang zwischen zwei variablen $x$ und $y$ zeigen wollen, rechnen wir die geschätzte Kovarianz:
+\[\text{cov}(x,y)=\frac{1}{N-1}\sum_{n=1}^{N}(x_n-\overline{x})(y_n-\overline{y})\]
+Wenn wir also sehr viele Datenpunkte Haben, dann gilt $\frac{1}{N-1}\rightarrow \frac{1}{N}$ und es gilt dass \[\lim_{N\rightarrow\infty} \text{cov}(x,y)=\sigma_{xy}^2\]
+Diese Kovarianz ist Einheitenabhängig mit $[x]\times [y]$ und ist also nicht universell benutzbar.
+\hypertarget{normiertekovarianz}{\subsubsection*{Normierte Kovarianz}} Die Kovarianz kann man mit den Grössen normieren so dass sie eien Absolute Bedeutung annehmen, in dem man die Kovarianz durch die Standardabweichungen dividiert:\[\rho_{xy}=\frac{\text{cov}(x,y)}{\sigma_x\sigma_y}\in [-1,1]\]
+Diese Normierte Kovarianz nimmt eine Neue Bedeutung an:
+\[\rho_{xy}=\left\lbrace \begin{matrix}0:&\text{ Die Variablen sind unkorreliert}\\ \pm1: & \text{ Die Variablen sind maximal (anti-) korreliert mit }y=ax\end{matrix}\right.\]
+Diese Varianzen und Kovarianzen können in eine Kovarianzmatrix dargestellt werde, wie es zuvor benutzt worden ist.\newline
+Um die Korrelation von zweier Datensätze graphisch darzustellen, ist einen graph von einen Datensatz im abhang von einen Anderen, ist dies linear, dann ist eine Lineare Korrelation vorhanden.
+\hypertarget{autokovarianz}{\subsection*{Auto-Kovarianz}} Meistens ist die Kovarianz nicht um unterschiedliche variablen als korrelierend Festzustellen benutzt, sondern um eine Variable mit sich selber in der Zeit korreliert zu finden. Dazu benutzt man also eine Kovarianz mit den Datensatz $x_i$ und einen Zeit-verschobenen Datensatz $x_{i+\Delta}$, wobei $\Delta$ eine Indexverschiebung ist.
+Man rechnet die Autokovarianz mithilfe der Definition der Kovarianz:
+\[R_{xx}(\Delta)=\frac{1}{N}\sum_{n=1}^{N}(x_n-\overline{x})(x_{n+\Delta}-\overline{x})\]
+Diesen Wert kann man auch normieren: \[\rho_{xx}=\frac{R_{xx}(\Delta)}{\sigma^2_x}\in[-1,1]\]
+Die autokovarianz kann auch von einer Diskreten Zeiteinheit $\tau=\Delta\times\delta t$ abhängen so dass man auch Zeitabhängige Funktionen nicht als folgen sondern als diskrete Funktionen Anschaeun kann. Die autokovarianz bleibt jedoch unverändert in der Form. Man kann auch $\delta t \rightarrow 0$ setzen und die Kontinuierliche Autokovarianz rechnen, wo die Summe also ein Integral wird. 
+\newline Hier ist eine Liste von
 %\section{Kovarianz und Autokovarianz}
-\section*{Fouriertranform}
-Wir können jede Funktion auf einem beschränkte Zetiperiode als eine Summe von Trigonometrischen funktionen defnieren. Wenn ich eine funktion $x_{t_k}$ habe dann kann ich eine frequenz hier einsetzen: (in theorie ist dies ein Integral aber hier handelt es sich um diskrete daten)
-\[X(f_n)=\frac{1}{N}\sum_{k=0}{N-1}x(t_k)e^{-i2\pi f_nt_k}\]
-und ich bekomme ein anteil der trigonometrischen funktionen von dieser fräquenz in der funktion.\newline
-Wie man das praktisch macht, man misst für alle frequenzen die Gleichung und dann bekommt man den anteil dieser fräquenz auf der funktion welche wir den Fouriertransform machen
-\subsubsection*{Aliasing} Man muss aufpassen wenn man eine Welle misst, wenn $\Delta t>\frac{1}{\nu}$ dann ist unsere messung okay, man braucht also mindestens zwei messpunkte pro oszillation der Welle, sonst kann ein Fall von Aliasing passieren wo wir eine höhere fräquenz messen als was eigentilch ist.
-\subsubsection*{Gabors limit} Wenn sag ich dass eine fräquenz nicht im Transform auftaucht? Gabors limit besagt dass je langer ein signal ist in der zeit, desto besser kann die präzision der messung vom signal sein: $\sigma_t\cdot\sigma_f\ge\frac{1}{2}$. Wobei $\sigma$ die auflösung der Messung ist.
+\hypertarget{fouriertransform}{section*{Fouriertranform}}
+Das Theorem von Fourier besagt dass jede integrierbare Funktion sich als summe von Trigonometrischen Funktionen darstellen lässt. Da wir in der Datenanalyse sind, betrachten wir den Diskreten Fall, wo $x(t_k)$ die Messung am $k$-ten zeitpunkt ist. Also kann man sagen dass:
+\[x(t_k)=\sum_{n=-\frac{N}{2}}^{\frac{N}{2}}X(f_n)e^{2\pi i f_n t_k}\] Da $e^{2\pi i f_n t_k}$ eine Trigonometrische Funktion ist nach dem Satz von Euler. Die funktion $X(f_n)$ ist die amplitude Der trigonometrischen Funktion mit der $n$-ten Frequenz $f_n$. Dies Funktion lässt sich also Schreiben als:
+\[X(f_n)=\frac{1}{N}\sum_{k=0}^{N-1}x(t_k)e^{-2\pi i f_n t_k}\] Diese Funktion nimmt die Form einer Kovarianz an, da man sich vorstellen kann, dass diese Funktion $X(f_n)$, misst wie gut unsere Messwerte $x$ mit der Trigonometrischen Funktion bei der $n$-ten Frequenz $f_n$ übereinstimmen. $X(f_n)$ gibt die amplitude der Trigonometrischen Funktion mit frequenz $f_n$ in der Summe die $x(t_k)$ bildet.
+Wenn wir diese Korrelation Normieren würden, dann würden wir ein Prozentsatz von den frequenzen die gegen $x$ aufsummieren.
+\subsubsection*{Aliasing} Aliasing ist wenn wir mit einen Frequenzschritt $\Delta f_n$ eine Fouriertransform macht die grösser ist als die eigentliche Frequenzwerte die wir messen wollen. Dann kommt ein ungenaues und falsches Datensatz raus. Die Grösste Messbare Frequenz mit den Fourier Transform heisst nyquist frequenz und ist gegeben durch:
+\[f_{\text{max}}=\frac{1}{2\Delta_t}\]
+Gabors limit besagt dass je langer ein signal ist in der zeit, desto besser kann die präzision der messung vom signal sein: $\sigma_t\cdot\sigma_f\ge\frac{1}{2}$. Wobei $\sigma$ die auflösung der Messung ist.
 Daher limitiert die Messzeit $t_{tot}$ $\sigma_t$. Wenn man den Fouriertransform von einer funktion mit eine auflösung $\sigma_t$, mit eine kleinere auflösung misst, bekommt man nicht mehr information, die zwei werte sind dann auf distanzen kleine als $\sigma_t$ korreliert und bringen nicht neue information.
-Zusätslich ist die Maximale frequenz die ich messen kann ist $f_{max}=\frac{1}{2\Delta t}$ die minimale frequenz lässt sich analog finden aber die negative Fourierwerte haben nicht mehr information als die positive
-
-
+\hypertarget{psd}{\subsection*{Spektrale Leistungsdichte}}
+Oft will man eher wissen was die Leistung der Summenanteile in einen Bestimmten Frequenzinterwall wissen. Zum beispiel der Sichtbare anteil eines lichtstrahles. Die Spektrale leistungsdichte oder Power Spektral Density (PSD) ist das Normierte Quadrat des Fourier Transforms im intervall.
+\[S_{xx}(f_n)=\frac{\Delta_t}{N}|X(f_n)|^2\]
+\hypertarget{parseval}{\section*{Pareseval Theorem}}
+Die wichtigste eigenschaft der Spektrale Leistungsdichte ist dass ihre normierung so gewählt ist so dass ihr Integral die Varianz ist:
+\[\sigma_x^2=\int^{-\infty}_{\infty}S_{xx}(d)\text{d}f\]
+\[\text{Und im diskreten Fall:}\]
+\[\sigma_x^2=\Delta_f\sum_{f=-f_{\text{max}}}^{f_{\text{max}}}S_{xx}(f)\]
+Spektrale Leistungsdichten sind additiv wenn die Variablen unkorreliert sind, also sind auch die Varianzen additiv für Unkorrelierte Datensätze.
+\hypertarget{likelihood}{\section*{Likelihood funktion}}
+Bisher war eine Messung schon immer eine Ziehung von einer Zufallszahl aus einer Wahrscheinlichkeitsverteilung einer zufallsvariable $\zeta$ und einen Parametervektor $a$ der die wahrscheinlichkeitsdichtefunktion definiert (z.B mittelwert und standardabweichung für eine Normalverteilung) : $f(\zeta, a)=p$ Wobei $p$ eine Wahrscheinlichkeit ist. Die Likelihood-Funktion ist eine Funktion $L(x,a)=l$ also Wir bekommen von einen fixes Gemessenes Datensatz $x$ und variable parameter $a$ eine
+plausibilität dass die Parameter $a$ richtig sind. Die Likelihood-Funktion sagt uns wie wahrscheinlich es ist dass die wahrscheinlichkeitsfunktion die Parameter $a$ hat mit den Daten $x$. Die Likelihood-Funktion ist keine Wahrscheinlichkeitsdichtefunktion da sie nicht auf $1$ aufsummiert.
+\newline Die Likelihood-Funktion wird gerechnet in dem man den produkt aller wahrscheinlichkeitsfunktionen für die Werte in $x$ nimmt:
+\[L(x,a_0,a_2)=\prod_{i=1}^nf(x_i, a_0, a_1)\]
+\hypertarget{maxlikelihood}{\subsection*{Maximum Likelihood}}Die likelihood-funktion ist alleine Nicht sehr wichtig, aber wenn man die Parameter $a$, die die Wahrscheinlichkeitsdichtefunktion vom datensatz, kennen will, dann nimmt man den Maximum der Likelihood-Funktion und bei diesem punkt, ist $a_r$ die beste Abschätzung der Parameter von der Wahrscheinlichkeitsdichtefunktion: \[a_r \smspc \text{so dass} \smspc L(x,a_r)=\max_{a\in \mathbb{C}}L(x,a)\]
 \end{document}
