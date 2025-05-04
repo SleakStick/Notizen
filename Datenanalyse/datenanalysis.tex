@@ -38,7 +38,7 @@
 
 \begin{tabular}{p{4cm}|p{8cm}|p{6cm}}
   \textbf{Name}&\textbf{Bedeutung}&\textbf{Formel}\\\hline
-  \hline\hyperlink{likelihood}{Likelyfood Funktion} &Die Likelihood-Funktion ist eine Funktion $L(x,a)$ die Von einen fixen datensatz $x=(x_0,...,x_n)$ und variable Wahrscheinlichkeitsdichtefunktion parameter $a=(a_0,...,a_n)$ eine plausibilität dass die parameter $a$ richtig sind zurückgibt. &\[L(x,a)=\prod_{i=0}^Nf(x_i, a)\]Wobei $ f(x_i,a)$ eine Wahrscheinlichkeitsfunktion ist mit parametern $a$\\
+  \hline\hyperlink{likelihood}{Likelihood Funktion} &Die Likelihood-Funktion ist eine Funktion $L(x,a)$ die Von einen fixen datensatz $x=(x_0,...,x_n)$ und variable Wahrscheinlichkeitsdichtefunktion parameter $a=(a_0,...,a_n)$ eine plausibilität dass die parameter $a$ richtig sind zurückgibt. &\[L(x,a)=\prod_{i=0}^Nf(x_i, a)\]Wobei $ f(x_i,a)$ eine Wahrscheinlichkeitsfunktion ist mit parametern $a$\\
 \end{tabular}
 
 
@@ -165,4 +165,5 @@ plausibilität dass die Parameter $a$ richtig sind. Die Likelihood-Funktion sagt
 \newline Die Likelihood-Funktion wird gerechnet in dem man den produkt aller wahrscheinlichkeitsfunktionen für die Werte in $x$ nimmt:
 \[L(x,a_0,a_2)=\prod_{i=1}^nf(x_i, a_0, a_1)\]
 \hypertarget{maxlikelihood}{\subsection*{Maximum Likelihood}}Die likelihood-funktion ist alleine Nicht sehr wichtig, aber wenn man die Parameter $a$, die die Wahrscheinlichkeitsdichtefunktion vom datensatz, kennen will, dann nimmt man den Maximum der Likelihood-Funktion und bei diesem punkt, ist $a_r$ die beste Abschätzung der Parameter von der Wahrscheinlichkeitsdichtefunktion: \[a_r \smspc \text{so dass} \smspc L(x,a_r)=\max_{a\in \mathbb{C}}L(x,a)\]
+\hyper
 \end{document}
