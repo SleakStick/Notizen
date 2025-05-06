@@ -660,7 +660,7 @@ Die Magnetische Kraft ist gegeben als \[\vec{B}:\mspc \vec{F_B}=q \vec{v}\times 
 Diese Kraft übt sich also nur auf bewegt ladungen. Wenn wir die Magnetische und die Elektrische Kraft zusammen setzen, dann bekommen wir die Lorentz kraft:
 \[\vec{F}=q\left(\vec{E}+\vec{v}\times \vec{B}\right)\]
 Sehr gut, aber wie findet man dieses Magnetisches Feld? Wenn wir Eine Fläche $C$ haben, mit den Rand $\partial C$, dann gilt:
-\[\oint^{}_{\partial C}\vec{B}\text{d}L=\mu_0 I_\text{ein}=\int^{}_{C}\vec{J}\text{d}\vec{s}\]
+\[\oint^{}_{\partial C}\vec{B}\text{d}L=\mu_0 I_\text{eingeschlossen}=\int^{}_{C}\vec{J}\text{d}\vec{s}\]
 Wobei $dl$ ein Teil des randes ist, und $d \vec{s}$ ein kleines flächenteil ist, ($I$ ist die flächendichte über die ganze fläche)
 \newline
 Sei ein Stromdurchflossener Leiter, Wenn wir dass magnetfeld in einer Distanz $r$ vom draht messen, dann ist es Gegeben durch:
@@ -681,4 +681,43 @@ Wenn wir also eine Spule, ist es nur eine Überlagerung von Ringströme, also is
 \end{tabular}
 \end{center}
 
+\section*{Magnetische Induktion}
+Wenn wir eine Ladung im Magnetfeld haben, dann gibt es eine Lorentz-Kraft:
+\[\vec{F}=q(\vec{E}+\vec{v}\times \vec{B})\]
+Alsoe gibt es ein Verschiebung der Elektrone und ein ELektrisches Feld
+\subsubsection*{Isolierter Leiter}
+Da die Ladungsverschiebung die Magnetische Kraft entgegen geht, bewegen sich dei Ladungen so lange bis der Interne Elektrische Feld die Aussere Kraft entgegen gestellt ist, wenn wir den Leiter aber bewegen dann gilt:
+\[\vec{F_{\text{int}}}+\vec{F_M}=0\]
+\[\vec{E_{\text{int}}}=-\vec{v}\times \vec{B }\]
+Wenn wir eine Lorentz-Transformation auf diese Kraft auflegen dann finden wir dass, da im Laborsystem das homogene Elektrische Feld $\perp$ $\vec{v}$:
+\[\vec{E_\perp}=\vec{E_\text{int}}=-\vec{v}\times \vec{B }\]
+Also diese Gesetze sind Lorentz-invariant.
+\subsubsection*{Leiter teil eines Schaltkreises}
+In einem Schaltkreis, wird diese bewegung von Ladungen, einen Strom. Die Änderung des Elektrischen Potential, wass man Elektromotorische Kraft nennt ist:
+\[\mathbf{\epsilon}=\oint^{}_{C }\vec{v}\times \vec{B }\text{d}\vec{s}\]
+\subsubsection*{Das Faraday'sche Gesetz}
+Im Faraday'schen Gesetz benutzt man den Magnetischen Fluss:
+\[\phi(t)=\int^{}_{A}\vec{B }\text{d}\vec{a}\]
+Am zeitpunkt $t+dt$ ist \[\phi(t+dt)=\int^{}_{A+dA}\vec{B }\text{d}\vec{a}=\phi+d\phi\]
+Die änderung der Fläche $dA$ ist aber auch:
+\[d \vec{a}=\frac{dt \vec{v}}{d \vec{x}}\times d \vec{s}\]
+Daher ist unser $d\phi$:
+\[d\phi=\int^{}_{dA}\vec{B }\text{d}\vec{a}=\oint^{}_{C }\vec{B }\text{d}\]
+%TODO Photo on phone
+
+Die Elektromotorische Kraft ist:
+\[\epsilon = -\frac{d\phi}{dt}=-\frac{d }{dt}\int^{}_{A}\vec{B }\text{d}\vec{a}\]
+Eine Lorentz-transformation (für das $dt$) zeigt dass im Stationären Fall:
+\[\int^{}_{A}\vec{\nabla}\times \vec{E}\text{d}\vec{a}=\int^{}_{\partial A}\vec{E }\text{d}\vec{s}=-\frac{\partial}{\partial t} \int^{}_{A}\vec{B }\text{d}\vec{a}\]
+\[\boxed{\vec{\nabla}\times \vec{E}=-\frac{\partial \vec{B}}{\partial t} }\]
+Was eine Maxwell-Gleicung ist!!
+\subsection*{Das Gesetz von Lenz}
+Die Magnetisch induzierte Elektromotorische Kraft induziert einen Strom was selber einen Magnetischen Feld erzeugt, und daher, gegen die anderung des ersten Magnets übt.
+\[\vec{F_\text{ext}}\cdot \vec{v}=\text{Leistung}=lIBv= \epsilon I\]
+\subsubsection*{Die Gegenseitige Induktivität}
+Wenn wir zwei Schaltkreise haben, dann ist die Elektromotorische Kraft die zwischen die Spulen induziert wird ist durch:
+\[\epsilon_{2,1}=-\frac{\phi_{2,1}}{dt}=\frac{-d }{dt} \int^{}_{A_2}\vec{B_1}\text{d}\vec{a}=-M_{2,1}\frac{dI_1}{dt}\]
+Und so ist $\epsilon_{1,2}$ auch definiert. Wobei $M_{2,1}=\frac{d\phi_{2,1}}{I_1}$ die Gegeninduktivitätskonstante ist die von der Spule geometrie abhängt.
+\subsubsection*{Selbstinduktivität}
+%TODO Skript folgen
 \end{document}
