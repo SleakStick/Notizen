@@ -165,5 +165,7 @@ plausibilität dass die Parameter $a$ richtig sind. Die Likelihood-Funktion sagt
 \newline Die Likelihood-Funktion wird gerechnet in dem man den produkt aller wahrscheinlichkeitsfunktionen für die Werte in $x$ nimmt:
 \[L(x,a_0,a_2)=\prod_{i=1}^nf(x_i, a_0, a_1)\]
 \hypertarget{maxlikelihood}{\subsection*{Maximum Likelihood}}Die likelihood-funktion ist alleine Nicht sehr wichtig, aber wenn man die Parameter $a$, die die Wahrscheinlichkeitsdichtefunktion vom datensatz, kennen will, dann nimmt man den Maximum der Likelihood-Funktion und bei diesem punkt, ist $a_r$ die beste Abschätzung der Parameter von der Wahrscheinlichkeitsdichtefunktion: \[a_r \smspc \text{so dass} \smspc L(x,a_r)=\max_{a\in \mathbb{C}}L(x,a)\]
-\hyper
+\section*{Fitten von Daten}
+\hypertarget{linearfitten}{\subsection*{Lineares Fitten}}
+Bisher, haben wir den Maximum der Likelyhood funktion benutzt um die Parameter der Wahrscheinlichkeitsdichtefunktion zu bestimmen. Um eine Funktion zu einen Datensatz bestens zu Fitten, macht man was ähnliches, man nimmt eine Basis funktion-Form die unsere Daten Folgen, dann minimisiert man die Kovarianz zwischen diese Funktion und unserem Datensatz.
 \end{document}
