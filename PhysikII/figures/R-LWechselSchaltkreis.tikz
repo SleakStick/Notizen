@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=circle] (1) at (-2, 0) {\tiny$\sim$};
+		\node [style=none] (2) at (-2, 2) {};
+		\node [style=none] (3) at (2, 2) {};
+		\node [style=none] (4) at (2, -2) {};
+		\node [style=none] (5) at (-2, -2) {};
+		\node [style=Resistor] (6) at (0, -2) {};
+		\node [style=none] (7) at (-0.75, 2) {};
+		\node [style=none] (8) at (-0.25, 2) {};
+		\node [style=none] (9) at (-0.25, 2) {};
+		\node [style=none] (10) at (0.25, 2) {};
+		\node [style=none] (11) at (0.25, 2) {};
+		\node [style=none] (12) at (0.75, 2) {};
+		\node [style=none] (13) at (-1.5, -0.5) {\tiny $-$};
+		\node [style=none] (14) at (-1.5, 0.5) {\tiny $+$};
+		\node [style=none] (15) at (0, 2.75) {$L$};
+		\node [style=none] (16) at (0, -1.25) {$R$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend left=90, looseness=1.50] (7.center) to (8.center);
+		\draw [bend left=90, looseness=1.50] (9.center) to (10.center);
+		\draw [bend left=90, looseness=1.50] (11.center) to (12.center);
+		\draw (2.center) to (7.center);
+		\draw (12.center) to (3.center);
+		\draw (3.center) to (4.center);
+		\draw (4.center) to (6);
+		\draw (5.center) to (6);
+		\draw (5.center) to (1);
+		\draw (1) to (2.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
